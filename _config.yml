@@ -5,7 +5,7 @@ paginate: 100 # it will paginate after this number
 language: 'en-uk'
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /jasper2/
+baseurl: /
 
 # Website info
 title: Ghost
@@ -15,7 +15,7 @@ logo: assets/images/blog-icon.png
 logo_dark: assets/images/favicon.png
 favicon: assets/images/favicon.png
 production_url: https://jekyller.github.io/jasper2/
-source_url: https://github.com/jekyller/jasper2/
+source_url: https://kjham.github.io/
 
 # Social info
 navigation: True # show the navbar links
@@ -67,12 +67,12 @@ feed:
 safe: False
 lsi: False
 username: kjham
-repo: jasper2
+repo: kjham.github.io
 branch: master
 relative_source: ../jasper2/
 destination: ../jasper2-pages/
 production_url:  https://jekyller.github.io/jasper2/
-source_url:  https://github.com/kjham/
+source_url:  https://kjham.github.io/
 
 exclude:
   - README.md
