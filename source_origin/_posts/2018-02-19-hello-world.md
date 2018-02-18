@@ -3,10 +3,8 @@ layout: post
 current: post
 cover:  assets/images/welcome.jpg
 navigation: True
-title: Welcome to Ghost
+title: Hello World !
 date: 2018-02-19 00:32:00
-class: post-template
-subclass: 'post tag-getting-started'
 author: kjham
 ---
 
