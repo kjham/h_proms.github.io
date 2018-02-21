@@ -11,7 +11,7 @@
 
 
 
-    <title>Hello World !</title>
+    <title>(Java) Logging Introduction (1)</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -29,54 +29,30 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Software Developement Laboratory" />
     <link rel="shortcut icon" href="http://localhost:4000/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="http://localhost:4000/hello-world" />
+    <link rel="canonical" href="http://localhost:4000/java-log4j" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="SWDEVLAB" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Hello World !" />
-    <meta property="og:description" content="안녕하세요.
-이 것은 테스트 글 입니다..
-
-하하하. 안녕하세요.
-
-
-  일
-  이
-  삼
-
-
-이상입니다 !
-" />
-    <meta property="og:url" content="http://localhost:4000/hello-world" />
+    <meta property="og:title" content="(Java) Logging Introduction (1)" />
+    <meta property="og:description" content="Java - Logging Introduction (1) : 종류 Application Project 를 진행하면 필수 요소 중 하나가 Log 를 남기는 Framework 구성입니다. 제품 개발이나 운영 시, 발생하는 문제를 추적하여 원인을 파악하기 위함이죠. 굉장히 유용한 Framework 이기 때문에 종류 또한 꽤 다양합니다. 또한, Logging 작업이 굉장히 많은 Project 를 위해 관리해주는 또 다른" />
+    <meta property="og:url" content="http://localhost:4000/java-log4j" />
     <meta property="og:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2018-02-18T10:32:00+09:00" />
-    <meta property="article:modified_time" content="2018-02-18T10:32:00+09:00" />
-    <meta property="article:tag" content="Test-page" />
+    <meta property="article:published_time" content="2018-02-19T09:00:00+09:00" />
+    <meta property="article:modified_time" content="2018-02-19T09:00:00+09:00" />
+    <meta property="article:tag" content="Sw-dev-lab" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Hello World !" />
-    <meta name="twitter:description" content="안녕하세요.
-이 것은 테스트 글 입니다..
-
-하하하. 안녕하세요.
-
-
-  일
-  이
-  삼
-
-
-이상입니다 !
-" />
+    <meta name="twitter:title" content="(Java) Logging Introduction (1)" />
+    <meta name="twitter:description" content="Java - Logging Introduction (1) : 종류 Application Project 를 진행하면 필수 요소 중 하나가 Log 를 남기는 Framework 구성입니다. 제품 개발이나 운영 시, 발생하는 문제를 추적하여 원인을 파악하기 위함이죠. 굉장히 유용한 Framework 이기 때문에 종류 또한 꽤 다양합니다. 또한, Logging 작업이 굉장히 많은 Project 를 위해 관리해주는 또 다른" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="SWDEVLAB" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Test-page" />
+    <meta name="twitter:data2" content="Sw-dev-lab" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -91,7 +67,7 @@
         "name": "SWDEVLAB",
         "logo": "http://localhost:4000/assets/images/blog-icon.png"
     },
-    "url": "http://localhost:4000/hello-world",
+    "url": "http://localhost:4000/java-log4j",
     "image": {
         "@type": "ImageObject",
         "url": "http://localhost:4000/assets/images/blog-cover.jpg",
@@ -100,21 +76,9 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "http://localhost:4000/hello-world"
+        "@id": "http://localhost:4000/java-log4j"
     },
-    "description": "안녕하세요.
-이 것은 테스트 글 입니다..
-
-하하하. 안녕하세요.
-
-
-  일
-  이
-  삼
-
-
-이상입니다 !
-"
+    "description": "Java - Logging Introduction (1) : 종류 Application Project 를 진행하면 필수 요소 중 하나가 Log 를 남기는 Framework 구성입니다. 제품 개발이나 운영 시, 발생하는 문제를 추적하여 원인을 파악하기 위함이죠. 굉장히 유용한 Framework 이기 때문에 종류 또한 꽤 다양합니다. 또한, Logging 작업이 굉장히 많은 Project 를 위해 관리해주는 또 다른"
 }
     </script>
 
@@ -127,7 +91,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Hello World !" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="(Java) Logging Introduction (1)" href="/feed.xml" />
 
 
 </head>
@@ -180,39 +144,64 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full post tag-getting-started no-image">
+        <article class="post-full post tag-sw-dev-lab no-image">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="18 February 2018">18 February 2018</time>
+                    <time class="post-full-meta-date" datetime="19 February 2018">19 February 2018</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                               <a href='/tag/test-page/'>TEST-PAGE</a>
+                               <a href='/tag/sw-dev-lab/'>SW-DEV-LAB</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">Hello World !</h1>
+                <h1 class="post-full-title">(Java) Logging Introduction (1)</h1>
             </header>
 
             
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>안녕하세요.
-이 것은 테스트 글 입니다..</p>
+                    <p><strong>Java - Logging Introduction (1) : 종류</strong></p>
 
-<h3 id="하하하-안녕하세요">하하하. 안녕하세요.</h3>
+<p>Application Project 를 진행하면 필수 요소 중 하나가 Log 를 남기는 Framework 구성입니다.
+제품 개발이나 운영 시, 발생하는 문제를 추적하여 원인을 파악하기 위함이죠.</p>
+
+<p>굉장히 유용한 Framework 이기 때문에 종류 또한 꽤 다양합니다.
+또한, Logging 작업이 굉장히 많은 Project 를 위해 관리해주는 또 다른 Framework 가 있기도 하죠.
+심지어 비용을 지불하고 구매할 정도로 막강한 기능을 갖고 있죠.</p>
+
+<p>우선, 종류에 대해 간단히 살펴보고 자세히 알아보도록 하겠습니다.</p>
 
 <ol>
-  <li>일</li>
-  <li>이</li>
-  <li>삼</li>
+  <li>
+    <p>Java Util Logging (JUL)
+제가 직접 Performance Test 를 한 것은 아니지만, Log4J 와 Logback 에 비해 평가가 그리 좋지 못합니다.
+평가의 척도는 속도나 기능적인 면이지요.</p>
+  </li>
+  <li>
+    <p>Log4J 1.x
+지금까지 가장 많이 사용된 Logging Framwork 일겁니다. 그러나, Log4J2 와 Logback 의 등장으로 사용 빈도가 점차 줄어들고 있지 않나 생각됩니다.
+공식적으로 Log4J 1.x 는 유지보수/개발이 끝났기 때문이죠.</p>
+  </li>
+  <li>
+    <p>Log4J 2.x
+Log4J 후속작이며, 많이 활성화 되고 있는 Logging Framework 입니다.
+나중에 다루게 된다면, Log4J 2.x 와 Logback 비교가 꽤 유용한 공부가 될 것 같습니다.</p>
+  </li>
+  <li>Logback
+마찬가지로 Log4J의 후속작입니다.
+    <ul>
+      <li><img src="https://beyondj2ee.wordpress.com/2012/11/09/logback-%EC%82%AC%EC%9A%A9%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-reasons-to-prefer-logback-over-log4j/" alt="참고 주소" /></li>
+    </ul>
+  </li>
+  <li>SLF4J Simple Logging (SLF4J SL)</li>
 </ol>
 
-<p>이상입니다 !</p>
+<p>이상입니다. 포스팅을 마치겠습니다.</p>
 
                 </div>
             </section>
@@ -306,7 +295,7 @@ into the {body} of the default.hbs template -->
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; SWDEVLAB &mdash;</small>
                             
-                                <h3 class="read-next-card-header-title"><a href="/tag/test-page/">Test-page</a></h3>
+                                <h3 class="read-next-card-header-title"><a href="/tag/sw-dev-lab/">Sw-dev-lab</a></h3>
                             
                         </header>
                         <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -316,16 +305,11 @@ into the {body} of the default.hbs template -->
                                 
                                 
                                   
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/java-executorservice">(Java) Thread Tutorial (2)</a></li>
+                                        
                                     
                                   
                                 
@@ -337,70 +321,48 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                            <li><a href="/welcome">Welcome to Ghost</a></li>
+                                            <li><a href="/java-jboss">(Java) JBOSS</a></li>
                                         
                                     
+                                  
+                                
                                   
                                 
                                   
                                     
                                         
                                         
-                                            <li><a href="/the-businessman-and-fisherman">The Businessman & The Fisherman</a></li>
+                                            <li><a href="/java-thread-runnable">(Java) Thread Tutorial (1)</a></li>
                                         
                                     
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                            <li><a href="/i-have-a-dream">I Have a Dream</a></li>
-                                        
-                                    
+                                
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
+                                
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
+                                
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
+                                
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
-                                  
                                 
-                                  
-                                    
-                                        
-                                        
-                                    
                                   
                                 
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
-                            <a href="/tag/test-page/">
+                            <a href="/tag/sw-dev-lab/">
                                 
-                                    See all 9 posts  →
+                                    See all 3 posts  →
                                 
                             </a>
                         </footer>
@@ -414,7 +376,7 @@ into the {body} of the default.hbs template -->
     <article class="post-card post-template no-image">
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/java-thread-runnable">
+            <a class="post-card-content-link" href="/java-executorservice">
                 <header class="post-card-header">
                     
                         
@@ -424,10 +386,10 @@ into the {body} of the default.hbs template -->
                         
                     
 
-                    <h2 class="post-card-title">(Java) Thread Tutorial (1)</h2>
+                    <h2 class="post-card-title">(Java) Thread Tutorial (2)</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>Java - Thread Tutorial (1) : Thread 와 Runnable **Java**에서 여러 작업을 동시에 처리하고 싶은 경우나 비동기 적으로 작업을 수행하고자 할 때, Thread 라는 것을 사용합니다. 일반적으로 가장 많이 알려진 것은, Thread /</p>
+                    <p>Java - Thread Tutorial (2) : ExecutorService 이번 포스팅에서는 Multi-Thread 를 사용하기 좋은 ExecutorService 를 소개하겠습니다. ExecutorService 는 Thread와 비교하여 다음과 같은 장점이 있습니다. 1. 여러 Thread 에 대한 결과 값을 개별적으로 받을</p>
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -457,32 +419,20 @@ into the {body} of the default.hbs template -->
     <article class="post-card post-template no-image">
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/welcome2">
+            <a class="post-card-content-link" href="/java-jboss">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Test-page</span>
+                                <span class="post-card-tags">Sw-dev-lab</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">Hello World !</h2>
+                    <h2 class="post-card-title">(Java) JBOSS</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>안녕하세요.
-이 것은 테스트 글 입니다..
-
-하하하. 안녕하세요.
-
-
-  일
-  이
-  삼
-
-
-이상입니다 !
-</p>
+                    <p>Java - JBOSS JBossAS란? JBossAS(JBoss Application Server)란 오픈소스 Java EE 서버입니다. Java EE 서버란 Java Enterprise Edition(EE) 표준에 따라 구현된 서버를 의미합니다. Java EE 서버를 흔희 Java EE 서버를 WAS(Web Application Server)라고 부르는데</p>
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -521,18 +471,18 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Hello World !</div>
+    <div class="floating-header-title">(Java) Logging Introduction (1)</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Hello+World+%21&amp;url=https://kjham.github.io/hello-world"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%28Java%29+Logging+Introduction+%281%29&amp;url=https://kjham.github.io/java-log4j"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://kjham.github.io/hello-world"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://kjham.github.io/java-log4j"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

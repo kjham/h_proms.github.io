@@ -812,6 +812,7 @@ Usage (In Ghost editor):
     line-height: 1.5em;
     background: color(var(--darkgrey) l(-3%));
     border-radius: 5px;
+    tab-size : 2;
 }
 
 .post-full-content pre code {
