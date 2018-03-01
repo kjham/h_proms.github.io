@@ -23,6 +23,21 @@
     
       
       <item>
+        <title>먼저 숲을 보고 나무를 보라</title>
+        
+          <description>&lt;p&gt;&lt;strong&gt;Chapter 01 : 먼저 숲을 보고 나무를 보라&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 19 Feb 2018 09:00:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/religion-bible-panorama-1</link>
+        <guid isPermaLink="true">http://localhost:4000/religion-bible-panorama-1</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>(Java) Logging Introduction (1)</title>
         
           <description>&lt;p&gt;&lt;strong&gt;Java - Logging Introduction (1) : 종류&lt;/strong&gt;&lt;/p&gt;
@@ -55,14 +70,14 @@
       <item>
         <title>Bible Panorama 를 시작하며</title>
         
-          <description>&lt;p&gt;저자 &lt;strong&gt;“테리 홀”&lt;/strong&gt; 의 &lt;strong&gt;“성경 파노라마”&lt;/strong&gt; !&lt;/p&gt;
+          <description>&lt;p&gt;&lt;strong&gt;BIBLE PANORAMA 를 시작하며 …&lt;/strong&gt;&lt;/p&gt;
 
 </description>
         
         <pubDate>Mon, 19 Feb 2018 09:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/religion-bible-panorama-1</link>
-        <guid isPermaLink="true">http://localhost:4000/religion-bible-panorama-1</guid>
+        http://localhost:4000/religion-bible-panorama-0</link>
+        <guid isPermaLink="true">http://localhost:4000/religion-bible-panorama-0</guid>
       </item>
       
     
@@ -78,160 +93,6 @@
         <link>
         http://localhost:4000/java-thread-runnable</link>
         <guid isPermaLink="true">http://localhost:4000/java-thread-runnable</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Hello World !</title>
-        
-          <description>&lt;p&gt;안녕하세요.
-이 것은 테스트 글 입니다..&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Sun, 18 Feb 2018 10:32:00 +0900</pubDate>
-        <link>
-        http://localhost:4000/hello-world</link>
-        <guid isPermaLink="true">http://localhost:4000/hello-world</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Hello World !</title>
-        
-          <description>&lt;p&gt;안녕하세요.
-이 것은 테스트 글 입니다..&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Sun, 18 Feb 2018 10:32:00 +0900</pubDate>
-        <link>
-        http://localhost:4000/welcome2</link>
-        <guid isPermaLink="true">http://localhost:4000/welcome2</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Welcome to Ghost</title>
-        
-          <description>&lt;p&gt;Hey! Welcome to Ghost, it’s great to have you :)&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Thu, 27 Jul 2017 19:00:00 +0900</pubDate>
-        <link>
-        http://localhost:4000/welcome</link>
-        <guid isPermaLink="true">http://localhost:4000/welcome</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>The Businessman &amp; The Fisherman</title>
-        
-          <description>&lt;p&gt;An American businessman took a vacation to a small coastal Mexican village on doctor’s orders. Unable to sleep after an urgent phone call from the office the first morning, he walked out to the pier to clear his head. A small boat with just one fisherman had docked, and inside the boat were several large yellowfin tuna. The American complimented the Mexican on the quality of his fish.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Tue, 12 Aug 2014 19:18:00 +0900</pubDate>
-        <link>
-        http://localhost:4000/the-businessman-and-fisherman</link>
-        <guid isPermaLink="true">http://localhost:4000/the-businessman-and-fisherman</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>I Have a Dream</title>
-        
-          <description>&lt;p&gt;I am happy to join with you today in what will go down in history as the greatest demonstration for freedom in the history of our nation.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Wed, 28 Aug 1963 19:18:00 +0900</pubDate>
-        <link>
-        http://localhost:4000/i-have-a-dream</link>
-        <guid isPermaLink="true">http://localhost:4000/i-have-a-dream</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>The Purpose of Education</title>
-        
-          <description>&lt;p&gt;As I engage in the so-called “bull sessions” around and about the school, I too often find that most college men have a misconception of the purpose of education. Most of the “brethren” think that education should equip them with the proper instruments of exploitation so that they can forever trample over the masses. Still others think that education should furnish them with noble ends rather than means to an end.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Sun, 12 Dec 1948 19:18:00 +0900</pubDate>
-        <link>
-        http://localhost:4000/the-purpose-of-education</link>
-        <guid isPermaLink="true">http://localhost:4000/the-purpose-of-education</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Out to Sea</title>
-        
-          <description>&lt;p&gt;I had this story from one who had no business to tell it to me, or to any other. I may credit the seductive influence of an old vintage upon the narrator for the beginning of it, and my own skeptical incredulity during the days that followed for the balance of the strange tale.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Wed, 24 Jul 1912 19:18:00 +0900</pubDate>
-        <link>
-        http://localhost:4000/out-to-sea</link>
-        <guid isPermaLink="true">http://localhost:4000/out-to-sea</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Looking-Glass house</title>
-        
-          <description>&lt;p&gt;One thing was certain, that the white kitten had had nothing to do with it:— it was the black kitten’s fault entirely. For the white kitten had been having its face washed by the old cat for the last quarter of an hour (and bearing it pretty well, considering); so you see that it couldn’t have had any hand in the mischief.
-The way Dinah washed her children’s faces was this: first she held the poor thing down by its ear with one paw, and then with the other paw she rubbed its face all over, the wrong way, beginning at the nose: and just now, as I said, she was hard at work on the white kitten, which was lying quite still and trying to purr — no doubt feeling that it was all meant for its good.
-But the black kitten had been finished with earlier in the afternoon, and so, while Alice was sitting curled up in a corner of the great arm-chair, half talking to herself and half asleep, the kitten had been having a grand game of romps with the ball of worsted Alice had been trying to wind up, and had been rolling it up and down till it had all come undone again; and there it was, spread over the hearth-rug, all knots and tangles, with the kitten running after its own tail in the middle.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Sat, 18 Mar 1871 19:18:00 +0900</pubDate>
-        <link>
-        http://localhost:4000/looking-glass-house</link>
-        <guid isPermaLink="true">http://localhost:4000/looking-glass-house</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Down The Rabbit Hole</title>
-        
-          <description>&lt;p&gt;Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, ‘and what is the use of a book,’ thought Alice ‘without pictures or conversation?’&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Sun, 26 Nov 1865 19:18:00 +0900</pubDate>
-        <link>
-        http://localhost:4000/down-the-rabbit-hole</link>
-        <guid isPermaLink="true">http://localhost:4000/down-the-rabbit-hole</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Gettysburg Address</title>
-        
-          <description>&lt;p&gt;Fourscore and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Thu, 19 Nov 1863 19:18:00 +0900</pubDate>
-        <link>
-        http://localhost:4000/gettysburg-address</link>
-        <guid isPermaLink="true">http://localhost:4000/gettysburg-address</guid>
       </item>
       
     

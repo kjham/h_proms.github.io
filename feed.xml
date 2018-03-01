@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-21T20:20:52+09:00</updated><id>http://localhost:4000/</id><title type="html">SWDEVLAB</title><subtitle>Software Developement Laboratory</subtitle><entry><title type="html">(Java) Thread Tutorial (2)</title><link href="http://localhost:4000/java-executorservice" rel="alternate" type="text/html" title="(Java) Thread Tutorial (2)" /><published>2018-02-21T09:00:00+09:00</published><updated>2018-02-21T09:00:00+09:00</updated><id>http://localhost:4000/java-executorservice</id><content type="html" xml:base="http://localhost:4000/java-executorservice">&lt;p&gt;Java - Thread Tutorial (2) : ExecutorService&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-01T22:45:20+09:00</updated><id>http://localhost:4000/</id><title type="html">SWDEVLAB</title><subtitle>Software Developement Laboratory</subtitle><entry><title type="html">(Java) Thread Tutorial (2)</title><link href="http://localhost:4000/java-executorservice" rel="alternate" type="text/html" title="(Java) Thread Tutorial (2)" /><published>2018-02-21T09:00:00+09:00</published><updated>2018-02-21T09:00:00+09:00</updated><id>http://localhost:4000/java-executorservice</id><content type="html" xml:base="http://localhost:4000/java-executorservice">&lt;p&gt;Java - Thread Tutorial (2) : ExecutorService&lt;/p&gt;
 
 &lt;p&gt;이번 포스팅에서는 Multi-Thread 를 사용하기 좋은 ExecutorService 를 소개하겠습니다.&lt;/p&gt;
 
@@ -8,7 +8,155 @@
   &lt;li&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;이상입니다. 이번 포스팅을 마치도록 하겠습니다.&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">Java - Thread Tutorial (2) : ExecutorService</summary></entry><entry><title type="html">(Java) Logging Introduction (1)</title><link href="http://localhost:4000/java-log4j" rel="alternate" type="text/html" title="(Java) Logging Introduction (1)" /><published>2018-02-19T09:00:00+09:00</published><updated>2018-02-19T09:00:00+09:00</updated><id>http://localhost:4000/java-log4j</id><content type="html" xml:base="http://localhost:4000/java-log4j">&lt;p&gt;&lt;strong&gt;Java - Logging Introduction (1) : 종류&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;이상입니다. 이번 포스팅을 마치도록 하겠습니다.&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">Java - Thread Tutorial (2) : ExecutorService</summary></entry><entry><title type="html">먼저 숲을 보고 나무를 보라</title><link href="http://localhost:4000/religion-bible-panorama-1" rel="alternate" type="text/html" title="먼저 숲을 보고 나무를 보라" /><published>2018-02-19T09:00:00+09:00</published><updated>2018-02-19T09:00:00+09:00</updated><id>http://localhost:4000/religion-bible-panorama-1</id><content type="html" xml:base="http://localhost:4000/religion-bible-panorama-1">&lt;p&gt;&lt;strong&gt;Chapter 01 : 먼저 숲을 보고 나무를 보라&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;/religion-bible-panorama-0&quot;&gt;Chapter 00 : BIBLE PANORAMA 를 시작하며 …&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Chapter 02 : 여덟 기둥으로 성경의 맥을 잡아라&lt;/li&gt;
+    &lt;li&gt;Chapter 03 : 구약 시대를 알아야 하나님의 마음이 보인다&lt;/li&gt;
+    &lt;li&gt;Chapter 04 : 지도로 보면 구약이 더 입체적으로 보인다&lt;/li&gt;
+    &lt;li&gt;Chapter 05 : 구약 드라마 속 줄거리의 핵심을 잡는다&lt;/li&gt;
+    &lt;li&gt;Chapter 06 : 하나님의 드라마가 사람을 바꾼다&lt;/li&gt;
+    &lt;li&gt;Chapter 07 : 구약의 드라마로 최고의 인생을 배운다&lt;/li&gt;
+    &lt;li&gt;Chapter 08 : 침묵에도 뜻이 있다&lt;/li&gt;
+    &lt;li&gt;Chapter 09 : 신약 시대를 알아야 예수님의 은혜를 누린다&lt;/li&gt;
+    &lt;li&gt;Chapter 10 : 복음서를 지도로 보면 예수님이 더 입체적으로 보인다&lt;/li&gt;
+    &lt;li&gt;Chapter 11 : 교회 시대를 지도로 보면 성령님의 역사가 더 입체적으로 보인다&lt;/li&gt;
+    &lt;li&gt;Chapter 12 : 성경의 모든 초점은 예수 그리스도이다&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;대부분의 크리스천들은 파노라마처럼 펼쳐진 전체 그림을 보지 못하고 단지 수 많은 조각만을 봅니다.&lt;br /&gt;
+또한, 퍼즐 조각의 의미를 벗어나 다른 조각과 억지로 끼워 맞추기도 합니다.&lt;br /&gt;
+이번 포스팅에서는 성경 안의 퍼즐 조각을 보다 올바르게 접근하기 위한 방향성을 제시할 것입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. 기본적인 성경 접근법&lt;/strong&gt;&lt;br /&gt;
+성경에는 접근하는 방법이 두 가지가 있습니다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;종합적 접근 방법&lt;br /&gt;
+큰 그림으로 성경을 접근하는 방법입니다. 이것에 그치면 세세한 광경을 놓치기 쉽지요.&lt;/li&gt;
+  &lt;li&gt;분석적 접근 방법&lt;br /&gt;
+어느 한 곳을 깊이 파내려가는 방법입니다. 앞뒤 문맥을 보지 않는다면, 올바른 해석을 하지 못할 수도 있지요.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;그렇다면? 어떻게 해야 할까요?&lt;br /&gt;
+이상적인 순서는 전체를 먼저 본 뒤 부분을 보고, 다시 부분을 전체와 연관지어 생각하는 것입니다.&lt;/p&gt;
+
+&lt;p&gt;일반적으로 성경은 일곱 가지 논리적 단계에 따라 접근할 수 있습니다.&lt;br /&gt;
+&lt;img src=&quot;/assets\images\religion_bible_panorama_1-1.jpg&quot; alt=&quot;일곱가지단계&quot; class=&quot;center-image&quot; /&gt; 
+이 때,  저자가 제안하는 방법이 있습니다.&lt;/p&gt;
+
+&lt;p&gt;만약 ‘문장’ 을 가리키는 것을 분석하고자 한다면..&lt;br /&gt;
+최소 그 위 단계인 ‘단락’ 을 먼저 보고, ‘문장’ 에 대해 분석하십시오.&lt;/p&gt;
+
+&lt;p&gt;‘단락’ 에 대해 분석하고자 한다면, ‘장’을 먼저 보십시오.&lt;br /&gt;
+즉, 한 단계 위의 것을 먼저 보라고 권유하고 있습니다.&lt;/p&gt;
+
+&lt;p&gt;부분을 전체 그림과 연결시켜서 개관하기를 원한다면 종합이 될 것이고,&lt;br /&gt;
+개별적인 부분을 그 자체로 탐구하기를 원한다면 분석이 될 것입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. 성경 조감의 중요성&lt;/strong&gt;&lt;br /&gt;
+조감이란? 새가 높은 하늘에서 아래를 내려다 보는 것처럼 전체를 한 눈으로 관찰한다는 뜻입니다.&lt;br /&gt;
+즉, 성격을 조감한 뒤 각 퍼즐 조각들이 어디에 끼워 맞춰야 할 지 알수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;이는 성경에 국한된 것이 아닙니다.&lt;br /&gt;
+성경은 창조부터 모든 것의 완성에 이르기까지 계속되는 하나님의 뜻과 길에 관해 말합니다.&lt;/p&gt;
+
+&lt;p&gt;즉, 조감하는 과정을 통해 우리 시대를 좀 더 잘 분별할 수 있습니다.&lt;br /&gt;
+이미 성취된 말씀을 깨닫게 될 때, 이 세대에 이루어지고 있는 예언을 올바르게 예언할 수 있을 것이고,&lt;br /&gt;
+하나님께서 자신이 선포한 말씀을 반드시 이루신다고 확신할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;교리란? 신학이란? 성경의 전체적인 주제를 조직적으로 다루는 쳬계라고 합니다.&lt;br /&gt;
+성경을 전체적으로 조감함으로써 기독고 신앙의 교리를 깨달을 수 있는 기반을 얻을 수 있을 것입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. 이 책에서 얻는 유익&lt;/strong&gt;&lt;br /&gt;
+이 책을 의욕적으로 읽는다면, 다음 내용을 충분히 소화할 수 있을 것입니다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;성경의 새 골격 또는 여덟 골격&lt;/li&gt;
+  &lt;li&gt;한 단락으로 된 성경의 역사&lt;/li&gt;
+  &lt;li&gt;성경의 모든 초점은 예수 그리스도께 고정됨&lt;/li&gt;
+  &lt;li&gt;각 행이 성경의 각 권을 묘사하는 시&lt;/li&gt;
+  &lt;li&gt;성경을 한눈에 보여주는 세 가지 지도&lt;/li&gt;
+  &lt;li&gt;신구약 각각에 대한 역사적인 열두 시대&lt;/li&gt;
+  &lt;li&gt;성경 66권의 간략한 주제와 개요&lt;/li&gt;
+  &lt;li&gt;신구약 비교 및 대조&lt;/li&gt;
+  &lt;li&gt;신구약 사이에 있는 400녀의 침묵기의 중요성&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;4. 성경에 대한 기초 상식&lt;/strong&gt;&lt;br /&gt;
+성경은 전체 66권 중 39권의 구약과 27권의 신약으로 이루어져 있습니다.&lt;br /&gt;
+열두 제자 중 베야요(베드로 야고보 요한) 3명 과 나머지 9명이라는 수자를 볼 때,&lt;br /&gt;
+구약은 3과 9를 이어 붙여 39권이고, 신약은 3과 9를 곱하여 27권이라고 하여 쉽게 외울 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5. 성경의 세 골격&lt;/strong&gt;&lt;br /&gt;
+성격 66권은 내용에 따라 역사(History), 체험(Experience), 예언(Prophecy) 세 범주로 묶을 수 있습니다.&lt;br /&gt;
+역사 범주는 구약 17권과 신약 5권 총 22권으로,&lt;br /&gt;
+체험 범주는 구약 5권과 신약 21권으로,&lt;br /&gt;
+예언 범주는 구약은약 17권과 신약 1권으로 이루어져 있습니다. 
+&lt;img src=&quot;/assets\images\religion_bible_panorama_1-2.jpg&quot; alt=&quot;성경의세골격&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6. 성경의 역사 요약&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;구약&lt;/strong&gt;&lt;br /&gt;
+하나님께서 세상을 창조하신 후 인간은 스스로 타락하고 말았다. 
+그래서 하나님께서는 큰 홍수를 일으켜 인간을 심판하셨고 또 교만해진 인간들을 바벨탑에서 온 땅으로 흩으셨다. 
+이후에 아브라함과 이삭과 야곱은 히브리 민족의 조상이 되었다. 
+애굽에서 큰 집단을 이룬 히브리 민족은 모세의 영도 아래 그곳을 빠져나왔다. 
+그들은 40년 동안 광야를 유랑하며 배우고, 시험을 당하고, 벌을 받고, 다시 배우다가 마침내 여호수아를 따라 약속의 땅으로 들어갔다. 
+원래 히브리 민족에게는 왕이 없었다. 간헐적으로 사사들이 일어나 그들을 이끌었다. 
+그러다가 사무엘을 마지막으로 14명의 사사 시대가 막을 내리고 마침내 왕정이 시작되어 사울, 다윗, 솔로몬이 차례로 왕위에 올랐다. 
+솔로몬이 죽은 뒤, 히브리 민족은 남쪽 왕국(유다)과 북족 왕국(이스라엘)으로 분열되었다. 
+북이스라엘은 19명의 사악한 왕들의 통치를 받은 뒤에 앗수르에 의해 멸망당하여 백성들이 뿔뿔이 흩어졌다. 
+남유다는 20명의 왕들의 통치를 받은 다음에 바벨론 땅으로 잡혀갔다. 
+그런데 바사(페르시아)가 바벨론을 정복하면서 남유다 백성들은 70년간의 바벨론 포로생활을 끝내고 고향으로 돌아갈 수 있었다. 
+이때 에스라와 느헤미야가 백성들을 이끌고 고향으로 귀한했고, 바사의 왕비가 된 에스더는 적의 위협으로부터 동포를 구했다. 
+그리고 이때부터 ‘침묵기’(신구약 중간기)라 불리는 400년의 시간이 흐른 뒤, 마침내 세례 요한과 예수님이 등장했다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;신약&lt;/strong&gt;&lt;br /&gt;
+하늘이 다시 열리고 천사들이 세례 요한과 예수님의 출생을 준비했다. 
+그로부터 30년쯤 후에 세례 요한은 이스라엘 백성들을 향해 회개의 세례를 받으라고 촉구했다. 
+육신을 입고 세상에 오신 하나님의 아들 예수 그리스도는 3년 동안 사역하면서 하나님이 어떤 분인지 보이셨고 또 하나님의 길을 가르치셨다. 
+예수님은 열두 제자들을 세워 땅에서 자신의 일을 지속하도록 준비시키신 다음, 모든 인간의 죄를 위해 자발적으로 십자가의 죽음을 택하셨고, 죽은 자 가운데서 일어나 하늘로 올라가셨다. 
+이후에 제자들은 오순절 성령 강림 사건을 체험하여 성령의 권능을 힘입었다. 
+그들은 주로 유대인들을 대상으로 예수님의 구원에 관한 좋은 소식을 전했으며, 사도 바울은 광범위하게 전도여행을 하면서 이방인들에게 복음을 전파했다. 
+바울은 신약성경 가운데 적어도 13권의 서신서를 기록했다. 
+사도 요한은 종말까지의 세상을 향한 하나님의 계획을 기록한 책 ‘요한계시록’을 썼다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;7. 성경의 다양성과 통일성&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;성경은 거의 1만 킬로미터를 포괄하는 지역의 10개 나라에 거주하며 약 20가지의 서로 다른 직업에 종사하는 40명의 기자들이 기록했다.&lt;/li&gt;
+  &lt;li&gt;성경은 히브리어, 헬라어, 아람어 세 가지어로 기록되었다.&lt;/li&gt;
+  &lt;li&gt;성경은 총 66권, 1,189장으로 구성되어 있다.&lt;/li&gt;
+  &lt;li&gt;성경은 1600년에 걸쳐 기록되었다. (욥기까지 간주하면 500년 늘어난다.)&lt;/li&gt;
+  &lt;li&gt;성경은 모든 주제들이 여러 문학 형태(시, 산문, 소설, 묵시, 자서전, 학술서, 역사서 등)로 기록되었다.&lt;/li&gt;
+  &lt;li&gt;성경은 최소 10가지의 다양한 수단(펜, 끌, 가죽, 진흙, 파피루스, 돌 등)으로 기록되었다.&lt;/li&gt;
+  &lt;li&gt;성경은 2,930명의 인물이 등장한다.&lt;/li&gt;
+  &lt;li&gt;성경에는 등장인물들의 주요 활동 무대로 1,551개의 지명이 언급되었다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이렇게 다양한 요소를 갖고 있음에도, 성경은 매우 통일적이며 일관성을 유지하고 있다.&lt;br /&gt;
+그것은 예수 그리스도께 모든 초점이 맞추어져 있기 때문이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;8. 성경의 특별한 용어&lt;/strong&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets\images\religion_bible_panorama_1-3.jpg&quot; alt=&quot;성경의세골격&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;9. 성경, 얼마나 잘 알고 있나?&lt;/strong&gt;
+성경의 주된 목적은 하나님을 계시하고 하나님의 구권의 길을 밝히는 것이다.&lt;br /&gt;
+황금률, 헌금, 기도, 교회 등 애쓰는 것으로 구원을 얻는 것은 모두 틀린 말이다.&lt;br /&gt;
+성경에서 말하는 구원은 인간의 힘으로는 절대로 얻을 수 없고 하나님의 선물로만 주어지는 것이기 때문이다.&lt;/p&gt;
+
+&lt;p&gt;천국의 영광의 문 앞에 하나님께서 안으로 들어보내야 할 까닭을 물어보신다면?&lt;br /&gt;
+하나님께 인정받을 수 있는 유일한 대답은&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;“그리스도께서 우리의 죄를 대신하여 갈보리 십자가에서 죽으셨다는 것을 믿습니다”
+라고 증거하는 것이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;천국에 갈 수 있다는 확신을 자신이 아닌 구주께로 확실히 옮기자.&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="religion-lab" /><summary type="html">Chapter 01 : 먼저 숲을 보고 나무를 보라</summary></entry><entry><title type="html">(Java) Logging Introduction (1)</title><link href="http://localhost:4000/java-log4j" rel="alternate" type="text/html" title="(Java) Logging Introduction (1)" /><published>2018-02-19T09:00:00+09:00</published><updated>2018-02-19T09:00:00+09:00</updated><id>http://localhost:4000/java-log4j</id><content type="html" xml:base="http://localhost:4000/java-log4j">&lt;p&gt;&lt;strong&gt;Java - Logging Introduction (1) : 종류&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Application Project 를 진행하면 필수 요소 중 하나가 Log 를 남기는 Framework 구성입니다.
 제품 개발이나 운영 시, 발생하는 문제를 추적하여 원인을 파악하기 위함이죠.&lt;/p&gt;
@@ -56,17 +204,40 @@ Log4J 후속작이며, 많이 활성화 되고 있는 Logging Framework 입니�
 
 &lt;p&gt;예를 들면 EJB나 JMS를 사용한 애플리케이션을 개발하고자 하는 경우에는 반드시 JBossAS와 같은 Java EE 표준을 모두 구현한 서버를 사용해야 겠습니다. 그러나 단순한 웹 애플리케이션을 구현하는 경우에는 Apache Tomcat을 사용할 수 있습니다. JBossAS에는 기본적으로 Tomcat이 내장되어 있으므로 Tomcat을 사용했었던 사용자는 손쉽게 JBossAS로 웹 애플리케이션을 이전할 수 있습니다.&lt;/p&gt;
 
-&lt;p&gt;출처: http://ssiso.net/cafe/club/club1/board1/content.php?board_code=jsp%7Csetting&amp;amp;idx=30224&amp;amp;club=jsp&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">Java - JBOSS</summary></entry><entry><title type="html">Bible Panorama 를 시작하며</title><link href="http://localhost:4000/religion-bible-panorama-1" rel="alternate" type="text/html" title="Bible Panorama 를 시작하며" /><published>2018-02-19T09:00:00+09:00</published><updated>2018-02-19T09:00:00+09:00</updated><id>http://localhost:4000/religion-bible-panorama-1</id><content type="html" xml:base="http://localhost:4000/religion-bible-panorama-1">&lt;p&gt;저자 &lt;strong&gt;“테리 홀”&lt;/strong&gt; 의 &lt;strong&gt;“성경 파노라마”&lt;/strong&gt; !&lt;/p&gt;
+&lt;p&gt;출처: http://ssiso.net/cafe/club/club1/board1/content.php?board_code=jsp%7Csetting&amp;amp;idx=30224&amp;amp;club=jsp&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">Java - JBOSS</summary></entry><entry><title type="html">Bible Panorama 를 시작하며</title><link href="http://localhost:4000/religion-bible-panorama-0" rel="alternate" type="text/html" title="Bible Panorama 를 시작하며" /><published>2018-02-19T09:00:00+09:00</published><updated>2018-02-19T09:00:00+09:00</updated><id>http://localhost:4000/religion-bible-panorama-0</id><content type="html" xml:base="http://localhost:4000/religion-bible-panorama-0">&lt;p&gt;&lt;strong&gt;BIBLE PANORAMA 를 시작하며 …&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;이 책을 통해 기독교에 관하여 공부하고자 합니다.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;/religion-bible-panorama-1&quot;&gt;Chapter 01 : 먼저 숲을 보고 나무를 보라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Chapter 02 : 여덟 기둥으로 성경의 맥을 잡아라&lt;/li&gt;
+    &lt;li&gt;Chapter 03 : 구약 시대를 알아야 하나님의 마음이 보인다&lt;/li&gt;
+    &lt;li&gt;Chapter 04 : 지도로 보면 구약이 더 입체적으로 보인다&lt;/li&gt;
+    &lt;li&gt;Chapter 05 : 구약 드라마 속 줄거리의 핵심을 잡는다&lt;/li&gt;
+    &lt;li&gt;Chapter 06 : 하나님의 드라마가 사람을 바꾼다&lt;/li&gt;
+    &lt;li&gt;Chapter 07 : 구약의 드라마로 최고의 인생을 배운다&lt;/li&gt;
+    &lt;li&gt;Chapter 08 : 침묵에도 뜻이 있다&lt;/li&gt;
+    &lt;li&gt;Chapter 09 : 신약 시대를 알아야 예수님의 은혜를 누린다&lt;/li&gt;
+    &lt;li&gt;Chapter 10 : 복음서를 지도로 보면 예수님이 더 입체적으로 보인다&lt;/li&gt;
+    &lt;li&gt;Chapter 11 : 교회 시대를 지도로 보면 성령님의 역사가 더 입체적으로 보인다&lt;/li&gt;
+    &lt;li&gt;Chapter 12 : 성경의 모든 초점은 예수 그리스도이다&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;저자 &lt;strong&gt;“Terry Hall”&lt;/strong&gt;의 &lt;strong&gt;“Bible Panorama&lt;/strong&gt;를 통해 성경 공부를 하고자 합니다.&lt;/p&gt;
 
 &lt;p&gt;‘창세기’ 부터 ‘요한계시록’ 까지 한눈에 볼 수 있도록 쉽게 정리되어 있으며,
 &lt;strong&gt;구약시대, 신구약 중간, 신약 시대&lt;/strong&gt; 세 가지로 나누어 안내합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/religion_bible_panorama.jpg&quot; alt=&quot;Bible Panorama&quot; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Part 1 - 성경의 골격 파노라마&lt;/li&gt;
+  &lt;li&gt;Part 2 - 구약성경 파노라마&lt;/li&gt;
+  &lt;li&gt;Part 3 - 신구약 중간기 파노라마&lt;/li&gt;
+  &lt;li&gt;Part 4 - 신약성경 파노라마&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;p&gt;블로그 포스팅을 통해 유익한 내용은 공유하도록 하겠습니다.
-물론, 저의 발전을 위한 포스팅이 우선이겠지만요 ^^&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="religion-lab" /><summary type="html">저자 “테리 홀” 의 “성경 파노라마” !</summary></entry><entry><title type="html">(Java) Thread Tutorial (1)</title><link href="http://localhost:4000/java-thread-runnable" rel="alternate" type="text/html" title="(Java) Thread Tutorial (1)" /><published>2018-02-19T09:00:00+09:00</published><updated>2018-02-19T09:00:00+09:00</updated><id>http://localhost:4000/java-thread-runnable</id><content type="html" xml:base="http://localhost:4000/java-thread-runnable">&lt;p&gt;Java - Thread Tutorial (1) : Thread 와 Runnable&lt;/p&gt;
+&lt;p&gt;약 두달정도 소요될 것으로 예상되네요.&lt;/p&gt;
+
+&lt;p&gt;성경을 바라보는 시각이 넓어지는 유익한 시간이 되길 바랍니다.&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="religion-lab" /><summary type="html">BIBLE PANORAMA 를 시작하며 …</summary></entry><entry><title type="html">(Java) Thread Tutorial (1)</title><link href="http://localhost:4000/java-thread-runnable" rel="alternate" type="text/html" title="(Java) Thread Tutorial (1)" /><published>2018-02-19T09:00:00+09:00</published><updated>2018-02-19T09:00:00+09:00</updated><id>http://localhost:4000/java-thread-runnable</id><content type="html" xml:base="http://localhost:4000/java-thread-runnable">&lt;p&gt;Java - Thread Tutorial (1) : Thread 와 Runnable&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Java&lt;/strong&gt;에서 여러 작업을 동시에 처리하고 싶은 경우나 비동기 적으로 작업을 수행하고자 할 때, Thread 라는 것을 사용합니다.&lt;/p&gt;
 
@@ -168,165 +339,4 @@ Thread Class 를 이용하여 Multi-Thread 방식을 취하려면, 여러 개의
 
 &lt;p&gt;Multi-Thread 는 Java 의 ExecutorService 를 통해 소개하도록 하겠습니다.&lt;/p&gt;
 
-&lt;p&gt;이상 포스팅을 마치겠습니다.&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">Java - Thread Tutorial (1) : Thread 와 Runnable</summary></entry><entry><title type="html">Hello World !</title><link href="http://localhost:4000/hello-world" rel="alternate" type="text/html" title="Hello World !" /><published>2018-02-18T10:32:00+09:00</published><updated>2018-02-18T10:32:00+09:00</updated><id>http://localhost:4000/hello-world</id><content type="html" xml:base="http://localhost:4000/hello-world">&lt;p&gt;안녕하세요.
-이 것은 테스트 글 입니다..&lt;/p&gt;
-
-&lt;h3 id=&quot;하하하-안녕하세요&quot;&gt;하하하. 안녕하세요.&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;일&lt;/li&gt;
-  &lt;li&gt;이&lt;/li&gt;
-  &lt;li&gt;삼&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;이상입니다 !&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="test-page" /><summary type="html">안녕하세요. 이 것은 테스트 글 입니다..</summary></entry><entry><title type="html">Hello World !</title><link href="http://localhost:4000/welcome2" rel="alternate" type="text/html" title="Hello World !" /><published>2018-02-18T10:32:00+09:00</published><updated>2018-02-18T10:32:00+09:00</updated><id>http://localhost:4000/welcome2</id><content type="html" xml:base="http://localhost:4000/welcome2">&lt;p&gt;안녕하세요.
-이 것은 테스트 글 입니다..&lt;/p&gt;
-
-&lt;h3 id=&quot;하하하-안녕하세요&quot;&gt;하하하. 안녕하세요.&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;일&lt;/li&gt;
-  &lt;li&gt;이&lt;/li&gt;
-  &lt;li&gt;삼&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;이상입니다 !&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="test-page" /><summary type="html">안녕하세요. 이 것은 테스트 글 입니다..</summary></entry><entry><title type="html">Welcome to Ghost</title><link href="http://localhost:4000/welcome" rel="alternate" type="text/html" title="Welcome to Ghost" /><published>2017-07-27T19:00:00+09:00</published><updated>2017-07-27T19:00:00+09:00</updated><id>http://localhost:4000/welcome</id><content type="html" xml:base="http://localhost:4000/welcome">&lt;p&gt;Hey! Welcome to Ghost, it’s great to have you :)&lt;/p&gt;
-
-&lt;p&gt;We know that first impressions are important, so we’ve populated your new site with some initial &lt;strong&gt;Getting Started&lt;/strong&gt; posts that will help you get familiar with everything in no time. This is the first one!&lt;/p&gt;
-
-&lt;h3 id=&quot;there-are-a-few-things-that-you-should-know-up-front&quot;&gt;There are a few things that you should know up-front:&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Ghost is designed for ambitious, professional publishers who want to actively build a business around their content. That’s who it works best for. If you’re using Ghost for some other purpose, that’s fine too - but it might not be the best choice for you.&lt;/li&gt;
-  &lt;li&gt;The entire platform can be modified and customized to suit your needs, which is very powerful, but doing so &lt;strong&gt;does&lt;/strong&gt; require some knowledge of code. Ghost is not necessarily a good platform for beginners or people who just want a simple personal blog.&lt;/li&gt;
-  &lt;li&gt;For the best experience we recommend downloading the Ghost Desktop App for your computer, which is the best way to access your Ghost site on a desktop device.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Ghost is made by an independent non-profit organisation called the Ghost Foundation. We are 100% self funded by revenue from our &lt;a href=&quot;https://ghost.org/pricing&quot;&gt;Ghost(Pro)&lt;/a&gt; service, and every penny we make is re-invested into funding further development of free, open source technology for modern journalism.&lt;/p&gt;
-
-&lt;p&gt;The main thing you’ll want to read about next is probably: &lt;a href=&quot;https://demo.ghost.io/the-editor/&quot;&gt;the Ghost editor&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Once you’re done reading, you can simply delete the default &lt;strong&gt;Ghost&lt;/strong&gt; user from your team to remove all of these introductory posts!&lt;/p&gt;</content><author><name>Ghost</name></author><category term="test-page" /><summary type="html">Hey! Welcome to Ghost, it’s great to have you :)</summary></entry><entry><title type="html">The Businessman &amp;amp; The Fisherman</title><link href="http://localhost:4000/the-businessman-and-fisherman" rel="alternate" type="text/html" title="The Businessman &amp; The Fisherman" /><published>2014-08-12T19:18:00+09:00</published><updated>2014-08-12T19:18:00+09:00</updated><id>http://localhost:4000/the-businessman-and-fisherman</id><content type="html" xml:base="http://localhost:4000/the-businessman-and-fisherman">&lt;p&gt;An American businessman took a vacation to a small coastal Mexican village on doctor’s orders. Unable to sleep after an urgent phone call from the office the first morning, he walked out to the pier to clear his head. A small boat with just one fisherman had docked, and inside the boat were several large yellowfin tuna. The American complimented the Mexican on the quality of his fish.&lt;/p&gt;
-
-&lt;p&gt;“How long did it take you to catch them?” the American asked.&lt;/p&gt;
-
-&lt;p&gt;“Only a little while,” the Mexican replied in surprisingly good English.&lt;/p&gt;
-
-&lt;p&gt;“Why don’t you stay out longer and catch more fish?” the American then asked.&lt;/p&gt;
-
-&lt;p&gt;“I have enough to support my family and give a few to friends,” the Mexican said as he unloaded them into a basket.&lt;/p&gt;
-
-&lt;p&gt;“But… What do you do with the rest of your time?”&lt;/p&gt;
-
-&lt;p&gt;The Mexican looked up and smiled. “I sleep late, fish a little, play with my children, take a siesta with my wife, Julia, and stroll into the village each evening, where I sip wine and play guitar with my amigos. I have a full and busy life, señor.”&lt;/p&gt;
-
-&lt;p&gt;The American laughed and stood tall. “Sir, I’m a Harvard M.B.A. and can help you. You should spend more time fishing, and with the proceeds, buy a bigger boat. In no time, you could buy several boats with the increased haul. Eventually, you would have a fleet of fishing boats.”&lt;/p&gt;
-
-&lt;p&gt;He continued, “Instead of selling your catch to a middleman, you would sell directly to the consumers, eventually opening your own cannery. You would control the product, processing, and distribution. You would need to leave this small coastal fishing village, of course, and move to Mexico City, then to Los Angeles, and eventually to New York City, where you could run your expanded enterprise with proper management.&lt;/p&gt;
-
-&lt;p&gt;The Mexican fisherman asked, “But, señor, how long will all this take?”&lt;/p&gt;
-
-&lt;p&gt;To which the American replied, “15-20 years, 25 tops.”&lt;/p&gt;
-
-&lt;p&gt;“But what then, señor?”&lt;/p&gt;
-
-&lt;p&gt;The American laughed and said, “That’s the best part. When the time is right, you would announce an IPO and sell your company stock to the public and become very rich. You would make millions.”&lt;/p&gt;
-
-&lt;p&gt;“Millions señor? Then what?”&lt;/p&gt;
-
-&lt;p&gt;“Then you would retire and move to a small coastal fishing village, where you would sleep late, fish a little, play with your kids, take a siesta with your wife, and stroll in to the village in the evenings where you could sip wine and play your guitar with your amigos.”&lt;/p&gt;
-
-&lt;p&gt;Adapted from the “Anekdote zur Senkung der Arbeitsmoral” by &lt;strong&gt;Heinrich Böll&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;An influential German write and Nobel Prize for Literature in 1972.&lt;/p&gt;</content><author><name>Hannah Wolfe</name></author><category term="test-page" /><summary type="html">An American businessman took a vacation to a small coastal Mexican village on doctor’s orders. Unable to sleep after an urgent phone call from the office the first morning, he walked out to the pier to clear his head. A small boat with just one fisherman had docked, and inside the boat were several large yellowfin tuna. The American complimented the Mexican on the quality of his fish.</summary></entry><entry><title type="html">I Have a Dream</title><link href="http://localhost:4000/i-have-a-dream" rel="alternate" type="text/html" title="I Have a Dream" /><published>1963-08-28T19:18:00+09:00</published><updated>1963-08-28T19:18:00+09:00</updated><id>http://localhost:4000/i-have-a-dream</id><content type="html" xml:base="http://localhost:4000/i-have-a-dream">&lt;p&gt;I am happy to join with you today in what will go down in history as the greatest demonstration for freedom in the history of our nation.&lt;/p&gt;
-
-&lt;p&gt;Five score years ago, a great American, in whose symbolic shadow we stand today, signed the Emancipation Proclamation. This momentous decree came as a great beacon light of hope to millions of Negro slaves who had been seared in the flames of withering injustice. It came as a joyous daybreak to end the long night of their captivity.&lt;/p&gt;
-
-&lt;p&gt;But one hundred years later, the Negro still is not free. One hundred years later, the life of the Negro is still sadly crippled by the manacles of segregation and the chains of discrimination. One hundred years later, the Negro lives on a lonely island of poverty in the midst of a vast ocean of material prosperity. One hundred years later, the Negro is still languished in the corners of American society and finds himself an exile in his own land. And so we’ve come here today to dramatize a shameful condition.&lt;/p&gt;
-
-&lt;p&gt;In a sense we’ve come to our nation’s capital to cash a check. When the architects of our republic wrote the magnificent words of the Constitution and the Declaration of Independence, they were signing a promissory note to which every American was to fall heir. This note was a promise that all men, yes, black men as well as white men, would be guaranteed the “unalienable Rights” of “Life, Liberty and the pursuit of Happiness.” It is obvious today that America has defaulted on this promissory note, insofar as her citizens of color are concerned. Instead of honoring this sacred obligation, America has given the Negro people a bad check, a check which has come back marked “insufficient funds.”&lt;/p&gt;
-
-&lt;p&gt;But we refuse to believe that the bank of justice is bankrupt. We refuse to believe that there are insufficient funds in the great vaults of opportunity of this nation. And so, we’ve come to cash this check, a check that will give us upon demand the riches of freedom and the security of justice.&lt;/p&gt;
-
-&lt;p&gt;We have also come to this hallowed spot to remind America of the fierce urgency of Now. This is no time to engage in the luxury of cooling off or to take the tranquilizing drug of gradualism. Now is the time to make real the promises of democracy. Now is the time to rise from the dark and desolate valley of segregation to the sunlit path of racial justice. Now is the time to lift our nation from the quicksands of racial injustice to the solid rock of brotherhood. Now is the time to make justice a reality for all of God’s children.&lt;/p&gt;
-
-&lt;p&gt;It would be fatal for the nation to overlook the urgency of the moment. This sweltering summer of the Negro’s legitimate discontent will not pass until there is an invigorating autumn of freedom and equality. Nineteen sixty-three is not an end, but a beginning. And those who hope that the Negro needed to blow off steam and will now be content will have a rude awakening if the nation returns to business as usual. And there will be neither rest nor tranquility in America until the Negro is granted his citizenship rights. The whirlwinds of revolt will continue to shake the foundations of our nation until the bright day of justice emerges.&lt;/p&gt;
-
-&lt;p&gt;But there is something that I must say to my people, who stand on the warm threshold which leads into the palace of justice: In the process of gaining our rightful place, we must not be guilty of wrongful deeds. Let us not seek to satisfy our thirst for freedom by drinking from the cup of bitterness and hatred. We must forever conduct our struggle on the high plane of dignity and discipline. We must not allow our creative protest to degenerate into physical violence. Again and again, we must rise to the majestic heights of meeting physical force with soul force.&lt;/p&gt;
-
-&lt;p&gt;The marvelous new militancy which has engulfed the Negro community must not lead us to a distrust of all white people, for many of our white brothers, as evidenced by their presence here today, have come to realize that their destiny is tied up with our destiny. And they have come to realize that their freedom is inextricably bound to our freedom.&lt;/p&gt;
-
-&lt;p&gt;We cannot walk alone.&lt;/p&gt;
-
-&lt;p&gt;And as we walk, we must make the pledge that we shall always march ahead.&lt;/p&gt;
-
-&lt;p&gt;We cannot turn back.&lt;/p&gt;
-
-&lt;p&gt;There are those who are asking the devotees of civil rights, “When will you be satisfied?” We can never be satisfied as long as the Negro is the victim of the unspeakable horrors of police brutality. We can never be satisfied as long as our bodies, heavy with the fatigue of travel, cannot gain lodging in the motels of the highways and the hotels of the cities. We cannot be satisfied as long as the negro’s basic mobility is from a smaller ghetto to a larger one. We can never be satisfied as long as our children are stripped of their self-hood and robbed of their dignity by signs stating: “For Whites Only.” We cannot be satisfied as long as a Negro in Mississippi cannot vote and a Negro in New York believes he has nothing for which to vote. No, no, we are not satisfied, and we will not be satisfied until “justice rolls down like waters, and righteousness like a mighty stream.”&lt;/p&gt;
-
-&lt;p&gt;I am not unmindful that some of you have come here out of great trials and tribulations. Some of you have come fresh from narrow jail cells. And some of you have come from areas where your quest – quest for freedom left you battered by the storms of persecution and staggered by the winds of police brutality. You have been the veterans of creative suffering. Continue to work with the faith that unearned suffering is redemptive. Go back to Mississippi, go back to Alabama, go back to South Carolina, go back to Georgia, go back to Louisiana, go back to the slums and ghettos of our northern cities, knowing that somehow this situation can and will be changed.&lt;/p&gt;
-
-&lt;p&gt;Let us not wallow in the valley of despair, I say to you today, my friends.&lt;/p&gt;
-
-&lt;p&gt;And so even though we face the difficulties of today and tomorrow, I still have a dream. It is a dream deeply rooted in the American dream.&lt;/p&gt;
-
-&lt;p&gt;I have a dream that one day this nation will rise up and live out the true meaning of its creed: “We hold these truths to be self-evident, that all men are created equal.”&lt;/p&gt;
-
-&lt;p&gt;I have a dream that one day on the red hills of Georgia, the sons of former slaves and the sons of former slave owners will be able to sit down together at the table of brotherhood.&lt;/p&gt;
-
-&lt;p&gt;I have a dream that one day even the state of Mississippi, a state sweltering with the heat of injustice, sweltering with the heat of oppression, will be transformed into an oasis of freedom and justice.&lt;/p&gt;
-
-&lt;p&gt;I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin but by the content of their character.&lt;/p&gt;
-
-&lt;p&gt;I have a &lt;strong&gt;dream&lt;/strong&gt; today!&lt;/p&gt;
-
-&lt;p&gt;I have a dream that one day, down in Alabama, with its vicious racists, with its governor having his lips dripping with the words of “interposition” and “nullification” – one day right there in Alabama little black boys and black girls will be able to join hands with little white boys and white girls as sisters and brothers.&lt;/p&gt;
-
-&lt;p&gt;I have a &lt;strong&gt;dream&lt;/strong&gt; today!&lt;/p&gt;
-
-&lt;p&gt;I have a dream that one day every valley shall be exalted, and every hill and mountain shall be made low, the rough places will be made plain, and the crooked places will be made straight; “and the glory of the Lord shall be revealed and all flesh shall see it together.”&lt;/p&gt;
-
-&lt;p&gt;This is our hope, and this is the faith that I go back to the South with.&lt;/p&gt;
-
-&lt;p&gt;With this faith, we will be able to hew out of the mountain of despair a stone of hope. With this faith, we will be able to transform the jangling discords of our nation into a beautiful symphony of brotherhood. With this faith, we will be able to work together, to pray together, to struggle together, to go to jail together, to stand up for freedom together, knowing that we will be free one day.&lt;/p&gt;
-
-&lt;p&gt;And this will be the day – this will be the day when all of God’s children will be able to sing with new meaning:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;My country ‘tis of thee, sweet land of liberty, of thee I sing.&lt;/p&gt;
-
-  &lt;p&gt;Land where my fathers died, land of the Pilgrim’s pride,&lt;/p&gt;
-
-  &lt;p&gt;From every mountainside, let freedom ring!&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;And if America is to be a great nation, this must become true.&lt;/p&gt;
-
-&lt;p&gt;And so let freedom ring from the prodigious hilltops of New Hampshire.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Let freedom ring from the mighty mountains of New York.&lt;/p&gt;
-
-  &lt;p&gt;Let freedom ring from the heightening Alleghenies of Pennsylvania.&lt;/p&gt;
-
-  &lt;p&gt;Let freedom ring from the snow-capped Rockies of Colorado.&lt;/p&gt;
-
-  &lt;p&gt;Let freedom ring from the curvaceous slopes of California.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;But not only that:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Let freedom ring from Stone Mountain of Georgia.&lt;/p&gt;
-
-  &lt;p&gt;Let freedom ring from Lookout Mountain of Tennessee.&lt;/p&gt;
-
-  &lt;p&gt;Let freedom ring from every hill and molehill of Mississippi.&lt;/p&gt;
-
-  &lt;p&gt;From every mountainside, let freedom ring.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;And when this happens, and when we allow freedom ring, when we let it ring from every village and every hamlet, from every state and every city, we will be able to speed up that day when all of God’s children, black men and white men, Jews and Gentiles, Protestants and Catholics, will be able to join hands and sing in the words of the old Negro spiritual:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Free at last! Free at last!&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Thank God Almighty, we are free at last!&lt;/em&gt;&lt;/p&gt;</content><author><name>martin</name></author><category term="test-page" /><summary type="html">I am happy to join with you today in what will go down in history as the greatest demonstration for freedom in the history of our nation.</summary></entry></feed>
+&lt;p&gt;이상 포스팅을 마치겠습니다.&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">Java - Thread Tutorial (1) : Thread 와 Runnable</summary></entry></feed>
