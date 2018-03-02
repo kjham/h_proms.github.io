@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-02T16:23:39+09:00</updated><id>http://localhost:4000/</id><title type="html">SWDEVLAB</title><subtitle>Software Developement Laboratory</subtitle><entry><title type="html">(Java) Thread Tutorial (2)</title><link href="http://localhost:4000/java-executorservice" rel="alternate" type="text/html" title="(Java) Thread Tutorial (2)" /><published>2018-02-21T09:00:00+09:00</published><updated>2018-02-21T09:00:00+09:00</updated><id>http://localhost:4000/java-executorservice</id><content type="html" xml:base="http://localhost:4000/java-executorservice">&lt;p&gt;Java - Thread Tutorial (2) : ExecutorService&lt;/p&gt;
+
+&lt;p&gt;이번 포스팅에서는 Multi-Thread 를 사용하기 좋은 ExecutorService 를 소개하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;ExecutorService 는 Thread와 비교하여 다음과 같은 장점이 있습니다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;여러 Thread 에 대한 결과 값을 개별적으로 받을 수 있습니다.&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;이상입니다. 이번 포스팅을 마치도록 하겠습니다.&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">Java - Thread Tutorial (2) : ExecutorService</summary></entry><entry><title type="html">먼저 숲을 보고 나무를 보라</title><link href="http://localhost:4000/religion-bible-panorama-1" rel="alternate" type="text/html" title="먼저 숲을 보고 나무를 보라" /><published>2018-02-19T09:00:00+09:00</published><updated>2018-02-19T09:00:00+09:00</updated><id>http://localhost:4000/religion-bible-panorama-1</id><content type="html" xml:base="http://localhost:4000/religion-bible-panorama-1">&lt;p&gt;&lt;strong&gt;Chapter 01 : 먼저 숲을 보고 나무를 보라&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;/religion-bible-panorama-0&quot;&gt;Chapter 00 : BIBLE PANORAMA 를 시작하며 …&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Chapter 02 : 여덟 기둥으로 성경의 맥을 잡아라&lt;/li&gt;
+    &lt;li&gt;Chapter 03 : 구약 시대를 알아야 하나님의 마음이 보인다&lt;/li&gt;
+    &lt;li&gt;Chapter 04 : 지도로 보면 구약이 더 입체적으로 보인다&lt;/li&gt;
+    &lt;li&gt;Chapter 05 : 구약 드라마 속 줄거리의 핵심을 잡는다&lt;/li&gt;
+    &lt;li&gt;Chapter 06 : 하나님의 드라마가 사람을 바꾼다&lt;/li&gt;
+    &lt;li&gt;Chapter 07 : 구약의 드라마로 최고의 인생을 배운다&lt;/li&gt;
+    &lt;li&gt;Chapter 08 : 침묵에도 뜻이 있다&lt;/li&gt;
+    &lt;li&gt;Chapter 09 : 신약 시대를 알아야 예수님의 은혜를 누린다&lt;/li&gt;
+    &lt;li&gt;Chapter 10 : 복음서를 지도로 보면 예수님이 더 입체적으로 보인다&lt;/li&gt;
+    &lt;li&gt;Chapter 11 : 교회 시대를 지도로 보면 성령님의 역사가 더 입체적으로 보인다&lt;/li&gt;
+    &lt;li&gt;Chapter 12 : 성경의 모든 초점은 예수 그리스도이다&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;대부분의 크리스천들은 파노라마처럼 펼쳐진 전체 그림을 보지 못하고 단지 수 많은 조각만을 봅니다.&lt;br /&gt;
+또한, 퍼즐 조각의 의미를 벗어나 다른 조각과 억지로 끼워 맞추기도 합니다.&lt;br /&gt;
+이번 포스팅에서는 성경 안의 퍼즐 조각을 보다 올바르게 접근하기 위한 방향성을 제시할 것입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. 기본적인 성경 접근법&lt;/strong&gt;&lt;br /&gt;
+성경에는 접근하는 방법이 두 가지가 있습니다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;종합적 접근 방법&lt;br /&gt;
+큰 그림으로 성경을 접근하는 방법입니다. 이것에 그치면 세세한 광경을 놓치기 쉽지요.&lt;/li&gt;
+  &lt;li&gt;분석적 접근 방법&lt;br /&gt;
+어느 한 곳을 깊이 파내려가는 방법입니다. 앞뒤 문맥을 보지 않는다면, 올바른 해석을 하지 못할 수도 있지요.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;그렇다면? 어떻게 해야 할까요?&lt;br /&gt;
+이상적인 순서는 전체를 먼저 본 뒤 부분을 보고, 다시 부분을 전체와 연관지어 생각하는 것입니다.&lt;/p&gt;
+
+&lt;p&gt;일반적으로 성경은 일곱 가지 논리적 단계에 따라 접근할 수 있습니다.&lt;br /&gt;
+&lt;img src=&quot;/assets\images\religion_bible_panorama_1-1.jpg&quot; alt=&quot;일곱가지단계&quot; class=&quot;center-image&quot; /&gt; 
+이 때,  저자가 제안하는 방법이 있습니다.&lt;/p&gt;
+
+&lt;p&gt;만약 ‘문장’ 을 가리키는 것을 분석하고자 한다면..&lt;br /&gt;
+최소 그 위 단계인 ‘단락’ 을 먼저 보고, ‘문장’ 에 대해 분석하십시오.&lt;/p&gt;
+
+&lt;p&gt;‘단락’ 에 대해 분석하고자 한다면, ‘장’을 먼저 보십시오.&lt;br /&gt;
+즉, 한 단계 위의 것을 먼저 보라고 권유하고 있습니다.&lt;/p&gt;
+
+&lt;p&gt;부분을 전체 그림과 연결시켜서 개관하기를 원한다면 종합이 될 것이고,&lt;br /&gt;
+개별적인 부분을 그 자체로 탐구하기를 원한다면 분석이 될 것입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. 성경 조감의 중요성&lt;/strong&gt;&lt;br /&gt;
+조감이란? 새가 높은 하늘에서 아래를 내려다 보는 것처럼 전체를 한 눈으로 관찰한다는 뜻입니다.&lt;br /&gt;
+즉, 성격을 조감한 뒤 각 퍼즐 조각들이 어디에 끼워 맞춰야 할 지 알수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;이는 성경에 국한된 것이 아닙니다.&lt;br /&gt;
+성경은 창조부터 모든 것의 완성에 이르기까지 계속되는 하나님의 뜻과 길에 관해 말합니다.&lt;/p&gt;
+
+&lt;p&gt;즉, 조감하는 과정을 통해 우리 시대를 좀 더 잘 분별할 수 있습니다.&lt;br /&gt;
+이미 성취된 말씀을 깨닫게 될 때, 이 세대에 이루어지고 있는 예언을 올바르게 예언할 수 있을 것이고,&lt;br /&gt;
+하나님께서 자신이 선포한 말씀을 반드시 이루신다고 확신할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;교리란? 신학이란? 성경의 전체적인 주제를 조직적으로 다루는 쳬계라고 합니다.&lt;br /&gt;
+성경을 전체적으로 조감함으로써 기독고 신앙의 교리를 깨달을 수 있는 기반을 얻을 수 있을 것입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. 이 책에서 얻는 유익&lt;/strong&gt;&lt;br /&gt;
+이 책을 의욕적으로 읽는다면, 다음 내용을 충분히 소화할 수 있을 것입니다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;성경의 새 골격 또는 여덟 골격&lt;/li&gt;
+  &lt;li&gt;한 단락으로 된 성경의 역사&lt;/li&gt;
+  &lt;li&gt;성경의 모든 초점은 예수 그리스도께 고정됨&lt;/li&gt;
+  &lt;li&gt;각 행이 성경의 각 권을 묘사하는 시&lt;/li&gt;
+  &lt;li&gt;성경을 한눈에 보여주는 세 가지 지도&lt;/li&gt;
+  &lt;li&gt;신구약 각각에 대한 역사적인 열두 시대&lt;/li&gt;
+  &lt;li&gt;성경 66권의 간략한 주제와 개요&lt;/li&gt;
+  &lt;li&gt;신구약 비교 및 대조&lt;/li&gt;
+  &lt;li&gt;신구약 사이에 있는 400녀의 침묵기의 중요성&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;4. 성경에 대한 기초 상식&lt;/strong&gt;&lt;br /&gt;
+성경은 전체 66권 중 39권의 구약과 27권의 신약으로 이루어져 있습니다.&lt;br /&gt;
+열두 제자 중 베야요(베드로 야고보 요한) 3명 과 나머지 9명이라는 수자를 볼 때,&lt;br /&gt;
+구약은 3과 9를 이어 붙여 39권이고, 신약은 3과 9를 곱하여 27권이라고 하여 쉽게 외울 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5. 성경의 세 골격&lt;/strong&gt;&lt;br /&gt;
+성격 66권은 내용에 따라 역사(History), 체험(Experience), 예언(Prophecy) 세 범주로 묶을 수 있습니다.&lt;br /&gt;
+역사 범주는 구약 17권과 신약 5권 총 22권으로,&lt;br /&gt;
+체험 범주는 구약 5권과 신약 21권으로,&lt;br /&gt;
+예언 범주는 구약은약 17권과 신약 1권으로 이루어져 있습니다. 
+&lt;img src=&quot;/assets\images\religion_bible_panorama_1-2.jpg&quot; alt=&quot;성경의세골격&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6. 성경의 역사 요약&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;구약&lt;/strong&gt;&lt;br /&gt;
+하나님께서 세상을 창조하신 후 인간은 스스로 타락하고 말았다. 
+그래서 하나님께서는 큰 홍수를 일으켜 인간을 심판하셨고 또 교만해진 인간들을 바벨탑에서 온 땅으로 흩으셨다. 
+이후에 아브라함과 이삭과 야곱은 히브리 민족의 조상이 되었다. 
+애굽에서 큰 집단을 이룬 히브리 민족은 모세의 영도 아래 그곳을 빠져나왔다. 
+그들은 40년 동안 광야를 유랑하며 배우고, 시험을 당하고, 벌을 받고, 다시 배우다가 마침내 여호수아를 따라 약속의 땅으로 들어갔다. 
+원래 히브리 민족에게는 왕이 없었다. 간헐적으로 사사들이 일어나 그들을 이끌었다. 
+그러다가 사무엘을 마지막으로 14명의 사사 시대가 막을 내리고 마침내 왕정이 시작되어 사울, 다윗, 솔로몬이 차례로 왕위에 올랐다. 
+솔로몬이 죽은 뒤, 히브리 민족은 남쪽 왕국(유다)과 북족 왕국(이스라엘)으로 분열되었다. 
+북이스라엘은 19명의 사악한 왕들의 통치를 받은 뒤에 앗수르에 의해 멸망당하여 백성들이 뿔뿔이 흩어졌다. 
+남유다는 20명의 왕들의 통치를 받은 다음에 바벨론 땅으로 잡혀갔다. 
+그런데 바사(페르시아)가 바벨론을 정복하면서 남유다 백성들은 70년간의 바벨론 포로생활을 끝내고 고향으로 돌아갈 수 있었다. 
+이때 에스라와 느헤미야가 백성들을 이끌고 고향으로 귀한했고, 바사의 왕비가 된 에스더는 적의 위협으로부터 동포를 구했다. 
+그리고 이때부터 ‘침묵기’(신구약 중간기)라 불리는 400년의 시간이 흐른 뒤, 마침내 세례 요한과 예수님이 등장했다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;신약&lt;/strong&gt;&lt;br /&gt;
+하늘이 다시 열리고 천사들이 세례 요한과 예수님의 출생을 준비했다. 
+그로부터 30년쯤 후에 세례 요한은 이스라엘 백성들을 향해 회개의 세례를 받으라고 촉구했다. 
+육신을 입고 세상에 오신 하나님의 아들 예수 그리스도는 3년 동안 사역하면서 하나님이 어떤 분인지 보이셨고 또 하나님의 길을 가르치셨다. 
+예수님은 열두 제자들을 세워 땅에서 자신의 일을 지속하도록 준비시키신 다음, 모든 인간의 죄를 위해 자발적으로 십자가의 죽음을 택하셨고, 죽은 자 가운데서 일어나 하늘로 올라가셨다. 
+이후에 제자들은 오순절 성령 강림 사건을 체험하여 성령의 권능을 힘입었다. 
+그들은 주로 유대인들을 대상으로 예수님의 구원에 관한 좋은 소식을 전했으며, 사도 바울은 광범위하게 전도여행을 하면서 이방인들에게 복음을 전파했다. 
+바울은 신약성경 가운데 적어도 13권의 서신서를 기록했다. 
+사도 요한은 종말까지의 세상을 향한 하나님의 계획을 기록한 책 ‘요한계시록’을 썼다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;7. 성경의 다양성과 통일성&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;성경은 거의 1만 킬로미터를 포괄하는 지역의 10개 나라에 거주하며 약 20가지의 서로 다른 직업에 종사하는 40명의 기자들이 기록했다.&lt;/li&gt;
+  &lt;li&gt;성경은 히브리어, 헬라어, 아람어 세 가지어로 기록되었다.&lt;/li&gt;
+  &lt;li&gt;성경은 총 66권, 1,189장으로 구성되어 있다.&lt;/li&gt;
+  &lt;li&gt;성경은 1600년에 걸쳐 기록되었다. (욥기까지 간주하면 500년 늘어난다.)&lt;/li&gt;
+  &lt;li&gt;성경은 모든 주제들이 여러 문학 형태(시, 산문, 소설, 묵시, 자서전, 학술서, 역사서 등)로 기록되었다.&lt;/li&gt;
+  &lt;li&gt;성경은 최소 10가지의 다양한 수단(펜, 끌, 가죽, 진흙, 파피루스, 돌 등)으로 기록되었다.&lt;/li&gt;
+  &lt;li&gt;성경은 2,930명의 인물이 등장한다.&lt;/li&gt;
+  &lt;li&gt;성경에는 등장인물들의 주요 활동 무대로 1,551개의 지명이 언급되었다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이렇게 다양한 요소를 갖고 있음에도, 성경은 매우 통일적이며 일관성을 유지하고 있다.&lt;br /&gt;
+그것은 예수 그리스도께 모든 초점이 맞추어져 있기 때문이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;8. 성경의 특별한 용어&lt;/strong&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets\images\religion_bible_panorama_1-3.jpg&quot; alt=&quot;성경의세골격&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;9. 성경, 얼마나 잘 알고 있나?&lt;/strong&gt;
+성경의 주된 목적은 하나님을 계시하고 하나님의 구권의 길을 밝히는 것이다.&lt;br /&gt;
+황금률, 헌금, 기도, 교회 등 애쓰는 것으로 구원을 얻는 것은 모두 틀린 말이다.&lt;br /&gt;
+성경에서 말하는 구원은 인간의 힘으로는 절대로 얻을 수 없고 하나님의 선물로만 주어지는 것이기 때문이다.&lt;/p&gt;
+
+&lt;p&gt;천국의 영광의 문 앞에 하나님께서 안으로 들어보내야 할 까닭을 물어보신다면?&lt;br /&gt;
+하나님께 인정받을 수 있는 유일한 대답은&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;“그리스도께서 우리의 죄를 대신하여 갈보리 십자가에서 죽으셨다는 것을 믿습니다”
+라고 증거하는 것이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;천국에 갈 수 있다는 확신을 자신이 아닌 구주께로 확실히 옮기자.&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="religion-lab" /><summary type="html">Chapter 01 : 먼저 숲을 보고 나무를 보라</summary></entry><entry><title type="html">(Java) Logging Introduction (1)</title><link href="http://localhost:4000/java-log4j" rel="alternate" type="text/html" title="(Java) Logging Introduction (1)" /><published>2018-02-19T09:00:00+09:00</published><updated>2018-02-19T09:00:00+09:00</updated><id>http://localhost:4000/java-log4j</id><content type="html" xml:base="http://localhost:4000/java-log4j">&lt;p&gt;&lt;strong&gt;Java - Logging Introduction (1) : 종류&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Application Project 를 진행하면 필수 요소 중 하나가 Log 를 남기는 Framework 구성입니다.
+제품 개발이나 운영 시, 발생하는 문제를 추적하여 원인을 파악하기 위함이죠.&lt;/p&gt;
+
+&lt;p&gt;굉장히 유용한 Framework 이기 때문에 종류 또한 꽤 다양합니다.
+또한, Logging 작업이 굉장히 많은 Project 를 위해 관리해주는 또 다른 Framework 가 있기도 하죠.
+심지어 비용을 지불하고 구매할 정도로 막강한 기능을 갖고 있죠.&lt;/p&gt;
+
+&lt;p&gt;우선, 종류에 대해 간단히 살펴보고 자세히 알아보도록 하겠습니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Java Util Logging (JUL)
+제가 직접 Performance Test 를 한 것은 아니지만, Log4J 와 Logback 에 비해 평가가 그리 좋지 못합니다.
+평가의 척도는 속도나 기능적인 면이지요.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Log4J 1.x
+지금까지 가장 많이 사용된 Logging Framwork 일겁니다. 그러나, Log4J2 와 Logback 의 등장으로 사용 빈도가 점차 줄어들고 있지 않나 생각됩니다.
+공식적으로 Log4J 1.x 는 유지보수/개발이 끝났기 때문이죠.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Log4J 2.x
+Log4J 후속작이며, 많이 활성화 되고 있는 Logging Framework 입니다.
+나중에 다루게 된다면, Log4J 2.x 와 Logback 비교가 꽤 유용한 공부가 될 것 같습니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Logback
+마찬가지로 Log4J의 후속작입니다.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;img src=&quot;https://beyondj2ee.wordpress.com/2012/11/09/logback-%EC%82%AC%EC%9A%A9%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-reasons-to-prefer-logback-over-log4j/&quot; alt=&quot;참고 주소&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;SLF4J Simple Logging (SLF4J SL)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;이상입니다. 포스팅을 마치겠습니다.&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">Java - Logging Introduction (1) : 종류</summary></entry><entry><title type="html">(Java) JBOSS</title><link href="http://localhost:4000/java-jboss" rel="alternate" type="text/html" title="(Java) JBOSS" /><published>2018-02-19T09:00:00+09:00</published><updated>2018-02-19T09:00:00+09:00</updated><id>http://localhost:4000/java-jboss</id><content type="html" xml:base="http://localhost:4000/java-jboss">&lt;p&gt;&lt;strong&gt;Java - JBOSS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;JBossAS란?&lt;/p&gt;
+
+&lt;p&gt;JBossAS(JBoss Application Server)란 오픈소스 Java EE 서버입니다. Java EE 서버란 Java Enterprise Edition(EE) 표준에 따라 구현된 서버를 의미합니다. Java EE 서버를 흔희 Java EE 서버를 WAS(Web Application Server)라고 부르는데 이러한 서버는 BEA WebLogic, Tmax JEUS, IBM WebSphere, Adobe JRUN, JBoss, Apache Geronimo 등이 있습니다.&lt;/p&gt;
+
+&lt;p&gt;Apache Tomcat과 JBossAS&lt;/p&gt;
+
+&lt;p&gt;Apache Tomcat은 Java EE 표준에 포함되어 있는 JSP, Servlet, JSTL 등과 같은 웹 애플리케이션 개발을 위한 표준을 구현한 웹 컨테이너입니다. Java EE 표준에는 다양한 컨테이너가 정의되어 있는데 대표적인 컨테이너가 웹 컨테이너와 EJB 컨테이너입니다. 웹 애플리케이션을 개발하기 위해서 필요한 웹 컨테이너를 구현한 것이 바로 Apache Tomcat이며, JBossAS는 Java EE 표준에 포함되어 있는 모든 표준을 구현한 완전한 Java EE 서버라고 할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;예를 들면 EJB나 JMS를 사용한 애플리케이션을 개발하고자 하는 경우에는 반드시 JBossAS와 같은 Java EE 표준을 모두 구현한 서버를 사용해야 겠습니다. 그러나 단순한 웹 애플리케이션을 구현하는 경우에는 Apache Tomcat을 사용할 수 있습니다. JBossAS에는 기본적으로 Tomcat이 내장되어 있으므로 Tomcat을 사용했었던 사용자는 손쉽게 JBossAS로 웹 애플리케이션을 이전할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;출처: http://ssiso.net/cafe/club/club1/board1/content.php?board_code=jsp%7Csetting&amp;amp;idx=30224&amp;amp;club=jsp&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">Java - JBOSS</summary></entry><entry><title type="html">(Java) Logging Introduction (1)</title><link href="http://localhost:4000/database-oracle-query" rel="alternate" type="text/html" title="(Java) Logging Introduction (1)" /><published>2018-02-19T09:00:00+09:00</published><updated>2018-02-19T09:00:00+09:00</updated><id>http://localhost:4000/database-oracle-query</id><content type="html" xml:base="http://localhost:4000/database-oracle-query">&lt;p&gt;&lt;strong&gt;Java - Logging Introduction (1) : 종류&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Application Project 를 진행하면 필수 요소 중 하나가 Log 를 남기는 Framework 구성입니다.
+제품 개발이나 운영 시, 발생하는 문제를 추적하여 원인을 파악하기 위함이죠.&lt;/p&gt;
+
+&lt;p&gt;굉장히 유용한 Framework 이기 때문에 종류 또한 꽤 다양합니다.
+또한, Logging 작업이 굉장히 많은 Project 를 위해 관리해주는 또 다른 Framework 가 있기도 하죠.
+심지어 비용을 지불하고 구매할 정도로 막강한 기능을 갖고 있죠.&lt;/p&gt;
+
+&lt;p&gt;우선, 종류에 대해 간단히 살펴보고 자세히 알아보도록 하겠습니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Java Util Logging (JUL)
+제가 직접 Performance Test 를 한 것은 아니지만, Log4J 와 Logback 에 비해 평가가 그리 좋지 못합니다.
+평가의 척도는 속도나 기능적인 면이지요.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Log4J 1.x
+지금까지 가장 많이 사용된 Logging Framwork 일겁니다. 그러나, Log4J2 와 Logback 의 등장으로 사용 빈도가 점차 줄어들고 있지 않나 생각됩니다.
+공식적으로 Log4J 1.x 는 유지보수/개발이 끝났기 때문이죠.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Log4J 2.x
+Log4J 후속작이며, 많이 활성화 되고 있는 Logging Framework 입니다.
+나중에 다루게 된다면, Log4J 2.x 와 Logback 비교가 꽤 유용한 공부가 될 것 같습니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Logback
+마찬가지로 Log4J의 후속작입니다.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;img src=&quot;https://beyondj2ee.wordpress.com/2012/11/09/logback-%EC%82%AC%EC%9A%A9%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-reasons-to-prefer-logback-over-log4j/&quot; alt=&quot;참고 주소&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;SLF4J Simple Logging (SLF4J SL)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;이상입니다. 포스팅을 마치겠습니다.&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">Java - Logging Introduction (1) : 종류</summary></entry><entry><title type="html">Bible Panorama 를 시작하며</title><link href="http://localhost:4000/religion-bible-panorama-0" rel="alternate" type="text/html" title="Bible Panorama 를 시작하며" /><published>2018-02-19T09:00:00+09:00</published><updated>2018-02-19T09:00:00+09:00</updated><id>http://localhost:4000/religion-bible-panorama-0</id><content type="html" xml:base="http://localhost:4000/religion-bible-panorama-0">&lt;p&gt;&lt;strong&gt;BIBLE PANORAMA 를 시작하며 …&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;/religion-bible-panorama-1&quot;&gt;Chapter 01 : 먼저 숲을 보고 나무를 보라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Chapter 02 : 여덟 기둥으로 성경의 맥을 잡아라&lt;/li&gt;
+    &lt;li&gt;Chapter 03 : 구약 시대를 알아야 하나님의 마음이 보인다&lt;/li&gt;
+    &lt;li&gt;Chapter 04 : 지도로 보면 구약이 더 입체적으로 보인다&lt;/li&gt;
+    &lt;li&gt;Chapter 05 : 구약 드라마 속 줄거리의 핵심을 잡는다&lt;/li&gt;
+    &lt;li&gt;Chapter 06 : 하나님의 드라마가 사람을 바꾼다&lt;/li&gt;
+    &lt;li&gt;Chapter 07 : 구약의 드라마로 최고의 인생을 배운다&lt;/li&gt;
+    &lt;li&gt;Chapter 08 : 침묵에도 뜻이 있다&lt;/li&gt;
+    &lt;li&gt;Chapter 09 : 신약 시대를 알아야 예수님의 은혜를 누린다&lt;/li&gt;
+    &lt;li&gt;Chapter 10 : 복음서를 지도로 보면 예수님이 더 입체적으로 보인다&lt;/li&gt;
+    &lt;li&gt;Chapter 11 : 교회 시대를 지도로 보면 성령님의 역사가 더 입체적으로 보인다&lt;/li&gt;
+    &lt;li&gt;Chapter 12 : 성경의 모든 초점은 예수 그리스도이다&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;저자 &lt;strong&gt;“Terry Hall”&lt;/strong&gt;의 &lt;strong&gt;“Bible Panorama&lt;/strong&gt;를 통해 성경 공부를 하고자 합니다.&lt;/p&gt;
+
+&lt;p&gt;‘창세기’ 부터 ‘요한계시록’ 까지 한눈에 볼 수 있도록 쉽게 정리되어 있으며,
+&lt;strong&gt;구약시대, 신구약 중간, 신약 시대&lt;/strong&gt; 세 가지로 나누어 안내합니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Part 1 - 성경의 골격 파노라마&lt;/li&gt;
+  &lt;li&gt;Part 2 - 구약성경 파노라마&lt;/li&gt;
+  &lt;li&gt;Part 3 - 신구약 중간기 파노라마&lt;/li&gt;
+  &lt;li&gt;Part 4 - 신약성경 파노라마&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;약 두달정도 소요될 것으로 예상되네요.&lt;/p&gt;
+
+&lt;p&gt;성경을 바라보는 시각이 넓어지는 유익한 시간이 되길 바랍니다.&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="religion-lab" /><summary type="html">BIBLE PANORAMA 를 시작하며 …</summary></entry><entry><title type="html">(Java) Thread Tutorial (1)</title><link href="http://localhost:4000/java-thread-runnable" rel="alternate" type="text/html" title="(Java) Thread Tutorial (1)" /><published>2018-02-19T09:00:00+09:00</published><updated>2018-02-19T09:00:00+09:00</updated><id>http://localhost:4000/java-thread-runnable</id><content type="html" xml:base="http://localhost:4000/java-thread-runnable">&lt;p&gt;Java - Thread Tutorial (1) : Thread 와 Runnable&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Java&lt;/strong&gt;에서 여러 작업을 동시에 처리하고 싶은 경우나 비동기 적으로 작업을 수행하고자 할 때, Thread 라는 것을 사용합니다.&lt;/p&gt;
+
+&lt;p&gt;일반적으로 가장 많이 알려진 것은, Thread / Runnable 방식이 있습니다.
+Thread 는 Class로 정의되어 있고, 실제 기능 동작을 위한 추상 메소드를 포함하고 있습니다.
+따라서, Thread 만 사용하게 되는 경우 사용자 정의 클래스에 상속 받아서 사용해야 하지요.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c1&quot;&gt;/////* Thread 방식 예제 */////&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CustomThread&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Thread&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;// 기능 동작 정의&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;// CustomThread 선언&lt;/span&gt;
+		&lt;span class=&quot;nx&quot;&gt;CustomThread&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;customThread&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CustomThread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;// Thread 기능동작 시작&lt;/span&gt;
+		&lt;span class=&quot;nx&quot;&gt;customThread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;// Thread 완료 대기&lt;/span&gt;
+		&lt;span class=&quot;nx&quot;&gt;customThread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;MainApp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;// CustomThread 선언&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;CustomThread&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;customThread&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CustomThread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;// Thread 기능동작 시작&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;customThread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;그러나 불필요한 Thread 상속을 하고싶지 않을 수 있습니다.
+이 때 사용되는 것이 Interface 로 구현된 Runnable 입니다.
+Runnable 을 선언하고, 실제 기능 동작할 메소드를 추상메소드에 넣고 Thread에 전달하기만 하면 됩니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c1&quot;&gt;/////* Thread &amp;amp; Runnable 방식 예제 */////&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MainApp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]){&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;// CustomThread 선언&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;Runnable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;runnable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Runnable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+				&lt;span class=&quot;c1&quot;&gt;// 기능 동작 정의&lt;/span&gt;
+			&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;Thread&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;thread&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;runnable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;// Thread 기능동작 시작&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;// Thread 완료 대기&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Thread 는 비동기적으로 데이터를 처리합니다.
+비동기적이라는 것은 &lt;strong&gt;thread.start()&lt;/strong&gt; 에서 결과를 반환해주기 전까지 기다리지 않고, 바로 다음 코드를 진행한다는 겁니다.
+따라서, 작업이 완료되는 것을 기다리기 위해 &lt;strong&gt;thread.join()&lt;/strong&gt; 을 위 코드에서 사용하였습니다.&lt;/p&gt;
+
+&lt;p&gt;지금까지 Single-Thread 를 다루었습니다.
+Thread Class 를 이용하여 Multi-Thread 방식을 취하려면, 여러 개의 Thread를 생성해야 합니다.
+즉, List, Vector 등 자료구조로 Thread 에 대한 배열을 생성해야 하는 것이지요.&lt;/p&gt;
+
+&lt;p&gt;Multi-Thread 는 Java 의 ExecutorService 를 통해 소개하도록 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;이상 포스팅을 마치겠습니다.&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">Java - Thread Tutorial (1) : Thread 와 Runnable</summary></entry></feed>
