@@ -1,67 +1,85 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-04T20:40:43+09:00</updated><id>http://localhost:4000/</id><title type="html">SWDEVLAB</title><subtitle>Software Developement Laboratory</subtitle><entry><title type="html">고난을 이기는 감사</title><link href="http://localhost:4000/religion-bible-worship" rel="alternate" type="text/html" title="고난을 이기는 감사" /><published>2018-03-03T09:00:00+09:00</published><updated>2018-03-03T09:00:00+09:00</updated><id>http://localhost:4000/religion-bible-worship</id><content type="html" xml:base="http://localhost:4000/religion-bible-worship">&lt;p&gt;&lt;strong&gt;2018년 3월 4일, 번동평화교회 주일예배&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-07T15:08:06+09:00</updated><id>http://localhost:4000/</id><title type="html">SWDEVLAB</title><subtitle>Software Developement Laboratory</subtitle><entry><title type="html">(Java) ShellScript Tutorial</title><link href="http://localhost:4000/java-shellscript_tutorial" rel="alternate" type="text/html" title="(Java) ShellScript Tutorial" /><published>2018-03-06T09:00:00+09:00</published><updated>2018-03-06T09:00:00+09:00</updated><id>http://localhost:4000/java-shellscript_tutorial</id><content type="html" xml:base="http://localhost:4000/java-shellscript_tutorial">&lt;p&gt;&lt;strong&gt;Java - Shell-Script Tutorial&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;-&lt;strong&gt;빌립보서4장 6-7절&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;아무것도 염려하지 말고다만 모든일에 기도와 간구로, 너희 구할 것을 감사함으로 하나님께 아뢰라.
-그리하면 모든 지각에 뛰어난 하나님의 평강이 그리스도 예수 안에서 너희 마음과 생각을 지키시리라.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt; if [ 값1 조건식 값2 ];then
+   수행문
+ fi 
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;-&lt;strong&gt;다니엘 6장 10절&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;다니엘이 이 조서에 왕의 도장이 찍힌 것을 알고도 자기 집에 돌아가서는 윗방에 올라가 예루살렘으로 향한 창문을 열고 전에 하던대로 하루 세번씩 무릎을 꿇고 기도하며 그의 하나님께 감사하였더라&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt; if [ 값1 조건식 값2 -a 값1 조건식 값2 ];then
+   수행문
+ fi 
 
-&lt;p&gt;오늘 본문의 주요 등장 인물은 다니엘 입니다.&lt;/p&gt;
+ if [ 값1 조건식 값2 -o 값1 조건식 값2 ];then
+   수행문
+ fi
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;다니엘서를 먼저 간단히 알아봅시다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;변수 타입 선언 (declare)&lt;/strong&gt;
+$ declare -i a (a는 정수형 변수)
+$ a=12
+$ a=a+1 (let 필요 없음)
+$ echo $a
+이름	의미
+declare -r 변수	읽기 전용 변수로 선언
+declare -i변수	정수형 변수로 선언
+declare -a 변수	배열 변수로 선언
+declare -f	스크립트 안에정의된 모든 함수들을 보여준다.
+declare -f 함수	해당 함수 내용을 보여준다.
+declare -x 변수	환경변수로 export&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;저자&lt;/strong&gt;&lt;br /&gt;
-다니엘&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;기록연대&lt;/strong&gt;&lt;br /&gt;
-다니엘 생 말기에 바벨론 궁전에 있는동안 기록하였습니다.&lt;br /&gt;
-당시는 바사(페르시아) 의 바벨론 함락 후인 고레스 9년으로 추정됩니다. (BC 530년경)&lt;br /&gt;
-본서는 에스겔서와 동일한 역사적 배경을 정확히 반영하지만, 에스겔서보다 더 기간을 다루고 있습니다.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;산술 비교 연산&lt;/strong&gt;
+산술 비교 연산자	의미
+정수1 -eq정수2	두 정수가 같으면 참 아니면 거짓
+정수1 -ne 정수2	두 정수가 다르면 참 아니면 거짓
+정수1 -gt 정수2	정수1이 정수2보다 크면 참 아니면 거짓
+정수1 -ge 정수2	정수1이 정수2보다 크거나 같으면 참 아니면 거짓
+정수1 -lt 정수2	정수1이 정수2보다 작으면 참 아니면 거짓
+정수1 -le 정수2	정수1이 정수2보다 작거나 같으면 참 아니면 거짓&lt;/p&gt;
 
-&lt;p&gt;오늘 본문은 그 유명한 사자굴 속의 다니엘 이야기 중 일부분입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;문자열 비교 연산&lt;/strong&gt;
+문자열 비교 연산자	의미
+문자열1 == 문자열2	두 문자열이 같으면 참 아니면 거짓
+문자열1 != 문자열2	두 문자열이 다르면 참 아니면 거짓
+-n 문자열	문자열이 null이 아니면 참
+-z 문자열	문자열이 null이면 참&lt;/p&gt;
 
-&lt;p&gt;느부갓네살 왕의 신임을 받은 다니엘이 고위직이 되어가는 중에 시기와 질투를 갖는 사람들이 등장합니다.&lt;br /&gt;
-그래서 다니엘이 여전히 하나님을 향해 기도하는 모습을 왕에게 고해 사자굴에 던져지게 됩니다.&lt;br /&gt;
-이는 왕의 금령이 있었기 때문입니다. 왕 외에 어떤 신이나 사람에게 구하면 사자굴에 던질 것이라는 거였지요..&lt;br /&gt;
-그러나 굶주린 사자들의 입을 천사들이 봉하여 다니엘은 무사히 나오게 됩니다.&lt;br /&gt;
-그리고 왕은 고발한 이들을 사자굴에 넣게되고, 그들은 사자에게 잡아 먹힙니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;파일 관련 연산&lt;/strong&gt;
+파일 관련 연산자	의미
+-a 파일	해당 파일이 존재하면 참
+-e 파일	해당 파일이 존재하면 참
+-r 파일	사용자가 해당 파일을 읽을 수 있으면 참
+-w 파일	사용자가 해당 파일을 쓸 수 있으면 참
+-x 파일	사용자가 해당 파일을 실행할 수 있으면 참
+-o 파일	사용자가 해당 파일의 소유자이면 참
+-z 파일	해당 파일의 크기가 0이면 참
+-f 파일	해당 파일이 일반 파일이면 참
+-d 파일	해당 파일이 디렉터리이면 참&lt;/p&gt;
 
-&lt;p&gt;다니엘은 어떻게 무사할 수 있었을까요?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;파일 및 디렉토리 삭제&lt;/strong&gt;
+rm -fr directory/
+rm -fr file&lt;/p&gt;
 
-&lt;p&gt;일반적으로 이는 하나님을 전적으로 신뢰하는 다니엘의 믿음 때문이라고 합니다.&lt;br /&gt;
-이에 덧붙여, 오늘은 ‘감사’를 라는 관점으로 보고 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;압축 및 해제&lt;/strong&gt;
+tar -cvf test.tar abc b c d
+tar -xvf test.tar -C /home/etc&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;빌립보서 4장 6-7절
-    &lt;blockquote&gt;
-      &lt;p&gt;염려하지 말고, 감사함으로 하나님께 아뢰라. 그리하면 너를 지키시리라.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;골로새서 4장 2절
-    &lt;blockquote&gt;
-      &lt;p&gt;기도를 계속하고 기도에 감사함으로 깨어 있어라&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;chkconfig&lt;/strong&gt;
+chkconfig –list
+chkconfig –level 2345 [파일명] on&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">Java - Shell-Script Tutorial</summary></entry><entry><title type="html">(Java) Automic Tutorial</title><link href="http://localhost:4000/java-atomicreferencearray" rel="alternate" type="text/html" title="(Java) Automic Tutorial" /><published>2018-03-06T09:00:00+09:00</published><updated>2018-03-06T09:00:00+09:00</updated><id>http://localhost:4000/java-atomicreferencearray</id><content type="html" xml:base="http://localhost:4000/java-atomicreferencearray">&lt;p&gt;&lt;strong&gt;Java - Atomic Tutorial&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;즉, 감사가 없는 기도, 감사가 없는 찬송은 하나나님께 도달할 수 없다는 것입니다.&lt;/p&gt;
+&lt;p&gt;AtomicInteger&lt;/p&gt;
 
-&lt;p&gt;창문을 열어 하나님을 향해 기도할 때에, 감사함이 묻어나는 기도를 했을 것입니다.&lt;br /&gt;
-그러하기에 하나님의 평강이 다니엘을 지킨 것이라 믿습니다.&lt;/p&gt;
-
-&lt;p&gt;기도의 중심에는 하나님이 하시는 일에 대한 감사가 있습니다.&lt;/p&gt;
-
-&lt;p&gt;오늘 말씀의 제목처럼..&lt;br /&gt;
-고난 가운데 하나님께 감사함을 아뢰길 바랍니다.&lt;br /&gt;
-그리하여 하나님을 체험하고 신뢰 가운데 그와 청명한 교제를 누리길 바랍니다.&lt;/p&gt;
-
-&lt;p&gt;고난이 감사와 함께 일할 때, 하나님이 하시고자 하시는 역사를 드러냅니다.&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="religion-lab" /><summary type="html">2018년 3월 4일, 번동평화교회 주일예배</summary></entry><entry><title type="html">(Java) Thread Tutorial (2)</title><link href="http://localhost:4000/java-executorservice" rel="alternate" type="text/html" title="(Java) Thread Tutorial (2)" /><published>2018-02-21T09:00:00+09:00</published><updated>2018-02-21T09:00:00+09:00</updated><id>http://localhost:4000/java-executorservice</id><content type="html" xml:base="http://localhost:4000/java-executorservice">&lt;p&gt;Java - Thread Tutorial (2) : ExecutorService&lt;/p&gt;
+&lt;p&gt;AtomicLongMap&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">Java - Atomic Tutorial</summary></entry><entry><title type="html">(Java) Thread Tutorial (2)</title><link href="http://localhost:4000/java-executorservice" rel="alternate" type="text/html" title="(Java) Thread Tutorial (2)" /><published>2018-02-21T09:00:00+09:00</published><updated>2018-02-21T09:00:00+09:00</updated><id>http://localhost:4000/java-executorservice</id><content type="html" xml:base="http://localhost:4000/java-executorservice">&lt;p&gt;Java - Thread Tutorial (2) : ExecutorService&lt;/p&gt;
 
 &lt;p&gt;이번 포스팅에서는 Multi-Thread 를 사용하기 좋은 ExecutorService 를 소개하겠습니다.&lt;/p&gt;
 
