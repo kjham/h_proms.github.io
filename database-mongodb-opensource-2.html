@@ -11,7 +11,7 @@
 
 
 
-    <title>(Java) Logging Introduction (1)</title>
+    <title>(OpenSource MongoDB) CRUD 연산</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -29,24 +29,24 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Software Developement Laboratory" />
     <link rel="shortcut icon" href="http://localhost:4000/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="http://localhost:4000/java-log4j" />
+    <link rel="canonical" href="http://localhost:4000/database-mongodb-opensource-2" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="SWDEVLAB" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="(Java) Logging Introduction (1)" />
-    <meta property="og:description" content="Java - Logging Introduction (1) : 종류 Application Project 를 진행하면 필수 요소 중 하나가 Log 를 남기는 Framework 구성입니다. 제품 개발이나 운영 시, 발생하는 문제를 추적하여 원인을 파악하기 위함이죠. 굉장히 유용한 Framework 이기 때문에 종류 또한 꽤 다양합니다. 또한, Logging 작업이 굉장히 많은 Project 를 위해 관리해주는 또 다른" />
-    <meta property="og:url" content="http://localhost:4000/java-log4j" />
+    <meta property="og:title" content="(OpenSource MongoDB) CRUD 연산" />
+    <meta property="og:description" content="penSource MongoDB - CRUD 연산 - CRUD 란? Create / Read / Update / Delete 를 의미합니다. Document 를 JSON 형태로 전달하면서 2진 JSON인 BSON 코드로 저장합니다. - MongoDB의 주요기능 Index MongoDB는 일반적인 쿼리 밑 업데이트 성능을 향상시키기 위해 인덱스를 완벽하게 지원합니다. 인덱스는 애플리케이션에서 데이터 구조를 효율적으로 관리하면서 컬렉션의 일정" />
+    <meta property="og:url" content="http://localhost:4000/database-mongodb-opensource-2" />
     <meta property="og:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2018-02-19T09:00:00+09:00" />
-    <meta property="article:modified_time" content="2018-02-19T09:00:00+09:00" />
+    <meta property="article:published_time" content="2018-03-15T01:00:00+09:00" />
+    <meta property="article:modified_time" content="2018-03-15T01:00:00+09:00" />
     <meta property="article:tag" content="Sw-dev-lab" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="(Java) Logging Introduction (1)" />
-    <meta name="twitter:description" content="Java - Logging Introduction (1) : 종류 Application Project 를 진행하면 필수 요소 중 하나가 Log 를 남기는 Framework 구성입니다. 제품 개발이나 운영 시, 발생하는 문제를 추적하여 원인을 파악하기 위함이죠. 굉장히 유용한 Framework 이기 때문에 종류 또한 꽤 다양합니다. 또한, Logging 작업이 굉장히 많은 Project 를 위해 관리해주는 또 다른" />
+    <meta name="twitter:title" content="(OpenSource MongoDB) CRUD 연산" />
+    <meta name="twitter:description" content="penSource MongoDB - CRUD 연산 - CRUD 란? Create / Read / Update / Delete 를 의미합니다. Document 를 JSON 형태로 전달하면서 2진 JSON인 BSON 코드로 저장합니다. - MongoDB의 주요기능 Index MongoDB는 일반적인 쿼리 밑 업데이트 성능을 향상시키기 위해 인덱스를 완벽하게 지원합니다. 인덱스는 애플리케이션에서 데이터 구조를 효율적으로 관리하면서 컬렉션의 일정" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -67,7 +67,7 @@
         "name": "SWDEVLAB",
         "logo": "http://localhost:4000/assets/images/blog-icon.png"
     },
-    "url": "http://localhost:4000/java-log4j",
+    "url": "http://localhost:4000/database-mongodb-opensource-2",
     "image": {
         "@type": "ImageObject",
         "url": "http://localhost:4000/assets/images/blog-cover.jpg",
@@ -76,9 +76,9 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "http://localhost:4000/java-log4j"
+        "@id": "http://localhost:4000/database-mongodb-opensource-2"
     },
-    "description": "Java - Logging Introduction (1) : 종류 Application Project 를 진행하면 필수 요소 중 하나가 Log 를 남기는 Framework 구성입니다. 제품 개발이나 운영 시, 발생하는 문제를 추적하여 원인을 파악하기 위함이죠. 굉장히 유용한 Framework 이기 때문에 종류 또한 꽤 다양합니다. 또한, Logging 작업이 굉장히 많은 Project 를 위해 관리해주는 또 다른"
+    "description": "penSource MongoDB - CRUD 연산 - CRUD 란? Create / Read / Update / Delete 를 의미합니다. Document 를 JSON 형태로 전달하면서 2진 JSON인 BSON 코드로 저장합니다. - MongoDB의 주요기능 Index MongoDB는 일반적인 쿼리 밑 업데이트 성능을 향상시키기 위해 인덱스를 완벽하게 지원합니다. 인덱스는 애플리케이션에서 데이터 구조를 효율적으로 관리하면서 컬렉션의 일정"
 }
     </script>
 
@@ -91,7 +91,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="(Java) Logging Introduction (1)" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="(OpenSource MongoDB) CRUD 연산" href="/feed.xml" />
 
 
 </head>
@@ -147,7 +147,7 @@ into the {body} of the default.hbs template -->
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="19 February 2018">19 February 2018</time>
+                    <time class="post-full-meta-date" datetime="15 March 2018">15 March 2018</time>
                     
                         <span class="date-divider">/</span>
                         
@@ -157,50 +157,118 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">(Java) Logging Introduction (1)</h1>
+                <h1 class="post-full-title">(OpenSource MongoDB) CRUD 연산</h1>
             </header>
 
             
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p><strong>Java - Logging Introduction (1) : 종류</strong></p>
+                    <p><strong>penSource MongoDB - CRUD 연산</strong></p>
 
-<p>Application Project 를 진행하면 필수 요소 중 하나가 Log 를 남기는 Framework 구성입니다.
-제품 개발이나 운영 시, 발생하는 문제를 추적하여 원인을 파악하기 위함이죠.</p>
+<p><strong>- CRUD 란?</strong><br />
+Create / Read / Update / Delete 를 의미합니다.<br />
+Document 를 JSON 형태로 전달하면서 2진 JSON인 BSON 코드로 저장합니다.</p>
 
-<p>굉장히 유용한 Framework 이기 때문에 종류 또한 꽤 다양합니다.
-또한, Logging 작업이 굉장히 많은 Project 를 위해 관리해주는 또 다른 Framework 가 있기도 하죠.
-심지어 비용을 지불하고 구매할 정도로 막강한 기능을 갖고 있죠.</p>
-
-<p>우선, 종류에 대해 간단히 살펴보고 자세히 알아보도록 하겠습니다.</p>
-
+<p><strong>- MongoDB의 주요기능</strong></p>
 <ol>
-  <li>
-    <p>Java Util Logging (JUL)
-제가 직접 Performance Test 를 한 것은 아니지만, Log4J 와 Logback 에 비해 평가가 그리 좋지 못합니다.
-평가의 척도는 속도나 기능적인 면이지요.</p>
-  </li>
-  <li>
-    <p>Log4J 1.x
-지금까지 가장 많이 사용된 Logging Framwork 일겁니다. 그러나, Log4J2 와 Logback 의 등장으로 사용 빈도가 점차 줄어들고 있지 않나 생각됩니다.
-공식적으로 Log4J 1.x 는 유지보수/개발이 끝났기 때문이죠.</p>
-  </li>
-  <li>
-    <p>Log4J 2.x
-Log4J 후속작이며, 많이 활성화 되고 있는 Logging Framework 입니다.
-나중에 다루게 된다면, Log4J 2.x 와 Logback 비교가 꽤 유용한 공부가 될 것 같습니다.</p>
-  </li>
-  <li>Logback
-마찬가지로 Log4J의 후속작입니다.
-    <ul>
-      <li><img src="https://beyondj2ee.wordpress.com/2012/11/09/logback-%EC%82%AC%EC%9A%A9%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-reasons-to-prefer-logback-over-log4j/" alt="참고 주소" /></li>
-    </ul>
-  </li>
-  <li>SLF4J Simple Logging (SLF4J SL)</li>
+  <li>Index<br />
+MongoDB는 일반적인 쿼리 밑 업데이트 성능을 향상시키기 위해 인덱스를 완벽하게 지원합니다.<br />
+인덱스는 애플리케이션에서 데이터 구조를 효율적으로 관리하면서 컬렉션의 일정 부분을 view로 저장하도록 지원합니다.</li>
 </ol>
 
-<p>이상입니다. 포스팅을 마치겠습니다.</p>
+<p>1) Index 를 사용하는 이유</p>
+<ul>
+  <li>Index는 DB 테이블에 대한 처리 속도를 높여주는 자료 구조로서, 저장딘 자료에 대한 빠른 조회가 가능해집니다.</li>
+  <li>Index는 Key-Field 형태를 가지며, 스캔을 거치지 않고 원하는 문서의 주소로 바로 이동하게 합니다.</li>
+  <li>Collection이 커지면 읽기 동작에서 정보 전체 읽기가 발생하여 처리 속도가 느려지므로, 서버는 정보 전체 읽기가 발생하지 않도록 해야합니다.</li>
+</ul>
+
+<p>2) Index 의 특징</p>
+<ul>
+  <li>MongoDB는 자동적으로 _id 필드에 unique Index를 생성합니다.</li>
+  <li>각 Index 는 8KB의 데이터 공간이 필요합니다.</li>
+  <li>Index 생성 시 쓰기 및 변경 동작의 성능이 떨어집니다.</li>
+  <li>Index는 system.indexes 컬렉션에 저장되며, db.system.indexes.fnid() 로 색인된 키를 확인할 수 있습니다.</li>
+</ul>
+
+<p>3) Index 사용 방법<br />
+db.users.find( {“username” : “david” }) 에 대한 Index 생성은
+db.users.ensureIndex( {“username”:1 })
+db.users.ensureIndex({“date”:1, “username”:1 }) -&gt; “1”은 오름차순 방향</p>
+
+<p>4) Index 사용시 주의 사항</p>
+<ul>
+  <li>모든 키에 대하여 인덱스하지 않는다.</li>
+  <li>컬렉션의 절반 이상을 반환해야 하는 경우에는 인덱스를 사용하지 않습니다.</li>
+</ul>
+
+<ol>
+  <li>복제 셋 읽기 우선 기능<br />
+복제 셋 구성 요소를 갖는 복제 셋과 샤드 클러스터에서의 애플리케이션은 읽기 우선으로 설정됩니다.<br />
+읽기 우선은 클라이언트가 셋의 직접 읽기 동작을 어떻게 수행할 것인지를 결정합니다.
+    <ul>
+      <li>데이터 중복을 방지한다.</li>
+      <li>고장 복구 기능을 제공한다.</li>
+      <li>Eventual Consistency를 활용하면 MongoDB의 Read Scalability를 향상시킬 수 있다.</li>
+      <li>Write Scalability는 복제 셋을 대신하여 샤딩으로 해결해야 한다.</li>
+    </ul>
+  </li>
+  <li>쓰기 확인 (WriteConcern)<br />
+애플리케이션은 ‘쓰기 확인’을 사용하여 쓰기 연산 동작을 제어합니다.
+    <ul>
+      <li>드라이버 단의 슬레이브에 쓰기 적용을 확인하는 방법이다.</li>
+      <li>서버가 2대인 경우, 최소한 2대의 서버에 write되어야 하며, write될 때까지 설정된 시간 동안 대기해야 한다.</li>
+    </ul>
+  </li>
+  <li>집계<br />
+MongoDB는 다양한 집계 기능도 제공합니다.</li>
+</ol>
+
+<p><strong>- MongoDB CRUD 읽기 동작</strong></p>
+<ol>
+  <li>읽기 동작
+1) Query Interface<br />
+db.users.find(				&lt;- collection
+ { age: { &amp;gt: 18 } },	&lt;- query criteeria
+ { name: 1, address: 1 }	&lt;- projection
+).limit(5)					&lt;- cusor modifier</li>
+</ol>
+
+<p>2) Query 특성</p>
+<ul>
+  <li>MongoDB에서 모든 쿼리는 단일 컬렉션에서 사용된다.</li>
+  <li>사용자는 limit, skips 밈ㅊ sort order를 사용하여 쿼리를 수정할 수 있다.</li>
+  <li>sort()가 설정되지 않으면 쿼리에서 반환된느 다큐먼트 순서는 정의되지 않는다.</li>
+  <li>기존의 다큐먼트를 update하는 동작은 Query가 갱신하려는 다큐먼트를 선택하는 것과 동일한 쿼리 문법을 사용한다.</li>
+  <li>$match 파이프라인 작업은 집계 파이프라인에서 MongoDB 쿼리에 접근한다.</li>
+</ul>
+
+<p>3) Projection<br />
+MongoDB에서 쿼리는 기본적으로 매칭된 모든 다큐먼트 내부의 필드를 반환합니다.<br />
+따라서 MongoDB가 애플리케이션으로 전송하는 데이터의 양을 줄이기 위해 쿼리에 프로젝션을 추가하여 사용할 수 있습니다.</p>
+
+<p>800개 데이터의 평균 점수를 계산하여 1개의 결과만을 출력하는 명령</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>db.grades.aggregate({'$group':{'_id':'$student_id', 'average':{$avg:'$score'}}), {'$sort':{'average':-1}}, {'$limit':1})
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>4) Projection Example</p>
+<ul>
+  <li>결과 셋에서 1개 필드 추출하기 -&gt; homework<br />
+db.grades.find( {“student_id” : {$lt : 42} }, {“homework” : 0})</li>
+  <li>2개 필드와 _id 필드를 추출하기<br />
+db.grades.find( {“student_id” : {$lt : 42} }, {“type” : 1, “score” : 1 })</li>
+  <li>_id 필드를 제외하고 2개 필드 추출하기<br />
+db.grades.find( {“student_id” : {$lt : 42} }, {“_id” : 0, “type” : 1, “score” : 1 })</li>
+</ul>
+
+<p>5) Projection 특성</p>
+<ul>
+  <li>기본적으로 _id 필드는 결과에 포함된다. 결과 셋에서 _id 필드를 제거하려면 프로젝션 다큐먼트에서 “_id”를 0으로 설정해야 한다.</li>
+  <li>몽고 DB는 배열이 포함된 필드에서 $elemMatch, $slice, $와 같은 프로젝션 연산자를 제공한다.</li>
+  <li>집계 프레임워크 파으프라인에서 연관된 프로젝션 기능으로 $project 파이프라인을 사용할 수 있다.</li>
+</ul>
 
                 </div>
             </section>
@@ -300,14 +368,10 @@ Log4J 후속작이며, 많이 활성화 되고 있는 Logging Framework 입니�
                                 
                                 
                                   
-                                
-                                  
-                                
-                                  
                                     
                                         
                                         
-                                            <li><a href="/java-shellscript_tutorial">(Java) ShellScript Tutorial</a></li>
+                                            <li><a href="/database-mongodb-opensource-aggregate">(OpenSource MongoDB) 집계 연산</a></li>
                                         
                                     
                                   
@@ -316,20 +380,7 @@ Log4J 후속작이며, 많이 활성화 되고 있는 Logging Framework 입니�
                                     
                                         
                                         
-                                            <li><a href="/java-atomicreferencearray">(Java) Automic Tutorial</a></li>
-                                        
-                                    
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                            <li><a href="/java-executorservice">(Java) Thread Tutorial (2)</a></li>
+                                            <li><a href="/database-mongodb-opensource-7">(OpenSource MongoDB) 집계 연산</a></li>
                                         
                                     
                                   
@@ -342,10 +393,114 @@ Log4J 후속작이며, 많이 활성화 되고 있는 Logging Framework 입니�
                                     
                                         
                                         
+                                            <li><a href="/database-mongodb-7-tunning">(New NoSQL & mongoDB) Performance Tuning</a></li>
+                                        
                                     
                                   
                                 
                                   
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
                                     
                                   
                                 
@@ -363,7 +518,7 @@ Log4J 후속작이며, 많이 활성화 되고 있는 Logging Framework 입니�
                         <footer class="read-next-card-footer">
                             <a href="/tag/sw-dev-lab/">
                                 
-                                    See all 6 posts  →
+                                    See all 18 posts  →
                                 
                             </a>
                         </footer>
@@ -377,7 +532,7 @@ Log4J 후속작이며, 많이 활성화 되고 있는 Logging Framework 입니�
     <article class="post-card post-template no-image">
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/java-executorservice">
+            <a class="post-card-content-link" href="/database-mongodb-opensource-7">
                 <header class="post-card-header">
                     
                         
@@ -387,10 +542,10 @@ Log4J 후속작이며, 많이 활성화 되고 있는 Logging Framework 입니�
                         
                     
 
-                    <h2 class="post-card-title">(Java) Thread Tutorial (2)</h2>
+                    <h2 class="post-card-title">(OpenSource MongoDB) 집계 연산</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>Java - Thread Tutorial (2) : ExecutorService 이번 포스팅에서는 Multi-Thread 를 사용하기 좋은 ExecutorService 를 소개하겠습니다. ExecutorService 는 Thread와 비교하여 다음과 같은 장점이 있습니다. 1. 여러 Thread 에 대한 결과 값을 개별적으로 받을</p>
+                    <p>**openSource MongoDB - 집계 연산** **- 집계동작 소개** 1. 집계 파이프라인 db.orders.aggregate( [ -- status field 가 "A" 인 것을 추출 { $match: { status: "A" } }, -- 그룹 식별 값은 "cust_id"</p>
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -416,7 +571,7 @@ Log4J 후속작이며, 많이 활성화 되고 있는 Logging Framework 입니�
     <article class="post-card post-template no-image">
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/java-jboss">
+            <a class="post-card-content-link" href="/database-mongodb-7-tunning">
                 <header class="post-card-header">
                     
                         
@@ -426,10 +581,10 @@ Log4J 후속작이며, 많이 활성화 되고 있는 Logging Framework 입니�
                         
                     
 
-                    <h2 class="post-card-title">(Java) JBOSS</h2>
+                    <h2 class="post-card-title">(New NoSQL & mongoDB) Performance Tuning</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>Java - JBOSS JBossAS란? JBossAS(JBoss Application Server)란 오픈소스 Java EE 서버입니다. Java EE 서버란 Java Enterprise Edition(EE) 표준에 따라 구현된 서버를 의미합니다. Java EE 서버를 흔희 Java EE 서버를 WAS(Web Application Server)라고 부르는데</p>
+                    <p>New NoSQL &amp; mongoDB - Performance Tuning 운영 단계에서 사용자가 예기치 못하는 다양한 장애와 성능 저하 현상들이 발생하고 있는데 그 원인은 다음과 같이 매우 다양합니다. Design Tuning 데이터베이스의 성능을 저하시키는 가장 큰 원인은</p>
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -464,18 +619,18 @@ Log4J 후속작이며, 많이 활성화 되고 있는 Logging Framework 입니�
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">(Java) Logging Introduction (1)</div>
+    <div class="floating-header-title">(OpenSource MongoDB) CRUD 연산</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%28Java%29+Logging+Introduction+%281%29&amp;url=https://kjham.github.io/java-log4j"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%28OpenSource+MongoDB%29+CRUD+%EC%97%B0%EC%82%B0&amp;url=https://kjham.github.io/database-mongodb-opensource-2"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://kjham.github.io/java-log4j"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://kjham.github.io/database-mongodb-opensource-2"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
