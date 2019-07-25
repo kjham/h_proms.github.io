@@ -4,20 +4,200 @@
     <title> - Articles</title>
     <description>Software Developement Laboratory</description>
     <link>
-    http://localhost:4000</link>
+    https://kjham.github.io</link>
     
       
       <item>
-        <title>(OpenSource MongoDB) 집계 연산</title>
+        <title>Ghost-Jekyll 적용하기 - 1</title>
         
-          <description>&lt;p&gt;&lt;strong&gt;openSource MongoDB - 집계 연산&lt;/strong&gt;&lt;/p&gt;
+          <description>&lt;h1 id=&quot;ghost-jekyll-적용하기---1&quot;&gt;Ghost-Jekyll 적용하기 - 1&lt;/h1&gt;
+
+</description>
+        
+        <pubDate>Thu, 25 Jul 2019 00:38:00 +0900</pubDate>
+        <link>
+        https://kjham.github.io/ghost-jekyll-1</link>
+        <guid isPermaLink="true">https://kjham.github.io/ghost-jekyll-1</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Vue.js 시작하기 - 2</title>
+        
+          <description>&lt;h1 id=&quot;vuejs-시작하기---2&quot;&gt;Vue.js 시작하기 - 2&lt;/h1&gt;
+
+</description>
+        
+        <pubDate>Wed, 24 Jul 2019 22:00:00 +0900</pubDate>
+        <link>
+        https://kjham.github.io/front-end-vue-js-2</link>
+        <guid isPermaLink="true">https://kjham.github.io/front-end-vue-js-2</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Vue.js 시작하기 - 1</title>
+        
+          <description>&lt;h1 id=&quot;vuejs-시작하기---1&quot;&gt;Vue.js 시작하기 - 1&lt;/h1&gt;
+
+</description>
+        
+        <pubDate>Tue, 23 Jul 2019 21:00:00 +0900</pubDate>
+        <link>
+        https://kjham.github.io/front-end-vue-js-1</link>
+        <guid isPermaLink="true">https://kjham.github.io/front-end-vue-js-1</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>(Java) Gradle Dependency</title>
+        
+          <description>&lt;p&gt;&lt;strong&gt;JAVA - Gradle Dependency&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 31 Mar 2018 02:45:00 +0900</pubDate>
+        <link>
+        https://kjham.github.io/java-gradle-dependency</link>
+        <guid isPermaLink="true">https://kjham.github.io/java-gradle-dependency</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>(Java) JPA Tutorial</title>
+        
+          <description>&lt;p&gt;&lt;strong&gt;JAVA - REDIS Tutorial&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 31 Mar 2018 00:29:00 +0900</pubDate>
+        <link>
+        https://kjham.github.io/java-redis-tutorial</link>
+        <guid isPermaLink="true">https://kjham.github.io/java-redis-tutorial</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>(Java) JPA Tutorial</title>
+        
+          <description>&lt;p&gt;&lt;strong&gt;JAVA - JPA Tutorial&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 31 Mar 2018 00:13:00 +0900</pubDate>
+        <link>
+        https://kjham.github.io/java-jpa-tutorial</link>
+        <guid isPermaLink="true">https://kjham.github.io/java-jpa-tutorial</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>(MongoDB) Linux 설치 가이드</title>
+        
+          <description>&lt;p&gt;&lt;strong&gt;MongoDB 설치 가이드&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 30 Mar 2018 23:42:00 +0900</pubDate>
+        <link>
+        https://kjham.github.io/database-mongodb-setup</link>
+        <guid isPermaLink="true">https://kjham.github.io/database-mongodb-setup</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>(Linux:Centos7) FTP 접속 관련</title>
+        
+          <description>&lt;p&gt;&lt;strong&gt;Linux Centos7 - FTP 접속 관련&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 30 Mar 2018 20:26:00 +0900</pubDate>
+        <link>
+        https://kjham.github.io/linux-error-vsftpd</link>
+        <guid isPermaLink="true">https://kjham.github.io/linux-error-vsftpd</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>(Linux:Centos7) IP 고정방법</title>
+        
+          <description>&lt;p&gt;&lt;strong&gt;Linux Centos7 - IP 고정방법&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 30 Mar 2018 20:26:00 +0900</pubDate>
+        <link>
+        https://kjham.github.io/linux-centos-ip-configuration</link>
+        <guid isPermaLink="true">https://kjham.github.io/linux-centos-ip-configuration</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>(Linux:Centos7) Booting Mode 변경</title>
+        
+          <description>&lt;p&gt;&lt;strong&gt;Linux Centos7 -Booting Mode 변경&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 30 Mar 2018 20:14:00 +0900</pubDate>
+        <link>
+        https://kjham.github.io/linux-centos-bootingmode</link>
+        <guid isPermaLink="true">https://kjham.github.io/linux-centos-bootingmode</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>(Linux:Centos7) FTP 접속 오류</title>
+        
+          <description>&lt;p&gt;&lt;strong&gt;Linux Centos7 - FTP 접속&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 30 Mar 2018 20:13:00 +0900</pubDate>
+        <link>
+        https://kjham.github.io/linux-centos-vsftpd</link>
+        <guid isPermaLink="true">https://kjham.github.io/linux-centos-vsftpd</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>(Linux:Centos7) 한글깨짐현상 수정</title>
+        
+          <description>&lt;p&gt;&lt;strong&gt;Linux Centos7 - 한글깨짐&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 30 Mar 2018 19:03:00 +0900</pubDate>
+        <link>
+        https://kjham.github.io/linux-centos-encoding</link>
+        <guid isPermaLink="true">https://kjham.github.io/linux-centos-encoding</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>(OpenSource MongoDB) Aggregation Pipeline Optimization</title>
+        
+          <description>&lt;p&gt;&lt;strong&gt;openSource MongoDB - Aggregate Pipeline Optimization&lt;/strong&gt;&lt;/p&gt;
 
 </description>
         
         <pubDate>Thu, 15 Mar 2018 01:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/database-mongodb-opensource-aggregate</link>
-        <guid isPermaLink="true">http://localhost:4000/database-mongodb-opensource-aggregate</guid>
+        https://kjham.github.io/database-mongodb-opensource-aggregate</link>
+        <guid isPermaLink="true">https://kjham.github.io/database-mongodb-opensource-aggregate</guid>
       </item>
       
     
@@ -31,8 +211,8 @@
         
         <pubDate>Thu, 15 Mar 2018 01:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/database-mongodb-opensource-7</link>
-        <guid isPermaLink="true">http://localhost:4000/database-mongodb-opensource-7</guid>
+        https://kjham.github.io/database-mongodb-opensource-7</link>
+        <guid isPermaLink="true">https://kjham.github.io/database-mongodb-opensource-7</guid>
       </item>
       
     
@@ -46,8 +226,8 @@
         
         <pubDate>Thu, 15 Mar 2018 01:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/database-mongodb-opensource-2</link>
-        <guid isPermaLink="true">http://localhost:4000/database-mongodb-opensource-2</guid>
+        https://kjham.github.io/database-mongodb-opensource-2</link>
+        <guid isPermaLink="true">https://kjham.github.io/database-mongodb-opensource-2</guid>
       </item>
       
     
@@ -61,8 +241,8 @@
         
         <pubDate>Tue, 13 Mar 2018 19:51:00 +0900</pubDate>
         <link>
-        http://localhost:4000/database-mongodb-7-tunning</link>
-        <guid isPermaLink="true">http://localhost:4000/database-mongodb-7-tunning</guid>
+        https://kjham.github.io/database-mongodb-7-tunning</link>
+        <guid isPermaLink="true">https://kjham.github.io/database-mongodb-7-tunning</guid>
       </item>
       
     
@@ -76,8 +256,8 @@
         
         <pubDate>Tue, 13 Mar 2018 19:51:00 +0900</pubDate>
         <link>
-        http://localhost:4000/database-mongodb-6-replica_replicasets</link>
-        <guid isPermaLink="true">http://localhost:4000/database-mongodb-6-replica_replicasets</guid>
+        https://kjham.github.io/database-mongodb-6-replica_replicasets</link>
+        <guid isPermaLink="true">https://kjham.github.io/database-mongodb-6-replica_replicasets</guid>
       </item>
       
     
@@ -91,8 +271,8 @@
         
         <pubDate>Tue, 13 Mar 2018 19:51:00 +0900</pubDate>
         <link>
-        http://localhost:4000/database-mongodb-5-sharding-system</link>
-        <guid isPermaLink="true">http://localhost:4000/database-mongodb-5-sharding-system</guid>
+        https://kjham.github.io/database-mongodb-5-sharding-system</link>
+        <guid isPermaLink="true">https://kjham.github.io/database-mongodb-5-sharding-system</guid>
       </item>
       
     
@@ -106,8 +286,8 @@
         
         <pubDate>Tue, 13 Mar 2018 02:39:00 +0900</pubDate>
         <link>
-        http://localhost:4000/database-mongodb-4-structure</link>
-        <guid isPermaLink="true">http://localhost:4000/database-mongodb-4-structure</guid>
+        https://kjham.github.io/database-mongodb-4-structure</link>
+        <guid isPermaLink="true">https://kjham.github.io/database-mongodb-4-structure</guid>
       </item>
       
     
@@ -121,8 +301,8 @@
         
         <pubDate>Tue, 13 Mar 2018 01:18:00 +0900</pubDate>
         <link>
-        http://localhost:4000/database-mongodb-3-data-modeling</link>
-        <guid isPermaLink="true">http://localhost:4000/database-mongodb-3-data-modeling</guid>
+        https://kjham.github.io/database-mongodb-3-data-modeling</link>
+        <guid isPermaLink="true">https://kjham.github.io/database-mongodb-3-data-modeling</guid>
       </item>
       
     
@@ -136,8 +316,8 @@
         
         <pubDate>Tue, 13 Mar 2018 01:13:00 +0900</pubDate>
         <link>
-        http://localhost:4000/database-mongodb-2-index-user</link>
-        <guid isPermaLink="true">http://localhost:4000/database-mongodb-2-index-user</guid>
+        https://kjham.github.io/database-mongodb-2-index-user</link>
+        <guid isPermaLink="true">https://kjham.github.io/database-mongodb-2-index-user</guid>
       </item>
       
     
@@ -151,8 +331,8 @@
         
         <pubDate>Tue, 13 Mar 2018 01:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/database-mongodb-opensource-1</link>
-        <guid isPermaLink="true">http://localhost:4000/database-mongodb-opensource-1</guid>
+        https://kjham.github.io/database-mongodb-opensource-1</link>
+        <guid isPermaLink="true">https://kjham.github.io/database-mongodb-opensource-1</guid>
       </item>
       
     
@@ -166,8 +346,8 @@
         
         <pubDate>Tue, 13 Mar 2018 01:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/database-mongodb-1-tutorial</link>
-        <guid isPermaLink="true">http://localhost:4000/database-mongodb-1-tutorial</guid>
+        https://kjham.github.io/database-mongodb-1-tutorial</link>
+        <guid isPermaLink="true">https://kjham.github.io/database-mongodb-1-tutorial</guid>
       </item>
       
     
@@ -181,8 +361,8 @@
         
         <pubDate>Sun, 11 Mar 2018 09:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/religion-bible-worship</link>
-        <guid isPermaLink="true">http://localhost:4000/religion-bible-worship</guid>
+        https://kjham.github.io/religion-bible-worship</link>
+        <guid isPermaLink="true">https://kjham.github.io/religion-bible-worship</guid>
       </item>
       
     
@@ -196,8 +376,8 @@
         
         <pubDate>Sat, 10 Mar 2018 09:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/religion-bible-panorama-2</link>
-        <guid isPermaLink="true">http://localhost:4000/religion-bible-panorama-2</guid>
+        https://kjham.github.io/religion-bible-panorama-2</link>
+        <guid isPermaLink="true">https://kjham.github.io/religion-bible-panorama-2</guid>
       </item>
       
     
@@ -211,8 +391,8 @@
         
         <pubDate>Tue, 06 Mar 2018 09:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/spring-rest-template</link>
-        <guid isPermaLink="true">http://localhost:4000/spring-rest-template</guid>
+        https://kjham.github.io/spring-rest-template</link>
+        <guid isPermaLink="true">https://kjham.github.io/spring-rest-template</guid>
       </item>
       
     
@@ -226,8 +406,8 @@
         
         <pubDate>Tue, 06 Mar 2018 09:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/java-shellscript_tutorial</link>
-        <guid isPermaLink="true">http://localhost:4000/java-shellscript_tutorial</guid>
+        https://kjham.github.io/java-shellscript_tutorial</link>
+        <guid isPermaLink="true">https://kjham.github.io/java-shellscript_tutorial</guid>
       </item>
       
     
@@ -241,8 +421,8 @@
         
         <pubDate>Tue, 06 Mar 2018 09:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/java-atomicreferencearray</link>
-        <guid isPermaLink="true">http://localhost:4000/java-atomicreferencearray</guid>
+        https://kjham.github.io/java-atomicreferencearray</link>
+        <guid isPermaLink="true">https://kjham.github.io/java-atomicreferencearray</guid>
       </item>
       
     
@@ -256,8 +436,8 @@
         
         <pubDate>Sat, 03 Mar 2018 09:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/religion-bible-worship</link>
-        <guid isPermaLink="true">http://localhost:4000/religion-bible-worship</guid>
+        https://kjham.github.io/religion-bible-worship</link>
+        <guid isPermaLink="true">https://kjham.github.io/religion-bible-worship</guid>
       </item>
       
     
@@ -271,8 +451,8 @@
         
         <pubDate>Thu, 01 Mar 2018 09:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/database-oracle-query</link>
-        <guid isPermaLink="true">http://localhost:4000/database-oracle-query</guid>
+        https://kjham.github.io/database-oracle-query</link>
+        <guid isPermaLink="true">https://kjham.github.io/database-oracle-query</guid>
       </item>
       
     
@@ -286,8 +466,8 @@
         
         <pubDate>Wed, 28 Feb 2018 09:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/religion-bible-panorama-1</link>
-        <guid isPermaLink="true">http://localhost:4000/religion-bible-panorama-1</guid>
+        https://kjham.github.io/religion-bible-panorama-1</link>
+        <guid isPermaLink="true">https://kjham.github.io/religion-bible-panorama-1</guid>
       </item>
       
     
@@ -301,8 +481,8 @@
         
         <pubDate>Wed, 21 Feb 2018 09:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/java-executorservice</link>
-        <guid isPermaLink="true">http://localhost:4000/java-executorservice</guid>
+        https://kjham.github.io/java-executorservice</link>
+        <guid isPermaLink="true">https://kjham.github.io/java-executorservice</guid>
       </item>
       
     
@@ -316,8 +496,8 @@
         
         <pubDate>Mon, 19 Feb 2018 09:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/java-logging-framework</link>
-        <guid isPermaLink="true">http://localhost:4000/java-logging-framework</guid>
+        https://kjham.github.io/java-logging-framework</link>
+        <guid isPermaLink="true">https://kjham.github.io/java-logging-framework</guid>
       </item>
       
     
@@ -331,8 +511,8 @@
         
         <pubDate>Mon, 19 Feb 2018 09:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/java-jboss</link>
-        <guid isPermaLink="true">http://localhost:4000/java-jboss</guid>
+        https://kjham.github.io/java-jboss</link>
+        <guid isPermaLink="true">https://kjham.github.io/java-jboss</guid>
       </item>
       
     
@@ -346,8 +526,8 @@
         
         <pubDate>Mon, 19 Feb 2018 09:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/religion-bible-panorama-0</link>
-        <guid isPermaLink="true">http://localhost:4000/religion-bible-panorama-0</guid>
+        https://kjham.github.io/religion-bible-panorama-0</link>
+        <guid isPermaLink="true">https://kjham.github.io/religion-bible-panorama-0</guid>
       </item>
       
     
@@ -361,8 +541,8 @@
         
         <pubDate>Mon, 19 Feb 2018 09:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/java-thread-runnable</link>
-        <guid isPermaLink="true">http://localhost:4000/java-thread-runnable</guid>
+        https://kjham.github.io/java-thread-runnable</link>
+        <guid isPermaLink="true">https://kjham.github.io/java-thread-runnable</guid>
       </item>
       
     

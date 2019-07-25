@@ -11,7 +11,7 @@
 
 
 
-    <title>(OpenSource MongoDB) 집계 연산</title>
+    <title>(OpenSource MongoDB) Aggregation Pipeline Optimization</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -28,27 +28,27 @@
 
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Software Developement Laboratory" />
-    <link rel="shortcut icon" href="http://localhost:4000/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="http://localhost:4000/database-mongodb-opensource-aggregate" />
+    <link rel="shortcut icon" href="https://kjham.github.io/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://kjham.github.io/database-mongodb-opensource-aggregate" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="SWDEVLAB" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="(OpenSource MongoDB) 집계 연산" />
-    <meta property="og:description" content="openSource MongoDB - 집계 연산 - 집계동작 소개 집계 파이프라인 db.orders.aggregate( [ – status field 가 “A” 인 것을 추출 { $match: { status: “A” } }, – 그룹 식별 값은 “cust_id” field 로.. – 그룹핑 된 document 들의 amount 값을 합친 것을 “total” field 로.. { $group: { _id:" />
-    <meta property="og:url" content="http://localhost:4000/database-mongodb-opensource-aggregate" />
-    <meta property="og:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
+    <meta property="og:title" content="(OpenSource MongoDB) Aggregation Pipeline Optimization" />
+    <meta property="og:description" content="openSource MongoDB - Aggregate Pipeline Optimization 명령어 (연산자) 실행 입출력 형태 $project reshape (1:1) 키를 지우거나 추가하기 $match filler (n:1) 필터링하기 $group aggregate (n:1) 합계 연산 $sort sort (1:1) 분류하기 $skip skips (n:1) 건너뛰기 $limit limits (n:1) 제한하기 $unwind normalize (1:n) tags:[“red”,”blue”,”green”] -&gt; tags:red, tags:green, tags:blue $out output (1:1) 출력하기" />
+    <meta property="og:url" content="https://kjham.github.io/database-mongodb-opensource-aggregate" />
+    <meta property="og:image" content="https://kjham.github.io/assets/images/blog-cover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
     <meta property="article:published_time" content="2018-03-15T01:00:00+09:00" />
     <meta property="article:modified_time" content="2018-03-15T01:00:00+09:00" />
     <meta property="article:tag" content="Sw-dev-lab" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="(OpenSource MongoDB) 집계 연산" />
-    <meta name="twitter:description" content="openSource MongoDB - 집계 연산 - 집계동작 소개 집계 파이프라인 db.orders.aggregate( [ – status field 가 “A” 인 것을 추출 { $match: { status: “A” } }, – 그룹 식별 값은 “cust_id” field 로.. – 그룹핑 된 document 들의 amount 값을 합친 것을 “total” field 로.. { $group: { _id:" />
-    <meta name="twitter:url" content="http://localhost:4000/" />
-    <meta name="twitter:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
+    <meta name="twitter:title" content="(OpenSource MongoDB) Aggregation Pipeline Optimization" />
+    <meta name="twitter:description" content="openSource MongoDB - Aggregate Pipeline Optimization 명령어 (연산자) 실행 입출력 형태 $project reshape (1:1) 키를 지우거나 추가하기 $match filler (n:1) 필터링하기 $group aggregate (n:1) 합계 연산 $sort sort (1:1) 분류하기 $skip skips (n:1) 건너뛰기 $limit limits (n:1) 제한하기 $unwind normalize (1:n) tags:[“red”,”blue”,”green”] -&gt; tags:red, tags:green, tags:blue $out output (1:1) 출력하기" />
+    <meta name="twitter:url" content="https://kjham.github.io/" />
+    <meta name="twitter:image" content="https://kjham.github.io/assets/images/blog-cover.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="SWDEVLAB" />
     <meta name="twitter:label2" content="Filed under" />
@@ -65,20 +65,20 @@
     "publisher": {
         "@type": "Organization",
         "name": "SWDEVLAB",
-        "logo": "http://localhost:4000/assets/images/blog-icon.png"
+        "logo": "https://kjham.github.io/assets/images/blog-icon.png"
     },
-    "url": "http://localhost:4000/database-mongodb-opensource-aggregate",
+    "url": "https://kjham.github.io/database-mongodb-opensource-aggregate",
     "image": {
         "@type": "ImageObject",
-        "url": "http://localhost:4000/assets/images/blog-cover.jpg",
+        "url": "https://kjham.github.io/assets/images/blog-cover.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "http://localhost:4000/database-mongodb-opensource-aggregate"
+        "@id": "https://kjham.github.io/database-mongodb-opensource-aggregate"
     },
-    "description": "openSource MongoDB - 집계 연산 - 집계동작 소개 집계 파이프라인 db.orders.aggregate( [ – status field 가 “A” 인 것을 추출 { $match: { status: “A” } }, – 그룹 식별 값은 “cust_id” field 로.. – 그룹핑 된 document 들의 amount 값을 합친 것을 “total” field 로.. { $group: { _id:"
+    "description": "openSource MongoDB - Aggregate Pipeline Optimization 명령어 (연산자) 실행 입출력 형태 $project reshape (1:1) 키를 지우거나 추가하기 $match filler (n:1) 필터링하기 $group aggregate (n:1) 합계 연산 $sort sort (1:1) 분류하기 $skip skips (n:1) 건너뛰기 $limit limits (n:1) 제한하기 $unwind normalize (1:n) tags:[“red”,”blue”,”green”] -&gt; tags:red, tags:green, tags:blue $out output (1:1) 출력하기"
 }
     </script>
 
@@ -91,7 +91,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="(OpenSource MongoDB) 집계 연산" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="(OpenSource MongoDB) Aggregation Pipeline Optimization" href="/feed.xml" />
 
 
 </head>
@@ -110,7 +110,7 @@ into the {body} of the default.hbs template -->
     <div class="site-nav-left">
         
             
-                <a class="site-nav-logo" href="http://localhost:4000/"><img src="/assets/images/blog-icon.png" alt="SWDEVLAB" /></a>
+                <a class="site-nav-logo" href="https://kjham.github.io/"><img src="/assets/images/blog-icon.png" alt="SWDEVLAB" /></a>
             
         
         
@@ -157,40 +157,14 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">(OpenSource MongoDB) 집계 연산</h1>
+                <h1 class="post-full-title">(OpenSource MongoDB) Aggregation Pipeline Optimization</h1>
             </header>
 
             
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p><strong>openSource MongoDB - 집계 연산</strong></p>
-
-<p><strong>- 집계동작 소개</strong></p>
-
-<ol>
-  <li>집계 파이프라인</li>
-</ol>
-
-<p>db.orders.aggregate( [ 
-	– status field 가 “A” 인 것을 추출
-	{ $match: { status: “A” } },
-	– 그룹 식별 값은 “cust_id” field 로..
-	– 그룹핑 된 document 들의 amount 값을 합친 것을 “total” field 로..
-	{ $group: { _id: : “$cust_id”, total : { $sum : “$amount” } } }
-	])</p>
-
-<ul>
-  <li>
-    <p>파이프라인 연산자와 인덱스<br />
-$match, $sort 파이프라인 연산자들은 파이프라인의 시작점에 사용하는 경우 인덱스로서의 장점을 발휘합니다.<br />
-버전 2.4 이후로 도입된 $geoNear 파이프라인 연산자는 위치 인덱스의 장점을 갖습니다.</p>
-  </li>
-  <li>
-    <p>선점 필터링 (Early Filtering)<br />
-데이터의 작은 집합만을 요청하는 경우에는 파이프라인의 시작점에서 입력되는 다큐먼트를 제한하기 위해 $match, $limit, $skip 단계를 사용합니다.</p>
-  </li>
-</ul>
+                    <p><strong>openSource MongoDB - Aggregate Pipeline Optimization</strong></p>
 
 <table>
   <thead>
@@ -244,286 +218,125 @@ $match, $sort 파이프라인 연산자들은 파이프라인의 시작점에 �
   </tbody>
 </table>
 
-<ol>
-  <li>집계 연산 동작</li>
-</ol>
+<p><strong>1. Pipeline Sequence Optimization</strong></p>
 
-<p>1) $count</p>
+<p>1) $project or $addFields + $match Sequence Optimization</p>
 
-<p>2) $distinct</p>
-
-<p>3) $group</p>
-
-<p>4) $sum</p>
-
-<p>5) $addToSet<br />
-category 로 넣는 연산자</p>
-
-<p>6) $push<br />
-caterory 로 넣되 중복 제거가 안됨</p>
-
-<p>7) $max, $min</p>
-
-<p>8) $project<br />
-{
-	“city” : “ACMAR”,
-	“loc” : [ -86.51557, 33.584132 ],
-	“pop” : 6055,
-	“state” : AL,
-	“_id” : “35004”
-} 
-일 경우,
-db.zips.aggregate([ 
-	{ $project: {_id:0, city:{$toLower:”$city”}, pop:1, state:1, zip:”$_id” } }
-	])<br />
-로 집계 한다면 …<br />
-{
-	“city” : “acmar”,<br />
-	“pop” : 6055,<br />
-	“state” : “AL”,<br />
-	“zip” : “35004”<br />
-}
-로 리턴됩니다.</p>
-
-<p>9) $match<br />
-임의의 컬렉션 필드에서 ‘20’ 이상인 다큐먼트를 찾는 쿼리는 다음과 같습니다.<br />
-db.<collection>.aggregate([{$match:{<field>:{$gt:20}}}])</field></collection></p>
-
-<p>10) $sort<br />
-집계 연산 동작은 디스크, 메모리 기반의 정령을 모두 지원합니다.<br />
-기본적으로 메모리 기반을 둔 정렬을 시도하고, 모든 파이프라인 단계에서 100MB의 제한이 있습니다.<br />
-또한 $group 전후에 정렬할 수 있습니다.<br />
-1이 오름차순, -1이 내림차순 입니다.</p>
-
-<p>11) $limit, $skip<br />
-보통 $skip을 사용한 후 $limit를 사용합니다.<br />
-$skip 은 주어진 값 만큼 건너뛰고 목록화 하는 것이고,<br />
-$limit 는 주어진 값 만큼 목록화 하는 것입니다.</p>
-
-<p>12) $first, $last<br />
-$group 단계에서 $first, $last 를 사용할 수 있습니다.<br />
-$first 는 첫 번째 값을, $last 는 마지막 값을 반환합니다.</p>
-
-<p>13) $unwind<br />
-MongoDB의 Document는 배열을 가질 수 있는데, 배열에 있는 값을 $group에 사용하기 위해 배열을 분리하는 과정에서 $unwind 연산자를 사용할 수 있습니다.<br />
-이와 반대되는 것은 $push 연산자 입니다.</p>
-
-<p>14) $redact
-{ $redact: { $cond: { if: { $eq: [ “$level”, 5 ] }, then: “<script type="math/tex">PRUNE", else: "</script>DESCEND” } } },
-{ $match: { year: 2014, category: { $ne: “Z” } } }</p>
-
-<p>{ $match: { year: 2014 } },
-{ $redact: { $cond: { if: { $eq: [ “$level”, 5 ] }, then: “<script type="math/tex">PRUNE", else: "</script>DESCEND” } } },
-{ $match: { year: 2014, category: { $ne: “Z” } } }</p>
-
-<p>15) $cond</p>
-
-<p>16) $addFields</p>
-
-<p>17) $lookup</p>
-
-<p><strong>- 집계 연산 성능</strong>
-참고주소 : https://docs.mongodb.com/manual/core/aggregation-pipeline-optimization/</p>
-
-<ol>
+<ul>
   <li>
-    <p>$sort + $match Sequence Optimization
-{ $sort: { age : -1 } },
-{ $match: { status: ‘A’ } }
-<strong>TO</strong>
-{ $match: { status: ‘A’ } },
-{ $sort: { age : -1 } }</p>
+    <p>Before Optimization
+// 필드 maxTime, minTime 추가
+{ $addFields: {
+  maxTime: { $max: “$times” },
+  minTime: { $min: “$times” }
+} },
+// document 에 출력 대상 선정
+{ $project: {
+  _id: 1, name: 1, times: 1, maxTime: 1, minTime: 1,
+  avgTime: { $avg: [“$maxTime”, “$minTime”] }
+} },
+// 출력 대상 필터링
+{ $match: {
+  name: “Joe Schmoe”,
+  maxTime: { $lt: 20 },
+  minTime: { $gt: 5 },
+  avgTime: { $gt: 7 }
+} }</p>
   </li>
   <li>
-    <p>$project or $addFields + $match Sequence Optimization
-{ $addFields: {
- maxTime: { $max: “$times” },
- minTime: { $min: “$times” }
-} },
-{ $project: {
- _id: 1, name: 1, times: 1, maxTime: 1, minTime: 1,
- avgTime: { $avg: [“$maxTime”, “$minTime”] }
-} },
-{ $match: {
- name: “Joe Schmoe”,
- maxTime: { $lt: 20 },
- minTime: { $gt: 5 },
- avgTime: { $gt: 7 }
-} }
-<strong>TO</strong>
+    <p>After Optimization
+// 출력 대상 먼저 필터링
 { $match: { name: “Joe Schmoe” } },
+// 필드 maxTime, minTIme 추가 (필터링이 되서, 추가되는 필드가 더 적을 것입니다.)
 { $addFields: {
- maxTime: { $max: “$times” },
- minTime: { $min: “$times” }
+  maxTime: { $max: “$times” },
+  minTime: { $min: “$times” }
 } },
+// 추가된 필드에 대한 필터링
 { $match: { maxTime: { $lt: 20 }, minTime: { $gt: 5 } } },
+// document 에 출력 대상 선정
 { $project: {
- _id: 1, name: 1, times: 1, maxTime: 1, minTime: 1,
- avgTime: { $avg: [“$maxTime”, “$minTime”] }
+  _id: 1, name: 1, times: 1, maxTime: 1, minTime: 1,
+  avgTime: { $avg: [“$maxTime”, “$minTime”] }
 } },
+// 추가된 avgTime에 대한 필터링
 { $match: { avgTime: { $gt: 7 } } }</p>
   </li>
-  <li>
-    <p>$redact + $match Sequence Optimization
+</ul>
+
+<p>위와 같이 최적화를 하는 것은, 필터링을 가능한 먼저하여 $addFields, $project 수행을 더 빠르게 하려는 것입니다.</p>
+
+<p>2) $sort + $match Sequence Optimization</p>
+<ul>
+  <li>Before Optimization
+{ $sort: { age : -1 } },
+{ $match: { status: ‘A’ } }</li>
+  <li>After Optimization
+{ $match: { status: ‘A’ } },
+{ $sort: { age : -1 } }</li>
+</ul>
+
+<p>이것도 $sort 를 하기 전에 데이터를 필터링하여 $sort 작업 수행을 원활하게 할 수 있도록 합니다.</p>
+
+<p>3) $redact + $match Sequence Optimization</p>
+<ul>
+  <li>Before Optimization
 { $redact: { $cond: { if: { $eq: [ “$level”, 5 ] }, then: “<script type="math/tex">PRUNE", else: "</script>DESCEND” } } },
-{ $match: { year: 2014, category: { $ne: “Z” } } }
-<strong>TO</strong>
-{ $match: { year: 2014 } },
-{ $redact: { $cond: { if: { $eq: [ “$level”, 5 ] }, then: “<script type="math/tex">PRUNE", else: "</script>DESCEND” } } },
-{ $match: { year: 2014, category: { $ne: “Z” } } }</p>
-  </li>
-  <li>
-    <p>$project + $skip or $limit Sequence Optimization
+{ $match: { year: 2014, category: { $ne: “Z” } } }</li>
+  <li>After Optimization
+// 2014년도의 데이터와 category 필드에 “Z” 문자가 아닌 것만 추출
+{ $match: { category: { $ne: “Z” } } }
+// level 필드가 5라면 남기고(“<script type="math/tex">PRUNE"), 아니라면 버림("</script>DESCEND”)
+{ $redact: { $cond: { if: { $eq: [ “$level”, 5 ] }, then: “<script type="math/tex">PRUNE", else: "</script>DESCEND” } } },</li>
+</ul>
+
+<p>이것도 결국 $match 를 먼저 하란 말..</p>
+
+<p>4) $skip + $limit Sequence Optimization</p>
+<ul>
+  <li>Before Optimization
+{ $skip: 10 },
+{ $limit: 5 }</li>
+  <li>After Optimization
+// $limit operator 를 먼저 수행하는 것이 효율이 좋습니다.
+{ $limit: 15 },
+{ $skip: 10 }</li>
+</ul>
+
+<p>5) $project + $skip or $limit Sequence Optimization</p>
+<ul>
+  <li>Before Optimization
 { $sort: { age : -1 } },
 { $project: { status: 1, name: 1 } },
-{ $limit: 5 }
-<strong>TO</strong>
+{ $limit: 5 }</li>
+  <li>After Optimization
+// age 기준으로 내림차순으로 정렬 수행
 { $sort: { age : -1 } },
-{ $limit: 5 }
-{ $project: { status: 1, name: 1 } },</p>
-  </li>
-  <li>
-    <p>$match + $match Coalescence
+// 5개 의 데이터만 추출
+{ $limit: 5 },
+// status, name 필드만 document 로 추출
+{ $project: { status: 1, name: 1 } }</li>
+</ul>
+
+<p>일반적으로 $sort operator는 $limit, $skip operator 보다 우선순위가 높을 수 밖에 없고 (결과가 달라지니깐..)<br />
+$limit 는 $porject 보다 먼저 수행해야 효율이 좋습니다.</p>
+
+<p>그런데 $limit 의 수치가 높다면, $project로 작게 필드를 먼저 추출하는 것이 좋을지 고민해봐야 할 것 같습니다.</p>
+
+<ol>
+  <li>Pipeline Coalescence Optimization</li>
+</ol>
+
+<p>1) $match + $match Coalescence</p>
+<ul>
+  <li>Before Optimization
 { $match: { year: 2014 } },
-{ $match: { status: “A” } }
-<strong>TO</strong>
-{ $match: { $and: [ { “year” : 2014 }, { “status” : “A” } ] } }</p>
-  </li>
-  <li>
-    <p>$lookup + $unwind Coalescence
-{
-  $lookup: {
- from: “otherCollection”,
- as: “resultingArray”,
- localField: “x”,
- foreignField: “y”
-  }
-},
-{ $unwind: “$resultingArray”}
-<strong>TO</strong>
-{
-  $lookup: {
- from: “otherCollection”,
- as: “resultingArray”,
- localField: “x”,
- foreignField: “y”,
- unwinding: { preserveNullAndEmptyArrays: false }
-  }
-}</p>
-  </li>
-</ol>
+{ $match: { status: “A” } }</li>
+  <li>After Optimization
+{ $match: { $and: [ { “year” : 2014 }, { “status” : “A” } ] } }</li>
+</ul>
 
-<p><strong>- 집계 연산 활용</strong></p>
-<ol>
-  <li>우편번호 데이터 셋의 집계 동작<br />
-1) 인구가 1,000만 명 이상인 주 반환<br />
-db.zips.aggregate([<br />
- { $group: { _id:”state”, totalPop:{ $sum : “$pop” }}},<br />
- { $matach: {totalPop: { $gte: 10<em>1000</em>1000 }}}<br />
-])</li>
-</ol>
-
-<p>2) 각 주의 도시 인구 평균을 반환<br />
-db.zips.aggregate([<br />
-	{ $group: { _id: { state: “$state”, city: “city” }, pop: { $sum: “$pop” }}},
-	{ $group: { _id: “$_id.state”, avgCityPop: {$avg: “$pop” }}}
-])</p>
-
-<p>P1. state, city 를 키로 인구 합산<br />
-P2. 첫번째 $group의 state 를 키로 갖으면서, pop의 평균 추출</p>
-
-<p>3) 각 주의 도시 인구가 가장 많은 곳과 적은 곳을 반환<br />
-db.zips.aggregate([
-	{ $group: 
-		{ 	_id: { state: “$state”, city: “$city” },
-			pop: { $sum: “$pop”}}},
-	{ $sort: { pop:1 }},
-	{ $group:
-		{	_id: “$_id.state”,
-			biggestCity: { $last: “$_id.city” },
-			biggestPop: { $last: “$pop” },
-			smallestCity: { $first: “$_id.city” },
-			smallestPop: { $first: “$pop” }
-		 }},
-	// 아래 코드는 선택적으로 할 수 있습니다.<br />
-	{ $project:
-		{ 	_id:0,
-			state:”$_id”,
-			biggestCity: { name: “$biggestCity”, pop: “$biggestPop” },
-			smallestCity: { name: “$smallestCity”, pop: “$smallestPop” }
-		}
-	}
-])</p>
-
-<ol>
-  <li>사용자의 선호 데이터 집계 연산 활용<br />
-가상의 스포츠 클럽을 대상으로 하는 사례입니다.</li>
-</ol>
-
-<p>1) 데이터 모델<br />
-{	_id: “jane”,
-	joined: ISODate{“2011-03-02”},
-	likes: [“golf”, “racquetball”]
-}</p>
-
-<p>2) 다큐먼트 정규화와 분류<br />
-이름을 대문자로 표시하고, 알파벳 순으로 정렬해봅시다.<br />
-db.sports.aggregate{[ 
-	{ $project: { name:{$toUpper: “$_id”}, _id:0 }},
-	{ $sort: { name:1 }}
-]}</p>
-
-<p>3) 가입 월별로 사용자 이름 반환<br />
-db.sports.aggregate{[
-	{ $project: 
-		{ 	month_joined: { $month: “$joined” },
-			name: “$_id”,
-			_id: 0
-		}},
-	{ $sort: { month_joined: 1 }}
-]}</p>
-
-<p>4) 월별로 가입한 회원 숫자 반환<br />
-db.sports.aggregate{[
-	{ $project:
-		{ month_joined: { $month: $”joined” }}},
-	{ $group:
-		{ _id: { month_joined: “$month_joined”}, number: { $sum: 1}}},
-	{ $sort: {“_id.month_joined”: 1}
-]}</p>
-
-<p>5) 회원들이 가장 선호하는 종목 5개 반환
-db.sports.aggregate{[
-	{ $unwind: “$likes” },
-	{ $group: { _id: “$likes”, number: { $sum:1 }}},
-	{ $sort: { “$number”:-1 }},
-	{ $limit: 5}
-]}</p>
-
-<ol>
-  <li>MapReduce 활용 사례<br />
-{
- _id: ObjectId(“50a8240b927d5d8b5891743c”),
- cust_id: “abc123”,
- ord_date: new Date(“Oct 04, 2012”),
- status: ‘A’,
- price: 25,
- items: [ { sku: “mmm”, qty: 5, price: 2.5 }, {sku: “nnn”, qty: 5, price: 2.5 }]
-}</li>
-</ol>
-
-<p>1) 고객별 합산 금액 반환<br />
-var mapFunction1 = function() { 
-		emit(this.cust_id, this.price);
-};
-var reduceFunction1 = function(keyCustId, valuePrices) {
-	return Array.sum(valuePrices);	
-};
-db.orders.mapReduce(
-	mapFunction1,
-	reduceFunction1,
-	{ out: “map_reduce_example” }
-)</p>
+<p>$and operator 를 사용하면, 두 개의 $match stage 를 하나로 만들 수 있습니다.</p>
 
                 </div>
             </section>
@@ -578,7 +391,7 @@ db.orders.mapReduce(
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'http://localhost:4000/';
+                            this.page.url = 'https://kjham.github.io/';
                             this.page.identifier = 'SWDEVLAB';
                         };
                         (function() {
@@ -624,6 +437,92 @@ db.orders.mapReduce(
                                 
                                   
                                     
+                                        
+                                        
+                                            <li><a href="/ghost-jekyll-1">Ghost-Jekyll 적용하기 - 1</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/front-end-vue-js-2">Vue.js 시작하기 - 2</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/front-end-vue-js-1">Vue.js 시작하기 - 1</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
                                   
                                 
                                   
@@ -634,7 +533,12 @@ db.orders.mapReduce(
                                     
                                         
                                         
-                                            <li><a href="/database-mongodb-opensource-2">(OpenSource MongoDB) CRUD 연산</a></li>
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
                                         
                                     
                                   
@@ -643,16 +547,12 @@ db.orders.mapReduce(
                                     
                                         
                                         
-                                            <li><a href="/database-mongodb-7-tunning">(New NoSQL & mongoDB) Performance Tuning</a></li>
-                                        
                                     
                                   
                                 
                                   
                                     
                                         
-                                        
-                                            <li><a href="/database-mongodb-6-replica_replicasets">(New NoSQL & mongoDB) Replica & ReplicaSets</a></li>
                                         
                                     
                                   
@@ -770,7 +670,7 @@ db.orders.mapReduce(
                         <footer class="read-next-card-footer">
                             <a href="/tag/sw-dev-lab/">
                                 
-                                    See all 18 posts  →
+                                    See all 30 posts  →
                                 
                             </a>
                         </footer>
@@ -779,6 +679,42 @@ db.orders.mapReduce(
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+    <article class="post-card post-template no-image">
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/linux-centos-encoding">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Sw-dev-lab</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">(Linux:Centos7) 한글깨짐현상 수정</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>**Linux Centos7 - 한글깨짐** 1. 현재 설정된 인코딩 설정 확인 [root@localhost etc]$ echo $LANG ko_KR.UTF-8 2. 인코딩 설정 해제 [root@localhost sysconfig]# unset LANG [root@localhost sysconfig]# LANG=C 3. 사용 가능한 인코딩 설정 확인 [root@localhost</p>
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/proms_profile.jpg" alt="Keon-Joo, Ham" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/proms/">Keon-Joo, Ham</a>
+                        </span>
+                    
+                
+            </footer>
+        </div>
+    </article>
+
             
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
@@ -827,7 +763,7 @@ db.orders.mapReduce(
 <!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
 <div class="floating-header">
     <div class="floating-header-logo">
-        <a href="http://localhost:4000/">
+        <a href="https://kjham.github.io/">
             
                 <img src="/assets/images/favicon.png" alt="SWDEVLAB icon" />
             
@@ -835,13 +771,13 @@ db.orders.mapReduce(
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">(OpenSource MongoDB) 집계 연산</div>
+    <div class="floating-header-title">(OpenSource MongoDB) Aggregation Pipeline Optimization</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%28OpenSource+MongoDB%29+%EC%A7%91%EA%B3%84+%EC%97%B0%EC%82%B0&amp;url=https://kjham.github.io/database-mongodb-opensource-aggregate"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%28OpenSource+MongoDB%29+Aggregation+Pipeline+Optimization&amp;url=https://kjham.github.io/database-mongodb-opensource-aggregate"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
@@ -871,7 +807,7 @@ db.orders.mapReduce(
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="http://localhost:4000/">SWDEVLAB</a> &copy; 2018</section>
+                <section class="copyright"><a href="https://kjham.github.io/">SWDEVLAB</a> &copy; 2019</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>

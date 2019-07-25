@@ -1,0 +1,1188 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-21T17:26:37+09:00</updated><id>http://localhost:4000/</id><title type="html">SWDEVLAB</title><subtitle>Software Developement Laboratory</subtitle><entry><title type="html">(OpenSource MongoDB) 집계 연산</title><link href="http://localhost:4000/database-mongodb-opensource-aggregate" rel="alternate" type="text/html" title="(OpenSource MongoDB) 집계 연산" /><published>2018-03-15T01:00:00+09:00</published><updated>2018-03-15T01:00:00+09:00</updated><id>http://localhost:4000/database-mongodb-opensource-aggregate</id><content type="html" xml:base="http://localhost:4000/database-mongodb-opensource-aggregate">&lt;p&gt;&lt;strong&gt;openSource MongoDB - 집계 연산&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- 집계동작 소개&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;집계 파이프라인&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;db.orders.aggregate( [ 
+	– status field 가 “A” 인 것을 추출
+	{ $match: { status: “A” } },
+	– 그룹 식별 값은 “cust_id” field 로..
+	– 그룹핑 된 document 들의 amount 값을 합친 것을 “total” field 로..
+	{ $group: { _id: : “$cust_id”, total : { $sum : “$amount” } } }
+	])&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;파이프라인 연산자와 인덱스&lt;br /&gt;
+$match, $sort 파이프라인 연산자들은 파이프라인의 시작점에 사용하는 경우 인덱스로서의 장점을 발휘합니다.&lt;br /&gt;
+버전 2.4 이후로 도입된 $geoNear 파이프라인 연산자는 위치 인덱스의 장점을 갖습니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;선점 필터링 (Early Filtering)&lt;br /&gt;
+데이터의 작은 집합만을 요청하는 경우에는 파이프라인의 시작점에서 입력되는 다큐먼트를 제한하기 위해 $match, $limit, $skip 단계를 사용합니다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;명령어 (연산자)&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;실행&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;입출력 형태&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$project&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;reshape&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;(1:1) 키를 지우거나 추가하기&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$match&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;filler&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;(n:1) 필터링하기&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$group&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;aggregate&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;(n:1) 합계 연산&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$sort&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;sort&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;(1:1) 분류하기&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$skip&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;skips&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;(n:1) 건너뛰기&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$limit&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;limits&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;(n:1) 제한하기&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$unwind&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;normalize&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;(1:n) tags:[“red”,”blue”,”green”] -&amp;gt; tags:red, tags:green, tags:blue&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$out&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;output&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;(1:1) 출력하기&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;집계 연산 동작&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;1) $count&lt;/p&gt;
+
+&lt;p&gt;2) $distinct&lt;/p&gt;
+
+&lt;p&gt;3) $group&lt;/p&gt;
+
+&lt;p&gt;4) $sum&lt;/p&gt;
+
+&lt;p&gt;5) $addToSet&lt;br /&gt;
+category 로 넣는 연산자&lt;/p&gt;
+
+&lt;p&gt;6) $push&lt;br /&gt;
+caterory 로 넣되 중복 제거가 안됨&lt;/p&gt;
+
+&lt;p&gt;7) $max, $min&lt;/p&gt;
+
+&lt;p&gt;8) $project&lt;br /&gt;
+{
+	“city” : “ACMAR”,
+	“loc” : [ -86.51557, 33.584132 ],
+	“pop” : 6055,
+	“state” : AL,
+	“_id” : “35004”
+} 
+일 경우,
+db.zips.aggregate([ 
+	{ $project: {_id:0, city:{$toLower:”$city”}, pop:1, state:1, zip:”$_id” } }
+	])&lt;br /&gt;
+로 집계 한다면 …&lt;br /&gt;
+{
+	“city” : “acmar”,&lt;br /&gt;
+	“pop” : 6055,&lt;br /&gt;
+	“state” : “AL”,&lt;br /&gt;
+	“zip” : “35004”&lt;br /&gt;
+}
+로 리턴됩니다.&lt;/p&gt;
+
+&lt;p&gt;9) $match&lt;br /&gt;
+임의의 컬렉션 필드에서 ‘20’ 이상인 다큐먼트를 찾는 쿼리는 다음과 같습니다.&lt;br /&gt;
+db.&lt;collection&gt;.aggregate([{$match:{&lt;field&gt;:{$gt:20}}}])&lt;/field&gt;&lt;/collection&gt;&lt;/p&gt;
+
+&lt;p&gt;10) $sort&lt;br /&gt;
+집계 연산 동작은 디스크, 메모리 기반의 정령을 모두 지원합니다.&lt;br /&gt;
+기본적으로 메모리 기반을 둔 정렬을 시도하고, 모든 파이프라인 단계에서 100MB의 제한이 있습니다.&lt;br /&gt;
+또한 $group 전후에 정렬할 수 있습니다.&lt;br /&gt;
+1이 오름차순, -1이 내림차순 입니다.&lt;/p&gt;
+
+&lt;p&gt;11) $limit, $skip&lt;br /&gt;
+보통 $skip을 사용한 후 $limit를 사용합니다.&lt;br /&gt;
+$skip 은 주어진 값 만큼 건너뛰고 목록화 하는 것이고,&lt;br /&gt;
+$limit 는 주어진 값 만큼 목록화 하는 것입니다.&lt;/p&gt;
+
+&lt;p&gt;12) $first, $last&lt;br /&gt;
+$group 단계에서 $first, $last 를 사용할 수 있습니다.&lt;br /&gt;
+$first 는 첫 번째 값을, $last 는 마지막 값을 반환합니다.&lt;/p&gt;
+
+&lt;p&gt;13) $unwind&lt;br /&gt;
+MongoDB의 Document는 배열을 가질 수 있는데, 배열에 있는 값을 $group에 사용하기 위해 배열을 분리하는 과정에서 $unwind 연산자를 사용할 수 있습니다.&lt;br /&gt;
+이와 반대되는 것은 $push 연산자 입니다.&lt;/p&gt;
+
+&lt;p&gt;14) $redact
+{ $redact: { $cond: { if: { $eq: [ “$level”, 5 ] }, then: “&lt;script type=&quot;math/tex&quot;&gt;PRUNE&quot;, else: &quot;&lt;/script&gt;DESCEND” } } },
+{ $match: { year: 2014, category: { $ne: “Z” } } }&lt;/p&gt;
+
+&lt;p&gt;{ $match: { year: 2014 } },
+{ $redact: { $cond: { if: { $eq: [ “$level”, 5 ] }, then: “&lt;script type=&quot;math/tex&quot;&gt;PRUNE&quot;, else: &quot;&lt;/script&gt;DESCEND” } } },
+{ $match: { year: 2014, category: { $ne: “Z” } } }&lt;/p&gt;
+
+&lt;p&gt;15) $cond&lt;/p&gt;
+
+&lt;p&gt;16) $addFields&lt;/p&gt;
+
+&lt;p&gt;17) $lookup&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- 집계 연산 성능&lt;/strong&gt;
+참고주소 : https://docs.mongodb.com/manual/core/aggregation-pipeline-optimization/&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;$sort + $match Sequence Optimization
+{ $sort: { age : -1 } },
+{ $match: { status: ‘A’ } }
+&lt;strong&gt;TO&lt;/strong&gt;
+{ $match: { status: ‘A’ } },
+{ $sort: { age : -1 } }&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;$project or $addFields + $match Sequence Optimization
+{ $addFields: {
+ maxTime: { $max: “$times” },
+ minTime: { $min: “$times” }
+} },
+{ $project: {
+ _id: 1, name: 1, times: 1, maxTime: 1, minTime: 1,
+ avgTime: { $avg: [“$maxTime”, “$minTime”] }
+} },
+{ $match: {
+ name: “Joe Schmoe”,
+ maxTime: { $lt: 20 },
+ minTime: { $gt: 5 },
+ avgTime: { $gt: 7 }
+} }
+&lt;strong&gt;TO&lt;/strong&gt;
+{ $match: { name: “Joe Schmoe” } },
+{ $addFields: {
+ maxTime: { $max: “$times” },
+ minTime: { $min: “$times” }
+} },
+{ $match: { maxTime: { $lt: 20 }, minTime: { $gt: 5 } } },
+{ $project: {
+ _id: 1, name: 1, times: 1, maxTime: 1, minTime: 1,
+ avgTime: { $avg: [“$maxTime”, “$minTime”] }
+} },
+{ $match: { avgTime: { $gt: 7 } } }&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;$redact + $match Sequence Optimization
+{ $redact: { $cond: { if: { $eq: [ “$level”, 5 ] }, then: “&lt;script type=&quot;math/tex&quot;&gt;PRUNE&quot;, else: &quot;&lt;/script&gt;DESCEND” } } },
+{ $match: { year: 2014, category: { $ne: “Z” } } }
+&lt;strong&gt;TO&lt;/strong&gt;
+{ $match: { year: 2014 } },
+{ $redact: { $cond: { if: { $eq: [ “$level”, 5 ] }, then: “&lt;script type=&quot;math/tex&quot;&gt;PRUNE&quot;, else: &quot;&lt;/script&gt;DESCEND” } } },
+{ $match: { year: 2014, category: { $ne: “Z” } } }&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;$project + $skip or $limit Sequence Optimization
+{ $sort: { age : -1 } },
+{ $project: { status: 1, name: 1 } },
+{ $limit: 5 }
+&lt;strong&gt;TO&lt;/strong&gt;
+{ $sort: { age : -1 } },
+{ $limit: 5 }
+{ $project: { status: 1, name: 1 } },&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;$match + $match Coalescence
+{ $match: { year: 2014 } },
+{ $match: { status: “A” } }
+&lt;strong&gt;TO&lt;/strong&gt;
+{ $match: { $and: [ { “year” : 2014 }, { “status” : “A” } ] } }&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;$lookup + $unwind Coalescence
+{
+  $lookup: {
+ from: “otherCollection”,
+ as: “resultingArray”,
+ localField: “x”,
+ foreignField: “y”
+  }
+},
+{ $unwind: “$resultingArray”}
+&lt;strong&gt;TO&lt;/strong&gt;
+{
+  $lookup: {
+ from: “otherCollection”,
+ as: “resultingArray”,
+ localField: “x”,
+ foreignField: “y”,
+ unwinding: { preserveNullAndEmptyArrays: false }
+  }
+}&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;- 집계 연산 활용&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;우편번호 데이터 셋의 집계 동작&lt;br /&gt;
+1) 인구가 1,000만 명 이상인 주 반환&lt;br /&gt;
+db.zips.aggregate([&lt;br /&gt;
+ { $group: { _id:”state”, totalPop:{ $sum : “$pop” }}},&lt;br /&gt;
+ { $matach: {totalPop: { $gte: 10&lt;em&gt;1000&lt;/em&gt;1000 }}}&lt;br /&gt;
+])&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;2) 각 주의 도시 인구 평균을 반환&lt;br /&gt;
+db.zips.aggregate([&lt;br /&gt;
+	{ $group: { _id: { state: “$state”, city: “city” }, pop: { $sum: “$pop” }}},
+	{ $group: { _id: “$_id.state”, avgCityPop: {$avg: “$pop” }}}
+])&lt;/p&gt;
+
+&lt;p&gt;P1. state, city 를 키로 인구 합산&lt;br /&gt;
+P2. 첫번째 $group의 state 를 키로 갖으면서, pop의 평균 추출&lt;/p&gt;
+
+&lt;p&gt;3) 각 주의 도시 인구가 가장 많은 곳과 적은 곳을 반환&lt;br /&gt;
+db.zips.aggregate([
+	{ $group: 
+		{ 	_id: { state: “$state”, city: “$city” },
+			pop: { $sum: “$pop”}}},
+	{ $sort: { pop:1 }},
+	{ $group:
+		{	_id: “$_id.state”,
+			biggestCity: { $last: “$_id.city” },
+			biggestPop: { $last: “$pop” },
+			smallestCity: { $first: “$_id.city” },
+			smallestPop: { $first: “$pop” }
+		 }},
+	// 아래 코드는 선택적으로 할 수 있습니다.&lt;br /&gt;
+	{ $project:
+		{ 	_id:0,
+			state:”$_id”,
+			biggestCity: { name: “$biggestCity”, pop: “$biggestPop” },
+			smallestCity: { name: “$smallestCity”, pop: “$smallestPop” }
+		}
+	}
+])&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;사용자의 선호 데이터 집계 연산 활용&lt;br /&gt;
+가상의 스포츠 클럽을 대상으로 하는 사례입니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;1) 데이터 모델&lt;br /&gt;
+{	_id: “jane”,
+	joined: ISODate{“2011-03-02”},
+	likes: [“golf”, “racquetball”]
+}&lt;/p&gt;
+
+&lt;p&gt;2) 다큐먼트 정규화와 분류&lt;br /&gt;
+이름을 대문자로 표시하고, 알파벳 순으로 정렬해봅시다.&lt;br /&gt;
+db.sports.aggregate{[ 
+	{ $project: { name:{$toUpper: “$_id”}, _id:0 }},
+	{ $sort: { name:1 }}
+]}&lt;/p&gt;
+
+&lt;p&gt;3) 가입 월별로 사용자 이름 반환&lt;br /&gt;
+db.sports.aggregate{[
+	{ $project: 
+		{ 	month_joined: { $month: “$joined” },
+			name: “$_id”,
+			_id: 0
+		}},
+	{ $sort: { month_joined: 1 }}
+]}&lt;/p&gt;
+
+&lt;p&gt;4) 월별로 가입한 회원 숫자 반환&lt;br /&gt;
+db.sports.aggregate{[
+	{ $project:
+		{ month_joined: { $month: $”joined” }}},
+	{ $group:
+		{ _id: { month_joined: “$month_joined”}, number: { $sum: 1}}},
+	{ $sort: {“_id.month_joined”: 1}
+]}&lt;/p&gt;
+
+&lt;p&gt;5) 회원들이 가장 선호하는 종목 5개 반환
+db.sports.aggregate{[
+	{ $unwind: “$likes” },
+	{ $group: { _id: “$likes”, number: { $sum:1 }}},
+	{ $sort: { “$number”:-1 }},
+	{ $limit: 5}
+]}&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;MapReduce 활용 사례&lt;br /&gt;
+{
+ _id: ObjectId(“50a8240b927d5d8b5891743c”),
+ cust_id: “abc123”,
+ ord_date: new Date(“Oct 04, 2012”),
+ status: ‘A’,
+ price: 25,
+ items: [ { sku: “mmm”, qty: 5, price: 2.5 }, {sku: “nnn”, qty: 5, price: 2.5 }]
+}&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;1) 고객별 합산 금액 반환&lt;br /&gt;
+var mapFunction1 = function() { 
+		emit(this.cust_id, this.price);
+};
+var reduceFunction1 = function(keyCustId, valuePrices) {
+	return Array.sum(valuePrices);	
+};
+db.orders.mapReduce(
+	mapFunction1,
+	reduceFunction1,
+	{ out: “map_reduce_example” }
+)&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">openSource MongoDB - 집계 연산</summary></entry><entry><title type="html">(OpenSource MongoDB) 집계 연산</title><link href="http://localhost:4000/database-mongodb-opensource-7" rel="alternate" type="text/html" title="(OpenSource MongoDB) 집계 연산" /><published>2018-03-15T01:00:00+09:00</published><updated>2018-03-15T01:00:00+09:00</updated><id>http://localhost:4000/database-mongodb-opensource-7</id><content type="html" xml:base="http://localhost:4000/database-mongodb-opensource-7">&lt;p&gt;&lt;strong&gt;openSource MongoDB - 집계 연산&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- 집계동작 소개&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;집계 파이프라인&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;db.orders.aggregate( [ 
+	– status field 가 “A” 인 것을 추출
+	{ $match: { status: “A” } },
+	– 그룹 식별 값은 “cust_id” field 로..
+	– 그룹핑 된 document 들의 amount 값을 합친 것을 “total” field 로..
+	{ $group: { _id: : “$cust_id”, total : { $sum : “$amount” } } }
+	])&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;파이프라인 연산자와 인덱스&lt;br /&gt;
+$match, $sort 파이프라인 연산자들은 파이프라인의 시작점에 사용하는 경우 인덱스로서의 장점을 발휘합니다.&lt;br /&gt;
+버전 2.4 이후로 도입된 $geoNear 파이프라인 연산자는 위치 인덱스의 장점을 갖습니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;선점 필터링 (Early Filtering)&lt;br /&gt;
+데이터의 작은 집합만을 요청하는 경우에는 파이프라인의 시작점에서 입력되는 다큐먼트를 제한하기 위해 $match, $limit, $skip 단계를 사용합니다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;명령어 (연산자)&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;실행&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;입출력 형태&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$project&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;reshape&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;(1:1) 키를 지우거나 추가하기&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$match&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;filler&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;(n:1) 필터링하기&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$group&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;aggregate&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;(n:1) 합계 연산&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$sort&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;sort&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;(1:1) 분류하기&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$skip&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;skips&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;(n:1) 건너뛰기&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$limit&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;limits&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;(n:1) 제한하기&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$unwind&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;normalize&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;(1:n) tags:[“red”,”blue”,”green”] -&amp;gt; tags:red, tags:green, tags:blue&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;$out&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;output&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;(1:1) 출력하기&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;집계 연산 동작&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;1) $count&lt;/p&gt;
+
+&lt;p&gt;2) $distinct&lt;/p&gt;
+
+&lt;p&gt;3) $group&lt;/p&gt;
+
+&lt;p&gt;4) $sum&lt;/p&gt;
+
+&lt;p&gt;5) $addToSet&lt;br /&gt;
+category 로 넣는 연산자&lt;/p&gt;
+
+&lt;p&gt;6) $push&lt;br /&gt;
+caterory 로 넣되 중복 제거가 안됨&lt;/p&gt;
+
+&lt;p&gt;7) $max, $min&lt;/p&gt;
+
+&lt;p&gt;8) $project&lt;br /&gt;
+{
+	“city” : “ACMAR”,
+	“loc” : [ -86.51557, 33.584132 ],
+	“pop” : 6055,
+	“state” : AL,
+	“_id” : “35004”
+} 
+일 경우,
+db.zips.aggregate([ 
+	{ $project: {_id:0, city:{$toLower:”$city”}, pop:1, state:1, zip:”$_id” } }
+	])&lt;br /&gt;
+로 집계 한다면 …&lt;br /&gt;
+{
+	“city” : “acmar”,&lt;br /&gt;
+	“pop” : 6055,&lt;br /&gt;
+	“state” : “AL”,&lt;br /&gt;
+	“zip” : “35004”&lt;br /&gt;
+}
+로 리턴됩니다.&lt;/p&gt;
+
+&lt;p&gt;9) $match&lt;br /&gt;
+임의의 컬렉션 필드에서 ‘20’ 이상인 다큐먼트를 찾는 쿼리는 다음과 같습니다.&lt;br /&gt;
+db.&lt;collection&gt;.aggregate([{$match:{&lt;field&gt;:{$gt:20}}}])&lt;/field&gt;&lt;/collection&gt;&lt;/p&gt;
+
+&lt;p&gt;10) $sort&lt;br /&gt;
+집계 연산 동작은 디스크, 메모리 기반의 정령을 모두 지원합니다.&lt;br /&gt;
+기본적으로 메모리 기반을 둔 정렬을 시도하고, 모든 파이프라인 단계에서 100MB의 제한이 있습니다.&lt;br /&gt;
+또한 $group 전후에 정렬할 수 있습니다.&lt;br /&gt;
+1이 오름차순, -1이 내림차순 입니다.&lt;/p&gt;
+
+&lt;p&gt;11) $limit, $skip&lt;br /&gt;
+보통 $skip을 사용한 후 $limit를 사용합니다.&lt;br /&gt;
+$skip 은 주어진 값 만큼 건너뛰고 목록화 하는 것이고,&lt;br /&gt;
+$limit 는 주어진 값 만큼 목록화 하는 것입니다.&lt;/p&gt;
+
+&lt;p&gt;12) $first, $last&lt;br /&gt;
+$group 단계에서 $first, $last 를 사용할 수 있습니다.&lt;br /&gt;
+$first 는 첫 번째 값을, $last 는 마지막 값을 반환합니다.&lt;/p&gt;
+
+&lt;p&gt;13) $unwind&lt;br /&gt;
+MongoDB의 Document는 배열을 가질 수 있는데, 배열에 있는 값을 $group에 사용하기 위해 배열을 분리하는 과정에서 $unwind 연산자를 사용할 수 있습니다.&lt;br /&gt;
+이와 반대되는 것은 $push 연산자 입니다.&lt;/p&gt;
+
+&lt;p&gt;14) $redact
+{ $redact: { $cond: { if: { $eq: [ “$level”, 5 ] }, then: “&lt;script type=&quot;math/tex&quot;&gt;PRUNE&quot;, else: &quot;&lt;/script&gt;DESCEND” } } },
+{ $match: { year: 2014, category: { $ne: “Z” } } }&lt;/p&gt;
+
+&lt;p&gt;{ $match: { year: 2014 } },
+{ $redact: { $cond: { if: { $eq: [ “$level”, 5 ] }, then: “&lt;script type=&quot;math/tex&quot;&gt;PRUNE&quot;, else: &quot;&lt;/script&gt;DESCEND” } } },
+{ $match: { year: 2014, category: { $ne: “Z” } } }&lt;/p&gt;
+
+&lt;p&gt;15) $cond&lt;/p&gt;
+
+&lt;p&gt;16) $addFields&lt;/p&gt;
+
+&lt;p&gt;17) $lookup&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- 집계 연산 성능&lt;/strong&gt;
+참고주소 : https://docs.mongodb.com/manual/core/aggregation-pipeline-optimization/&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;$sort + $match Sequence Optimization
+{ $sort: { age : -1 } },
+{ $match: { status: ‘A’ } }
+&lt;strong&gt;TO&lt;/strong&gt;
+{ $match: { status: ‘A’ } },
+{ $sort: { age : -1 } }&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;$project or $addFields + $match Sequence Optimization
+{ $addFields: {
+ maxTime: { $max: “$times” },
+ minTime: { $min: “$times” }
+} },
+{ $project: {
+ _id: 1, name: 1, times: 1, maxTime: 1, minTime: 1,
+ avgTime: { $avg: [“$maxTime”, “$minTime”] }
+} },
+{ $match: {
+ name: “Joe Schmoe”,
+ maxTime: { $lt: 20 },
+ minTime: { $gt: 5 },
+ avgTime: { $gt: 7 }
+} }
+&lt;strong&gt;TO&lt;/strong&gt;
+{ $match: { name: “Joe Schmoe” } },
+{ $addFields: {
+ maxTime: { $max: “$times” },
+ minTime: { $min: “$times” }
+} },
+{ $match: { maxTime: { $lt: 20 }, minTime: { $gt: 5 } } },
+{ $project: {
+ _id: 1, name: 1, times: 1, maxTime: 1, minTime: 1,
+ avgTime: { $avg: [“$maxTime”, “$minTime”] }
+} },
+{ $match: { avgTime: { $gt: 7 } } }&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;$redact + $match Sequence Optimization
+{ $redact: { $cond: { if: { $eq: [ “$level”, 5 ] }, then: “&lt;script type=&quot;math/tex&quot;&gt;PRUNE&quot;, else: &quot;&lt;/script&gt;DESCEND” } } },
+{ $match: { year: 2014, category: { $ne: “Z” } } }
+&lt;strong&gt;TO&lt;/strong&gt;
+{ $match: { year: 2014 } },
+{ $redact: { $cond: { if: { $eq: [ “$level”, 5 ] }, then: “&lt;script type=&quot;math/tex&quot;&gt;PRUNE&quot;, else: &quot;&lt;/script&gt;DESCEND” } } },
+{ $match: { year: 2014, category: { $ne: “Z” } } }&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;$project + $skip or $limit Sequence Optimization
+{ $sort: { age : -1 } },
+{ $project: { status: 1, name: 1 } },
+{ $limit: 5 }
+&lt;strong&gt;TO&lt;/strong&gt;
+{ $sort: { age : -1 } },
+{ $limit: 5 }
+{ $project: { status: 1, name: 1 } },&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;$match + $match Coalescence
+{ $match: { year: 2014 } },
+{ $match: { status: “A” } }
+&lt;strong&gt;TO&lt;/strong&gt;
+{ $match: { $and: [ { “year” : 2014 }, { “status” : “A” } ] } }&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;$lookup + $unwind Coalescence
+{
+  $lookup: {
+ from: “otherCollection”,
+ as: “resultingArray”,
+ localField: “x”,
+ foreignField: “y”
+  }
+},
+{ $unwind: “$resultingArray”}
+&lt;strong&gt;TO&lt;/strong&gt;
+{
+  $lookup: {
+ from: “otherCollection”,
+ as: “resultingArray”,
+ localField: “x”,
+ foreignField: “y”,
+ unwinding: { preserveNullAndEmptyArrays: false }
+  }
+}&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;- 집계 연산 활용&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;우편번호 데이터 셋의 집계 동작&lt;br /&gt;
+1) 인구가 1,000만 명 이상인 주 반환&lt;br /&gt;
+db.zips.aggregate([&lt;br /&gt;
+ { $group: { _id:”state”, totalPop:{ $sum : “$pop” }}},&lt;br /&gt;
+ { $matach: {totalPop: { $gte: 10&lt;em&gt;1000&lt;/em&gt;1000 }}}&lt;br /&gt;
+])&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;2) 각 주의 도시 인구 평균을 반환&lt;br /&gt;
+db.zips.aggregate([&lt;br /&gt;
+	{ $group: { _id: { state: “$state”, city: “city” }, pop: { $sum: “$pop” }}},
+	{ $group: { _id: “$_id.state”, avgCityPop: {$avg: “$pop” }}}
+])&lt;/p&gt;
+
+&lt;p&gt;P1. state, city 를 키로 인구 합산&lt;br /&gt;
+P2. 첫번째 $group의 state 를 키로 갖으면서, pop의 평균 추출&lt;/p&gt;
+
+&lt;p&gt;3) 각 주의 도시 인구가 가장 많은 곳과 적은 곳을 반환&lt;br /&gt;
+db.zips.aggregate([
+	{ $group: 
+		{ 	_id: { state: “$state”, city: “$city” },
+			pop: { $sum: “$pop”}}},
+	{ $sort: { pop:1 }},
+	{ $group:
+		{	_id: “$_id.state”,
+			biggestCity: { $last: “$_id.city” },
+			biggestPop: { $last: “$pop” },
+			smallestCity: { $first: “$_id.city” },
+			smallestPop: { $first: “$pop” }
+		 }},
+	// 아래 코드는 선택적으로 할 수 있습니다.&lt;br /&gt;
+	{ $project:
+		{ 	_id:0,
+			state:”$_id”,
+			biggestCity: { name: “$biggestCity”, pop: “$biggestPop” },
+			smallestCity: { name: “$smallestCity”, pop: “$smallestPop” }
+		}
+	}
+])&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;사용자의 선호 데이터 집계 연산 활용&lt;br /&gt;
+가상의 스포츠 클럽을 대상으로 하는 사례입니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;1) 데이터 모델&lt;br /&gt;
+{	_id: “jane”,
+	joined: ISODate{“2011-03-02”},
+	likes: [“golf”, “racquetball”]
+}&lt;/p&gt;
+
+&lt;p&gt;2) 다큐먼트 정규화와 분류&lt;br /&gt;
+이름을 대문자로 표시하고, 알파벳 순으로 정렬해봅시다.&lt;br /&gt;
+db.sports.aggregate{[ 
+	{ $project: { name:{$toUpper: “$_id”}, _id:0 }},
+	{ $sort: { name:1 }}
+]}&lt;/p&gt;
+
+&lt;p&gt;3) 가입 월별로 사용자 이름 반환&lt;br /&gt;
+db.sports.aggregate{[
+	{ $project: 
+		{ 	month_joined: { $month: “$joined” },
+			name: “$_id”,
+			_id: 0
+		}},
+	{ $sort: { month_joined: 1 }}
+]}&lt;/p&gt;
+
+&lt;p&gt;4) 월별로 가입한 회원 숫자 반환&lt;br /&gt;
+db.sports.aggregate{[
+	{ $project:
+		{ month_joined: { $month: $”joined” }}},
+	{ $group:
+		{ _id: { month_joined: “$month_joined”}, number: { $sum: 1}}},
+	{ $sort: {“_id.month_joined”: 1}
+]}&lt;/p&gt;
+
+&lt;p&gt;5) 회원들이 가장 선호하는 종목 5개 반환
+db.sports.aggregate{[
+	{ $unwind: “$likes” },
+	{ $group: { _id: “$likes”, number: { $sum:1 }}},
+	{ $sort: { “$number”:-1 }},
+	{ $limit: 5}
+]}&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;MapReduce 활용 사례&lt;br /&gt;
+{
+ _id: ObjectId(“50a8240b927d5d8b5891743c”),
+ cust_id: “abc123”,
+ ord_date: new Date(“Oct 04, 2012”),
+ status: ‘A’,
+ price: 25,
+ items: [ { sku: “mmm”, qty: 5, price: 2.5 }, {sku: “nnn”, qty: 5, price: 2.5 }]
+}&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;1) 고객별 합산 금액 반환&lt;br /&gt;
+var mapFunction1 = function() { 
+		emit(this.cust_id, this.price);
+};
+var reduceFunction1 = function(keyCustId, valuePrices) {
+	return Array.sum(valuePrices);	
+};
+db.orders.mapReduce(
+	mapFunction1,
+	reduceFunction1,
+	{ out: “map_reduce_example” }
+)&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">openSource MongoDB - 집계 연산</summary></entry><entry><title type="html">(OpenSource MongoDB) CRUD 연산</title><link href="http://localhost:4000/database-mongodb-opensource-2" rel="alternate" type="text/html" title="(OpenSource MongoDB) CRUD 연산" /><published>2018-03-15T01:00:00+09:00</published><updated>2018-03-15T01:00:00+09:00</updated><id>http://localhost:4000/database-mongodb-opensource-2</id><content type="html" xml:base="http://localhost:4000/database-mongodb-opensource-2">&lt;p&gt;&lt;strong&gt;penSource MongoDB - CRUD 연산&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- CRUD 란?&lt;/strong&gt;&lt;br /&gt;
+Create / Read / Update / Delete 를 의미합니다.&lt;br /&gt;
+Document 를 JSON 형태로 전달하면서 2진 JSON인 BSON 코드로 저장합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- MongoDB의 주요기능&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Index&lt;br /&gt;
+MongoDB는 일반적인 쿼리 밑 업데이트 성능을 향상시키기 위해 인덱스를 완벽하게 지원합니다.&lt;br /&gt;
+인덱스는 애플리케이션에서 데이터 구조를 효율적으로 관리하면서 컬렉션의 일정 부분을 view로 저장하도록 지원합니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;1) Index 를 사용하는 이유&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Index는 DB 테이블에 대한 처리 속도를 높여주는 자료 구조로서, 저장딘 자료에 대한 빠른 조회가 가능해집니다.&lt;/li&gt;
+  &lt;li&gt;Index는 Key-Field 형태를 가지며, 스캔을 거치지 않고 원하는 문서의 주소로 바로 이동하게 합니다.&lt;/li&gt;
+  &lt;li&gt;Collection이 커지면 읽기 동작에서 정보 전체 읽기가 발생하여 처리 속도가 느려지므로, 서버는 정보 전체 읽기가 발생하지 않도록 해야합니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;2) Index 의 특징&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;MongoDB는 자동적으로 _id 필드에 unique Index를 생성합니다.&lt;/li&gt;
+  &lt;li&gt;각 Index 는 8KB의 데이터 공간이 필요합니다.&lt;/li&gt;
+  &lt;li&gt;Index 생성 시 쓰기 및 변경 동작의 성능이 떨어집니다.&lt;/li&gt;
+  &lt;li&gt;Index는 system.indexes 컬렉션에 저장되며, db.system.indexes.fnid() 로 색인된 키를 확인할 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;3) Index 사용 방법&lt;br /&gt;
+db.users.find( {“username” : “david” }) 에 대한 Index 생성은
+db.users.ensureIndex( {“username”:1 })
+db.users.ensureIndex({“date”:1, “username”:1 }) -&amp;gt; “1”은 오름차순 방향&lt;/p&gt;
+
+&lt;p&gt;4) Index 사용시 주의 사항&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;모든 키에 대하여 인덱스하지 않는다.&lt;/li&gt;
+  &lt;li&gt;컬렉션의 절반 이상을 반환해야 하는 경우에는 인덱스를 사용하지 않습니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;복제 셋 읽기 우선 기능&lt;br /&gt;
+복제 셋 구성 요소를 갖는 복제 셋과 샤드 클러스터에서의 애플리케이션은 읽기 우선으로 설정됩니다.&lt;br /&gt;
+읽기 우선은 클라이언트가 셋의 직접 읽기 동작을 어떻게 수행할 것인지를 결정합니다.
+    &lt;ul&gt;
+      &lt;li&gt;데이터 중복을 방지한다.&lt;/li&gt;
+      &lt;li&gt;고장 복구 기능을 제공한다.&lt;/li&gt;
+      &lt;li&gt;Eventual Consistency를 활용하면 MongoDB의 Read Scalability를 향상시킬 수 있다.&lt;/li&gt;
+      &lt;li&gt;Write Scalability는 복제 셋을 대신하여 샤딩으로 해결해야 한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;쓰기 확인 (WriteConcern)&lt;br /&gt;
+애플리케이션은 ‘쓰기 확인’을 사용하여 쓰기 연산 동작을 제어합니다.
+    &lt;ul&gt;
+      &lt;li&gt;드라이버 단의 슬레이브에 쓰기 적용을 확인하는 방법이다.&lt;/li&gt;
+      &lt;li&gt;서버가 2대인 경우, 최소한 2대의 서버에 write되어야 하며, write될 때까지 설정된 시간 동안 대기해야 한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;집계&lt;br /&gt;
+MongoDB는 다양한 집계 기능도 제공합니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;- MongoDB CRUD 읽기 동작&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;읽기 동작
+1) Query Interface&lt;br /&gt;
+db.users.find(				&amp;lt;- collection
+ { age: { &amp;amp;gt: 18 } },	&amp;lt;- query criteeria
+ { name: 1, address: 1 }	&amp;lt;- projection
+).limit(5)					&amp;lt;- cusor modifier&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;2) Query 특성&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;MongoDB에서 모든 쿼리는 단일 컬렉션에서 사용된다.&lt;/li&gt;
+  &lt;li&gt;사용자는 limit, skips 밈ㅊ sort order를 사용하여 쿼리를 수정할 수 있다.&lt;/li&gt;
+  &lt;li&gt;sort()가 설정되지 않으면 쿼리에서 반환된느 다큐먼트 순서는 정의되지 않는다.&lt;/li&gt;
+  &lt;li&gt;기존의 다큐먼트를 update하는 동작은 Query가 갱신하려는 다큐먼트를 선택하는 것과 동일한 쿼리 문법을 사용한다.&lt;/li&gt;
+  &lt;li&gt;$match 파이프라인 작업은 집계 파이프라인에서 MongoDB 쿼리에 접근한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;3) Projection&lt;br /&gt;
+MongoDB에서 쿼리는 기본적으로 매칭된 모든 다큐먼트 내부의 필드를 반환합니다.&lt;br /&gt;
+따라서 MongoDB가 애플리케이션으로 전송하는 데이터의 양을 줄이기 위해 쿼리에 프로젝션을 추가하여 사용할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;800개 데이터의 평균 점수를 계산하여 1개의 결과만을 출력하는 명령&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;db.grades.aggregate({'$group':{'_id':'$student_id', 'average':{$avg:'$score'}}), {'$sort':{'average':-1}}, {'$limit':1})
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;4) Projection Example&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;결과 셋에서 1개 필드 추출하기 -&amp;gt; homework&lt;br /&gt;
+db.grades.find( {“student_id” : {$lt : 42} }, {“homework” : 0})&lt;/li&gt;
+  &lt;li&gt;2개 필드와 _id 필드를 추출하기&lt;br /&gt;
+db.grades.find( {“student_id” : {$lt : 42} }, {“type” : 1, “score” : 1 })&lt;/li&gt;
+  &lt;li&gt;_id 필드를 제외하고 2개 필드 추출하기&lt;br /&gt;
+db.grades.find( {“student_id” : {$lt : 42} }, {“_id” : 0, “type” : 1, “score” : 1 })&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;5) Projection 특성&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;기본적으로 _id 필드는 결과에 포함된다. 결과 셋에서 _id 필드를 제거하려면 프로젝션 다큐먼트에서 “_id”를 0으로 설정해야 한다.&lt;/li&gt;
+  &lt;li&gt;몽고 DB는 배열이 포함된 필드에서 $elemMatch, $slice, $와 같은 프로젝션 연산자를 제공한다.&lt;/li&gt;
+  &lt;li&gt;집계 프레임워크 파으프라인에서 연관된 프로젝션 기능으로 $project 파이프라인을 사용할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">penSource MongoDB - CRUD 연산</summary></entry><entry><title type="html">(New NoSQL &amp;amp; mongoDB) Performance Tuning</title><link href="http://localhost:4000/database-mongodb-7-tunning" rel="alternate" type="text/html" title="(New NoSQL &amp; mongoDB) Performance Tuning" /><published>2018-03-13T19:51:00+09:00</published><updated>2018-03-13T19:51:00+09:00</updated><id>http://localhost:4000/database-mongodb-7-tunning</id><content type="html" xml:base="http://localhost:4000/database-mongodb-7-tunning">&lt;p&gt;&lt;strong&gt;New NoSQL &amp;amp; mongoDB - Performance Tuning&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;운영 단계에서 사용자가 예기치 못하는 다양한 장애와 성능 저하 현상들이 발생하고 있는데 그 원인은 다음과 같이 매우 다양합니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Design Tuning&lt;br /&gt;
+데이터베이스의 성능을 저하시키는 가장 큰 원인은 데이터를 저장하는 논리적 구조인 컬렉션에 대한 적절한 분석과 설계 작업이 수행되지 못했기 때문입니다.&lt;br /&gt;
+이러한 컬렉션의 설계 문제로 인한 성능저하 원인과 문제점을 분석하고 대처하는 방법을 디자인 튜닝이라고 합니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;1) 대용량 데이터의 INSERT가 발생하는 Collection의 경우 최초 Extent의 크기를 충분히 설계하여 Extent 증가 시 불필요한 성능 지연이 발생하지 않도록 생성해야 하며, 대용량 데이터의 Full Scan이 자주 발생하는 Collection의 경우에는 Extent가 큰 것이 유라혹 Index Scan이 자주 발생하는 경우에는 Extent의 크기가 작거 설계되는 것이 유리합니다.&lt;/p&gt;
+
+&lt;p&gt;2) Collection 간에 업무적 관계가 밀접한 경우에는 Embedded 또는 Extend Document를 설계하고, 밀접하지 않은 경우에는 Linking(DBRef) 방법을 통해 설계해야합니다.&lt;/p&gt;
+
+&lt;p&gt;3) Compound Index를 설계할 때 자주 검색되거나 검색 조건이 유리한 Field를 선행 Field로 선택해야 성능에 유리합니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Statement Tuning&lt;br /&gt;
+MongoDB의 두 번쨰 성능 원인은 개발자가 작성한 Query가 적절하게 작성되지 못한 경우입니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;1) MongoDB는 서버와 사용자에 의해 실행된 문장의 실행 결과에 대해 Profiling System을 제공하며 분석 결과는 db.system.profile Collection에 저장합니다.&lt;/p&gt;
+
+&lt;p&gt;2) Explain() 함수를 통해 Full Collection Scan 되는 문장들이 튜닝 대상입니다.
+인덱스가 존재하지 않거나 인덱스는 존재하지만 인덱스를 통한 검색이 수행되지 못하는 경우 성능이 저하됩니다.&lt;/p&gt;
+
+&lt;p&gt;3) Key에 대한 Update는 Index에 대한 Update가 발생하기 때문에 성능이 저하될 수 있습니다. Key는 되도록 Update, Insert, Delete가 빈번하게 발생하지 않는 Field로 생성하는 것이 좋습니다.&lt;/p&gt;
+
+&lt;p&gt;4) 빅 데이터에 대한 빠른 Update를 위해서는 충분한 익스텐트 공간을 확보해야 합니다.&lt;/p&gt;
+
+&lt;p&gt;5) 인덱스의 빠른 생성을 위해 Background Index의 생성을 고려하십시오.&lt;/p&gt;
+
+&lt;p&gt;6) Graph Data는 응답 시간이 초과할 수 밖에 없기 때문에 성능이 저하될 수 밖에 없습니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Architecture Tuning&lt;br /&gt;
+MongoDB는 빅 데이터의 빠른 쓰기와 읽기 작업을 위해 다양한 솔루션을 제공하는데, 이런 아키텍처를 분석하여 해결하는 방안을 Architecture Tuning 라고 합니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;1) Replica Set 영역과 사용자의 비지니스 Area 영역은 반드시 분리하십시오. 불필요하게 하나의 서버에서 다양한 기능 설정을 하면 성능이 저하될 수 밖에 없습니다.&lt;/p&gt;
+
+&lt;p&gt;2) 하나의 instance 보다 Shard Clusters를 적절히 활용하십시오. 여러개의 서버에 Shard 설정을 통해 분산과 Load Balancing 할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;3) Slave 데이터베이스에는 Backup과 Reports 활동을 중지하십시오. 되도록 Master 데이터베이스를 통해 작업 수행하는 것이 유리합니다. 백업 및 통계 분석 작업은 슬래이브 서버에 성능 부하를 일으킵니다. 마스터 슬래이브의 복제 작업이 있기 때문입니다.&lt;/p&gt;
+
+&lt;p&gt;4) 하나의 Machine에는 하나의 MongoDB Instance 만 활성화 하십시오. MongoDB는 충분한 Map Memory 영역을 요구하기 때문에 불필요하게 여러 개의 mongod를 수행하게 되면 메모리 부족으로 성능 지연이 예상됩니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Instance Tuning&lt;br /&gt;
+충분한 메모리 영역이 할당되지 않았을 때 성능 저하 현상이 발생할 수 있습니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;1) Explain Plan과 Profiler를 적용하여 문장 튜닝을 먼저 수행하십십오.&lt;/p&gt;
+
+&lt;p&gt;2) 최적화된 Read/Write가 가능하도록 문장을 작성하십시오.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;db.test.update({_id:99}, {$inc:{imageCount:1}})&lt;br /&gt;
+db.test.find({folderID:99}).count().explain()&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;3) Data Locality(인접성)이 높아질 수 있도록 설계하고 저장하십시오.&lt;br /&gt;
+디스크 상 하나의 블록에 충분한 여유공간을 확보하고 보다 많은 데이터가 저장될 수 있도록 하십시오.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Hardware Tuning&lt;br /&gt;
+운영체계에서 발생하는 문제로 시스템 성능이 저하될 때, MongoDB도 함께 성능이 저하될 수 밖에 없습니다.&lt;br /&gt;
+따라서 운영체계에 대항 성능 튜닝이 먼저 요구됩니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;1) 운영체계 환경에 대한 고려&lt;/p&gt;
+
+&lt;p&gt;2) 하드디스크 환경에 대한 고려&lt;/p&gt;
+
+&lt;p&gt;3) File System 환경에 대한 고려&lt;/p&gt;
+
+&lt;p&gt;4) 저장엔진(Storage Engine)에 대한 고려&lt;/p&gt;
+
+&lt;p&gt;5) 복제(Replication) 서버 환경에 대한 고려&lt;/p&gt;
+
+&lt;p&gt;6) Sharding 서버 환경에 대한 고려&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">New NoSQL &amp;amp; mongoDB - Performance Tuning</summary></entry><entry><title type="html">(New NoSQL &amp;amp; mongoDB) Replica &amp;amp; ReplicaSets</title><link href="http://localhost:4000/database-mongodb-6-replica_replicasets" rel="alternate" type="text/html" title="(New NoSQL &amp; mongoDB) Replica &amp; ReplicaSets" /><published>2018-03-13T19:51:00+09:00</published><updated>2018-03-13T19:51:00+09:00</updated><id>http://localhost:4000/database-mongodb-6-replica_replicasets</id><content type="html" xml:base="http://localhost:4000/database-mongodb-6-replica_replicasets">&lt;p&gt;&lt;strong&gt;New NoSQL &amp;amp; mongoDB - Replica &amp;amp; ReplicaSets&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- Master &amp;amp; Slave 서버&lt;/strong&gt;&lt;br /&gt;
+빅 데이터의 안정한 저장과 관리 그리고 복구가 수행되기 위해서는 적절한 백업 솔루션이 필요합니다.&lt;br /&gt;
+리프리카와 리프리카 셋 기능은 빅데이터의 백업을 통해 안정성을 보장하기 위한 솔루션 중 하나 입니다.&lt;/p&gt;
+
+&lt;p&gt;리프리카 기능을 위해서는 마스터 노트와 슬레이브 노드가 필요하며, 슬레이브 노드는 최소 3대 이상을 권장합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- ReplicaSets&lt;/strong&gt;&lt;br /&gt;
+마스터 서버와 슬레이브 서버의 관계는 원본 데이터베이스에 대한 복제 본 데이터베이스에 동일한 데이터를 하나 더 저장해 두는 관계를 의미합니다.&lt;br /&gt;
+그런데, 실시간으로 마스터 서버에 대한 복구 작업을 수행하는 거나 슬레이브 서버를 즉시 사용할 수 있는 것은 아닙니다.&lt;br /&gt;
+이를 위한 기능이 리프리카셋 입니다.&lt;/p&gt;
+
+&lt;p&gt;리프리카셋에서 실시간으로 사용되는 메인 서버를 Primary Server 라고 합니다.&lt;br /&gt;
+Primary Server 을 통해 데이터를 입력, 수정, 삭제, 조회 합니다.&lt;/p&gt;
+
+&lt;p&gt;리프리카셋에서 두 번째 서버를 Secondary Server 라고 하는데, 이 서버는 Primary Server 장애 발생 시, 리프리카셋에 의해 즉시 Primary Server의 마지막 수행 작업부터 연속적으로 작업 수행을 가능하도록 합니다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;-주요특징&lt;br /&gt;
+1) 리프리카셋에서 프라이머리 서버는 맴 2초마다 세컨더리 서버의 상태를 케츠하며 동기화를 위한 HeartBeat 작업을 수행합니다.&lt;br /&gt;
+2) Secondary Server가 Shutdown 된더라도 복제 작업만 중지될 뿐 Primary Server에 대한 데이터 읽기 작업은 정상적으로 수행됩니다.&lt;br /&gt;
+3) Primary Server가 중지되면 Secondary Server 가 Primary Server가 됩니다.&lt;br /&gt;
+4) OpLog 는 Primary Server 가 Secondary Server로 복제 작업을 수행하다 장애로 인해 작업을 수행할 수 없는 경우 동기화하지 못한 데이터를 추후 Secondary Server로 반영해 주기 위해 데이터를 백업해줍니다.&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">New NoSQL &amp;amp; mongoDB - Replica &amp;amp; ReplicaSets</summary></entry><entry><title type="html">(New NoSQL &amp;amp; mongoDB) Sharding System</title><link href="http://localhost:4000/database-mongodb-5-sharding-system" rel="alternate" type="text/html" title="(New NoSQL &amp; mongoDB) Sharding System" /><published>2018-03-13T19:51:00+09:00</published><updated>2018-03-13T19:51:00+09:00</updated><id>http://localhost:4000/database-mongodb-5-sharding-system</id><content type="html" xml:base="http://localhost:4000/database-mongodb-5-sharding-system">&lt;p&gt;&lt;strong&gt;New NoSQL &amp;amp; mongoDB - Sharding System&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- Sharding System 이란?&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Sharding 의 가장 큰 목적은 파티셔닝을 통한 데이터 분산 처리와 성능 향상을 위한 Load Balancing 입니다.&lt;/li&gt;
+  &lt;li&gt;또한, 빅 데이터의 효율적 관리와 백업 및 복구 전략 수립을 위한 솔루션이기도 합니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;- Sharding의 목적&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;데이터의 분산 저장&lt;br /&gt;
+하나의 서버에 빅 데이터를 저장, 관리하는 것은 성능 저하 문제를 유발시킵니다.&lt;br /&gt;
+따라서, 여러대의 서버를 통하 분산 처리했을 때 가장 이상적으로 작동할 수 있습니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;빠른 성능&lt;br /&gt;
+분산 처리는 여러 개의 프로세스가 여러 개의 CPU를 통해 동시 작업을 수행했을 때 가장 이상적이라 볼 수 있습니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;데이터 백업과 복구 전략의 역할&lt;br /&gt;
+하나의 서버에 빅 데이터를 저장, 관리했을 때 서버 장애가 발생한다면 어마어마한 데이터 유실이 발생합니다.&lt;br /&gt;
+따라서, 샤딩 시스템을 이용하여 보다 안정적이고 효과적인 시스템 운영이 가능하도록 합니다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;- 시스템 환경&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;적절한 분산 처리를 위해 3대 이상의 샤드 서버로 구축을 권장합니다.&lt;/li&gt;
+  &lt;li&gt;싱글 노드로 운영할 때 보다 20~30% 이상의 추가 메모리 영역이 요구됩니다.&lt;br /&gt;
+(Mongos, OpLog, Balancer 프로세스 등 사용)&lt;/li&gt;
+  &lt;li&gt;샤스 시스템 구축할 때 요구되는 Config 서버는 최소 3대 이상 활성화할 것을 권장합니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;- Config 서버&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;예기치 못한 시스템 장애를 대비하여 3대 이상의 Config 서버를 별도 시스템 혹은 적절한 샤드 서버쪽 배치 작업이 필요합니다.&lt;/li&gt;
+  &lt;li&gt;Config-1 에 저장된 Meta Data는 Config-2, Config-3 에 동일하게 저장 관리됩니다.&lt;/li&gt;
+  &lt;li&gt;2대 이상의 Config 서버 운영 중, 하나의 Config 에서 장애 발생 시 나머지 Config 서버는 읽기 전용으로 되고, 최소한의 샤딩시스템 운영이 가능하도록 합니다.&lt;/li&gt;
+  &lt;li&gt;Config 서버는 각 샤드 서버에 어떤 데이터들이 어떻게 분산 저장 되어 있는지에 대한 Meta Data가 저장되어 있으며 MongoS가 데이터를 쓰고/읽기 작업을 수행할 때 COnfig 서버를 통해 수집합니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;- MongoS 프로세스&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;빅 데이터를 샤드 서버로 분배해 주는 프로세스 입니다.&lt;/li&gt;
+  &lt;li&gt;하나 이상의 프로세스가 활성화 됩니다.&lt;/li&gt;
+  &lt;li&gt;Application Server에서 실행 가능합니다.&lt;/li&gt;
+  &lt;li&gt;Config 서버로부터 Meta Data를 캐시합니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Config 서버가 설치된 Node에서 각 Node 가 성호 연결될 수 있도록 MongoS에 등록해야 합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- Chunk&lt;/strong&gt;
+초당 발생하는 빅 데이터를 여러 대의 서버로 구성된 샤딩 시스템에 저장할 때 하나의 서버에만 데이터가 저장된다면 쓰기 지연 현상이 집중적으로 발생하여 성능 저하 현상이 발생합니다.&lt;br /&gt;
+이런 경우, 하나의 서버에 저장되는 데이터들이 여러 개의 논리족 구조로 분할 저장해 두었다가 일정한 데이터 양에 도달했을 때, 두 번째, 세 번째 서버로 분할 데이터의 일부를 이동 저장하게 되는데.. 이 분할 단위를 청크라고 합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-Sharding System의 문제점&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;하나의 Shard 서버에 데이터가 집중되고 Load Balancing이 되지 않는 경우&lt;br /&gt;
+Shard Key로 설정된 Cardinality가 낮은 경우에 Chunk Size는 반드시 64MB 단위로 분할되는 것은 아닙니다.&lt;br /&gt;
+이런 경우, 64MB보다 훨씬 큰 Chunk 크기가 생성되는데.. 다른 서버로 데이터 분산이 이뤄지지 않아 하나의 샤드 서버에만 데이터가 집중되는 현상이 발생합니다.&lt;br /&gt;
+따라서 적절한 Shard Key 설정과 Chunk Size 조절이 필요합니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;특정 Shard 서버에 IO 트래픽이 증가하는 경우&lt;br /&gt;
+너무 낮은 Cardinality를 가진 필드를 Shard Key로 설정하면, 특정 Shard Server에만 데이터가 저장될 수 있습니다.&lt;br /&gt;
+이는 Shard Server는 동일한 Shard Key를 가진 데이터들을 같은 서버에 저장하기 때문입니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;샤드 클러스터의 밸런스가 균등하지 않은 경우&lt;br /&gt;
+Shard 서버에 분산 저장되는 속도가 하나의 컬렉션에 데이터가 입력되는 속도보다 느릴 때, 밸런스가 균등하지 않게 됩니다.&lt;br /&gt;
+Chunk Migration 이 빈약한 네트워크 대여푝의  경우 빅 데이터의 빠른 저장을 따라가지 못합니다.&lt;br /&gt;
+하루 일과 중 Peak Hour에 Chunk Migration이 발생하면 시스템 자원의 효율성이 떨어지게 되어, Peak Hour 에는 Chunk Migration을 중지하도록 Balance Window 를 설정하는데.. 너무 긴 Balance Window 는 균형을 무너뜨리게 됩니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;과도한 Chunk Migration이 클러스터 작동을 멈추는 경우&lt;br /&gt;
+불필요하게 큰 Chunk Size는 과부하를 발생시킵니다.&lt;br /&gt;
+빈번한 Chunk Migration은 일시적으로 클러스트 서버 전체의 성능 지연 문제를 유발하므로 Shard 서버를 늘리는 것도 방법이 됩니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;쓰기 겅능이 지연되고 빠른 검색이 안 되는 경우&lt;br /&gt;
+하나의 컬렉션은 여러 개의 익스텐트 구조로 생성되는데 이 익스텐트의 크기가 너무 작으면 빅 데이터가 저장되면서 새로운 익스텐트가 할당하며 불필요한 대기 시간이 발생하게 되고 쓰기 성능을 지연시키는 원인이 됩니다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;- ZONE Sharding&lt;/strong&gt;&lt;br /&gt;
+3.4버전부터 제공되는 Zone Sharding 기능은 Auto Sharding을 통해 분산 저장되는 데이터를 사용자가 직접 원하는 Shard Server에 저장되도록 설계하는 방법입니다.&lt;br /&gt;
+이는 데이터의 분산 정도를 제어할 수 있는 장점을 가졌다고 볼 수 있습니다.&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">New NoSQL &amp;amp; mongoDB - Sharding System</summary></entry><entry><title type="html">(New NoSQL &amp;amp; mongoDB) Structure</title><link href="http://localhost:4000/database-mongodb-4-structure" rel="alternate" type="text/html" title="(New NoSQL &amp; mongoDB) Structure" /><published>2018-03-13T02:39:00+09:00</published><updated>2018-03-13T02:39:00+09:00</updated><id>http://localhost:4000/database-mongodb-4-structure</id><content type="html" xml:base="http://localhost:4000/database-mongodb-4-structure">&lt;p&gt;&lt;strong&gt;New NoSQL &amp;amp; mongoDB - Structure&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- Server Structre&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Process 영역&lt;/li&gt;
+  &lt;li&gt;Memory 영역&lt;/li&gt;
+  &lt;li&gt;File 영역&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;- Storage Engine&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Memory Mapping 엔진 (MMAP)&lt;br /&gt;
+파일 시스템 기반의 이 엔진은 1.x, 2.x 까지 사용되었습니다.&lt;br /&gt;
+초당 10만건 이상의 빅데이터에 대한 빠른 쓰기/읽기 작업을 수행한 후 분석, 통계 작업까지 효과적으로 수행할 수 있도록 최적화된 저장 엔진 입니다.&lt;br /&gt;
+서버 장애 시 복구 작업이 가능한 Journal 로그도 제공합니다.&lt;br /&gt;
+Single CPU 기반의 프로세싱  위주로 처리되기 때문에 CPU 개수보다 충분한 크기의 메모리 자원이 더 요구됩니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;WiredTiger 저장엔진
+이는 3.x 버전부터 제공되는 파일 시스템 기반의 저장 엔진입니다.&lt;br /&gt;
+다수의 사용자가 트랜잭션 위주의 데이터를 처리하는데 최적화 되었습니다.&lt;br /&gt;
+Point in Time Recovery 복구 기능이 제공됩니다.&lt;br /&gt;
+다중 CPU 기반의 트랜잭션 위주 데이터 처리에 적합하기 떄문에 충분한 개수의 CPU 와 메모리 자원이 요구됩니다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;메모리 영역
+Resident Area : 사용자 데이터를 실제로 처리하는 메모리 영역&lt;br /&gt;
+Virtual Area : 가상 메모리 영역 (사용자 데이터를 압축 및 암호화)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;프로세스 영역
+Server Process : mongod.exe 를 통한 서버 구동을 위한 프로세스
+Client Process : 사용자 애플리케이션을 위한 프로세스&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;파일 영역
+Data File : 사용자 데이터를 저장하는 영역
+Diagnostic File : 시스템 백업 및 복구를 위한 정보를 저장하는 영역
+Journal(Log) File : 자동 복구를 위한 백업 데이터를 저장하는 영역&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;주요 특징
+Document-Level Lock 제공으로 다수의 사용자가 트랜잭션 위주의 데이터를 빠르게 처리할 수 있도록 동시성 제공&lt;br /&gt;
+인메모리 구조의 개선으로 MongoDB 서버의 빠른 처리 성능 개선&lt;br /&gt;
+Multi-Core를 활용할 수 있는 시스템 구조, 이로인해 다중 쓰레드를 통해 집중화를 최소화하였으며 동시성을 향상&lt;br /&gt;
+CheckSums 기능을 통해 시스템 장애 또는 저장 장치 장애로부터 발생하는 데이터 유실 최소화 가능, 또한 File System의 훼손(Corrupt) 상태를 분석할 수 있는 기능 추가&lt;br /&gt;
+압축(Compression) 기능을 통해 저장 공간 최소화 가능 (기본적으로 Snappy Compression 기능 제공)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;MMAP와 비교하여 Storage Size 점유율이 10%로 줄었고, 처리속도도 5배 이상 향상되었습니다.&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">New NoSQL &amp;amp; mongoDB - Structure</summary></entry><entry><title type="html">(New NoSQL &amp;amp; mongoDB) Data Modeling</title><link href="http://localhost:4000/database-mongodb-3-data-modeling" rel="alternate" type="text/html" title="(New NoSQL &amp; mongoDB) Data Modeling" /><published>2018-03-13T01:18:00+09:00</published><updated>2018-03-13T01:18:00+09:00</updated><id>http://localhost:4000/database-mongodb-3-data-modeling</id><content type="html" xml:base="http://localhost:4000/database-mongodb-3-data-modeling">&lt;p&gt;&lt;strong&gt;New NoSQL &amp;amp; mongoDB - Data Modeling&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- Data Modeling&lt;/strong&gt;&lt;br /&gt;
+생략&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">New NoSQL &amp;amp; mongoDB - Data Modeling</summary></entry><entry><title type="html">(New NoSQL &amp;amp; mongoDB) Index&amp;amp;User</title><link href="http://localhost:4000/database-mongodb-2-index-user" rel="alternate" type="text/html" title="(New NoSQL &amp; mongoDB) Index&amp;User" /><published>2018-03-13T01:13:00+09:00</published><updated>2018-03-13T01:13:00+09:00</updated><id>http://localhost:4000/database-mongodb-2-index-user</id><content type="html" xml:base="http://localhost:4000/database-mongodb-2-index-user">&lt;p&gt;&lt;strong&gt;New NoSQL &amp;amp; mongoDB - Index&amp;amp;User&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- Index를 사용하는 이유?&lt;/strong&gt;&lt;br /&gt;
+데이터 검색을 빠르게 처리하기 위해서 사용합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- Index 종류&lt;/strong&gt;&lt;br /&gt;
+각 Index 에 대한 특징은 시간이 날 때 알아봅시다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Non-Unique / Unique Index&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Single Field / Compound Index&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Multi Key Index&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Background Index&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;TTL Index&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Sparse Index&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Partial Index&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;GeoSpatial(2d) Index&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;GeoSpatial(2dsphere) Index&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;GeoHayStack Index&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Text Index&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Hashed Index&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Covered Index&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;- 사용자 생성 및 관리&lt;/strong&gt;
+MongoDB는 RDBMS와 달리 스키마와 계정 관계 같은 것이 없습니다.&lt;br /&gt;
+컬렉션과 별도라고 볼 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;OS 인증 방식 과 DB 인증 방식 두 가지가 있습니다.&lt;/p&gt;
+
+&lt;p&gt;사용자 권한 롤은 4가지로 나누어집니다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Database User Role&lt;/li&gt;
+  &lt;li&gt;DB Administration Role&lt;/li&gt;
+  &lt;li&gt;Administrative Role&lt;/li&gt;
+  &lt;li&gt;Any Database Role&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;위에 넘버링이 높을수록 권한이 높습니다.&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">New NoSQL &amp;amp; mongoDB - Index&amp;amp;User</summary></entry><entry><title type="html">(OpenSource MongoDB) Introduction</title><link href="http://localhost:4000/database-mongodb-opensource-1" rel="alternate" type="text/html" title="(OpenSource MongoDB) Introduction" /><published>2018-03-13T01:00:00+09:00</published><updated>2018-03-13T01:00:00+09:00</updated><id>http://localhost:4000/database-mongodb-opensource-1</id><content type="html" xml:base="http://localhost:4000/database-mongodb-opensource-1">&lt;p&gt;&lt;strong&gt;penSource MongoDB - Introduction&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- MongoDB 란?&lt;/strong&gt;
+몽고DB는 NoSQL(Not only SQL) 데이터베이스로, JSON(JavaScript Object Notation) 형태의 데이터를 저장합니다.&lt;br /&gt;
+SQL을 지원하지 않기 때문에 Join 개념이 없고, 스키마는 유동적입니다.&lt;br /&gt;
+여기서 유동적이라는 말은 몽고DB에서 저장하는 데이터 단위가 ‘다큐먼트’라는 것을 의미하는데, 이는 RDBMS에서 행 단위의 레코드라고 할 수 있습니다.&lt;br /&gt;
+따라서 몽고DB의 다큐먼트 속성은 SQL처럼 정형화되어 있지 않고, 가변적이기 때문에 모든 문서 형태가 비정형 데이터를 저장하고 처리하는 데 적합합니다.&lt;/p&gt;
+
+&lt;p&gt;다큐먼트를 집합적으로 부를 때는 ‘컬렉션’이라 합니다.&lt;br /&gt;
+컬렉션은 RDBMS에서 테이블 개념과 논리적으로 유사하지만, 데이터 구조를 미리 정의할 필요가 없습니다.&lt;br /&gt;
+몽고DB는 조인 기능을 포기하고, 이를 Embedding 과 Linking 기능으로 대체하였습니다.&lt;br /&gt;
+또한 다큐먼트 간에 트랜잭션은 없지만, 다큐먼트가 계층화되어 있고, 다큐먼트를 단위적(Atomic)으로 처리할 수 있으므로 트랜잭션과 유사한 효과를 냅니다.&lt;br /&gt;
+또한 여러 다큐먼트 간에 걸친 트랜잭션을 지원하지 않습니다.&lt;/p&gt;
+
+&lt;p&gt;RDBMS 			MongoDB&lt;br /&gt;
+Database	-&amp;gt;	Database&lt;br /&gt;
+Table 		-&amp;gt;	Collection&lt;br /&gt;
+Index 		-&amp;gt;	Index&lt;br /&gt;
+Row			-&amp;gt;	Document&lt;br /&gt;
+Join 		-&amp;gt;	Embedding &amp;amp; Linking&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- MongoDB의 기본 지식 이해&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;MongoDB Json Document&lt;br /&gt;
+JSON Document 안에는 key 와 value 가 있습니다.&lt;br /&gt;
+{“a” : 6, “b” : 7, “fruit”: {“apple”, “pear”, “banana”}}&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;JSON은 기본적으로 2개의 데이터 구조체를 만들기 위해 배열과 Dictionary를 사용합니다.&lt;br /&gt;
+배열은 [ , , ] 로, Dictionary 는 { keyword : value, value, … } 로 표현됩니다.&lt;br /&gt;
+{ name: “Park”, SN: 38010, class: { “CH707”, “BC385”, “AZ208” }}&lt;/p&gt;
+
+&lt;p&gt;MongoDB는 스키마가 없으며, 이는 서로 다른 2개의 다큐먼트가 동일한 스키마를 가질 필요가 없는 것을 의미합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- MongoDB Shell 이해&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Database 로 이동&lt;br /&gt;
+@root&amp;gt; use test&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Collection / Document 생성&lt;br /&gt;
+@root&amp;gt; db.things.save( { a : 1, b : 2, c : 3 })&lt;br /&gt;
+이는 things 라는 Collection 과 { a : 1, b : 2, c : 3} 이라는 한 개의 Document 를 생성함을 의미합니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Collection 내 Document 조회
+@root&amp;gt; db.things.find()&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;현재 사용 중인 Database, Collection 조회&lt;br /&gt;
+@root&amp;gt; show dbs&lt;br /&gt;
+@root&amp;gt; show collections&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">penSource MongoDB - Introduction</summary></entry></feed>
