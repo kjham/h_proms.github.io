@@ -1,4 +1,197 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://kjham.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kjham.github.io/" rel="alternate" type="text/html" /><updated>2019-07-25T16:50:44+09:00</updated><id>https://kjham.github.io/feed.xml</id><title type="html">SWDEVLAB</title><subtitle>Software Developement Laboratory</subtitle><entry><title type="html">Ghost-Jekyll 적용하기 - 1</title><link href="https://kjham.github.io/ghost-jekyll-1" rel="alternate" type="text/html" title="Ghost-Jekyll 적용하기 - 1" /><published>2019-07-25T00:38:00+09:00</published><updated>2019-07-25T00:38:00+09:00</updated><id>https://kjham.github.io/ghost-jekyll-1</id><content type="html" xml:base="https://kjham.github.io/ghost-jekyll-1">&lt;h1 id=&quot;ghost-jekyll-적용하기---1&quot;&gt;Ghost-Jekyll 적용하기 - 1&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://kjham.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kjham.github.io/" rel="alternate" type="text/html" /><updated>2019-07-26T14:32:47+09:00</updated><id>https://kjham.github.io/feed.xml</id><title type="html">SWDEVLAB</title><subtitle>Software Developement Laboratory</subtitle><entry><title type="html">Vue.js 시작하기 - 3</title><link href="https://kjham.github.io/front-end-vue-js-3" rel="alternate" type="text/html" title="Vue.js 시작하기 - 3" /><published>2019-07-26T02:00:00+09:00</published><updated>2019-07-26T02:00:00+09:00</updated><id>https://kjham.github.io/front-end-vue-js-3</id><content type="html" xml:base="https://kjham.github.io/front-end-vue-js-3">&lt;h1 id=&quot;vuejs-시작하기---3&quot;&gt;Vue.js 시작하기 - 3&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;5. 라우터&lt;/strong&gt;&lt;br /&gt;
+5-1. 라우터 코드 정의&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;6. HTTP 통신 라이브러리&lt;/strong&gt;
+6-1.  Axios (액시오스) 
+6-2. Axios 실습
+6-3. HTTP 통신 구조
+6-4. 크롬 개발자 도구 네트워크 패널&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;5-라우터&quot;&gt;5. 라우터&lt;/h2&gt;
+&lt;p&gt;Vue 라우터는 Vue.js의 공식 라우터입니다.&lt;br /&gt;
+Vue.js를 사용한 싱글 페이지 앱을 쉽게 만들 수 있도록 Vue.js의 코어와 긴밀히 통합되어 있습니다.&lt;/p&gt;
+
+&lt;p&gt;아래의 기능을 포함합니다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;중첩된 라우트/뷰 매핑&lt;/li&gt;
+  &lt;li&gt;모듈화된, 컴포넌트 기반의 라우터 설정&lt;/li&gt;
+  &lt;li&gt;라우터 파라미터, 쿼리, 와일드카드&lt;/li&gt;
+  &lt;li&gt;Vue.js의 트랜지션 시스템을 이용한 트랜지션 효과&lt;/li&gt;
+  &lt;li&gt;세밀한 네비게이션 컨트롤&lt;/li&gt;
+  &lt;li&gt;active CSS 클래스를 자동으로 추가해주는 링크&lt;/li&gt;
+  &lt;li&gt;HTML5 히스토리 모드 또는 해시 모드(IE9에서 자동으로 폴백)&lt;/li&gt;
+  &lt;li&gt;사용자 정의 가능한 스크롤 동작&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;5-1-라우터-코드-정의&quot;&gt;5-1. 라우터 코드 정의&lt;/h2&gt;
+&lt;p&gt;new VueRouter({}) 를 이용하여 라우터 인스턴스를 정의할 수 있습니다.&lt;br /&gt;
+그리고 new Vue({}) 객체의 router 속성에 인스턴스로 정의한 VueRouter를 부여합니다.&lt;br /&gt;
+VueRouter 인스턴스 내 routes 에 정의한 각 Page로 구성된 화면을 확인할 수 있습니다.&lt;/p&gt;
+&lt;router-link to=&quot;&quot;&gt;Login&amp;lt;/route-link&amp;gt; 는 기존 &lt;a&gt;&lt;/a&gt; 태그이며, 사용자에게 링크를 제공하는 역할을 수행합니다.
+
+~~~html
+&amp;lt;!DOCTYPE html&amp;gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot; /&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;app&quot;&gt;
+        &lt;div&gt;
+            &lt;!-- 기존 앵커태그 : &lt;a href=&quot;/login&quot;&gt;&lt;/a&gt; --&gt;
+            &lt;router-link to=&quot;/login&quot;&gt;Login&lt;/router-link&gt;            
+            &lt;router-link to=&quot;/main&quot;&gt;Main&lt;/router-link&gt;
+        &lt;/div&gt;
+        &lt;!-- 컴포넌트가 뿌려지는 영역 --&gt;
+        &lt;router-view&gt;&lt;/router-view&gt;
+    &lt;/div&gt;
+
+    &lt;!-- 순서 중요! Vue를 먼저 넣고, Router를 넣어야합니다. --&gt;
+    &lt;!-- 아래는 CDN 방식입니다. --&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://unpkg.com/vue-router/dist/vue-router.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+        var LoginComponent = {
+            template: '&lt;div&gt;login&lt;/div&gt;'
+        }
+        var MainComponent = {
+            template: '&lt;div&gt;main&lt;/div&gt;'
+        }
+        var router = new VueRouter({
+            // 페이지의 라우팅 정보 (어떤 URI에 어떤 Page가 표현될 지 정의)
+            routes: [
+                // 로그인 페이지 정보
+                {
+                    // 페이지의 url
+                    path: '/login',
+                    // 해당 url에서 표시될 컴포넌트
+                    component: LoginComponent
+                },
+                // 메인 페이지 정보
+                {
+                    path: '/main',
+                    component: MainComponent
+                }
+            ]
+        });
+
+        new Vue({
+            el: '#app',
+            router: router
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+~~~
+
+# 6. HTTP 통신 라이브러리
+
+&amp;gt; **Axios (액시오스)**  
+뷰에서 권고하는 HTTP 통신 라이브러리는 Axios입니다.  
+Promise 기반의 HTTP 통신 라이브러리이며 상대적으로 다른 HTTP 통신 라이브러리들에 비해 문서화가 잘 되어 있고 API가 다양합니다.
+
+&amp;gt; **Ajax (에이작스)**  
+Ajax는 비동기적인 웹 애플리케이션의 제작을 위한 기법입니다.  
+이전에는 데이터를 수정하려면 서버에 요청하고 수신받아야했지만, Ajax를 이용하면 비동기적으로 수정이 가능합니다.  
+대표적으로 Jquery.ajax() 가 있습니다.
+
+&amp;gt; **Vue Resource**
+Vue.js에서 공식 HTTP 통신 라이브러리였지만, 지금은 Axios로 변경되었다.  
+Vue Resource 기준의 샘플은 오래된 것일 가능성이 크다는 점을 참고하면 됩니다.
+
+## 6-1.  Axios (액시오스) 
+Vue.js의 창시자 애반 유가 Vue Resource에서 Axios를 공식 Http 통신 라이브러리로 변경하였습니다.  
+
+&amp;gt; **오픈소스 활용법**  
+&amp;gt; Star 지수, commits 수, contributors 수가 많은 것을 활용하는 것이 좋음
+&amp;gt; Commit 이력을 볼 때 수정일이 비교적 최근인 것들이 있는 것이 좋음
+
+Promise는 Java Script의 비동기 처리 패턴을 의미합니다.  
+비동기 처리 패턴은 다음과 같이 변화되었습니다.  
+1. callback  
+2. promise  
+3. promise + generator  
+4. async $ await
+
+## 6-2. Axios 실습
+다음 코드는 axios를 통해 서버에 데이터를 요청하여 수신받는 모습을 보여줍니다.  
+getData로 표기된 버튼을 클릭했을 때 Json 형식의 데이터를 수신받아 화면에 보여줍니다.  
+~~~html
+&amp;lt;!DOCTYPE html&amp;gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot; /&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot; /&gt;
+  &lt;title&gt;Axios&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id=&quot;app&quot;&gt;
+    &lt;button v-on:click=&quot;getData&quot;&gt;get user&lt;/button&gt;
+    &lt;div&gt;
+      
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- CDN 방식으로 Vue 와 Axios 를 불러옴 --&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://unpkg.com/axios/dist/axios.min.js&quot;&gt;&lt;/script&gt;
+
+  &lt;script&gt;
+    new Vue({
+      el: '#app',
+      data: {
+        users: []
+      },
+      methods: {
+        getData: function() { 
+          var vm = this;
+          axios.get('https://jsonplaceholder.typicode.com/users/')
+            .then(function(response) {
+              // 성공할 경우 처리 루트
+              console.log(response.data);
+              vm.users = response.data;
+              // call-back 함수 내 의 this는 Vue 객체를 뜻하지 않음
+              // this.users = response.data;
+            })
+            .catch(function(error) {
+              // 실패할 경우 처리 루트
+              console.log(error);
+            });
+        }
+      }
+    })
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+~~~
+
+## 6-3. HTTP 통신 구조
+1. 브라우저는 서버에 HTTP Request를 수행하여 데이터 송신을 요청합니다.  
+2. 서버는 Back-End 로직을 수행합니다.  
+3. 서버는 Database에서 필요한 데이터를 조회합니다.  
+4. 조회된 데이터로 Back-End 로직을 수행하여 최종 응답 데이터를 생성합니다.  
+5. 서버는 HTTP Response로 응답받아 화면에 데이터를 표현합니다.  
+
+## 6-4. 크롬 개발자 도구 네트워크 패널
+1. Chrome 브라우저에서 F12 (Windows 기준) 을 누릅니다.  
+2. Network 패널을 클릭합니다.  
+개발하면서 가장 많이 접하게 되는 패널입니다.  
+3. HTTP 통신 작업을 수행할 때, XHR에 수행 이력이 생성됩니다.  
+- [Headers]-[General] 에서 URL, METHOD, STATUS CODE를 확인 가능합니다.  
+- [Request Headers], [Response Header] 에서도 여러가지 정보 확인이 가능합니다.  
+- [Response], [Preview] 에서 수신받은 정보를 확인 가능합니다.
+&lt;/router-link&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">Vue.js 시작하기 - 3</summary></entry><entry><title type="html">Ghost-Jekyll 적용하기 - 1</title><link href="https://kjham.github.io/ghost-jekyll-1" rel="alternate" type="text/html" title="Ghost-Jekyll 적용하기 - 1" /><published>2019-07-25T00:38:00+09:00</published><updated>2019-07-25T00:38:00+09:00</updated><id>https://kjham.github.io/ghost-jekyll-1</id><content type="html" xml:base="https://kjham.github.io/ghost-jekyll-1">&lt;h1 id=&quot;ghost-jekyll-적용하기---1&quot;&gt;Ghost-Jekyll 적용하기 - 1&lt;/h1&gt;
 
 &lt;h1 id=&quot;1-github-page-생성&quot;&gt;1. Github Page 생성&lt;/h1&gt;
 
@@ -1377,7 +1570,37 @@ mkdir -p /data/db&lt;/p&gt;
 또 다른 linux 세션을 접속 후..
 /[압축푼 경로]/mongodb-linux-x86_64-rhel70-3.4.2/bin/mongo –port 27017&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">MongoDB 설치 가이드</summary></entry><entry><title type="html">(Linux:Centos7) FTP 접속 관련</title><link href="https://kjham.github.io/linux-error-vsftpd" rel="alternate" type="text/html" title="(Linux:Centos7) FTP 접속 관련" /><published>2018-03-30T20:26:00+09:00</published><updated>2018-03-30T20:26:00+09:00</updated><id>https://kjham.github.io/linux-error-vsftpd</id><content type="html" xml:base="https://kjham.github.io/linux-error-vsftpd">&lt;p&gt;&lt;strong&gt;Linux Centos7 - FTP 접속 관련&lt;/strong&gt;&lt;/p&gt;
+&lt;/ol&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">MongoDB 설치 가이드</summary></entry><entry><title type="html">(Linux:Centos7) IP 고정방법</title><link href="https://kjham.github.io/linux-centos-ip-configuration" rel="alternate" type="text/html" title="(Linux:Centos7) IP 고정방법" /><published>2018-03-30T20:26:00+09:00</published><updated>2018-03-30T20:26:00+09:00</updated><id>https://kjham.github.io/linux-centos-ip-configuration</id><content type="html" xml:base="https://kjham.github.io/linux-centos-ip-configuration">&lt;p&gt;&lt;strong&gt;Linux Centos7 - IP 고정방법&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;네트워크 설정 파일은 /etc/sysconfig/network-scripts/ifcfg-enp0s3입니다.(파일 이름은 다를 수도 있습니다.) 설정 파일을 텍스트 에디터로 엽니다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;TYPE=”Ethernet”
+PROXY_METHOD=”none”
+BROWSER_ONLY=”no”
+DEFROUTE=”yes”
+IPV4_FAILURE_FATAL=”no”
+IPV6INIT=”yes”
+IPV6_AUTOCONF=”yes”
+IPV6_DEFROUTE=”yes”
+IPV6_FAILURE_FATAL=”no”
+IPV6_ADDR_GEN_MODE=”stable-privacy”
+NAME=”enp0s3”
+UUID=”91af51db-7cf0-4069-9433-77d356b31bca”
+DEVICE=”enp0s3”
+ONBOOT=”yes”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;BOOTPROTO=”static”
+IPADDR=”192.168.0.123”
+GATEWAY=”192.168.0.1”
+DNS1=”168.126.63.1”
+DNS2=”168.126.63.2”&lt;/p&gt;
+
+&lt;p&gt;네트워크를 재시작합니다.&lt;/p&gt;
+&lt;h1 id=&quot;systemctl-restart-network&quot;&gt;systemctl restart network&lt;/h1&gt;
+
+&lt;p&gt;출처 : https://www.manualfactory.net/10004&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">Linux Centos7 - IP 고정방법</summary></entry><entry><title type="html">(Linux:Centos7) FTP 접속 관련</title><link href="https://kjham.github.io/linux-error-vsftpd" rel="alternate" type="text/html" title="(Linux:Centos7) FTP 접속 관련" /><published>2018-03-30T20:26:00+09:00</published><updated>2018-03-30T20:26:00+09:00</updated><id>https://kjham.github.io/linux-error-vsftpd</id><content type="html" xml:base="https://kjham.github.io/linux-error-vsftpd">&lt;p&gt;&lt;strong&gt;Linux Centos7 - FTP 접속 관련&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Centos7 를 설치할 때, FTP 를 옵션으로 선택하였음에도.. 접속이 안되는 경우가 있습니다.&lt;/p&gt;
 
@@ -1408,64 +1631,4 @@ mkdir -p /data/db&lt;/p&gt;
 &lt;h1 id=&quot;systemctl-stop-vsftpdservice&quot;&gt;systemctl stop vsftpd.service&lt;/h1&gt;
 &lt;h1 id=&quot;systemctl-start-vsftpdservice&quot;&gt;systemctl start vsftpd.service&lt;/h1&gt;
 
-&lt;p&gt;출처 : http://ellehu.com/linux/4333&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">Linux Centos7 - FTP 접속 관련</summary></entry><entry><title type="html">(Linux:Centos7) IP 고정방법</title><link href="https://kjham.github.io/linux-centos-ip-configuration" rel="alternate" type="text/html" title="(Linux:Centos7) IP 고정방법" /><published>2018-03-30T20:26:00+09:00</published><updated>2018-03-30T20:26:00+09:00</updated><id>https://kjham.github.io/linux-centos-ip-configuration</id><content type="html" xml:base="https://kjham.github.io/linux-centos-ip-configuration">&lt;p&gt;&lt;strong&gt;Linux Centos7 - IP 고정방법&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;네트워크 설정 파일은 /etc/sysconfig/network-scripts/ifcfg-enp0s3입니다.(파일 이름은 다를 수도 있습니다.) 설정 파일을 텍스트 에디터로 엽니다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;TYPE=”Ethernet”
-PROXY_METHOD=”none”
-BROWSER_ONLY=”no”
-DEFROUTE=”yes”
-IPV4_FAILURE_FATAL=”no”
-IPV6INIT=”yes”
-IPV6_AUTOCONF=”yes”
-IPV6_DEFROUTE=”yes”
-IPV6_FAILURE_FATAL=”no”
-IPV6_ADDR_GEN_MODE=”stable-privacy”
-NAME=”enp0s3”
-UUID=”91af51db-7cf0-4069-9433-77d356b31bca”
-DEVICE=”enp0s3”
-ONBOOT=”yes”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;BOOTPROTO=”static”
-IPADDR=”192.168.0.123”
-GATEWAY=”192.168.0.1”
-DNS1=”168.126.63.1”
-DNS2=”168.126.63.2”&lt;/p&gt;
-
-&lt;p&gt;네트워크를 재시작합니다.&lt;/p&gt;
-&lt;h1 id=&quot;systemctl-restart-network&quot;&gt;systemctl restart network&lt;/h1&gt;
-
-&lt;p&gt;출처 : https://www.manualfactory.net/10004&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">Linux Centos7 - IP 고정방법</summary></entry><entry><title type="html">(Linux:Centos7) Booting Mode 변경</title><link href="https://kjham.github.io/linux-centos-bootingmode" rel="alternate" type="text/html" title="(Linux:Centos7) Booting Mode 변경" /><published>2018-03-30T20:14:00+09:00</published><updated>2018-03-30T20:14:00+09:00</updated><id>https://kjham.github.io/linux-centos-bootingmode</id><content type="html" xml:base="https://kjham.github.io/linux-centos-bootingmode">&lt;p&gt;&lt;strong&gt;Linux Centos7 -Booting Mode 변경&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;[Centos 7] 부팅모드 변경 방법​​&lt;/p&gt;
-
-&lt;p&gt;이전 버전과 다르게 CentOS 7 에서는
-/etc/inittab 에 들어가도 부팅 순서 변경이 보이질 않는다.&lt;/p&gt;
-
-&lt;p&gt;여기서는 systemctl을 이용한 변경을 해야 한다.&lt;/p&gt;
-
-&lt;p&gt;현재의 런레벨을 확인하는 방법&lt;/p&gt;
-
-&lt;h1 id=&quot;runlevel&quot;&gt;runlevel&lt;/h1&gt;
-&lt;h1 id=&quot;who--r&quot;&gt;who -r&lt;/h1&gt;
-
-&lt;p&gt;런레벨 3(text mode)으로 변경&lt;/p&gt;
-
-&lt;h1 id=&quot;systemctl-set-default-multi-usertarget&quot;&gt;systemctl set-default multi-user.target&lt;/h1&gt;
-&lt;h1 id=&quot;systemctl-get-default&quot;&gt;systemctl get-default&lt;/h1&gt;
-&lt;h1 id=&quot;reboot&quot;&gt;reboot&lt;/h1&gt;
-
-&lt;p&gt;런레벨 5(graphic mode)으로 변경&lt;/p&gt;
-
-&lt;h1 id=&quot;systemctl-set-default-graphicaltarget&quot;&gt;systemctl set-default graphical.target&lt;/h1&gt;
-&lt;h1 id=&quot;systemctl-get-default-1&quot;&gt;systemctl get-default&lt;/h1&gt;
-&lt;h1 id=&quot;reboot-1&quot;&gt;reboot&lt;/h1&gt;
-
-&lt;p&gt;바꿀 수 있는 런레벨 출력&lt;/p&gt;
-
-&lt;h1 id=&quot;systemctl-list-units-typetarget&quot;&gt;systemctl list-units –type=target&lt;/h1&gt;
-
-&lt;p&gt;출처 : https://m.blog.naver.com/PostView.nhn?blogId=nels1004&amp;amp;logNo=220252554151&amp;amp;proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">Linux Centos7 -Booting Mode 변경</summary></entry></feed>
+&lt;p&gt;출처 : http://ellehu.com/linux/4333&lt;/p&gt;</content><author><name>Keon-Joo, Ham</name></author><category term="sw-dev-lab" /><summary type="html">Linux Centos7 - FTP 접속 관련</summary></entry></feed>
