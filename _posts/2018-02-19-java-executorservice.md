@@ -1,7 +1,7 @@
 ---
 layout: post
 title: (Java) Thread Tutorial (2)
-author: proms
+author: Sujay Kundu
 date: '2018-02-21 00:00:00 +0530'
 category: java
 tag: 
