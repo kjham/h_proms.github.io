@@ -17,19 +17,26 @@
     <!-- Styles'n'Scripts -->
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
-
-    <!-- 웹 폰트 설정 -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
-    
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
     <!-- highlight.js -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">    
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
 
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Software Developement Laboratory" />
-    <link rel="shortcut icon" href="https://kjham.github.io/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://kjham.github.io/database-mongodb-1-tutorial" />
+    <link rel="shortcut icon" href="http://localhost:4000/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="http://localhost:4000/database-mongodb-1-tutorial" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
@@ -37,8 +44,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="(New NoSQL & mongoDB) Tutorial" />
     <meta property="og:description" content="New NoSQL &amp; mongoDB - Tutorial - 특징 JSON 타입으로 데이터 저장 관리 JSON 이란 ? Java Script Object Notation Replication 및 Shard 기능으로 복제 및 분산처리 가능 또한, MapReduce 를 통해 빅데이터에 대한 빠른 추출 가능 관계형 데이터베이스의 주요기능인 CRUD 위주의 다중 트랜잭션 처리도 가능 Memory Mapping 기술을 통해" />
-    <meta property="og:url" content="https://kjham.github.io/database-mongodb-1-tutorial" />
-    <meta property="og:image" content="https://kjham.github.io/assets/images/blog-cover.jpg" />
+    <meta property="og:url" content="http://localhost:4000/database-mongodb-1-tutorial" />
+    <meta property="og:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
     <meta property="article:published_time" content="2018-03-13T01:00:00+09:00" />
@@ -47,8 +54,8 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="(New NoSQL & mongoDB) Tutorial" />
     <meta name="twitter:description" content="New NoSQL &amp; mongoDB - Tutorial - 특징 JSON 타입으로 데이터 저장 관리 JSON 이란 ? Java Script Object Notation Replication 및 Shard 기능으로 복제 및 분산처리 가능 또한, MapReduce 를 통해 빅데이터에 대한 빠른 추출 가능 관계형 데이터베이스의 주요기능인 CRUD 위주의 다중 트랜잭션 처리도 가능 Memory Mapping 기술을 통해" />
-    <meta name="twitter:url" content="https://kjham.github.io/" />
-    <meta name="twitter:image" content="https://kjham.github.io/assets/images/blog-cover.jpg" />
+    <meta name="twitter:url" content="http://localhost:4000/" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="SWDEVLAB" />
     <meta name="twitter:label2" content="Filed under" />
@@ -65,18 +72,18 @@
     "publisher": {
         "@type": "Organization",
         "name": "SWDEVLAB",
-        "logo": "https://kjham.github.io/assets/images/blog-icon.png"
+        "logo": "http://localhost:4000/assets/images/blog-icon.png"
     },
-    "url": "https://kjham.github.io/database-mongodb-1-tutorial",
+    "url": "http://localhost:4000/database-mongodb-1-tutorial",
     "image": {
         "@type": "ImageObject",
-        "url": "https://kjham.github.io/assets/images/blog-cover.jpg",
+        "url": "http://localhost:4000/assets/images/blog-cover.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://kjham.github.io/database-mongodb-1-tutorial"
+        "@id": "http://localhost:4000/database-mongodb-1-tutorial"
     },
     "description": "New NoSQL &amp; mongoDB - Tutorial - 특징 JSON 타입으로 데이터 저장 관리 JSON 이란 ? Java Script Object Notation Replication 및 Shard 기능으로 복제 및 분산처리 가능 또한, MapReduce 를 통해 빅데이터에 대한 빠른 추출 가능 관계형 데이터베이스의 주요기능인 CRUD 위주의 다중 트랜잭션 처리도 가능 Memory Mapping 기술을 통해"
 }
@@ -110,15 +117,15 @@ into the {body} of the default.hbs template -->
     <div class="site-nav-left">
         
             
-                <a class="site-nav-logo" href="https://kjham.github.io/"><img src="/assets/images/blog-icon.png" alt="SWDEVLAB" /></a>
+                <a class="site-nav-logo" href="http://localhost:4000/"><img src="/assets/images/blog-icon.png" alt="SWDEVLAB" /></a>
             
         
         
             <ul class="nav" role="menu">
     <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
-    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>    
-    <li class="nav-sw-dev-lab" role="menuitem"><a href="/tag/sw-dev-lab/">SW Dev Lab</a></li>
-    <li class="nav-religion-lab" role="menuitem"><a href="/tag/religion-lab/">Religion Lab</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-getting-started" role="menuitem"><a href="/tag/getting-started/">Getting Started</a></li>
+    <li class="nav-try-ghost" role="menuitem"><a href="https://ghost.org">Try Ghost</a></li>
 </ul>
 
         
@@ -342,7 +349,7 @@ $project, $match, $group, $sort, $limit, $skip 등 6개의 연결 연산자로 �
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'https://kjham.github.io/';
+                            this.page.url = 'http://localhost:4000/';
                             this.page.identifier = 'SWDEVLAB';
                         };
                         (function() {
@@ -660,6 +667,7 @@ $project, $match, $group, $sort, $limit, $skip 등 6개의 연결 연산자로 �
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
                 
+
     <article class="post-card post-template no-image">
         
         <div class="post-card-content">
@@ -676,7 +684,9 @@ $project, $match, $group, $sort, $limit, $skip 등 6개의 연결 연산자로 �
                     <h2 class="post-card-title">(OpenSource MongoDB) Introduction</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>**penSource MongoDB - Introduction** **- MongoDB 란?** 몽고DB는 NoSQL(Not only SQL) 데이터베이스로, JSON(JavaScript Object Notation) 형태의 데이터를 저장합니다. SQL을 지원하지 않기 때문에 Join 개념이 없고, 스키마는 유동적입니다. 여기서 유동적이라는 말은 몽고DB에서 저장하는 데이터</p>
+                    
+                        <p></p>
+                    
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -690,6 +700,12 @@ $project, $match, $group, $sort, $limit, $skip 등 6개의 연결 연산자로 �
                         </span>
                     
                 
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
             </footer>
         </div>
     </article>
@@ -699,6 +715,7 @@ $project, $match, $group, $sort, $limit, $skip 등 6개의 연결 연산자로 �
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
                 
+
     <article class="post-card post-template">
         
             <a class="post-card-image-link" href="/religion-bible-worship">
@@ -719,7 +736,9 @@ $project, $match, $group, $sort, $limit, $skip 등 6개의 연결 연산자로 �
                     <h2 class="post-card-title">내 멍에 주님의 멍에</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>2018년 3월 11일, 번동평화교회 주일예배 -마태복음 11장 28-30절 28절. 수고하고 무거운 짐 진 자들아 다 내게로 오라 내가 너희를 쉬게 하리라 29절. 나는 마음이 온유하고 겸손하니 나의 멍에를 메고 내게 배우라 그리하면 너희</p>
+                    
+                        <p></p>
+                    
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -733,6 +752,12 @@ $project, $match, $group, $sort, $limit, $skip 등 6개의 연결 연산자로 �
                         </span>
                     
                 
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
             </footer>
         </div>
     </article>
@@ -746,7 +771,7 @@ $project, $match, $group, $sort, $limit, $skip 등 6개의 연결 연산자로 �
 <!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
 <div class="floating-header">
     <div class="floating-header-logo">
-        <a href="https://kjham.github.io/">
+        <a href="http://localhost:4000/">
             
                 <img src="/assets/images/favicon.png" alt="SWDEVLAB icon" />
             
@@ -790,7 +815,7 @@ $project, $match, $group, $sort, $limit, $skip 등 6개의 연결 연산자로 �
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://kjham.github.io/">SWDEVLAB</a> &copy; 2019</section>
+                <section class="copyright"><a href="http://localhost:4000/">SWDEVLAB</a> &copy; 2019</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>

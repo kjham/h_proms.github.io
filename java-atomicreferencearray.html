@@ -17,19 +17,26 @@
     <!-- Styles'n'Scripts -->
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
-
-    <!-- 웹 폰트 설정 -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
-    
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
     <!-- highlight.js -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">    
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
 
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Software Developement Laboratory" />
-    <link rel="shortcut icon" href="https://kjham.github.io/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://kjham.github.io/java-atomicreferencearray" />
+    <link rel="shortcut icon" href="http://localhost:4000/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="http://localhost:4000/java-atomicreferencearray" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
@@ -42,8 +49,8 @@ AtomicInteger
 
 AtomicLongMap
 " />
-    <meta property="og:url" content="https://kjham.github.io/java-atomicreferencearray" />
-    <meta property="og:image" content="https://kjham.github.io/assets/images/blog-cover.jpg" />
+    <meta property="og:url" content="http://localhost:4000/java-atomicreferencearray" />
+    <meta property="og:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
     <meta property="article:published_time" content="2018-03-06T09:00:00+09:00" />
@@ -57,8 +64,8 @@ AtomicInteger
 
 AtomicLongMap
 " />
-    <meta name="twitter:url" content="https://kjham.github.io/" />
-    <meta name="twitter:image" content="https://kjham.github.io/assets/images/blog-cover.jpg" />
+    <meta name="twitter:url" content="http://localhost:4000/" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="SWDEVLAB" />
     <meta name="twitter:label2" content="Filed under" />
@@ -75,18 +82,18 @@ AtomicLongMap
     "publisher": {
         "@type": "Organization",
         "name": "SWDEVLAB",
-        "logo": "https://kjham.github.io/assets/images/blog-icon.png"
+        "logo": "http://localhost:4000/assets/images/blog-icon.png"
     },
-    "url": "https://kjham.github.io/java-atomicreferencearray",
+    "url": "http://localhost:4000/java-atomicreferencearray",
     "image": {
         "@type": "ImageObject",
-        "url": "https://kjham.github.io/assets/images/blog-cover.jpg",
+        "url": "http://localhost:4000/assets/images/blog-cover.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://kjham.github.io/java-atomicreferencearray"
+        "@id": "http://localhost:4000/java-atomicreferencearray"
     },
     "description": "Java - Atomic Tutorial
 
@@ -125,15 +132,15 @@ into the {body} of the default.hbs template -->
     <div class="site-nav-left">
         
             
-                <a class="site-nav-logo" href="https://kjham.github.io/"><img src="/assets/images/blog-icon.png" alt="SWDEVLAB" /></a>
+                <a class="site-nav-logo" href="http://localhost:4000/"><img src="/assets/images/blog-icon.png" alt="SWDEVLAB" /></a>
             
         
         
             <ul class="nav" role="menu">
     <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
-    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>    
-    <li class="nav-sw-dev-lab" role="menuitem"><a href="/tag/sw-dev-lab/">SW Dev Lab</a></li>
-    <li class="nav-religion-lab" role="menuitem"><a href="/tag/religion-lab/">Religion Lab</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-getting-started" role="menuitem"><a href="/tag/getting-started/">Getting Started</a></li>
+    <li class="nav-try-ghost" role="menuitem"><a href="https://ghost.org">Try Ghost</a></li>
 </ul>
 
         
@@ -238,7 +245,7 @@ into the {body} of the default.hbs template -->
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'https://kjham.github.io/';
+                            this.page.url = 'http://localhost:4000/';
                             this.page.identifier = 'SWDEVLAB';
                         };
                         (function() {
@@ -556,6 +563,7 @@ into the {body} of the default.hbs template -->
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
                 
+
     <article class="post-card post-template no-image">
         
         <div class="post-card-content">
@@ -572,7 +580,9 @@ into the {body} of the default.hbs template -->
                     <h2 class="post-card-title">(Java) ShellScript Tutorial</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>**Java - Shell-Script Tutorial** ~~~ if [ 값1 조건식 값2 ];then 수행문 fi ~~~ ~~~ if [ 값1 조건식 값2 -a 값1 조건식 값2 ];then 수행문 fi if [ 값1 조건식 값2 -o</p>
+                    
+                        <p></p>
+                    
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -586,6 +596,12 @@ into the {body} of the default.hbs template -->
                         </span>
                     
                 
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
             </footer>
         </div>
     </article>
@@ -595,6 +611,7 @@ into the {body} of the default.hbs template -->
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
                 
+
     <article class="post-card post-template">
         
             <a class="post-card-image-link" href="/religion-bible-worship">
@@ -615,7 +632,9 @@ into the {body} of the default.hbs template -->
                     <h2 class="post-card-title">고난을 이기는 감사</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>2018년 3월 4일, 번동평화교회 주일예배 -빌립보서4장 6-7절 아무것도 염려하지 말고다만 모든일에 기도와 간구로, 너희 구할 것을 감사함으로 하나님께 아뢰라. 그리하면 모든 지각에 뛰어난 하나님의 평강이 그리스도 예수 안에서 너희 마음과 생각을 지키시리라. -다니엘</p>
+                    
+                        <p></p>
+                    
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -629,6 +648,12 @@ into the {body} of the default.hbs template -->
                         </span>
                     
                 
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
             </footer>
         </div>
     </article>
@@ -642,7 +667,7 @@ into the {body} of the default.hbs template -->
 <!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
 <div class="floating-header">
     <div class="floating-header-logo">
-        <a href="https://kjham.github.io/">
+        <a href="http://localhost:4000/">
             
                 <img src="/assets/images/favicon.png" alt="SWDEVLAB icon" />
             
@@ -686,7 +711,7 @@ into the {body} of the default.hbs template -->
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://kjham.github.io/">SWDEVLAB</a> &copy; 2019</section>
+                <section class="copyright"><a href="http://localhost:4000/">SWDEVLAB</a> &copy; 2019</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>

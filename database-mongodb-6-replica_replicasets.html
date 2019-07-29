@@ -17,19 +17,26 @@
     <!-- Styles'n'Scripts -->
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
-
-    <!-- 웹 폰트 설정 -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
-    
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
     <!-- highlight.js -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">    
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
 
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Software Developement Laboratory" />
-    <link rel="shortcut icon" href="https://kjham.github.io/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://kjham.github.io/database-mongodb-6-replica_replicasets" />
+    <link rel="shortcut icon" href="http://localhost:4000/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="http://localhost:4000/database-mongodb-6-replica_replicasets" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
@@ -37,8 +44,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="(New NoSQL & mongoDB) Replica & ReplicaSets" />
     <meta property="og:description" content="New NoSQL &amp; mongoDB - Replica &amp; ReplicaSets - Master &amp; Slave 서버 빅 데이터의 안정한 저장과 관리 그리고 복구가 수행되기 위해서는 적절한 백업 솔루션이 필요합니다. 리프리카와 리프리카 셋 기능은 빅데이터의 백업을 통해 안정성을 보장하기 위한 솔루션 중 하나 입니다. 리프리카 기능을 위해서는 마스터 노트와 슬레이브 노드가 필요하며, 슬레이브 노드는" />
-    <meta property="og:url" content="https://kjham.github.io/database-mongodb-6-replica_replicasets" />
-    <meta property="og:image" content="https://kjham.github.io/assets/images/blog-cover.jpg" />
+    <meta property="og:url" content="http://localhost:4000/database-mongodb-6-replica_replicasets" />
+    <meta property="og:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
     <meta property="article:published_time" content="2018-03-13T19:51:00+09:00" />
@@ -47,8 +54,8 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="(New NoSQL & mongoDB) Replica & ReplicaSets" />
     <meta name="twitter:description" content="New NoSQL &amp; mongoDB - Replica &amp; ReplicaSets - Master &amp; Slave 서버 빅 데이터의 안정한 저장과 관리 그리고 복구가 수행되기 위해서는 적절한 백업 솔루션이 필요합니다. 리프리카와 리프리카 셋 기능은 빅데이터의 백업을 통해 안정성을 보장하기 위한 솔루션 중 하나 입니다. 리프리카 기능을 위해서는 마스터 노트와 슬레이브 노드가 필요하며, 슬레이브 노드는" />
-    <meta name="twitter:url" content="https://kjham.github.io/" />
-    <meta name="twitter:image" content="https://kjham.github.io/assets/images/blog-cover.jpg" />
+    <meta name="twitter:url" content="http://localhost:4000/" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="SWDEVLAB" />
     <meta name="twitter:label2" content="Filed under" />
@@ -65,18 +72,18 @@
     "publisher": {
         "@type": "Organization",
         "name": "SWDEVLAB",
-        "logo": "https://kjham.github.io/assets/images/blog-icon.png"
+        "logo": "http://localhost:4000/assets/images/blog-icon.png"
     },
-    "url": "https://kjham.github.io/database-mongodb-6-replica_replicasets",
+    "url": "http://localhost:4000/database-mongodb-6-replica_replicasets",
     "image": {
         "@type": "ImageObject",
-        "url": "https://kjham.github.io/assets/images/blog-cover.jpg",
+        "url": "http://localhost:4000/assets/images/blog-cover.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://kjham.github.io/database-mongodb-6-replica_replicasets"
+        "@id": "http://localhost:4000/database-mongodb-6-replica_replicasets"
     },
     "description": "New NoSQL &amp; mongoDB - Replica &amp; ReplicaSets - Master &amp; Slave 서버 빅 데이터의 안정한 저장과 관리 그리고 복구가 수행되기 위해서는 적절한 백업 솔루션이 필요합니다. 리프리카와 리프리카 셋 기능은 빅데이터의 백업을 통해 안정성을 보장하기 위한 솔루션 중 하나 입니다. 리프리카 기능을 위해서는 마스터 노트와 슬레이브 노드가 필요하며, 슬레이브 노드는"
 }
@@ -110,15 +117,15 @@ into the {body} of the default.hbs template -->
     <div class="site-nav-left">
         
             
-                <a class="site-nav-logo" href="https://kjham.github.io/"><img src="/assets/images/blog-icon.png" alt="SWDEVLAB" /></a>
+                <a class="site-nav-logo" href="http://localhost:4000/"><img src="/assets/images/blog-icon.png" alt="SWDEVLAB" /></a>
             
         
         
             <ul class="nav" role="menu">
     <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
-    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>    
-    <li class="nav-sw-dev-lab" role="menuitem"><a href="/tag/sw-dev-lab/">SW Dev Lab</a></li>
-    <li class="nav-religion-lab" role="menuitem"><a href="/tag/religion-lab/">Religion Lab</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-getting-started" role="menuitem"><a href="/tag/getting-started/">Getting Started</a></li>
+    <li class="nav-try-ghost" role="menuitem"><a href="https://ghost.org">Try Ghost</a></li>
 </ul>
 
         
@@ -243,7 +250,7 @@ Primary Server 을 통해 데이터를 입력, 수정, 삭제, 조회 합니다.
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'https://kjham.github.io/';
+                            this.page.url = 'http://localhost:4000/';
                             this.page.identifier = 'SWDEVLAB';
                         };
                         (function() {
@@ -561,6 +568,7 @@ Primary Server 을 통해 데이터를 입력, 수정, 삭제, 조회 합니다.
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
                 
+
     <article class="post-card post-template no-image">
         
         <div class="post-card-content">
@@ -577,7 +585,9 @@ Primary Server 을 통해 데이터를 입력, 수정, 삭제, 조회 합니다.
                     <h2 class="post-card-title">(New NoSQL & mongoDB) Performance Tuning</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>**New NoSQL & mongoDB - Performance Tuning** 운영 단계에서 사용자가 예기치 못하는 다양한 장애와 성능 저하 현상들이 발생하고 있는데 그 원인은 다음과 같이 매우 다양합니다. 1. Design Tuning 데이터베이스의 성능을 저하시키는 가장 큰</p>
+                    
+                        <p></p>
+                    
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -591,6 +601,12 @@ Primary Server 을 통해 데이터를 입력, 수정, 삭제, 조회 합니다.
                         </span>
                     
                 
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
             </footer>
         </div>
     </article>
@@ -600,6 +616,7 @@ Primary Server 을 통해 데이터를 입력, 수정, 삭제, 조회 합니다.
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
                 
+
     <article class="post-card post-template no-image">
         
         <div class="post-card-content">
@@ -616,7 +633,9 @@ Primary Server 을 통해 데이터를 입력, 수정, 삭제, 조회 합니다.
                     <h2 class="post-card-title">(New NoSQL & mongoDB) Sharding System</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>New NoSQL &amp; mongoDB - Sharding System - Sharding System 이란? Sharding 의 가장 큰 목적은 파티셔닝을 통한 데이터 분산 처리와 성능 향상을 위한 Load Balancing 입니다. 또한, 빅 데이터의 효율적 관리와 백업</p>
+                    
+                        <p></p>
+                    
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -630,6 +649,12 @@ Primary Server 을 통해 데이터를 입력, 수정, 삭제, 조회 합니다.
                         </span>
                     
                 
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
             </footer>
         </div>
     </article>
@@ -643,7 +668,7 @@ Primary Server 을 통해 데이터를 입력, 수정, 삭제, 조회 합니다.
 <!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
 <div class="floating-header">
     <div class="floating-header-logo">
-        <a href="https://kjham.github.io/">
+        <a href="http://localhost:4000/">
             
                 <img src="/assets/images/favicon.png" alt="SWDEVLAB icon" />
             
@@ -687,7 +712,7 @@ Primary Server 을 통해 데이터를 입력, 수정, 삭제, 조회 합니다.
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://kjham.github.io/">SWDEVLAB</a> &copy; 2019</section>
+                <section class="copyright"><a href="http://localhost:4000/">SWDEVLAB</a> &copy; 2019</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>

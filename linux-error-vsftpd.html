@@ -17,19 +17,26 @@
     <!-- Styles'n'Scripts -->
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
-
-    <!-- 웹 폰트 설정 -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
-    
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
     <!-- highlight.js -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">    
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
 
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Software Developement Laboratory" />
-    <link rel="shortcut icon" href="https://kjham.github.io/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://kjham.github.io/linux-error-vsftpd" />
+    <link rel="shortcut icon" href="http://localhost:4000/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="http://localhost:4000/linux-error-vsftpd" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
@@ -37,8 +44,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="(Linux:Centos7) FTP 접속 관련" />
     <meta property="og:description" content="Linux Centos7 - FTP 접속 관련 Centos7 를 설치할 때, FTP 를 옵션으로 선택하였음에도.. 접속이 안되는 경우가 있습니다. systemctl 명령어로 vsftpd를 시작/중지/상태확인합니다. systemctl status vsftpd.service &lt;– vsftpd 상태확인 systemctl start vsftpd.service &lt;– vsftpd 시작 systemctl stop vsftpd.service &lt;– vsftpd 중지 systemctl restart vsftpd.service &lt;– vsftpd 재시작 방화벽으로 인해 접속이 안되는" />
-    <meta property="og:url" content="https://kjham.github.io/linux-error-vsftpd" />
-    <meta property="og:image" content="https://kjham.github.io/assets/images/blog-cover.jpg" />
+    <meta property="og:url" content="http://localhost:4000/linux-error-vsftpd" />
+    <meta property="og:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
     <meta property="article:published_time" content="2018-03-30T20:26:00+09:00" />
@@ -47,8 +54,8 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="(Linux:Centos7) FTP 접속 관련" />
     <meta name="twitter:description" content="Linux Centos7 - FTP 접속 관련 Centos7 를 설치할 때, FTP 를 옵션으로 선택하였음에도.. 접속이 안되는 경우가 있습니다. systemctl 명령어로 vsftpd를 시작/중지/상태확인합니다. systemctl status vsftpd.service &lt;– vsftpd 상태확인 systemctl start vsftpd.service &lt;– vsftpd 시작 systemctl stop vsftpd.service &lt;– vsftpd 중지 systemctl restart vsftpd.service &lt;– vsftpd 재시작 방화벽으로 인해 접속이 안되는" />
-    <meta name="twitter:url" content="https://kjham.github.io/" />
-    <meta name="twitter:image" content="https://kjham.github.io/assets/images/blog-cover.jpg" />
+    <meta name="twitter:url" content="http://localhost:4000/" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="SWDEVLAB" />
     <meta name="twitter:label2" content="Filed under" />
@@ -65,18 +72,18 @@
     "publisher": {
         "@type": "Organization",
         "name": "SWDEVLAB",
-        "logo": "https://kjham.github.io/assets/images/blog-icon.png"
+        "logo": "http://localhost:4000/assets/images/blog-icon.png"
     },
-    "url": "https://kjham.github.io/linux-error-vsftpd",
+    "url": "http://localhost:4000/linux-error-vsftpd",
     "image": {
         "@type": "ImageObject",
-        "url": "https://kjham.github.io/assets/images/blog-cover.jpg",
+        "url": "http://localhost:4000/assets/images/blog-cover.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://kjham.github.io/linux-error-vsftpd"
+        "@id": "http://localhost:4000/linux-error-vsftpd"
     },
     "description": "Linux Centos7 - FTP 접속 관련 Centos7 를 설치할 때, FTP 를 옵션으로 선택하였음에도.. 접속이 안되는 경우가 있습니다. systemctl 명령어로 vsftpd를 시작/중지/상태확인합니다. systemctl status vsftpd.service &lt;– vsftpd 상태확인 systemctl start vsftpd.service &lt;– vsftpd 시작 systemctl stop vsftpd.service &lt;– vsftpd 중지 systemctl restart vsftpd.service &lt;– vsftpd 재시작 방화벽으로 인해 접속이 안되는"
 }
@@ -110,15 +117,15 @@ into the {body} of the default.hbs template -->
     <div class="site-nav-left">
         
             
-                <a class="site-nav-logo" href="https://kjham.github.io/"><img src="/assets/images/blog-icon.png" alt="SWDEVLAB" /></a>
+                <a class="site-nav-logo" href="http://localhost:4000/"><img src="/assets/images/blog-icon.png" alt="SWDEVLAB" /></a>
             
         
         
             <ul class="nav" role="menu">
     <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
-    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>    
-    <li class="nav-sw-dev-lab" role="menuitem"><a href="/tag/sw-dev-lab/">SW Dev Lab</a></li>
-    <li class="nav-religion-lab" role="menuitem"><a href="/tag/religion-lab/">Religion Lab</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-getting-started" role="menuitem"><a href="/tag/getting-started/">Getting Started</a></li>
+    <li class="nav-try-ghost" role="menuitem"><a href="https://ghost.org">Try Ghost</a></li>
 </ul>
 
         
@@ -250,7 +257,7 @@ into the {body} of the default.hbs template -->
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'https://kjham.github.io/';
+                            this.page.url = 'http://localhost:4000/';
                             this.page.identifier = 'SWDEVLAB';
                         };
                         (function() {
@@ -568,6 +575,7 @@ into the {body} of the default.hbs template -->
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
                 
+
     <article class="post-card post-template no-image">
         
         <div class="post-card-content">
@@ -584,7 +592,9 @@ into the {body} of the default.hbs template -->
                     <h2 class="post-card-title">(MongoDB) Linux 설치 가이드</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>**MongoDB 설치 가이드** 1. tar 다운로드 https://www.mongodb.com/download-center#atlas 위 주소로 접속하여, 최신버전 다운로드 2. linux 서버로 파일 복사 3. 압축 풀기 tar xzf mongodb-linux-x86_64-rhel70-3.4.2.gz 4. 데이터 저장용 폴더 생성 mkdir -p /data/db 5. 서버</p>
+                    
+                        <p></p>
+                    
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -598,6 +608,12 @@ into the {body} of the default.hbs template -->
                         </span>
                     
                 
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
             </footer>
         </div>
     </article>
@@ -607,6 +623,7 @@ into the {body} of the default.hbs template -->
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
                 
+
     <article class="post-card post-template no-image">
         
         <div class="post-card-content">
@@ -623,7 +640,9 @@ into the {body} of the default.hbs template -->
                     <h2 class="post-card-title">(Linux:Centos7) IP 고정방법</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>Linux Centos7 - IP 고정방법 네트워크 설정 파일은 /etc/sysconfig/network-scripts/ifcfg-enp0s3입니다.(파일 이름은 다를 수도 있습니다.) 설정 파일을 텍스트 에디터로 엽니다. TYPE=”Ethernet” PROXY_METHOD=”none” BROWSER_ONLY=”no” DEFROUTE=”yes” IPV4_FAILURE_FATAL=”no” IPV6INIT=”yes” IPV6_AUTOCONF=”yes” IPV6_DEFROUTE=”yes” IPV6_FAILURE_FATAL=”no” IPV6_ADDR_GEN_MODE=”stable-privacy” NAME=”enp0s3” UUID=”91af51db-7cf0-4069-9433-77d356b31bca” DEVICE=”enp0s3” ONBOOT=”yes” BOOTPROTO=”static”</p>
+                    
+                        <p></p>
+                    
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -637,6 +656,12 @@ into the {body} of the default.hbs template -->
                         </span>
                     
                 
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
             </footer>
         </div>
     </article>
@@ -650,7 +675,7 @@ into the {body} of the default.hbs template -->
 <!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
 <div class="floating-header">
     <div class="floating-header-logo">
-        <a href="https://kjham.github.io/">
+        <a href="http://localhost:4000/">
             
                 <img src="/assets/images/favicon.png" alt="SWDEVLAB icon" />
             
@@ -694,7 +719,7 @@ into the {body} of the default.hbs template -->
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://kjham.github.io/">SWDEVLAB</a> &copy; 2019</section>
+                <section class="copyright"><a href="http://localhost:4000/">SWDEVLAB</a> &copy; 2019</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>

@@ -17,19 +17,26 @@
     <!-- Styles'n'Scripts -->
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
-
-    <!-- 웹 폰트 설정 -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
-    
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
     <!-- highlight.js -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">    
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
 
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Software Developement Laboratory" />
-    <link rel="shortcut icon" href="https://kjham.github.io/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://kjham.github.io/java-thread-runnable" />
+    <link rel="shortcut icon" href="http://localhost:4000/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="http://localhost:4000/java-thread-runnable" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
@@ -37,8 +44,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="(Java) Thread Tutorial (1)" />
     <meta property="og:description" content="Java - Thread Tutorial (1) : Thread 와 Runnable Java에서 여러 작업을 동시에 처리하고 싶은 경우나 비동기 적으로 작업을 수행하고자 할 때, Thread 라는 것을 사용합니다. 일반적으로 가장 많이 알려진 것은, Thread / Runnable 방식이 있습니다. Thread 는 Class로 정의되어 있고, 실제 기능 동작을 위한 추상 메소드를 포함하고 있습니다. 따라서," />
-    <meta property="og:url" content="https://kjham.github.io/java-thread-runnable" />
-    <meta property="og:image" content="https://kjham.github.io/assets/images/blog-cover.jpg" />
+    <meta property="og:url" content="http://localhost:4000/java-thread-runnable" />
+    <meta property="og:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
     <meta property="article:published_time" content="2018-02-19T09:00:00+09:00" />
@@ -47,8 +54,8 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="(Java) Thread Tutorial (1)" />
     <meta name="twitter:description" content="Java - Thread Tutorial (1) : Thread 와 Runnable Java에서 여러 작업을 동시에 처리하고 싶은 경우나 비동기 적으로 작업을 수행하고자 할 때, Thread 라는 것을 사용합니다. 일반적으로 가장 많이 알려진 것은, Thread / Runnable 방식이 있습니다. Thread 는 Class로 정의되어 있고, 실제 기능 동작을 위한 추상 메소드를 포함하고 있습니다. 따라서," />
-    <meta name="twitter:url" content="https://kjham.github.io/" />
-    <meta name="twitter:image" content="https://kjham.github.io/assets/images/blog-cover.jpg" />
+    <meta name="twitter:url" content="http://localhost:4000/" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="SWDEVLAB" />
     <meta name="twitter:label2" content="Filed under" />
@@ -65,18 +72,18 @@
     "publisher": {
         "@type": "Organization",
         "name": "SWDEVLAB",
-        "logo": "https://kjham.github.io/assets/images/blog-icon.png"
+        "logo": "http://localhost:4000/assets/images/blog-icon.png"
     },
-    "url": "https://kjham.github.io/java-thread-runnable",
+    "url": "http://localhost:4000/java-thread-runnable",
     "image": {
         "@type": "ImageObject",
-        "url": "https://kjham.github.io/assets/images/blog-cover.jpg",
+        "url": "http://localhost:4000/assets/images/blog-cover.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://kjham.github.io/java-thread-runnable"
+        "@id": "http://localhost:4000/java-thread-runnable"
     },
     "description": "Java - Thread Tutorial (1) : Thread 와 Runnable Java에서 여러 작업을 동시에 처리하고 싶은 경우나 비동기 적으로 작업을 수행하고자 할 때, Thread 라는 것을 사용합니다. 일반적으로 가장 많이 알려진 것은, Thread / Runnable 방식이 있습니다. Thread 는 Class로 정의되어 있고, 실제 기능 동작을 위한 추상 메소드를 포함하고 있습니다. 따라서,"
 }
@@ -110,15 +117,15 @@ into the {body} of the default.hbs template -->
     <div class="site-nav-left">
         
             
-                <a class="site-nav-logo" href="https://kjham.github.io/"><img src="/assets/images/blog-icon.png" alt="SWDEVLAB" /></a>
+                <a class="site-nav-logo" href="http://localhost:4000/"><img src="/assets/images/blog-icon.png" alt="SWDEVLAB" /></a>
             
         
         
             <ul class="nav" role="menu">
     <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
-    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>    
-    <li class="nav-sw-dev-lab" role="menuitem"><a href="/tag/sw-dev-lab/">SW Dev Lab</a></li>
-    <li class="nav-religion-lab" role="menuitem"><a href="/tag/religion-lab/">Religion Lab</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-getting-started" role="menuitem"><a href="/tag/getting-started/">Getting Started</a></li>
+    <li class="nav-try-ghost" role="menuitem"><a href="https://ghost.org">Try Ghost</a></li>
 </ul>
 
         
@@ -323,7 +330,7 @@ Thread Class 를 이용하여 Multi-Thread 방식을 취하려면, 여러 개의
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'https://kjham.github.io/';
+                            this.page.url = 'http://localhost:4000/';
                             this.page.identifier = 'SWDEVLAB';
                         };
                         (function() {
@@ -641,6 +648,7 @@ Thread Class 를 이용하여 Multi-Thread 방식을 취하려면, 여러 개의
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
                 
+
     <article class="post-card post-template">
         
             <a class="post-card-image-link" href="/religion-bible-panorama-0">
@@ -661,7 +669,9 @@ Thread Class 를 이용하여 Multi-Thread 방식을 취하려면, 여러 개의
                     <h2 class="post-card-title">Bible Panorama 를 시작하며</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>**BIBLE PANORAMA 를 시작하며 ...** >* [Chapter 01 : 먼저 숲을 보고 나무를 보라](/religion-bible-panorama-1) * [Chapter 02 : 여덟 기둥으로 성경의 맥을 잡아라](/religion-bible-panorama-2) * Chapter 03 : 구약 시대를 알아야 하나님의 마음이 보인다</p>
+                    
+                        <p></p>
+                    
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -675,6 +685,12 @@ Thread Class 를 이용하여 Multi-Thread 방식을 취하려면, 여러 개의
                         </span>
                     
                 
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
             </footer>
         </div>
     </article>
@@ -691,7 +707,7 @@ Thread Class 를 이용하여 Multi-Thread 방식을 취하려면, 여러 개의
 <!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
 <div class="floating-header">
     <div class="floating-header-logo">
-        <a href="https://kjham.github.io/">
+        <a href="http://localhost:4000/">
             
                 <img src="/assets/images/favicon.png" alt="SWDEVLAB icon" />
             
@@ -735,7 +751,7 @@ Thread Class 를 이용하여 Multi-Thread 방식을 취하려면, 여러 개의
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://kjham.github.io/">SWDEVLAB</a> &copy; 2019</section>
+                <section class="copyright"><a href="http://localhost:4000/">SWDEVLAB</a> &copy; 2019</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>

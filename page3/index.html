@@ -17,19 +17,26 @@
     <!-- Styles'n'Scripts -->
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
-
-    <!-- 웹 폰트 설정 -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
-    
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
     <!-- highlight.js -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">    
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
 
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Software Developement Laboratory" />
-    <link rel="shortcut icon" href="https://kjham.github.io/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://kjham.github.io/page3/" />
+    <link rel="shortcut icon" href="http://localhost:4000/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="http://localhost:4000/page3/" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
@@ -37,14 +44,14 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="SWDEVLAB" />
     <meta property="og:description" content="Software Developement Laboratory" />
-    <meta property="og:url" content="https://kjham.github.io/page3/" />
-    <meta property="og:image" content="https://kjham.github.io/assets/images/blog-cover.jpg" />
+    <meta property="og:url" content="http://localhost:4000/page3/" />
+    <meta property="og:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="SWDEVLAB" />
     <meta name="twitter:description" content="Software Developement Laboratory" />
-    <meta name="twitter:url" content="https://kjham.github.io/" />
-    <meta name="twitter:image" content="https://kjham.github.io/assets/images/blog-cover.jpg" />
+    <meta name="twitter:url" content="http://localhost:4000/" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="SWDEVLAB" />
     <meta name="twitter:site" content="@" />
@@ -59,18 +66,18 @@
     "publisher": {
         "@type": "Organization",
         "name": "SWDEVLAB",
-        "logo": "https://kjham.github.io/assets/images/blog-icon.png"
+        "logo": "http://localhost:4000/assets/images/blog-icon.png"
     },
-    "url": "https://kjham.github.io/page3/",
+    "url": "http://localhost:4000/page3/",
     "image": {
         "@type": "ImageObject",
-        "url": "https://kjham.github.io/assets/images/blog-cover.jpg",
+        "url": "http://localhost:4000/assets/images/blog-cover.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://kjham.github.io/page3/"
+        "@id": "http://localhost:4000/page3/"
     },
     "description": "Software Developement Laboratory"
 }
@@ -114,9 +121,9 @@ into the {body} of the default.hbs template -->
         
             <ul class="nav" role="menu">
     <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
-    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>    
-    <li class="nav-sw-dev-lab" role="menuitem"><a href="/tag/sw-dev-lab/">SW Dev Lab</a></li>
-    <li class="nav-religion-lab" role="menuitem"><a href="/tag/religion-lab/">Religion Lab</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-getting-started" role="menuitem"><a href="/tag/getting-started/">Getting Started</a></li>
+    <li class="nav-try-ghost" role="menuitem"><a href="https://ghost.org">Try Ghost</a></li>
 </ul>
 
         
@@ -142,6 +149,8 @@ into the {body} of the default.hbs template -->
         <div class="post-feed">
             <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
             
+
+
     <article class="post-card home-template no-image">
         
         <div class="post-card-content">
@@ -158,7 +167,11 @@ into the {body} of the default.hbs template -->
                     <h2 class="post-card-title">(New NoSQL & mongoDB) Replica & ReplicaSets</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>New NoSQL &amp; mongoDB - Replica &amp; ReplicaSets - Master &amp; Slave 서버 빅 데이터의 안정한 저장과 관리 그리고 복구가 수행되기 위해서는 적절한 백업 솔루션이 필요합니다. 리프리카와 리프리카 셋 기능은 빅데이터의 백업을 통해</p>
+                    
+                        <p>New NoSQL &amp; mongoDB - Replica &amp; ReplicaSets
+
+</p>
+                    
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -172,6 +185,12 @@ into the {body} of the default.hbs template -->
                         </span>
                     
                 
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
             </footer>
         </div>
     </article>
@@ -192,7 +211,11 @@ into the {body} of the default.hbs template -->
                     <h2 class="post-card-title">(New NoSQL & mongoDB) Sharding System</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>New NoSQL &amp; mongoDB - Sharding System - Sharding System 이란? Sharding 의 가장 큰 목적은 파티셔닝을 통한 데이터 분산 처리와 성능 향상을 위한 Load Balancing 입니다. 또한, 빅 데이터의 효율적 관리와 백업</p>
+                    
+                        <p>New NoSQL &amp; mongoDB - Sharding System
+
+</p>
+                    
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -206,6 +229,12 @@ into the {body} of the default.hbs template -->
                         </span>
                     
                 
+                <span class="reading-time">
+                    
+                    
+                      3 min read
+                    
+                </span>
             </footer>
         </div>
     </article>
@@ -226,7 +255,11 @@ into the {body} of the default.hbs template -->
                     <h2 class="post-card-title">(New NoSQL & mongoDB) Structure</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>New NoSQL &amp; mongoDB - Structure - Server Structre Process 영역 Memory 영역 File 영역 - Storage Engine Memory Mapping 엔진 (MMAP) 파일 시스템 기반의 이 엔진은 1.x, 2.x 까지 사용되었습니다. 초당 10만건</p>
+                    
+                        <p>New NoSQL &amp; mongoDB - Structure
+
+</p>
+                    
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -240,6 +273,12 @@ into the {body} of the default.hbs template -->
                         </span>
                     
                 
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
             </footer>
         </div>
     </article>
@@ -260,12 +299,11 @@ into the {body} of the default.hbs template -->
                     <h2 class="post-card-title">(New NoSQL & mongoDB) Data Modeling</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>New NoSQL &amp; mongoDB - Data Modeling
-
-- Data Modeling
-생략
+                    
+                        <p>New NoSQL &amp; mongoDB - Data Modeling
 
 </p>
+                    
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -279,6 +317,12 @@ into the {body} of the default.hbs template -->
                         </span>
                     
                 
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
             </footer>
         </div>
     </article>
@@ -299,7 +343,11 @@ into the {body} of the default.hbs template -->
                     <h2 class="post-card-title">(New NoSQL & mongoDB) Index&User</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>New NoSQL &amp; mongoDB - Index&amp;User - Index를 사용하는 이유? 데이터 검색을 빠르게 처리하기 위해서 사용합니다. - Index 종류 각 Index 에 대한 특징은 시간이 날 때 알아봅시다. Non-Unique / Unique Index Single</p>
+                    
+                        <p>New NoSQL &amp; mongoDB - Index&amp;User
+
+</p>
+                    
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -313,6 +361,12 @@ into the {body} of the default.hbs template -->
                         </span>
                     
                 
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
             </footer>
         </div>
     </article>
@@ -333,7 +387,11 @@ into the {body} of the default.hbs template -->
                     <h2 class="post-card-title">(OpenSource MongoDB) Introduction</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>penSource MongoDB - Introduction - MongoDB 란? 몽고DB는 NoSQL(Not only SQL) 데이터베이스로, JSON(JavaScript Object Notation) 형태의 데이터를 저장합니다. SQL을 지원하지 않기 때문에 Join 개념이 없고, 스키마는 유동적입니다. 여기서 유동적이라는 말은 몽고DB에서 저장하는 데이터</p>
+                    
+                        <p>penSource MongoDB - Introduction
+
+</p>
+                    
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -347,6 +405,12 @@ into the {body} of the default.hbs template -->
                         </span>
                     
                 
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
             </footer>
         </div>
     </article>
@@ -367,7 +431,11 @@ into the {body} of the default.hbs template -->
                     <h2 class="post-card-title">(New NoSQL & mongoDB) Tutorial</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>New NoSQL &amp; mongoDB - Tutorial - 특징 JSON 타입으로 데이터 저장 관리 JSON 이란 ? Java Script Object Notation Replication 및 Shard 기능으로 복제 및 분산처리 가능 또한, MapReduce 를 통해 빅데이터에</p>
+                    
+                        <p>New NoSQL &amp; mongoDB - Tutorial
+
+</p>
+                    
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -381,6 +449,12 @@ into the {body} of the default.hbs template -->
                         </span>
                     
                 
+                <span class="reading-time">
+                    
+                    
+                      2 min read
+                    
+                </span>
             </footer>
         </div>
     </article>
@@ -405,7 +479,11 @@ into the {body} of the default.hbs template -->
                     <h2 class="post-card-title">내 멍에 주님의 멍에</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>2018년 3월 11일, 번동평화교회 주일예배 -마태복음 11장 28-30절 28절. 수고하고 무거운 짐 진 자들아 다 내게로 오라 내가 너희를 쉬게 하리라 29절. 나는 마음이 온유하고 겸손하니 나의 멍에를 메고 내게 배우라 그리하면 너희</p>
+                    
+                        <p>2018년 3월 11일, 번동평화교회 주일예배
+
+</p>
+                    
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -419,6 +497,12 @@ into the {body} of the default.hbs template -->
                         </span>
                     
                 
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
             </footer>
         </div>
     </article>
@@ -443,7 +527,11 @@ into the {body} of the default.hbs template -->
                     <h2 class="post-card-title">여덟 기둥으로 성경의 맥을 잡아라</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>Chapter 02 : 여덟 기둥으로 성경의 맥을 잡아라 Chapter 00 : BIBLE PANORAMA 를 시작하며 … Chapter 01 : 먼저 숲을 보고 나무를 보라 Chapter 03 : 구약 시대를 알아야 하나님의 마음이 보인다</p>
+                    
+                        <p>Chapter 02 : 여덟 기둥으로 성경의 맥을 잡아라
+
+</p>
+                    
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -457,6 +545,12 @@ into the {body} of the default.hbs template -->
                         </span>
                     
                 
+                <span class="reading-time">
+                    
+                    
+                      5 min read
+                    
+                </span>
             </footer>
         </div>
     </article>
@@ -477,10 +571,11 @@ into the {body} of the default.hbs template -->
                     <h2 class="post-card-title">(Spring) RestTemplate</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>Spring - RestTemplate
+                    
+                        <p>Spring - RestTemplate
 
-http://blog.saltfactory.net/post-multipart-form-data-using-resttemplate-in-spring/
 </p>
+                    
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -494,6 +589,12 @@ http://blog.saltfactory.net/post-multipart-form-data-using-resttemplate-in-sprin
                         </span>
                     
                 
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
             </footer>
         </div>
     </article>
@@ -525,7 +626,7 @@ http://blog.saltfactory.net/post-multipart-form-data-using-resttemplate-in-sprin
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://kjham.github.io/">SWDEVLAB</a> &copy; 2019</section>
+                <section class="copyright"><a href="http://localhost:4000/">SWDEVLAB</a> &copy; 2019</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>

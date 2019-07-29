@@ -17,19 +17,26 @@
     <!-- Styles'n'Scripts -->
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
-
-    <!-- 웹 폰트 설정 -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
-    
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
     <!-- highlight.js -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">    
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
 
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Software Developement Laboratory" />
-    <link rel="shortcut icon" href="https://kjham.github.io/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://kjham.github.io/database-mongodb-opensource-1" />
+    <link rel="shortcut icon" href="http://localhost:4000/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="http://localhost:4000/database-mongodb-opensource-1" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
@@ -37,8 +44,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="(OpenSource MongoDB) Introduction" />
     <meta property="og:description" content="penSource MongoDB - Introduction - MongoDB 란? 몽고DB는 NoSQL(Not only SQL) 데이터베이스로, JSON(JavaScript Object Notation) 형태의 데이터를 저장합니다. SQL을 지원하지 않기 때문에 Join 개념이 없고, 스키마는 유동적입니다. 여기서 유동적이라는 말은 몽고DB에서 저장하는 데이터 단위가 ‘다큐먼트’라는 것을 의미하는데, 이는 RDBMS에서 행 단위의 레코드라고 할 수 있습니다. 따라서 몽고DB의 다큐먼트 속성은 SQL처럼" />
-    <meta property="og:url" content="https://kjham.github.io/database-mongodb-opensource-1" />
-    <meta property="og:image" content="https://kjham.github.io/assets/images/blog-cover.jpg" />
+    <meta property="og:url" content="http://localhost:4000/database-mongodb-opensource-1" />
+    <meta property="og:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
     <meta property="article:published_time" content="2018-03-13T01:00:00+09:00" />
@@ -47,8 +54,8 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="(OpenSource MongoDB) Introduction" />
     <meta name="twitter:description" content="penSource MongoDB - Introduction - MongoDB 란? 몽고DB는 NoSQL(Not only SQL) 데이터베이스로, JSON(JavaScript Object Notation) 형태의 데이터를 저장합니다. SQL을 지원하지 않기 때문에 Join 개념이 없고, 스키마는 유동적입니다. 여기서 유동적이라는 말은 몽고DB에서 저장하는 데이터 단위가 ‘다큐먼트’라는 것을 의미하는데, 이는 RDBMS에서 행 단위의 레코드라고 할 수 있습니다. 따라서 몽고DB의 다큐먼트 속성은 SQL처럼" />
-    <meta name="twitter:url" content="https://kjham.github.io/" />
-    <meta name="twitter:image" content="https://kjham.github.io/assets/images/blog-cover.jpg" />
+    <meta name="twitter:url" content="http://localhost:4000/" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/blog-cover.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="SWDEVLAB" />
     <meta name="twitter:label2" content="Filed under" />
@@ -65,18 +72,18 @@
     "publisher": {
         "@type": "Organization",
         "name": "SWDEVLAB",
-        "logo": "https://kjham.github.io/assets/images/blog-icon.png"
+        "logo": "http://localhost:4000/assets/images/blog-icon.png"
     },
-    "url": "https://kjham.github.io/database-mongodb-opensource-1",
+    "url": "http://localhost:4000/database-mongodb-opensource-1",
     "image": {
         "@type": "ImageObject",
-        "url": "https://kjham.github.io/assets/images/blog-cover.jpg",
+        "url": "http://localhost:4000/assets/images/blog-cover.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://kjham.github.io/database-mongodb-opensource-1"
+        "@id": "http://localhost:4000/database-mongodb-opensource-1"
     },
     "description": "penSource MongoDB - Introduction - MongoDB 란? 몽고DB는 NoSQL(Not only SQL) 데이터베이스로, JSON(JavaScript Object Notation) 형태의 데이터를 저장합니다. SQL을 지원하지 않기 때문에 Join 개념이 없고, 스키마는 유동적입니다. 여기서 유동적이라는 말은 몽고DB에서 저장하는 데이터 단위가 ‘다큐먼트’라는 것을 의미하는데, 이는 RDBMS에서 행 단위의 레코드라고 할 수 있습니다. 따라서 몽고DB의 다큐먼트 속성은 SQL처럼"
 }
@@ -110,15 +117,15 @@ into the {body} of the default.hbs template -->
     <div class="site-nav-left">
         
             
-                <a class="site-nav-logo" href="https://kjham.github.io/"><img src="/assets/images/blog-icon.png" alt="SWDEVLAB" /></a>
+                <a class="site-nav-logo" href="http://localhost:4000/"><img src="/assets/images/blog-icon.png" alt="SWDEVLAB" /></a>
             
         
         
             <ul class="nav" role="menu">
     <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
-    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>    
-    <li class="nav-sw-dev-lab" role="menuitem"><a href="/tag/sw-dev-lab/">SW Dev Lab</a></li>
-    <li class="nav-religion-lab" role="menuitem"><a href="/tag/religion-lab/">Religion Lab</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-getting-started" role="menuitem"><a href="/tag/getting-started/">Getting Started</a></li>
+    <li class="nav-try-ghost" role="menuitem"><a href="https://ghost.org">Try Ghost</a></li>
 </ul>
 
         
@@ -274,7 +281,7 @@ JSON Document 안에는 key 와 value 가 있습니다.<br />
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'https://kjham.github.io/';
+                            this.page.url = 'http://localhost:4000/';
                             this.page.identifier = 'SWDEVLAB';
                         };
                         (function() {
@@ -592,6 +599,7 @@ JSON Document 안에는 key 와 value 가 있습니다.<br />
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
                 
+
     <article class="post-card post-template no-image">
         
         <div class="post-card-content">
@@ -608,7 +616,9 @@ JSON Document 안에는 key 와 value 가 있습니다.<br />
                     <h2 class="post-card-title">(New NoSQL & mongoDB) Index&User</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>**New NoSQL & mongoDB - Index&User** **- Index를 사용하는 이유?** 데이터 검색을 빠르게 처리하기 위해서 사용합니다. **- Index 종류** 각 Index 에 대한 특징은 시간이 날 때 알아봅시다. 1. Non-Unique / Unique Index</p>
+                    
+                        <p></p>
+                    
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -622,6 +632,12 @@ JSON Document 안에는 key 와 value 가 있습니다.<br />
                         </span>
                     
                 
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
             </footer>
         </div>
     </article>
@@ -631,6 +647,7 @@ JSON Document 안에는 key 와 value 가 있습니다.<br />
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
                 
+
     <article class="post-card post-template no-image">
         
         <div class="post-card-content">
@@ -647,7 +664,9 @@ JSON Document 안에는 key 와 value 가 있습니다.<br />
                     <h2 class="post-card-title">(New NoSQL & mongoDB) Tutorial</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>New NoSQL &amp; mongoDB - Tutorial - 특징 JSON 타입으로 데이터 저장 관리 JSON 이란 ? Java Script Object Notation Replication 및 Shard 기능으로 복제 및 분산처리 가능 또한, MapReduce 를 통해 빅데이터에</p>
+                    
+                        <p></p>
+                    
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -661,6 +680,12 @@ JSON Document 안에는 key 와 value 가 있습니다.<br />
                         </span>
                     
                 
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
             </footer>
         </div>
     </article>
@@ -674,7 +699,7 @@ JSON Document 안에는 key 와 value 가 있습니다.<br />
 <!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
 <div class="floating-header">
     <div class="floating-header-logo">
-        <a href="https://kjham.github.io/">
+        <a href="http://localhost:4000/">
             
                 <img src="/assets/images/favicon.png" alt="SWDEVLAB icon" />
             
@@ -718,7 +743,7 @@ JSON Document 안에는 key 와 value 가 있습니다.<br />
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://kjham.github.io/">SWDEVLAB</a> &copy; 2019</section>
+                <section class="copyright"><a href="http://localhost:4000/">SWDEVLAB</a> &copy; 2019</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
