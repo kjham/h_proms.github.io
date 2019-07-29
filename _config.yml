@@ -6,38 +6,56 @@ language: 'en-uk'
 words_per_minute: 200
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /jasper2/
+baseurl: /
 
 # Website info
-title: Ghost
-description: The professional publishing platform
+title: SW DEV LAB
+description: Software Developement Laboratory
 cover: assets/images/blog-cover.jpg
 logo: assets/images/blog-icon.png
 logo_dark: assets/images/favicon.png
 favicon: assets/images/favicon.png
-production_url: https://jekyller.github.io/jasper2/
-source_url: https://github.com/jekyller/jasper2/
+
+production_url: https://kjham.github.io
+# 최종적으로 blog가 운영될 url
+
+source_url: https://github.com/kjham/kjham.github.io
+# blogmaker(jekyll source folder)에 대한 github repository
+
 CNAME: #add cname for website to be created
 
 # Social info
 navigation: True # show the navbar links
-subscribers: True # you need to connect an external service for this to work,
-# if 'True' the submit button is disabled for now, but you can change that
-# by editing `_includes/subscribe-form.html`
-twitter: tryghost # replace by your username
-facebook: ghost # replace by your username
+# Navigation bar link를 보여줄건지 여부
+
+subscribers: True 
+# subscriber 기능을 사용할건지의 여부
+# 저는 약간의 수정을 통해 subscriber 기능대신
+# lunr.js를 이용한 검색 기능으로 대체 사용했습니다.
+# 검색기능으로 대체하기 위해서
+# `_includes/subscribe-form.html` 파일의 수정이 필요합니다.
+
+twitter: # kjham # replace by your username
+facebook: # h_proms # replace by your username
+# 만약 twitter와 facebook을 이용하면 username을 입력
 
 # Disqus
-disqus: False
-disqus_shortname: jekyller # replace with your disqus username
+disqus: True
+disqus_shortname: proms-blog
+# disqus는 온라인 댓글 시스템. 댓글 기능을 사용하기 위해
+# disqus를 이용할 것인지 여부와 만약 사용하면
+# disqus shortname을 입력 ( disqus username이 아님 )
 
 # Google Analytics
-google_analytics: UA-69281367-1 # replace with your GA tracking identifier
+google_analytics: # UA-69281367-1 # replace with your GA tracking identifier
+# Google Analytics을 사용할 경우 GA tracking identifier를 입력
 
 # Permalinks
 permalink: /:title
 # permalink: /author/:author
-# permalink: /tag/:tag
+# permalink: /tag/:title
+# 각각의 post에 고정주소를 어떤 방식으로 할당할 것인지를 결정
+# 이 값을 바꾸면 작성한 포스트의 저장위치나 파일이름이 변경된다.
 
 # Authors' info in `_data/authors.yml`
 # Tags' info in `_data/tags_info.yml`
@@ -69,13 +87,22 @@ feed:
 # or "master" otherwise
 safe: False
 lsi: False
-username: jekyller
-repo: jasper2
+
+username: kjham
+repo: kjham.github.io
+# username : travis-ci와 연동하는 github의 username
+# repo: travis-ci와 연동하는 github의 repository이름
+# https://github.com/<username>/<repository>0
+
 branch: master
-relative_source: ../jasper2/
+# 사용할 branch명
+
+#relative_source: ../jasper2/
+
 destination: ../jasper2-pages/
-production_url:  https://jekyller.github.io/jasper2/
-source_url:  https://github.com/jekyller/jasper2/
+
+production_url:  https://kjham.github.io/
+source_url:  https://github.com/kjham/kjham.github.io/
 
 exclude:
   - assets/css
