@@ -198,166 +198,283 @@ Vue.js를 사용한 싱글 페이지 앱을 쉽게 만들 수 있도록 Vue.js�
 <h2 id="5-1-라우터-코드-정의">5-1. 라우터 코드 정의</h2>
 <p>new VueRouter({}) 를 이용하여 라우터 인스턴스를 정의할 수 있습니다.<br />
 그리고 new Vue({}) 객체의 router 속성에 인스턴스로 정의한 VueRouter를 부여합니다.<br />
-VueRouter 인스턴스 내 routes 에 정의한 각 Page로 구성된 화면을 확인할 수 있습니다.</p>
-<router-link to="">Login&lt;/route-link&gt; 는 기존 <a></a> 태그이며, 사용자에게 링크를 제공하는 역할을 수행합니다.
+VueRouter 인스턴스 내 routes 에 정의한 각 Page로 구성된 화면을 확인할 수 있습니다.<br />
+<code class="highlighter-rouge">&lt;router-link to=""&gt;Login&lt;/route-link&gt;</code> 는 기존<code class="highlighter-rouge"> &lt;a&gt;&lt;/a&gt;</code> 태그이며, 사용자에게 링크를 제공하는 역할을 수행합니다.</p>
 
-~~~html
-&lt;!DOCTYPE html&gt;
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-</head>
-<body>
-    <div id="app">
-        <div>
-            <!-- 기존 앵커태그 : <a href="/login"></a> -->
-            <router-link to="/login">Login</router-link>            
-            <router-link to="/main">Main</router-link>
-        </div>
-        <!-- 컴포넌트가 뿌려지는 영역 -->
-        <router-view></router-view>
-    </div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"ie=edge"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div&gt;</span>
+            <span class="c">&lt;!-- 기존 앵커태그 : &lt;a href="/login"&gt;&lt;/a&gt; --&gt;</span>
+            <span class="nt">&lt;router-link</span> <span class="na">to=</span><span class="s">"/login"</span><span class="nt">&gt;</span>Login<span class="nt">&lt;/router-link&gt;</span>            
+            <span class="nt">&lt;router-link</span> <span class="na">to=</span><span class="s">"/main"</span><span class="nt">&gt;</span>Main<span class="nt">&lt;/router-link&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="c">&lt;!-- 컴포넌트가 뿌려지는 영역 --&gt;</span>
+        <span class="nt">&lt;router-view&gt;&lt;/router-view&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
 
-    <!-- 순서 중요! Vue를 먼저 넣고, Router를 넣어야합니다. -->
-    <!-- 아래는 CDN 방식입니다. -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <span class="c">&lt;!-- 순서 중요! Vue를 먼저 넣고, Router를 넣어야합니다. --&gt;</span>
+    <span class="c">&lt;!-- 아래는 CDN 방식입니다. --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://unpkg.com/vue-router/dist/vue-router.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 
-    <script>
-        var LoginComponent = {
-            template: '<div>login</div>'
-        }
-        var MainComponent = {
-            template: '<div>main</div>'
-        }
-        var router = new VueRouter({
-            // 페이지의 라우팅 정보 (어떤 URI에 어떤 Page가 표현될 지 정의)
-            routes: [
-                // 로그인 페이지 정보
-                {
-                    // 페이지의 url
-                    path: '/login',
-                    // 해당 url에서 표시될 컴포넌트
-                    component: LoginComponent
-                },
-                // 메인 페이지 정보
-                {
-                    path: '/main',
-                    component: MainComponent
-                }
-            ]
-        });
+    <span class="nt">&lt;script&gt;</span>
+        <span class="kd">var</span> <span class="nx">LoginComponent</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="na">template</span><span class="p">:</span> <span class="dl">'</span><span class="s1">&lt;div&gt;login&lt;/div&gt;</span><span class="dl">'</span>
+        <span class="p">}</span>
+        <span class="kd">var</span> <span class="nx">MainComponent</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="na">template</span><span class="p">:</span> <span class="dl">'</span><span class="s1">&lt;div&gt;main&lt;/div&gt;</span><span class="dl">'</span>
+        <span class="p">}</span>
+        <span class="kd">var</span> <span class="nx">router</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">VueRouter</span><span class="p">({</span>
+            <span class="c1">// 페이지의 라우팅 정보 (어떤 URI에 어떤 Page가 표현될 지 정의)</span>
+            <span class="na">routes</span><span class="p">:</span> <span class="p">[</span>
+                <span class="c1">// 로그인 페이지 정보</span>
+                <span class="p">{</span>
+                    <span class="c1">// 페이지의 url</span>
+                    <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/login</span><span class="dl">'</span><span class="p">,</span>
+                    <span class="c1">// 해당 url에서 표시될 컴포넌트</span>
+                    <span class="na">component</span><span class="p">:</span> <span class="nx">LoginComponent</span>
+                <span class="p">},</span>
+                <span class="c1">// 메인 페이지 정보</span>
+                <span class="p">{</span>
+                    <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/main</span><span class="dl">'</span><span class="p">,</span>
+                    <span class="na">component</span><span class="p">:</span> <span class="nx">MainComponent</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">});</span>
 
-        new Vue({
-            el: '#app',
-            router: router
-        });
-    </script>
-</body>
-</html>
-~~~
+        <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+            <span class="na">el</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#app</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">router</span><span class="p">:</span> <span class="nx">router</span>
+        <span class="p">});</span>
+    <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
-# 6. HTTP 통신 라이브러리
+<h1 id="6-http-통신-라이브러리">6. HTTP 통신 라이브러리</h1>
 
-&gt; **Axios (액시오스)**  
-뷰에서 권고하는 HTTP 통신 라이브러리는 Axios입니다.  
-Promise 기반의 HTTP 통신 라이브러리이며 상대적으로 다른 HTTP 통신 라이브러리들에 비해 문서화가 잘 되어 있고 API가 다양합니다.
+<blockquote>
+  <p><strong>Axios (액시오스)</strong><br />
+뷰에서 권고하는 HTTP 통신 라이브러리는 Axios입니다.<br />
+Promise 기반의 HTTP 통신 라이브러리이며 상대적으로 다른 HTTP 통신 라이브러리들에 비해 문서화가 잘 되어 있고 API가 다양합니다.</p>
+</blockquote>
 
-&gt; **Ajax (에이작스)**  
-Ajax는 비동기적인 웹 애플리케이션의 제작을 위한 기법입니다.  
-이전에는 데이터를 수정하려면 서버에 요청하고 수신받아야했지만, Ajax를 이용하면 비동기적으로 수정이 가능합니다.  
-대표적으로 Jquery.ajax() 가 있습니다.
+<blockquote>
+  <p><strong>Ajax (에이작스)</strong><br />
+Ajax는 비동기적인 웹 애플리케이션의 제작을 위한 기법입니다.<br />
+이전에는 데이터를 수정하려면 서버에 요청하고 수신받아야했지만, Ajax를 이용하면 비동기적으로 수정이 가능합니다.<br />
+대표적으로 Jquery.ajax() 가 있습니다.</p>
+</blockquote>
 
-&gt; **Vue Resource**
-Vue.js에서 공식 HTTP 통신 라이브러리였지만, 지금은 Axios로 변경되었다.  
-Vue Resource 기준의 샘플은 오래된 것일 가능성이 크다는 점을 참고하면 됩니다.
+<blockquote>
+  <p><strong>Vue Resource</strong>
+Vue.js에서 공식 HTTP 통신 라이브러리였지만, 지금은 Axios로 변경되었다.<br />
+Vue Resource 기준의 샘플은 오래된 것일 가능성이 크다는 점을 참고하면 됩니다.</p>
+</blockquote>
 
-## 6-1.  Axios (액시오스) 
-Vue.js의 창시자 애반 유가 Vue Resource에서 Axios를 공식 Http 통신 라이브러리로 변경하였습니다.  
+<h2 id="6-1--axios-액시오스">6-1.  Axios (액시오스)</h2>
+<p>Vue.js의 창시자 애반 유가 Vue Resource에서 Axios를 공식 Http 통신 라이브러리로 변경하였습니다.</p>
 
-&gt; **오픈소스 활용법**  
-&gt; Star 지수, commits 수, contributors 수가 많은 것을 활용하는 것이 좋음  
-&gt; Commit 이력을 볼 때 수정일이 비교적 최근인 것들이 있는 것이 좋음
+<blockquote>
+  <p><strong>오픈소스 활용법</strong><br />
+Star 지수, commits 수, contributors 수가 많은 것을 활용하는 것이 좋음<br />
+Commit 이력을 볼 때 수정일이 비교적 최근인 것들이 있는 것이 좋음</p>
+</blockquote>
 
-Promise는 Java Script의 비동기 처리 패턴을 의미합니다.  
-비동기 처리 패턴은 다음과 같이 변화되었습니다.  
-1. callback  
-2. promise  
-3. promise + generator  
-4. async $ await  
+<p>Promise는 Java Script의 비동기 처리 패턴을 의미합니다.<br />
+비동기 처리 패턴은 다음과 같이 변화되었습니다.</p>
+<ol>
+  <li>callback</li>
+  <li>promise</li>
+  <li>promise + generator</li>
+  <li>async $ await</li>
+</ol>
 
-## 6-2. Axios 실습
-다음 코드는 axios를 통해 서버에 데이터를 요청하여 수신받는 모습을 보여줍니다.  
-getData로 표기된 버튼을 클릭했을 때 Json 형식의 데이터를 수신받아 화면에 보여줍니다.  
-~~~html
-&lt;!DOCTYPE html&gt;
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Axios</title>
-</head>
-<body>
-  <div id="app">
-    <button v-on:click="getData">get user</button>
-    <div>
+<h2 id="6-2-axios-실습">6-2. Axios 실습</h2>
+<p>다음 코드는 axios를 통해 서버에 데이터를 요청하여 수신받는 모습을 보여줍니다.<br />
+getData로 표기된 버튼을 클릭했을 때 Json 형식의 데이터를 수신받아 화면에 보여줍니다.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"ie=edge"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>Axios<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">v-on:click=</span><span class="s">"getData"</span><span class="nt">&gt;</span>get user<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
       
-    </div>
-  </div>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 
-  <!-- CDN 방식으로 Vue 와 Axios 를 불러옴 -->
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <span class="c">&lt;!-- CDN 방식으로 Vue 와 Axios 를 불러옴 --&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://unpkg.com/axios/dist/axios.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 
-  <script>
-    new Vue({
-      el: '#app',
-      data: {
-        users: []
-      },
-      methods: {
-        getData: function() { 
-          var vm = this;
-          axios.get('https://jsonplaceholder.typicode.com/users/')
-            .then(function(response) {
-              // 성공할 경우 처리 루트
-              console.log(response.data);
-              vm.users = response.data;
-              // call-back 함수 내 의 this는 Vue 객체를 뜻하지 않음
-              // this.users = response.data;
-            })
-            .catch(function(error) {
-              // 실패할 경우 처리 루트
-              console.log(error);
-            });
-        }
-      }
-    })
-  </script>
-</body>
-</html>
-~~~
+  <span class="nt">&lt;script&gt;</span>
+    <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+      <span class="na">el</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#app</span><span class="dl">'</span><span class="p">,</span>
+      <span class="na">data</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">users</span><span class="p">:</span> <span class="p">[]</span>
+      <span class="p">},</span>
+      <span class="na">methods</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">getData</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> 
+          <span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+          <span class="nx">axios</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://jsonplaceholder.typicode.com/users/</span><span class="dl">'</span><span class="p">)</span>
+            <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+              <span class="c1">// 성공할 경우 처리 루트</span>
+              <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+              <span class="nx">vm</span><span class="p">.</span><span class="nx">users</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+              <span class="c1">// call-back 함수 내 의 this는 Vue 객체를 뜻하지 않음</span>
+              <span class="c1">// this.users = response.data;</span>
+            <span class="p">})</span>
+            <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+              <span class="c1">// 실패할 경우 처리 루트</span>
+              <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+            <span class="p">});</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">})</span>
+  <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
-## 6-3. HTTP 통신 구조
-1. 브라우저는 서버에 HTTP Request를 수행하여 데이터 송신을 요청합니다.  
-2. 서버는 Back-End 로직을 수행합니다.  
-3. 서버는 Database에서 필요한 데이터를 조회합니다.  
-4. 조회된 데이터로 Back-End 로직을 수행하여 최종 응답 데이터를 생성합니다.  
-5. 서버는 HTTP Response로 응답받아 화면에 데이터를 표현합니다.  
+<h2 id="6-3-http-통신-구조">6-3. HTTP 통신 구조</h2>
+<ol>
+  <li>브라우저는 서버에 HTTP Request를 수행하여 데이터 송신을 요청합니다.</li>
+  <li>서버는 Back-End 로직을 수행합니다.</li>
+  <li>서버는 Database에서 필요한 데이터를 조회합니다.</li>
+  <li>조회된 데이터로 Back-End 로직을 수행하여 최종 응답 데이터를 생성합니다.</li>
+  <li>서버는 HTTP Response로 응답받아 화면에 데이터를 표현합니다.</li>
+</ol>
 
-## 6-4. 크롬 개발자 도구 네트워크 패널
-1. Chrome 브라우저에서 F12 (Windows 기준) 을 누릅니다.  
-2. Network 패널을 클릭합니다.  
-개발하면서 가장 많이 접하게 되는 패널입니다.  
-3. HTTP 통신 작업을 수행할 때, XHR에 수행 이력이 생성됩니다.  
-- [Headers]-[General] 에서 URL, METHOD, STATUS CODE를 확인 가능합니다.  
-- [Request Headers], [Response Header] 에서도 여러가지 정보 확인이 가능합니다.  
-- [Response], [Preview] 에서 수신받은 정보를 확인 가능합니다.  
-</router-link>
+<h2 id="6-4-크롬-개발자-도구-네트워크-패널">6-4. 크롬 개발자 도구 네트워크 패널</h2>
+<ol>
+  <li>Chrome 브라우저에서 F12 (Windows 기준) 을 누릅니다.</li>
+  <li>Network 패널을 클릭합니다.<br />
+개발하면서 가장 많이 접하게 되는 패널입니다.</li>
+  <li>HTTP 통신 작업을 수행할 때, XHR에 수행 이력이 생성됩니다.
+    <ul>
+      <li>[Headers]-[General] 에서 URL, METHOD, STATUS CODE를 확인 가능합니다.</li>
+      <li>[Request Headers], [Response Header] 에서도 여러가지 정보 확인이 가능합니다.</li>
+      <li>[Response], [Preview] 에서 수신받은 정보를 확인 가능합니다.</li>
+    </ul>
+  </li>
+</ol>
 
                 </div>
             </section>
