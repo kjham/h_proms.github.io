@@ -1,13 +1,13 @@
 ---
 layout: post
-current: post
-navigation: True
 title: (Java) Thread Tutorial (2)
-date: 2018-02-21 00:00:00
-tags: [sw-dev-lab]
-class: post-template
-subclass: 'post tag-sw-dev-lab'
 author: proms
+date: '2018-02-21 00:00:00 +0530'
+category: java
+tag: 
+    - java
+summary: Getting Started - Build your blog using devlopr jekyll
+thumbnail: /assets/img/posts/devlopr.png
 ---
 
 Java - Thread Tutorial (2) : ExecutorService
