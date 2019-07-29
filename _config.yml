@@ -1,65 +1,96 @@
-title: devlopr jekyll
-subtitle: A Jekyll Theme built for Developers
-description: >- # this means to ignore newlines until "baseurl:"
-  A Jekyll Theme Built For Developers
-baseurl: "" # the subpath of your site, e.g. /blog
-#url: "https://devlopr.netlify.com" # the base hostname & protocol for your site, e.g. http://example.com
-url: "https://swdevlab.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-
-author_logo: profile.png
-disqus_shortname: kjham  #for comments using disqus
-author: proms
-author_bio: devlopr-jekyll is a theme built for developers. Anyone can create a blog like this. As easy as PIE !
-author_email: "h_proms@naver.com"
-author_location: Korea
-author_website_url: "https://h_proms.blog.me"
-
-# social links
-twitter_username: empty
-github_username: kjham
-facebook_username: h_proms
-linkedin_username: empty
-behance_username: empty
-instagram_username: proms
-medium_username: empty
-telegram_username: empty
-dribbble_username: empty 
-flickr_username: empty
-
-# dont touch this unless required
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-analytics
-  - jekyll-algolia
-  - jekyll-menus 
-
-
-# code highlighter
+# Jekyll configuration
+markdown: kramdown
 highlighter: rouge
+paginate: 100 # it will paginate after this number
+language: 'en-uk'
+words_per_minute: 200
 
-jekyll_analytics:
-  GoogleAnalytics:          # Add, if you want to track with Google Analytics
-    id: UA-46783401-10      # Required - replace with your tracking id
-    anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
+# edit baseurl to simply '/' if using as your personal page (instead of a project page)
+baseurl: /jasper2/
 
-# minify html
-compress_html:
-    clippings: []
-    comments: []
-    endings: []
-    ignore:
-    envs: []
-    blanklines: false
-    profile: false
-    startings: []
+# Website info
+title: Ghost
+description: The professional publishing platform
+cover: assets/images/blog-cover.jpg
+logo: assets/images/blog-icon.png
+logo_dark: assets/images/favicon.png
+favicon: assets/images/favicon.png
+production_url: https://jekyller.github.io/jasper2/
+source_url: https://github.com/jekyller/jasper2/
+CNAME: #add cname for website to be created
 
-# algolia search 
-algolia:
-  application_id: D9WA1YKTRQ
-  index_name: blog_posts # You can replace that with whatever name you want
-  files_to_exclude: []
-  nodes_to_index: 'article'
-  search_only_api_key: 58ffdd7cd6c45ec1577a7fcd789b1b9a
+# Social info
+navigation: True # show the navbar links
+subscribers: True # you need to connect an external service for this to work,
+# if 'True' the submit button is disabled for now, but you can change that
+# by editing `_includes/subscribe-form.html`
+twitter: tryghost # replace by your username
+facebook: ghost # replace by your username
 
+# Disqus
+disqus: False
+disqus_shortname: jekyller # replace with your disqus username
+
+# Google Analytics
+google_analytics: UA-69281367-1 # replace with your GA tracking identifier
+
+# Permalinks
+permalink: /:title
+# permalink: /author/:author
+# permalink: /tag/:tag
+
+# Authors' info in `_data/authors.yml`
+# Tags' info in `_data/tags_info.yml`
+
+# gems and other configs
+plugins_dir: [_plugins]
+plugins: [jekyll-paginate, jekyll-feed]
+
+feed:
+  path: feed.xml
+
+# Additional settings available on the front-matter
+# Site logo in the index.html (as in demo.ghost.io)
+# Author's page cover in _layouts/author.html
+# The same for page.html and tag.html layouts
+# Post's page cover as a per-post basis _posts/...
+# Disqus comments as a per-post basis
+# ...
+
+# Settings for builing master branch with travis-ci
+# with jekyll-travis
+
+# Settings for deploy rake task
+# Username and repo of Github repo, e.g.
+# https://github.com/USERNAME/REPO.git
+# username defaults to ENV['GIT_NAME'] used by Travis
+# repo defaults to USERNAME.github.io
+# Branch defaults to "source" for USERNAME.github.io
+# or "master" otherwise
+safe: False
+lsi: False
+username: jekyller
+repo: jasper2
+branch: master
+relative_source: ../jasper2/
+destination: ../jasper2-pages/
+production_url:  https://jekyller.github.io/jasper2/
+source_url:  https://github.com/jekyller/jasper2/
+
+exclude:
+  - assets/css
+  - node_modules
+  - vendor
+  - .travis.yml
+  - Gemfile
+  - Gemfile.lock
+  - GHOST.txt
+  - gulpfile.js
+  - LICENSE
+  - package.json
+  - Rakefile
+  - README.md
+  - script.py
+  - changelog.md
+  - "*.Rmd"
+  - .git*
