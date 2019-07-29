@@ -11,7 +11,7 @@
 
 
 
-    <title>Vue.js 시작하기 - 4</title>
+    <title>Vue.js 시작하기 - 5</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -35,7 +35,7 @@
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="SWDEVLAB" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Vue.js 시작하기 - 4" />
+    <meta property="og:title" content="Vue.js 시작하기 - 5" />
     <meta property="og:description" content="Vue.js 시작하기 - 5 7. 싱글 파일 컴포넌트 8 최종 프로젝트 9. 최종 정리 7. 싱글 파일 컴포넌트 빈 vue 파일을 생성 후 scf(scaffold)키워드로 자동완성으로 기본 템플릿 코드를 작성할 수 있습니다. 에는 하나의 &lt;div /&gt; 만 선언이 가능합니다. components 폴더 하위에 컴포넌트를 생성하게 되는데, 보통 두 단어 이상으로 구성하길 권장합니다." />
     <meta property="og:url" content="https://kjham.github.io/front-end-vue-js-5" />
     <meta property="og:image" content="https://kjham.github.io/assets/images/blog-cover.jpg" />
@@ -45,7 +45,7 @@
     <meta property="article:modified_time" content="2019-07-26T21:00:00+09:00" />
     <meta property="article:tag" content="Sw-dev-lab" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Vue.js 시작하기 - 4" />
+    <meta name="twitter:title" content="Vue.js 시작하기 - 5" />
     <meta name="twitter:description" content="Vue.js 시작하기 - 5 7. 싱글 파일 컴포넌트 8 최종 프로젝트 9. 최종 정리 7. 싱글 파일 컴포넌트 빈 vue 파일을 생성 후 scf(scaffold)키워드로 자동완성으로 기본 템플릿 코드를 작성할 수 있습니다. 에는 하나의 &lt;div /&gt; 만 선언이 가능합니다. components 폴더 하위에 컴포넌트를 생성하게 되는데, 보통 두 단어 이상으로 구성하길 권장합니다." />
     <meta name="twitter:url" content="https://kjham.github.io/" />
     <meta name="twitter:image" content="https://kjham.github.io/assets/images/blog-cover.jpg" />
@@ -91,7 +91,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Vue.js 시작하기 - 4" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Vue.js 시작하기 - 5" href="/feed.xml" />
 
 
 </head>
@@ -157,7 +157,7 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">Vue.js 시작하기 - 4</h1>
+                <h1 class="post-full-title">Vue.js 시작하기 - 5</h1>
             </header>
 
             
@@ -185,138 +185,8 @@ into the {body} of the default.hbs template -->
 components 폴더 하위에 컴포넌트를 생성하게 되는데, 보통 두 단어 이상으로 구성하길 권장합니다.<br />
 html에 존재하는 기존 tag와 중복될 수 있기 때문입니다.</p>
 
-<blockquote>
-  <p>App.vue<br />
-~~~js</p>
-</blockquote>
-<template>
-  <!-- 하나의 Element 만 선언해야 합니다. (뒤에 <div> </div> 중복 불가) -->
-  <div>
-    <!-- <app-header v-bind:프롭스 속성 이름="상위 컴포넌트의 데이터 이름"></app-header> -->
-    <!-- 하위 컴포넌트에서 인식하도록 선언한 v-on -->
-    <app-header v-bind:propsdata="str" v-on:renew="renewStr"></app-header>
-  </div>
-  <!-- 오류 발생 -->
-  <!-- <div></div> -->
-</template>
-
-<script>
-// .vue 까지 붙여야 파일 바로가기 수행이 가능합니다.
-import AppHeader from './components/appHeader.vue'
-
-export default {
-  // vue-cli를 사용하면서  data: {} 이 아니라 function()을 이용해야합니다.
-  data: function() {
-    return {
-      str: 'Header'
-    }
-  },
-  components: {
-    'app-header': AppHeader
-  },
-  methods: {    
-    renewStr: function() {
-      this.str = 'hi'
-    }
-  }
-}
-</script>
-
-<style>
-
-</style>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-</pre></td><td class="rouge-code"><pre>
-&gt; appHeader.vue  
-~~~html
-&lt;template&gt;
-    &lt;header&gt;
-        &lt;!-- 상위 컴포넌트의 데이터를 수신받아 표기 --&gt;
-        &lt;h1&gt;&lt;/h1&gt;
-        &lt;!-- sendEvent를 이용하여 상위 컴포넌트에 전달 --&gt;
-        &lt;button v-on:click="sendEvent"&gt;send&lt;/button&gt;
-    &lt;/header&gt;
-&lt;/template&gt;
-
-&lt;script&gt;
-export default {
-    props: ['propsdata'],
-    methods: {
-        sendEvent: function() {
-            this.$emit('renew')
-        }
-    }
-}
-&lt;/script&gt;
-
-&lt;style&gt;
-
-&lt;/style&gt;
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h2 id="8-최종-프로젝트">8. 최종 프로젝트</h2>
-<p>다음 명령어를 수행하여 새로운 프로젝트를 생성하고 실행합니다.<br />
-<code class="highlighter-rouge">vue create vue-form</code><br />
-<code class="highlighter-rouge">cd vue-form</code><br />
-<code class="highlighter-rouge">npm run serve</code></p>
-
-<p>간단하게 마크업 구조를 잡아보겠습니다.</p>
-<blockquote>
-  <p>App.vue<br />
-~~~js</p>
-</blockquote>
-<template>
-  <!-- vue-cli 프로젝트를 생성하고, 간단하게 mark-up 구조를 잡아봅니다. -->
-  <form action="">
-    <div>
-      <label for="username">id: </label>
-      <input id="username" type="text" />
-    </div>
-    <div>
-      <label for="password">pw: </label>
-      <input id="password" type="text" />
-    </div>
-    <button>login</button>
-  </form>
-</template>
-
-<script>
-export default {
-
-}
-</script>
-
-<style>
-
-</style>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<p>App.vue</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -355,46 +225,227 @@ export default {
 37
 38
 39
-</pre></td><td class="rouge-code"><pre>
-username과 password에 이벤트를 처리하고, 입력값이 변수에 입력되도록 추가합니다.  
-&gt; App.vue  
-~~~js
-&lt;template&gt;
-  &lt;!-- vue-cli 프로젝트를 생성하고, 간단하게 mark-up 구조를 잡아봅니다. --&gt;
-  &lt;form v-on:submit="submitForm"&gt;
-    &lt;div&gt;
-      &lt;label for="username"&gt;id: &lt;/label&gt;
-      &lt;input id="username" type="text" v-model="username"&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;label for="password"&gt;pw: &lt;/label&gt;
-      &lt;input id="password" type="password" v-model="password"&gt;
-    &lt;/div&gt;
-    &lt;button type="submit"&gt;login&lt;/button&gt;
-  &lt;/form&gt;
-&lt;/template&gt;
+</pre></td><td class="rouge-code"><pre><span class="o">&lt;</span><span class="nx">template</span><span class="o">&gt;</span>
+  <span class="c">&lt;!--</span> <span class="err">하나의</span> <span class="nx">Element</span> <span class="err">만</span> <span class="err">선언해야</span> <span class="err">합니다</span><span class="p">.</span> <span class="p">(</span><span class="err">뒤에</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="sr">/div&gt; 중복 불가</span><span class="se">)</span><span class="sr"> --</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+    <span class="c">&lt;!--</span> <span class="o">&lt;</span><span class="nx">app</span><span class="o">-</span><span class="nx">header</span> <span class="nx">v</span><span class="o">-</span><span class="nx">bind</span><span class="p">:</span><span class="err">프롭스</span> <span class="err">속성</span> <span class="err">이름</span><span class="o">=</span><span class="dl">"</span><span class="s2">상위 컴포넌트의 데이터 이름</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/app-header&gt; --</span><span class="err">&gt;
+</span>    <span class="c">&lt;!--</span> <span class="err">하위</span> <span class="err">컴포넌트에서</span> <span class="err">인식하도록</span> <span class="err">선언한</span> <span class="nx">v</span><span class="o">-</span><span class="nx">on</span> <span class="o">--&gt;</span>
+    <span class="o">&lt;</span><span class="nx">app</span><span class="o">-</span><span class="nx">header</span> 
+      <span class="nx">v</span><span class="o">-</span><span class="nx">bind</span><span class="p">:</span><span class="nx">propsdata</span><span class="o">=</span><span class="dl">"</span><span class="s2">str</span><span class="dl">"</span>      
+      <span class="nx">v</span><span class="o">-</span><span class="nx">on</span><span class="p">:</span><span class="nx">renew</span><span class="o">=</span><span class="dl">"</span><span class="s2">renewStr</span><span class="dl">"</span>
+      <span class="o">&gt;&lt;</span><span class="sr">/app-header</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="c">&lt;!--</span> <span class="err">오류</span> <span class="err">발생</span> <span class="o">--&gt;</span>
+  <span class="c">&lt;!--</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;&lt;</span><span class="sr">/div&gt; --</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/template</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<span class="c1">// .vue 까지 붙여야 파일 바로가기 수행이 가능합니다.</span>
+<span class="k">import</span> <span class="nx">AppHeader</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./components/appHeader.vue</span><span class="dl">'</span>
 
-&lt;script&gt;
-export default {
-  data: function() {
-    return {
-      username: '',
-      password: '',
-    }
-  },
-  methods: {
-    submitForm: function(event) {
-      event.preventDefault();
-      console.log(this.username, this.password);      
-    }
-  }
-}
-&lt;/script&gt;
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="c1">// vue-cli를 사용하면서  data: {} 이 아니라 function()을 이용해야합니다.</span>
+  <span class="na">data</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="na">str</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Header</span><span class="dl">'</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="na">components</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">'</span><span class="s1">app-header</span><span class="dl">'</span><span class="p">:</span> <span class="nx">AppHeader</span>
+  <span class="p">},</span>
+  <span class="na">methods</span><span class="p">:</span> <span class="p">{</span>    
+    <span class="na">renewStr</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">str</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">hi</span><span class="dl">'</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">style</span><span class="o">&gt;</span>
 
-&lt;style&gt;
+<span class="o">&lt;</span><span class="sr">/style</span><span class="err">&gt;
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
-&lt;/style&gt;
-</pre></td></tr></tbody></table></code></pre></div></div>
+<p>appHeader.vue</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+</pre></td><td class="rouge-code"><pre><span class="o">&lt;</span><span class="nx">template</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">header</span><span class="o">&gt;</span>
+        <span class="c">&lt;!--</span> <span class="err">상위</span> <span class="err">컴포넌트의</span> <span class="err">데이터를</span> <span class="err">수신받아</span> <span class="err">표기</span> <span class="o">--&gt;</span>
+        <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>        <span class="c">&lt;!--</span> <span class="nx">sendEvent</span><span class="err">를</span> <span class="err">이용하여</span> <span class="err">상위</span> <span class="err">컴포넌트에</span> <span class="err">전달</span> <span class="o">--&gt;</span>
+        <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">v</span><span class="o">-</span><span class="nx">on</span><span class="p">:</span><span class="nx">click</span><span class="o">=</span><span class="dl">"</span><span class="s2">sendEvent</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">send</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/header</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/template</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+    <span class="na">props</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">propsdata</span><span class="dl">'</span><span class="p">],</span>
+    <span class="na">methods</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">sendEvent</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">$emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">renew</span><span class="dl">'</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">style</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="sr">/style</span><span class="err">&gt;
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="8-최종-프로젝트">8. 최종 프로젝트</h2>
+<p>다음 명령어를 수행하여 새로운 프로젝트를 생성하고 실행합니다.<br />
+<code class="highlighter-rouge">vue create vue-form</code><br />
+<code class="highlighter-rouge">cd vue-form</code><br />
+<code class="highlighter-rouge">npm run serve</code></p>
+
+<p>간단하게 마크업 구조를 잡아보겠습니다.<br />
+App.vue</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre></td><td class="rouge-code"><pre><span class="o">&lt;</span><span class="nx">template</span><span class="o">&gt;</span>
+  <span class="c">&lt;!--</span> <span class="nx">vue</span><span class="o">-</span><span class="nx">cli</span> <span class="err">프로젝트를</span> <span class="err">생성하고</span><span class="p">,</span> <span class="err">간단하게</span> <span class="nx">mark</span><span class="o">-</span><span class="nx">up</span> <span class="err">구조를</span> <span class="err">잡아봅니다</span><span class="p">.</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="nx">form</span> <span class="nx">action</span><span class="o">=</span><span class="dl">""</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">label</span> <span class="k">for</span><span class="o">=</span><span class="dl">"</span><span class="s2">username</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">id</span><span class="p">:</span> <span class="o">&lt;</span><span class="sr">/label</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">username</span><span class="dl">"</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">label</span> <span class="k">for</span><span class="o">=</span><span class="dl">"</span><span class="s2">password</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">pw</span><span class="p">:</span> <span class="o">&lt;</span><span class="sr">/label</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">password</span><span class="dl">"</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">button</span><span class="o">&gt;</span><span class="nx">login</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="sr">/form</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/template</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">style</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="sr">/style</span><span class="err">&gt;
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>username과 password에 이벤트를 처리하고, 입력값이 변수에 입력되도록 추가합니다.<br />
+App.vue</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+</pre></td><td class="rouge-code"><pre><span class="o">&lt;</span><span class="nx">template</span><span class="o">&gt;</span>
+  <span class="c">&lt;!--</span> <span class="nx">vue</span><span class="o">-</span><span class="nx">cli</span> <span class="err">프로젝트를</span> <span class="err">생성하고</span><span class="p">,</span> <span class="err">간단하게</span> <span class="nx">mark</span><span class="o">-</span><span class="nx">up</span> <span class="err">구조를</span> <span class="err">잡아봅니다</span><span class="p">.</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="nx">form</span> <span class="nx">v</span><span class="o">-</span><span class="nx">on</span><span class="p">:</span><span class="nx">submit</span><span class="o">=</span><span class="dl">"</span><span class="s2">submitForm</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">label</span> <span class="k">for</span><span class="o">=</span><span class="dl">"</span><span class="s2">username</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">id</span><span class="p">:</span> <span class="o">&lt;</span><span class="sr">/label</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">username</span><span class="dl">"</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span> <span class="nx">v</span><span class="o">-</span><span class="nx">model</span><span class="o">=</span><span class="dl">"</span><span class="s2">username</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">label</span> <span class="k">for</span><span class="o">=</span><span class="dl">"</span><span class="s2">password</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">pw</span><span class="p">:</span> <span class="o">&lt;</span><span class="sr">/label</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">password</span><span class="dl">"</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">password</span><span class="dl">"</span> <span class="nx">v</span><span class="o">-</span><span class="nx">model</span><span class="o">=</span><span class="dl">"</span><span class="s2">password</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">submit</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">login</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="sr">/form</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/template</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="na">data</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="na">username</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+      <span class="na">password</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="na">methods</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">submitForm</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">username</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">password</span><span class="p">);</span>      
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">style</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="sr">/style</span><span class="err">&gt;
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>다음 명령어를 수행하여 axios를 설치합니다.<br />
 <code class="highlighter-rouge">npm i axios</code></p>
@@ -673,6 +724,11 @@ Vue 개발을 수행할 때 부딪히는 많은 문제에 대해서 다루고 �
                                 
                                   
                                     
+                                        
+                                        
+                                            <li><a href="/front-end-vue-js-4">Vue.js 시작하기 - 4</a></li>
+                                        
+                                    
                                   
                                 
                                   
@@ -696,8 +752,6 @@ Vue 개발을 수행할 때 부딪히는 많은 문제에 대해서 다루고 �
                                   
                                     
                                         
-                                        
-                                            <li><a href="/front-end-vue-js-2">Vue.js 시작하기 - 2</a></li>
                                         
                                     
                                   
@@ -985,13 +1039,13 @@ Vue 개발을 수행할 때 부딪히는 많은 문제에 대해서 다루고 �
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Vue.js 시작하기 - 4</div>
+    <div class="floating-header-title">Vue.js 시작하기 - 5</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Vue.js+%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0+-+4&amp;url=https://kjham.github.io/front-end-vue-js-5"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Vue.js+%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0+-+5&amp;url=https://kjham.github.io/front-end-vue-js-5"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
