@@ -1,0 +1,180 @@
+# Jekyll configuration
+markdown: kramdown
+# kramdown : markdown의 개조판.
+# markdown에서 불편한 사항을 개선한 형태.
+
+highlighter: rouge
+# text highlighter로 rouge이용
+# 2016.02월 이후로 syntax highlighter는 rouge만 지원.
+# Pygments 사용불가.
+
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+      start_line: 1
+
+# pagination:
+#   enabled: true
+#   per_page: 12
+#   sort_reverse: true
+#   sort_field: 'date'
+#   title: ':title'
+#   trail:
+#     before: 2
+#     after: 2
+paginate: 10
+# 작성한 모든 post를 하나의 페이지에 열거할 수 없으니
+# pagination이 필요하고 몇개의 post를 하나의 page에서
+# 보여줄 건지를 설정.
+
+# language: 'en-uk'
+language: ['ja', 'ko', 'en']
+default_lang: 'ko'
+# 언어 설정
+
+url: https://kjham.github.io
+# Google Search Console에서 사용하는 sitemap.xml 생성시
+# 이 url key값이 존재하지 않으면 sitemap.xml이
+# 정상적으로 생성되지 않는다.
+# 또한 disqus(댓글시스템)를 이용하기 위해서도 필요.
+# 자신의 github page url을 입력
+# ( https://your_github_id.github.io 형식 )
+
+# edit baseurl to simply '/' if using as your personal page (instead of a project page)
+baseurl: /
+
+# Website info
+title: SWDEVLAB
+# 자신의 blog title.
+
+description: Software Developement Laboratory
+# blog home에 표시될 blog에 대한 전반적인 설명.
+
+cover: assets/images/blog-cover.jpg
+# blog home에 표시될 blog cover image.
+
+logo: assets/images/blog-icon.png
+logo_dark: assets/images/favicon.png
+favicon: assets/images/favicon.png
+# favicon으로 사용할 image
+
+production_url: https://kjham.github.io/
+# 최종적으로 blog가 운영될 url
+
+source_url: https://github.com/kjham/githubpage_kjham_source/
+# blogmaker(jekyll source folder)에 대한 github repository
+
+# Social info
+navigation: True # show the navbar links
+# Navigation bar link를 보여줄건지 여부
+
+subscribers: True 
+# subscriber 기능을 사용할건지의 여부
+# 저는 약간의 수정을 통해 subscriber 기능대신
+# lunr.js를 이용한 검색 기능으로 대체 사용했습니다.
+# 검색기능으로 대체하기 위해서
+# `_includes/subscribe-form.html` 파일의 수정이 필요합니다.
+
+twitter: # kjham # replace by your username
+facebook: # h_proms # replace by your username
+# 만약 twitter와 facebook을 이용하면 username을 입력
+
+# Disqus
+disqus: True
+disqus_shortname: proms-blog
+# disqus는 온라인 댓글 시스템. 댓글 기능을 사용하기 위해
+# disqus를 이용할 것인지 여부와 만약 사용하면
+# disqus shortname을 입력 ( disqus username이 아님 )
+
+# Google Analytics
+google_analytics: UA-144720566-1 # UA-69281367-1 # replace with your GA tracking identifier
+# Google Analytics을 사용할 경우 GA tracking identifier를 입력
+
+# Permalinks
+permalink: /:title
+# permalink: /author/:author
+# permalink: /tag/:title
+# 각각의 post에 고정주소를 어떤 방식으로 할당할 것인지를 결정
+# 이 값을 바꾸면 작성한 포스트의 저장위치나 파일이름이 변경된다.
+
+# Authors' info in `_data/authors.yml`
+# Tags' info in `_data/tags_info.yml`
+
+# gems and other configs
+plugins: 
+  - jekyll-paginate
+  - jekyll-feed
+  # - jekyll-paginate-v2
+  # - jekyll-polyglot
+  - jekyll-seo-tag
+
+exclude: [vendor]
+
+feed:
+  path: feed.xml
+
+# Additional settings available on the front-matter
+# Site logo in the index.html (as in demo.ghost.io)
+# Author's page cover in _layouts/author.html
+# The same for page.html and tag.html layouts
+# Post's page cover as a per-post basis _posts/...
+# Disqus comments as a per-post basis
+# ...
+
+# Settings for builing master branch with travis-ci
+# with jekyll-travis
+
+# Settings for deploy rake task
+# Username and repo of Github repo, e.g.
+# https://github.com/USERNAME/REPO.git
+# username defaults to ENV['GIT_NAME'] used by Travis
+# repo defaults to USERNAME.github.io
+# Branch defaults to "source" for USERNAME.github.io
+# or "master" otherwise
+# Travis-CI 설정입니다.
+safe: False
+lsi: False
+
+username: kjham
+repo: githubpage_kjham_source
+# username : travis-ci와 연동하는 github의 username
+# repo: travis-ci와 연동하는 github의 repository이름
+# https://github.com/<username>/<repository>
+
+branch: master
+# 사용할 branch명
+
+destination: ../kjham.github.io/
+# compile된 결과가 생성되는 폴더
+# 이 폴더안으로 우리가 운영하는 블로그 내용이 컴파일되서 들어간다.
+# 이 폴더안의 내용을 github repository(https://username.github.io)에 push
+# 만약 Travis-CI를 이용할 예정이면 이 부분을 git submodule로
+# github repository(https://username.github.io)에 연결해야 한다.
+
+relative_source: # ../jasper2/
+
+production_url:  https://kjham.github.io/
+source_url:  https://github.com/kjham/githubpage_kjham_source/
+
+# exclude는 Jekyll컴파일 시 destination에 포함될 필요가
+# 없는것들을 명시한다. (node_modules는 포함시키자)
+
+exclude:
+  - assets/css
+  - node_modules
+  - vendor
+  - .travis.yml
+  - Gemfile
+  - Gemfile.lock
+  - GHOST.txt
+  - gulpfile.js
+  - LICENSE
+  - package.json
+  - Rakefile
+  - README.md
+  - script.py
+  - changelog.md
+  - "*.Rmd"
+  - .git*

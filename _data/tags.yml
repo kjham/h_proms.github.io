@@ -1,0 +1,24 @@
+speeches:
+  name: speeches
+  description: Some of the greatest words ever spoken.
+  cover: assets/images/speeches.jpg
+fiction:
+  name: fiction
+  description: False
+  cover: False
+fables:
+  name: fables
+  description: A series of short stories that make you think.
+  cover: assets/images/fables.jpg
+sw-dev-lab:
+  name: sw-dev-lab
+  description: False
+  cover: False
+religion:
+  name: religion-lab
+  description: False
+  cover: False
+test-page:
+  name: test-page
+  description: False
+  cover: False
