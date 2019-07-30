@@ -11,7 +11,7 @@
 
 
 
-    <title>(Linux:Centos7) FTP 접속 관련</title>
+    <title>Vue.js 완벽가이드 - 4</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -36,26 +36,26 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Software Developement Laboratory" />
     <link rel="shortcut icon" href="https://kjham.github.io/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://kjham.github.io/linux-error-vsftpd" />
+    <link rel="canonical" href="https://kjham.github.io/front-end-vue-js-complete-4" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="SWDEVLAB" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="(Linux:Centos7) FTP 접속 관련" />
-    <meta property="og:description" content="Linux Centos7 - FTP 접속 관련 Centos7 를 설치할 때, FTP 를 옵션으로 선택하였음에도.. 접속이 안되는 경우가 있습니다. systemctl 명령어로 vsftpd를 시작/중지/상태확인합니다. systemctl status vsftpd.service &lt;– vsftpd 상태확인 systemctl start vsftpd.service &lt;– vsftpd 시작 systemctl stop vsftpd.service &lt;– vsftpd 중지 systemctl restart vsftpd.service &lt;– vsftpd 재시작 방화벽으로 인해 접속이 안되는" />
-    <meta property="og:url" content="https://kjham.github.io/linux-error-vsftpd" />
-    <meta property="og:image" content="https://kjham.github.io/assets/images/blog-cover.jpg" />
+    <meta property="og:title" content="Vue.js 완벽가이드 - 4" />
+    <meta property="og:description" content="7. 스토어 7-1. Vuex 설치 및 Vuex가 적용된 앱 구조 소개 지금까지 수행한 프로젝트는 API에서 바로 View로 데이터를 전달하였습니다. Vuex를 설치하여 API -&gt; Vuex -&gt; View 로 데이터 전달 과정을 알아보겠습니다. 터미널에서 npm i vuex를 입력하여 vuex를 설치합니다. 7-2. Vuex 모듈화 및 state 적용 컴포넌트가 많은 프로젝트의 경우 하나의 컴포넌트가" />
+    <meta property="og:url" content="https://kjham.github.io/front-end-vue-js-complete-4" />
+    <meta property="og:image" content="https://kjham.github.io/assets/images/VUE_JS.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2018-03-30T20:26:00+09:00" />
-    <meta property="article:modified_time" content="2018-03-30T20:26:00+09:00" />
+    <meta property="article:published_time" content="2019-07-30T03:00:00+09:00" />
+    <meta property="article:modified_time" content="2019-07-30T03:00:00+09:00" />
     <meta property="article:tag" content="Sw-dev-lab" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="(Linux:Centos7) FTP 접속 관련" />
-    <meta name="twitter:description" content="Linux Centos7 - FTP 접속 관련 Centos7 를 설치할 때, FTP 를 옵션으로 선택하였음에도.. 접속이 안되는 경우가 있습니다. systemctl 명령어로 vsftpd를 시작/중지/상태확인합니다. systemctl status vsftpd.service &lt;– vsftpd 상태확인 systemctl start vsftpd.service &lt;– vsftpd 시작 systemctl stop vsftpd.service &lt;– vsftpd 중지 systemctl restart vsftpd.service &lt;– vsftpd 재시작 방화벽으로 인해 접속이 안되는" />
+    <meta name="twitter:title" content="Vue.js 완벽가이드 - 4" />
+    <meta name="twitter:description" content="7. 스토어 7-1. Vuex 설치 및 Vuex가 적용된 앱 구조 소개 지금까지 수행한 프로젝트는 API에서 바로 View로 데이터를 전달하였습니다. Vuex를 설치하여 API -&gt; Vuex -&gt; View 로 데이터 전달 과정을 알아보겠습니다. 터미널에서 npm i vuex를 입력하여 vuex를 설치합니다. 7-2. Vuex 모듈화 및 state 적용 컴포넌트가 많은 프로젝트의 경우 하나의 컴포넌트가" />
     <meta name="twitter:url" content="https://kjham.github.io/" />
-    <meta name="twitter:image" content="https://kjham.github.io/assets/images/blog-cover.jpg" />
+    <meta name="twitter:image" content="https://kjham.github.io/assets/images/VUE_JS.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="SWDEVLAB" />
     <meta name="twitter:label2" content="Filed under" />
@@ -74,18 +74,18 @@
         "name": "SWDEVLAB",
         "logo": "https://kjham.github.io/assets/images/blog-icon.png"
     },
-    "url": "https://kjham.github.io/linux-error-vsftpd",
+    "url": "https://kjham.github.io/front-end-vue-js-complete-4",
     "image": {
         "@type": "ImageObject",
-        "url": "https://kjham.github.io/assets/images/blog-cover.jpg",
+        "url": "https://kjham.github.io/assets/images/VUE_JS.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://kjham.github.io/linux-error-vsftpd"
+        "@id": "https://kjham.github.io/front-end-vue-js-complete-4"
     },
-    "description": "Linux Centos7 - FTP 접속 관련 Centos7 를 설치할 때, FTP 를 옵션으로 선택하였음에도.. 접속이 안되는 경우가 있습니다. systemctl 명령어로 vsftpd를 시작/중지/상태확인합니다. systemctl status vsftpd.service &lt;– vsftpd 상태확인 systemctl start vsftpd.service &lt;– vsftpd 시작 systemctl stop vsftpd.service &lt;– vsftpd 중지 systemctl restart vsftpd.service &lt;– vsftpd 재시작 방화벽으로 인해 접속이 안되는"
+    "description": "7. 스토어 7-1. Vuex 설치 및 Vuex가 적용된 앱 구조 소개 지금까지 수행한 프로젝트는 API에서 바로 View로 데이터를 전달하였습니다. Vuex를 설치하여 API -&gt; Vuex -&gt; View 로 데이터 전달 과정을 알아보겠습니다. 터미널에서 npm i vuex를 입력하여 vuex를 설치합니다. 7-2. Vuex 모듈화 및 state 적용 컴포넌트가 많은 프로젝트의 경우 하나의 컴포넌트가"
 }
     </script>
 
@@ -98,7 +98,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="(Linux:Centos7) FTP 접속 관련" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Vue.js 완벽가이드 - 4" href="/feed.xml" />
 
 
 </head>
@@ -150,11 +150,11 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full post tag-sw-dev-lab no-image">
+        <article class="post-full post tag-sw-dev-lab ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="30 March 2018">30 March 2018</time>
+                    <time class="post-full-meta-date" datetime="30 July 2019">30 July 2019</time>
                     
                         <span class="date-divider">/</span>
                         
@@ -164,45 +164,293 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">(Linux:Centos7) FTP 접속 관련</h1>
+                <h1 class="post-full-title">Vue.js 완벽가이드 - 4</h1>
             </header>
 
+            
+            <figure class="post-full-image" style="background-image: url(/assets/images/VUE_JS.jpg)">
+            </figure>
             
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p><strong>Linux Centos7 - FTP 접속 관련</strong></p>
+                    <h1 id="7-스토어">7. 스토어</h1>
 
-<p>Centos7 를 설치할 때, FTP 를 옵션으로 선택하였음에도.. 접속이 안되는 경우가 있습니다.</p>
+<h2 id="7-1-vuex-설치-및-vuex가-적용된-앱-구조-소개">7-1. Vuex 설치 및 Vuex가 적용된 앱 구조 소개</h2>
+<p>지금까지 수행한 프로젝트는 API에서 바로 View로 데이터를 전달하였습니다.<br />
+Vuex를 설치하여 API -&gt; Vuex -&gt; View 로 데이터 전달 과정을 알아보겠습니다.</p>
 
-<ol>
-  <li>systemctl 명령어로 vsftpd를 시작/중지/상태확인합니다.
-    <h1 id="systemctl-status-vsftpdservice--vsftpd-상태확인">systemctl status vsftpd.service &lt;– vsftpd 상태확인</h1>
-    <h1 id="systemctl-start-vsftpdservice--vsftpd-시작">systemctl start vsftpd.service &lt;– vsftpd 시작</h1>
-    <h1 id="systemctl-stop-vsftpdservice--vsftpd-중지">systemctl stop vsftpd.service &lt;– vsftpd 중지</h1>
-    <h1 id="systemctl-restart-vsftpdservice--vsftpd-재시작">systemctl restart vsftpd.service &lt;– vsftpd 재시작</h1>
-  </li>
-  <li>방화벽으로 인해 접속이 안되는 경우가 있습니다.
-— firewalld 실행 상태 확인
-    <h1 id="systemctl-status-firewalldservice">systemctl status firewalld.service</h1>
-    <p>— firewalld 중지</p>
-    <h1 id="systemctl-stop-firewalldservice">systemctl stop firewalld.service</h1>
-    <p>— firewalld 자동중지(시스템시작시 자동시작 안함)</p>
-    <h1 id="systemctl-disable-firewalldservice">systemctl disable firewalld.service</h1>
-  </li>
-  <li>root 계정으로 접속이 안될 떄
-    <h1 id="vi-etcvsftpdftpusers">vi /etc/vsftpd/ftpusers</h1>
-    <h1 id="vi-etcvsftpduser_list">vi /etc/vsftpd/user_list</h1>
-  </li>
-</ol>
+<p>터미널에서 <code class="highlighter-rouge">npm i vuex</code>를 입력하여 vuex를 설치합니다.</p>
 
-<p>위 두 곳에서 root 제거</p>
+<h2 id="7-2-vuex-모듈화-및-state-적용">7-2. Vuex 모듈화 및 state 적용</h2>
+<p>컴포넌트가 많은 프로젝트의 경우 하나의 컴포넌트가 갖고 있는 data를 다른 컴포넌트에 공유할 일이 발생합니다.</p>
 
-<p>vsftpd 재실행</p>
-<h1 id="systemctl-stop-vsftpdservice">systemctl stop vsftpd.service</h1>
-<h1 id="systemctl-start-vsftpdservice">systemctl start vsftpd.service</h1>
+<p><code class="highlighter-rouge">./src/store/index.js</code> 파일을 생성합니다.<br />
+<code class="highlighter-rouge">index.js</code>에 다음과 같이 코드를 작성합니다.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="nx">Vue</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">Vuex</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vuex</span><span class="dl">'</span><span class="p">;</span>
 
-<p>출처 : http://ellehu.com/linux/4333</p>
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Vuex</span><span class="p">);</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vuex</span><span class="p">.</span><span class="nx">Store</span><span class="p">({</span>
+    <span class="na">state</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">news</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><code class="highlighter-rouge">main.js</code>에 store를 추가합니다.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="nx">Vue</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue</span><span class="dl">'</span>
+<span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./App.vue</span><span class="dl">'</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">router</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./routes/index.js</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">store</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./store/index.js</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">productionTip</span> <span class="o">=</span> <span class="kc">false</span>
+
+<span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+  <span class="na">render</span><span class="p">:</span> <span class="nx">h</span> <span class="o">=&gt;</span> <span class="nx">h</span><span class="p">(</span><span class="nx">App</span><span class="p">),</span>
+  <span class="nx">router</span><span class="p">,</span>
+  <span class="nx">store</span>
+<span class="p">}).</span><span class="nx">$mount</span><span class="p">(</span><span class="dl">'</span><span class="s1">#app</span><span class="dl">'</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>서버를 실행 하면 개발자도구 Vue의 두번째 Tab에서 State 항목으로 news가 등록된 것을 확인할 수 있습니다.</p>
+
+<h2 id="7-2-newsview에-actions와-실습-안내">7-2. NewsView에 actions와 실습 안내</h2>
+<p>Actions에서 Backend API를 통해 데이터를 수신받습니다.<br />
+이 데이터는 state로 바로 전달하지 못하고, mutations를 통해 전달해야 합니다.<br />
+<code class="highlighter-rouge">index.js</code>에 actions, mutations를 구현해봅시다.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="nx">Vue</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">Vuex</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vuex</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">fetchNewsList</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">../api/index.js</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Vuex</span><span class="p">);</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vuex</span><span class="p">.</span><span class="nx">Store</span><span class="p">({</span>
+    <span class="na">state</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">news</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">},</span>
+    <span class="na">mutations</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nx">SET_NEWS</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">news</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">state</span><span class="p">.</span><span class="nx">news</span> <span class="o">=</span> <span class="nx">news</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="na">actions</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nx">FETCH_NEWS</span><span class="p">(</span><span class="nx">context</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">fetchNewsList</span><span class="p">()</span>
+                <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+                    <span class="nx">context</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="dl">'</span><span class="s1">SET_NEWS</span><span class="dl">'</span><span class="p">,</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+                    <span class="c1">// state.news = response.data; -&gt; 불가능</span>
+                <span class="p">})</span>
+                <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>                    
+                <span class="p">});</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><code class="highlighter-rouge">NewsView.vue</code>에 store를 적용해봅시다.<br />
+이제 store에서 관리하는 news 데이터는 모든 component에서 접근이 가능하게 되었습니다.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="rouge-code"><pre><span class="o">&lt;</span><span class="nx">template</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>        
+        <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">v</span><span class="o">-</span><span class="k">for</span><span class="o">=</span><span class="dl">"</span><span class="s2">user in this.$store.state.news</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/template</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+    <span class="nx">created</span><span class="p">()</span> <span class="p">{</span>      
+        <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="dl">'</span><span class="s1">FETCH_NEWS</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">style</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="sr">/style</span><span class="err">&gt;
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="7-3-jobsview-askview-적용">7-3. JobsView, AskView 적용</h2>
+<p><code class="highlighter-rouge">index.js</code>에 Jobs, Ask 에 관한 state, mutations, actions를 추가합니다.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="nx">Vue</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">Vuex</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vuex</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">fetchNewsList</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">../api/index.js</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">fetchAskList</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">../api/index.js</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">fetchJobsList</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">../api/index.js</span><span class="dl">'</span>
+
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Vuex</span><span class="p">);</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vuex</span><span class="p">.</span><span class="nx">Store</span><span class="p">({</span>
+    <span class="na">state</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">news</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="na">jobs</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="na">ask</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">},</span>
+    <span class="na">mutations</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nx">SET_NEWS</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">news</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">state</span><span class="p">.</span><span class="nx">news</span> <span class="o">=</span> <span class="nx">news</span><span class="p">;</span>
+        <span class="p">},</span>
+        <span class="nx">SET_JOBS</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">jobs</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">state</span><span class="p">.</span><span class="nx">jobs</span> <span class="o">=</span> <span class="nx">jobs</span><span class="p">;</span>
+        <span class="p">},</span>
+        <span class="nx">SET_ASK</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">ask</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">state</span><span class="p">.</span><span class="nx">ask</span> <span class="o">=</span> <span class="nx">ask</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="na">actions</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nx">FETCH_NEWS</span><span class="p">(</span><span class="nx">context</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">fetchNewsList</span><span class="p">()</span>
+                <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+                    <span class="nx">context</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="dl">'</span><span class="s1">SET_NEWS</span><span class="dl">'</span><span class="p">,</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+                    <span class="c1">// state.news = response.data; -&gt; 불가능</span>
+                <span class="p">})</span>
+                <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>                    
+                <span class="p">});</span>
+        <span class="p">},</span>
+        <span class="c1">// context 내부의 commit을 바로 호출하여 간결한 코드 작성이 가능합니다.</span>
+        <span class="nx">FETCH_JOBS</span><span class="p">({</span> <span class="nx">commit</span> <span class="p">})</span> <span class="p">{</span>
+            <span class="nx">fetchJobsList</span><span class="p">()</span>
+            	<span class="c1">// 바로 data를 호출하는 방식입니다.</span>
+                <span class="p">.</span><span class="nx">then</span><span class="p">(({</span> <span class="nx">data</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                    <span class="nx">commit</span><span class="p">(</span><span class="dl">'</span><span class="s1">SET_JOBS</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+                <span class="p">})</span>
+                <span class="p">.</span><span class="k">catch</span><span class="p">();</span>
+        <span class="p">},</span>
+        <span class="nx">FETCH_ASK</span><span class="p">({</span> <span class="nx">commit</span> <span class="p">})</span> <span class="p">{</span>
+            <span class="nx">fetchAskList</span><span class="p">()</span>
+                <span class="p">.</span><span class="nx">then</span><span class="p">(({</span> <span class="nx">data</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                    <span class="nx">commit</span><span class="p">(</span><span class="dl">'</span><span class="s1">SET_ASK</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+                <span class="p">})</span>
+                <span class="p">.</span><span class="k">catch</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
                 </div>
             </section>
@@ -303,11 +551,6 @@ into the {body} of the default.hbs template -->
                                 
                                   
                                     
-                                        
-                                        
-                                            <li><a href="/front-end-vue-js-complete-4">Vue.js 완벽가이드 - 4</a></li>
-                                        
-                                    
                                   
                                 
                                   
@@ -332,12 +575,7 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
+                                            <li><a href="/front-end-vue-js-complete-1">Vue.js 완벽가이드 - 1</a></li>
                                         
                                     
                                   
@@ -406,6 +644,16 @@ into the {body} of the default.hbs template -->
                                   
                                 
                                   
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
                                     
                                   
                                 
@@ -595,60 +843,19 @@ into the {body} of the default.hbs template -->
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template no-image">
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/database-mongodb-setup">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Sw-dev-lab</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">(MongoDB) Linux 설치 가이드</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/proms_profile.jpg" alt="Keon-Joo, Ham" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/proms/">Keon-Joo, Ham</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
                 
 
-    <article class="post-card post-template no-image">
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/front-end-vue-js-complete-3">
+                <div class="post-card-image" style="background-image: url(/assets/images/VUE_JS.jpg)"></div>
+            </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/linux-centos-ip-configuration">
+            <a class="post-card-content-link" href="/front-end-vue-js-complete-3">
                 <header class="post-card-header">
                     
                         
@@ -658,7 +865,7 @@ into the {body} of the default.hbs template -->
                         
                     
 
-                    <h2 class="post-card-title">(Linux:Centos7) IP 고정방법</h2>
+                    <h2 class="post-card-title">Vue.js 완벽가이드 - 3</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -704,18 +911,18 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">(Linux:Centos7) FTP 접속 관련</div>
+    <div class="floating-header-title">Vue.js 완벽가이드 - 4</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%28Linux%3ACentos7%29+FTP+%EC%A0%91%EC%86%8D+%EA%B4%80%EB%A0%A8&amp;url=https://kjham.github.io/linux-error-vsftpd"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Vue.js+%EC%99%84%EB%B2%BD%EA%B0%80%EC%9D%B4%EB%93%9C+-+4&amp;url=https://kjham.github.io/front-end-vue-js-complete-4"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://kjham.github.io/linux-error-vsftpd"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://kjham.github.io/front-end-vue-js-complete-4"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

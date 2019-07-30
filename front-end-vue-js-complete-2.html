@@ -43,7 +43,7 @@
     <meta property="og:site_name" content="SWDEVLAB" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Vue.js 완벽가이드 - 2" />
-    <meta property="og:description" content="Vue.js 완벽가이드 - 2 5. 라우터 기본 5. 라우터 기본 5-1. 라우터 설치 및 구현 터미널을 열어 npm i vue-router --save를 입력해봅시다. package.json에서 dependencies항목에 vue-router을 확인 할 수 있습니다. main.js 코드 내 router을 추가할 수 있습니다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14" />
+    <meta property="og:description" content="5. 라우터 기본 5-1. 라우터 설치 및 구현 터미널을 열어 npm i vue-router --save를 입력해봅시다. package.json에서 dependencies항목에 vue-router을 확인 할 수 있습니다. main.js 코드 내 router을 추가할 수 있습니다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 import" />
     <meta property="og:url" content="https://kjham.github.io/front-end-vue-js-complete-2" />
     <meta property="og:image" content="https://kjham.github.io/assets/images/VUE_JS.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -53,7 +53,7 @@
     <meta property="article:tag" content="Sw-dev-lab" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Vue.js 완벽가이드 - 2" />
-    <meta name="twitter:description" content="Vue.js 완벽가이드 - 2 5. 라우터 기본 5. 라우터 기본 5-1. 라우터 설치 및 구현 터미널을 열어 npm i vue-router --save를 입력해봅시다. package.json에서 dependencies항목에 vue-router을 확인 할 수 있습니다. main.js 코드 내 router을 추가할 수 있습니다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14" />
+    <meta name="twitter:description" content="5. 라우터 기본 5-1. 라우터 설치 및 구현 터미널을 열어 npm i vue-router --save를 입력해봅시다. package.json에서 dependencies항목에 vue-router을 확인 할 수 있습니다. main.js 코드 내 router을 추가할 수 있습니다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 import" />
     <meta name="twitter:url" content="https://kjham.github.io/" />
     <meta name="twitter:image" content="https://kjham.github.io/assets/images/VUE_JS.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -85,7 +85,7 @@
         "@type": "WebPage",
         "@id": "https://kjham.github.io/front-end-vue-js-complete-2"
     },
-    "description": "Vue.js 완벽가이드 - 2 5. 라우터 기본 5. 라우터 기본 5-1. 라우터 설치 및 구현 터미널을 열어 npm i vue-router --save를 입력해봅시다. package.json에서 dependencies항목에 vue-router을 확인 할 수 있습니다. main.js 코드 내 router을 추가할 수 있습니다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14"
+    "description": "5. 라우터 기본 5-1. 라우터 설치 및 구현 터미널을 열어 npm i vue-router --save를 입력해봅시다. package.json에서 dependencies항목에 vue-router을 확인 할 수 있습니다. main.js 코드 내 router을 추가할 수 있습니다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 import"
 }
     </script>
 
@@ -174,13 +174,7 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h1 id="vuejs-완벽가이드---2">Vue.js 완벽가이드 - 2</h1>
-
-<blockquote>
-  <p><strong>5. 라우터 기본</strong></p>
-</blockquote>
-
-<h2 id="5-라우터-기본">5. 라우터 기본</h2>
+                    <h1 id="5-라우터-기본">5. 라우터 기본</h1>
 
 <h2 id="5-1-라우터-설치-및-구현">5-1. 라우터 설치 및 구현</h2>
 <p>터미널을 열어 <code class="highlighter-rouge">npm i vue-router --save</code>를 입력해봅시다.<br />
@@ -377,6 +371,293 @@ into the {body} of the default.hbs template -->
 </pre></td></tr></tbody></table></code></pre></div></div>
 
 <h2 id="5-2-router-view를-이용한-라우팅-컴포넌트">5-2. router-view를 이용한 라우팅 컴포넌트</h2>
+<p><code class="highlighter-rouge">App.vue</code>에 <code class="highlighter-rouge">router-view</code>를 추가합니다.<br />
+그럼 router변경에 따라 화면에 컴포넌트가 표기됩니다.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+</pre></td><td class="rouge-code"><pre><span class="o">&lt;</span><span class="nx">template</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">router</span><span class="o">-</span><span class="nx">view</span><span class="o">&gt;&lt;</span><span class="sr">/router-view</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/template</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="na">methods</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nx">fetchData</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span><span class="p">);</span>      
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">style</span><span class="o">&gt;</span>
+<span class="err">#</span><span class="nx">app</span> <span class="p">{</span>
+  <span class="nx">font</span><span class="o">-</span><span class="na">family</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Avenir</span><span class="dl">'</span><span class="p">,</span> <span class="nx">Helvetica</span><span class="p">,</span> <span class="nx">Arial</span><span class="p">,</span> <span class="nx">sans</span><span class="o">-</span><span class="nx">serif</span><span class="p">;</span>
+  <span class="o">-</span><span class="nx">webkit</span><span class="o">-</span><span class="nx">font</span><span class="o">-</span><span class="na">smoothing</span><span class="p">:</span> <span class="nx">antialiased</span><span class="p">;</span>
+  <span class="o">-</span><span class="nx">moz</span><span class="o">-</span><span class="nx">osx</span><span class="o">-</span><span class="nx">font</span><span class="o">-</span><span class="na">smoothing</span><span class="p">:</span> <span class="nx">grayscale</span><span class="p">;</span>
+  <span class="nx">text</span><span class="o">-</span><span class="na">align</span><span class="p">:</span> <span class="nx">center</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="err">#</span><span class="mi">2</span><span class="nx">c3e50</span><span class="p">;</span>
+  <span class="nx">margin</span><span class="o">-</span><span class="na">top</span><span class="p">:</span> <span class="mi">60</span><span class="nx">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/style</span><span class="err">&gt;
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><code class="highlighter-rouge">http://localhost:8082/#/jobs</code><br />
+<code class="highlighter-rouge">http://localhost:8082/#/news</code><br />
+<code class="highlighter-rouge">http://localhost:8082/#/ask</code><br />
+주소에 따라 생성한 컴포넌트가 표기되는 것을 확인할 수 있습니다.</p>
+
+<h2 id="5-3-redirect-속성과-router-link">5-3. redirect 속성과 router-link</h2>
+<p>URL 입력이 아니라 링크에 의해 페이지 변경을 다루어보겠습니다.</p>
+
+<p>헤더를 생성하기 위해 <code class="highlighter-rouge">ToolBar.vue</code> 를 정의하겠습니다.<br />
+<code class="highlighter-rouge">router-link</code>를 이용하여 URL을 정의합니다.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="rouge-code"><pre><span class="o">&lt;</span><span class="nx">template</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">router</span><span class="o">-</span><span class="nx">link</span> <span class="nx">to</span><span class="o">=</span><span class="dl">"</span><span class="s2">/news</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">News</span><span class="o">&lt;</span><span class="sr">/router-link</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">router</span><span class="o">-</span><span class="nx">link</span> <span class="nx">to</span><span class="o">=</span><span class="dl">"</span><span class="s2">/ask</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">Ask</span><span class="o">&lt;</span><span class="sr">/router-link</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">router</span><span class="o">-</span><span class="nx">link</span> <span class="nx">to</span><span class="o">=</span><span class="dl">"</span><span class="s2">/jobs</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">Jobs</span><span class="o">&lt;</span><span class="sr">/router-link</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/template</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">style</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="sr">/style</span><span class="err">&gt;
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><code class="highlighter-rouge">ToolBar.vue</code>를 App.vue에 적용합니다.<br />
+Vue에서 태그를 입력할 때는 Pascal 방식보다는 ‘-‘로 이루어진 태그를 사용합니다.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre></td><td class="rouge-code"><pre><span class="o">&lt;</span><span class="nx">template</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="c">&lt;!--</span> <span class="nx">Pascal</span> <span class="err">방식의</span> <span class="nx">Tag</span> <span class="err">명명법</span> <span class="o">--&gt;</span>
+    <span class="c">&lt;!--</span> <span class="mi">1</span> <span class="o">-</span> <span class="nx">Strongly</span> <span class="nx">Recommended</span> <span class="o">--&gt;</span>
+    <span class="c">&lt;!--</span> <span class="o">&lt;</span><span class="nx">ToolBar</span><span class="o">&gt;&lt;</span><span class="sr">/ToolBar&gt; --</span><span class="err">&gt;
+</span>
+    <span class="c">&lt;!--</span> <span class="nx">Vue</span><span class="err">에서</span> <span class="err">제공하는</span> <span class="err">자동완성</span> <span class="o">--&gt;</span>
+    <span class="c">&lt;!--</span> <span class="mi">2</span> <span class="o">-</span> <span class="nx">Essential</span> <span class="o">--&gt;</span>
+    <span class="o">&lt;</span><span class="nx">tool</span><span class="o">-</span><span class="nx">bar</span><span class="o">&gt;&lt;</span><span class="sr">/tool-bar&gt;   </span><span class="err"> 
+</span>    <span class="o">&lt;</span><span class="nx">router</span><span class="o">-</span><span class="nx">view</span><span class="o">&gt;&lt;</span><span class="sr">/router-view</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/template</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<span class="k">import</span> <span class="nx">ToolBar</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./components/ToolBar.vue</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="na">components</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nx">ToolBar</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">style</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="sr">/style</span><span class="err">&gt;
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>저장 후, 화면에서 각 URL로 이동할 수 있는 Header가 생긴 것을 확인할 수 있습니다.</p>
+
+<h2 id="5-4-toolbar와-router-link-스타일링">5-4. ToolBar와 Router Link 스타일링</h2>
+<p>Styling은 주로 Web에 화면을 띄우고 [F12]를 클릭하여 Element 요소 값을 수정하며 확인합니다.</p>
+
+<p>먼저 <code class="highlighter-rouge">Toolbar.vue</code>에 정의한 header를 수정하겠습니다.<br />
+Header의 기존적인 색감과 각 링크가 클릭되었을 때 스타일링을 주었습니다.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="rouge-code"><pre><span class="o">&lt;</span><span class="nx">template</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="kd">class</span><span class="o">=</span><span class="dl">"</span><span class="s2">header</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">router</span><span class="o">-</span><span class="nx">link</span> <span class="nx">to</span><span class="o">=</span><span class="dl">"</span><span class="s2">/news</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">News</span><span class="o">&lt;</span><span class="sr">/router-link&gt; </span><span class="err">|
+</span>        <span class="o">&lt;</span><span class="nx">router</span><span class="o">-</span><span class="nx">link</span> <span class="nx">to</span><span class="o">=</span><span class="dl">"</span><span class="s2">/ask</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">Ask</span><span class="o">&lt;</span><span class="sr">/router-link&gt; </span><span class="err">|
+</span>        <span class="o">&lt;</span><span class="nx">router</span><span class="o">-</span><span class="nx">link</span> <span class="nx">to</span><span class="o">=</span><span class="dl">"</span><span class="s2">/jobs</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">Jobs</span><span class="o">&lt;</span><span class="sr">/router-link</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/template</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>
+<span class="c1">// scoped는 해당 Component만 정의되도록 합니다.</span>
+<span class="o">&lt;</span><span class="nx">style</span> <span class="nx">scoped</span><span class="o">&gt;</span>
+<span class="p">.</span><span class="nx">header</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="nx">white</span><span class="p">;</span>
+    <span class="nx">background</span><span class="o">-</span><span class="nx">color</span><span class="p">:</span> <span class="err">#</span><span class="mi">42</span><span class="nx">b883</span><span class="p">;</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="nx">flex</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="mi">8</span><span class="nx">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nx">header</span> <span class="p">.</span><span class="nx">router</span><span class="o">-</span><span class="nx">link</span><span class="o">-</span><span class="nx">exact</span><span class="o">-</span><span class="nx">active</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="err">#</span><span class="mi">35495</span><span class="nx">e</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nx">header</span> <span class="nx">a</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="nx">white</span>
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/style</span><span class="err">&gt;
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><code class="highlighter-rouge">App.vue</code>에 Padding을 줍니다.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="rouge-code"><pre><span class="o">&lt;</span><span class="nx">template</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="c">&lt;!--</span> <span class="nx">Pascal</span> <span class="err">방식의</span> <span class="nx">Tag</span> <span class="err">명명법</span> <span class="o">--&gt;</span>
+    <span class="c">&lt;!--</span> <span class="mi">1</span> <span class="o">-</span> <span class="nx">Strongly</span> <span class="nx">Recommended</span> <span class="o">--&gt;</span>
+    <span class="c">&lt;!--</span> <span class="o">&lt;</span><span class="nx">ToolBar</span><span class="o">&gt;&lt;</span><span class="sr">/ToolBar&gt; --</span><span class="err">&gt;
+</span>
+    <span class="c">&lt;!--</span> <span class="nx">Vue</span><span class="err">에서</span> <span class="err">제공하는</span> <span class="err">자동완성</span> <span class="o">--&gt;</span>
+    <span class="c">&lt;!--</span> <span class="mi">2</span> <span class="o">-</span> <span class="nx">Essential</span> <span class="o">--&gt;</span>
+    <span class="o">&lt;</span><span class="nx">tool</span><span class="o">-</span><span class="nx">bar</span><span class="o">&gt;&lt;</span><span class="sr">/tool-bar&gt;   </span><span class="err"> 
+</span>    <span class="o">&lt;</span><span class="nx">router</span><span class="o">-</span><span class="nx">view</span><span class="o">&gt;&lt;</span><span class="sr">/router-view</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/template</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<span class="k">import</span> <span class="nx">ToolBar</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./components/ToolBar.vue</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="na">components</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nx">ToolBar</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">style</span><span class="o">&gt;</span>
+<span class="nx">body</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/style</span><span class="err">&gt;
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="5-5-itemview와-userview-구현">5-5. ItemView와 UserView 구현</h2>
 
                 </div>
             </section>
@@ -477,6 +758,24 @@ into the {body} of the default.hbs template -->
                                 
                                   
                                     
+                                        
+                                        
+                                            <li><a href="/front-end-vue-js-complete-4">Vue.js 완벽가이드 - 4</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/front-end-vue-js-complete-3">Vue.js 완벽가이드 - 3</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
                                   
                                 
                                   
@@ -492,16 +791,12 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                            <li><a href="/front-end-vue-js-5">Vue.js 시작하기 - 5</a></li>
-                                        
                                     
                                   
                                 
                                   
                                     
                                         
-                                        
-                                            <li><a href="/front-end-vue-js-4">Vue.js 시작하기 - 4</a></li>
                                         
                                     
                                   
@@ -745,7 +1040,7 @@ into the {body} of the default.hbs template -->
                         <footer class="read-next-card-footer">
                             <a href="/tag/sw-dev-lab/">
                                 
-                                    See all 35 posts  →
+                                    See all 37 posts  →
                                 
                             </a>
                         </footer>
@@ -754,6 +1049,55 @@ into the {body} of the default.hbs template -->
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/front-end-vue-js-complete-3">
+                <div class="post-card-image" style="background-image: url(/assets/images/VUE_JS.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/front-end-vue-js-complete-3">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Sw-dev-lab</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Vue.js 완벽가이드 - 3</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/proms_profile.jpg" alt="Keon-Joo, Ham" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/proms/">Keon-Joo, Ham</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
             
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
