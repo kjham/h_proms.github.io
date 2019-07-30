@@ -2,17 +2,17 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator>
-  <link href="https://kjham.github.io/tag/sw-dev-lab/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://kjham.github.io/" rel="alternate" type="text/html" />
-  <updated>2019-07-30T12:35:25+09:00</updated>
-  <id>https://kjham.github.io/tag/sw-dev-lab/feed.xml</id>
+  <link href="https://kjham.github.io/family/tag/sw-dev-lab/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://kjham.github.io/family/" rel="alternate" type="text/html" />
+  <updated>2019-07-30T12:36:41+09:00</updated>
+  <id>https://kjham.github.io/family/tag/sw-dev-lab/feed.xml</id>
 
   
   
   
 
   
-    <title type="html">SWDEVLAB | </title>
+    <title type="html">FAMILY | </title>
   
 
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Vue.js 시작하기 - 5</title>
-      <link href="https://kjham.github.io/front-end-vue-js-5" rel="alternate" type="text/html" title="Vue.js 시작하기 - 5" />
+      <link href="https://kjham.github.io/family/front-end-vue-js-5" rel="alternate" type="text/html" title="Vue.js 시작하기 - 5" />
       <published>2019-07-27T21:00:00+09:00</published>
       <updated>2019-07-27T21:00:00+09:00</updated>
-      <id>https://kjham.github.io/front-end-vue-js-5</id>
-      <content type="html" xml:base="https://kjham.github.io/front-end-vue-js-5">&lt;h1 id=&quot;vuejs-시작하기---5&quot;&gt;Vue.js 시작하기 - 5&lt;/h1&gt;
+      <id>https://kjham.github.io/family/front-end-vue-js-5</id>
+      <content type="html" xml:base="https://kjham.github.io/family/front-end-vue-js-5">&lt;h1 id=&quot;vuejs-시작하기---5&quot;&gt;Vue.js 시작하기 - 5&lt;/h1&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;7. 싱글 파일 컴포넌트&lt;/strong&gt;&lt;/p&gt;
@@ -522,11 +522,11 @@ Vue 개발을 수행할 때 부딪히는 많은 문제에 대해서 다루고 �
   
     <entry>
       <title type="html">Vue.js 시작하기 - 4</title>
-      <link href="https://kjham.github.io/front-end-vue-js-4" rel="alternate" type="text/html" title="Vue.js 시작하기 - 4" />
+      <link href="https://kjham.github.io/family/front-end-vue-js-4" rel="alternate" type="text/html" title="Vue.js 시작하기 - 4" />
       <published>2019-07-26T21:00:00+09:00</published>
       <updated>2019-07-26T21:00:00+09:00</updated>
-      <id>https://kjham.github.io/front-end-vue-js-4</id>
-      <content type="html" xml:base="https://kjham.github.io/front-end-vue-js-4">&lt;h1 id=&quot;vuejs-시작하기---4&quot;&gt;Vue.js 시작하기 - 4&lt;/h1&gt;
+      <id>https://kjham.github.io/family/front-end-vue-js-4</id>
+      <content type="html" xml:base="https://kjham.github.io/family/front-end-vue-js-4">&lt;h1 id=&quot;vuejs-시작하기---4&quot;&gt;Vue.js 시작하기 - 4&lt;/h1&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;7. 템플릿 문법&lt;/strong&gt;&lt;br /&gt;
@@ -1409,11 +1409,11 @@ HelloWorld.vue 컴포넌트를 가면 template에 msg 를 출력하는 코드가
   
     <entry>
       <title type="html">Vue.js 시작하기 - 3</title>
-      <link href="https://kjham.github.io/front-end-vue-js-3" rel="alternate" type="text/html" title="Vue.js 시작하기 - 3" />
+      <link href="https://kjham.github.io/family/front-end-vue-js-3" rel="alternate" type="text/html" title="Vue.js 시작하기 - 3" />
       <published>2019-07-26T02:00:00+09:00</published>
       <updated>2019-07-26T02:00:00+09:00</updated>
-      <id>https://kjham.github.io/front-end-vue-js-3</id>
-      <content type="html" xml:base="https://kjham.github.io/front-end-vue-js-3">&lt;h1 id=&quot;vuejs-시작하기---3&quot;&gt;Vue.js 시작하기 - 3&lt;/h1&gt;
+      <id>https://kjham.github.io/family/front-end-vue-js-3</id>
+      <content type="html" xml:base="https://kjham.github.io/family/front-end-vue-js-3">&lt;h1 id=&quot;vuejs-시작하기---3&quot;&gt;Vue.js 시작하기 - 3&lt;/h1&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;5. 라우터&lt;/strong&gt;&lt;br /&gt;
@@ -1753,11 +1753,11 @@ getData로 표기된 버튼을 클릭했을 때 Json 형식의 데이터를 수�
   
     <entry>
       <title type="html">Ghost-Jekyll 적용하기 - 1</title>
-      <link href="https://kjham.github.io/ghost-jekyll-1" rel="alternate" type="text/html" title="Ghost-Jekyll 적용하기 - 1" />
+      <link href="https://kjham.github.io/family/ghost-jekyll-1" rel="alternate" type="text/html" title="Ghost-Jekyll 적용하기 - 1" />
       <published>2019-07-25T00:38:00+09:00</published>
       <updated>2019-07-25T00:38:00+09:00</updated>
-      <id>https://kjham.github.io/ghost-jekyll-1</id>
-      <content type="html" xml:base="https://kjham.github.io/ghost-jekyll-1">&lt;h1 id=&quot;ghost-jekyll-적용하기---1&quot;&gt;Ghost-Jekyll 적용하기 - 1&lt;/h1&gt;
+      <id>https://kjham.github.io/family/ghost-jekyll-1</id>
+      <content type="html" xml:base="https://kjham.github.io/family/ghost-jekyll-1">&lt;h1 id=&quot;ghost-jekyll-적용하기---1&quot;&gt;Ghost-Jekyll 적용하기 - 1&lt;/h1&gt;
 
 &lt;h1 id=&quot;1-github-page-생성&quot;&gt;1. Github Page 생성&lt;/h1&gt;
 
@@ -1874,11 +1874,11 @@ jekyll 소스 폴더 내 Gemfile 을 삭제 후 다음과 같이 실행합니다
   
     <entry>
       <title type="html">Vue.js 시작하기 - 2</title>
-      <link href="https://kjham.github.io/front-end-vue-js-2" rel="alternate" type="text/html" title="Vue.js 시작하기 - 2" />
+      <link href="https://kjham.github.io/family/front-end-vue-js-2" rel="alternate" type="text/html" title="Vue.js 시작하기 - 2" />
       <published>2019-07-24T22:00:00+09:00</published>
       <updated>2019-07-24T22:00:00+09:00</updated>
-      <id>https://kjham.github.io/front-end-vue-js-2</id>
-      <content type="html" xml:base="https://kjham.github.io/front-end-vue-js-2">&lt;h1 id=&quot;vuejs-시작하기---2&quot;&gt;Vue.js 시작하기 - 2&lt;/h1&gt;
+      <id>https://kjham.github.io/family/front-end-vue-js-2</id>
+      <content type="html" xml:base="https://kjham.github.io/family/front-end-vue-js-2">&lt;h1 id=&quot;vuejs-시작하기---2&quot;&gt;Vue.js 시작하기 - 2&lt;/h1&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;3. 인스턴스&lt;/strong&gt;&lt;br /&gt;
@@ -2740,11 +2740,11 @@ B 에서 Root 로 Event Emit을 이용하여 데이터를 전달한다.&lt;br /&
   
     <entry>
       <title type="html">Vue.js 시작하기 - 1</title>
-      <link href="https://kjham.github.io/front-end-vue-js-1" rel="alternate" type="text/html" title="Vue.js 시작하기 - 1" />
+      <link href="https://kjham.github.io/family/front-end-vue-js-1" rel="alternate" type="text/html" title="Vue.js 시작하기 - 1" />
       <published>2019-07-23T21:00:00+09:00</published>
       <updated>2019-07-23T21:00:00+09:00</updated>
-      <id>https://kjham.github.io/front-end-vue-js-1</id>
-      <content type="html" xml:base="https://kjham.github.io/front-end-vue-js-1">&lt;h1 id=&quot;vuejs-시작하기---1&quot;&gt;Vue.js 시작하기 - 1&lt;/h1&gt;
+      <id>https://kjham.github.io/family/front-end-vue-js-1</id>
+      <content type="html" xml:base="https://kjham.github.io/family/front-end-vue-js-1">&lt;h1 id=&quot;vuejs-시작하기---1&quot;&gt;Vue.js 시작하기 - 1&lt;/h1&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;1. 개발환경 설정&lt;/strong&gt;&lt;br /&gt;
@@ -2967,11 +2967,11 @@ Model 에서 Business Logic을 처리후 Data Bindings를 통해 View에 전달&
   
     <entry>
       <title type="html">(Java) Gradle Dependency</title>
-      <link href="https://kjham.github.io/java-gradle-dependency" rel="alternate" type="text/html" title="(Java) Gradle Dependency" />
+      <link href="https://kjham.github.io/family/java-gradle-dependency" rel="alternate" type="text/html" title="(Java) Gradle Dependency" />
       <published>2018-03-31T02:45:00+09:00</published>
       <updated>2018-03-31T02:45:00+09:00</updated>
-      <id>https://kjham.github.io/java-gradle-dependency</id>
-      <content type="html" xml:base="https://kjham.github.io/java-gradle-dependency">&lt;p&gt;&lt;strong&gt;JAVA - Gradle Dependency&lt;/strong&gt;&lt;/p&gt;
+      <id>https://kjham.github.io/family/java-gradle-dependency</id>
+      <content type="html" xml:base="https://kjham.github.io/family/java-gradle-dependency">&lt;p&gt;&lt;strong&gt;JAVA - Gradle Dependency&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -3051,11 +3051,11 @@ http://blog.leocat.kr/notes/2017/10/11/gradle-shadowjar-make-fat-jar&lt;/p&gt;
   
     <entry>
       <title type="html">(Java) JPA Tutorial</title>
-      <link href="https://kjham.github.io/java-redis-tutorial" rel="alternate" type="text/html" title="(Java) JPA Tutorial" />
+      <link href="https://kjham.github.io/family/java-redis-tutorial" rel="alternate" type="text/html" title="(Java) JPA Tutorial" />
       <published>2018-03-31T00:29:00+09:00</published>
       <updated>2018-03-31T00:29:00+09:00</updated>
-      <id>https://kjham.github.io/java-redis-tutorial</id>
-      <content type="html" xml:base="https://kjham.github.io/java-redis-tutorial">&lt;p&gt;&lt;strong&gt;JAVA - REDIS Tutorial&lt;/strong&gt;&lt;/p&gt;
+      <id>https://kjham.github.io/family/java-redis-tutorial</id>
+      <content type="html" xml:base="https://kjham.github.io/family/java-redis-tutorial">&lt;p&gt;&lt;strong&gt;JAVA - REDIS Tutorial&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Redis 란? (&lt;strong&gt;RE&lt;/strong&gt;mote &lt;strong&gt;DI&lt;/strong&gt;ctionary Server)&lt;br /&gt;
@@ -3227,11 +3227,11 @@ https://redis.io/documentation&lt;/p&gt;
   
     <entry>
       <title type="html">(Java) JPA Tutorial</title>
-      <link href="https://kjham.github.io/java-jpa-tutorial" rel="alternate" type="text/html" title="(Java) JPA Tutorial" />
+      <link href="https://kjham.github.io/family/java-jpa-tutorial" rel="alternate" type="text/html" title="(Java) JPA Tutorial" />
       <published>2018-03-31T00:13:00+09:00</published>
       <updated>2018-03-31T00:13:00+09:00</updated>
-      <id>https://kjham.github.io/java-jpa-tutorial</id>
-      <content type="html" xml:base="https://kjham.github.io/java-jpa-tutorial">&lt;p&gt;&lt;strong&gt;JAVA - JPA Tutorial&lt;/strong&gt;&lt;/p&gt;
+      <id>https://kjham.github.io/family/java-jpa-tutorial</id>
+      <content type="html" xml:base="https://kjham.github.io/family/java-jpa-tutorial">&lt;p&gt;&lt;strong&gt;JAVA - JPA Tutorial&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;JPA는 Java Persistent API 의 약자입니다.&lt;br /&gt;
 JPA는 여러 ORM 전문가가 참여한 EJB 3.0 스펙 작업에서 기존 EJB ORM이던 Entity Bean을 JPA라고 바꾸고 JavaSE, JavaEE를 위한 영속성(persistence) 관리와 ORM을 위한 표준 기술입니다.
@@ -3304,11 +3304,11 @@ https://www.slideshare.net/zipkyh/spring-datajpa?next_slideshow=1&lt;/p&gt;
   
     <entry>
       <title type="html">(MongoDB) Linux 설치 가이드</title>
-      <link href="https://kjham.github.io/database-mongodb-setup" rel="alternate" type="text/html" title="(MongoDB) Linux 설치 가이드" />
+      <link href="https://kjham.github.io/family/database-mongodb-setup" rel="alternate" type="text/html" title="(MongoDB) Linux 설치 가이드" />
       <published>2018-03-30T23:42:00+09:00</published>
       <updated>2018-03-30T23:42:00+09:00</updated>
-      <id>https://kjham.github.io/database-mongodb-setup</id>
-      <content type="html" xml:base="https://kjham.github.io/database-mongodb-setup">&lt;p&gt;&lt;strong&gt;MongoDB 설치 가이드&lt;/strong&gt;&lt;/p&gt;
+      <id>https://kjham.github.io/family/database-mongodb-setup</id>
+      <content type="html" xml:base="https://kjham.github.io/family/database-mongodb-setup">&lt;p&gt;&lt;strong&gt;MongoDB 설치 가이드&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
