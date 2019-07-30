@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator>
   <link href="https://kjham.github.io/tag/sw-dev-lab/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://kjham.github.io/" rel="alternate" type="text/html" />
-  <updated>2019-07-30T00:35:02+09:00</updated>
+  <updated>2019-07-30T12:35:25+09:00</updated>
   <id>https://kjham.github.io/tag/sw-dev-lab/feed.xml</id>
 
   
@@ -30,148 +30,6 @@
   
   
 
-  
-    <entry>
-      <title type="html">Vue.js 완벽가이드 - 1</title>
-      <link href="https://kjham.github.io/front-end-vue-js-complete-1" rel="alternate" type="text/html" title="Vue.js 완벽가이드 - 1" />
-      <published>2019-07-28T21:00:00+09:00</published>
-      <updated>2019-07-28T21:00:00+09:00</updated>
-      <id>https://kjham.github.io/front-end-vue-js-complete-1</id>
-      <content type="html" xml:base="https://kjham.github.io/front-end-vue-js-complete-1">&lt;h1 id=&quot;vuejs-완벽가이드---1&quot;&gt;Vue.js 완벽가이드 - 1&lt;/h1&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;1. 강의 소개&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;2. 앱 소개 및 가이드&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;9. 최종 정리&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;1-강의-소개&quot;&gt;1. 강의 소개&lt;/h2&gt;
-
-&lt;p&gt;Application을 직접 제작하며 Vue.js의 구조를 이해합니다.&lt;br /&gt;
-Application 제작을 위한 실무 학습을 수행합니다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Vue.js를 이용한 웹 서비스 구현 절차&lt;/li&gt;
-  &lt;li&gt;실무 프로젝트 진행 방식 (컴포넌트, 라우터, API, 스토어)&lt;/li&gt;
-  &lt;li&gt;컴포넌트 디자인 패턴과 자바스크립트 비동기 처리&lt;/li&gt;
-  &lt;li&gt;Mixins과 HOC를 이용한 컴포넌트 재활용 방법&lt;/li&gt;
-  &lt;li&gt;외부 라이브러리 모듈화 및 실무 프로젝트 구성 방법&lt;/li&gt;
-  &lt;li&gt;사용자 경험을 높이는 라우터 설계 방법과 고급 라우터 패턴&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;뉴스정보를 읽어와서 화면에 표기하는 Application을 제작합니다.&lt;br /&gt;
-각 페이지를 클릭하여 라우터 처리를 수행하도록 합니다.&lt;br /&gt;
-각 항목을 클릭할 때 상세 내용을 읽어와 화면에 표기합니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;2-앱-소개-및-가이드&quot;&gt;2. 앱 소개 및 가이드&lt;/h2&gt;
-
-&lt;h3 id=&quot;2-1-개발-환경&quot;&gt;2-1. 개발 환경&lt;/h3&gt;
-&lt;p&gt;개발환경은 다음과 같습니다.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Node.js&lt;br /&gt;
-Visual Studio Code (+ Plug-In)&lt;/p&gt;
-  &lt;blockquote&gt;
-    &lt;p&gt;Vetur : 코드 자동완성&lt;br /&gt;
-TSLint : TypeScript를 사용하지 않아도 타입에 대한 감지를 수행&lt;br /&gt;
-ESLint : &lt;br /&gt;
-Auto Close Tag : Tag 자동완성&lt;br /&gt;
-Live Server : 라이브 서버 실행 지원&lt;br /&gt;
-Night Owl : 코드 테마&lt;/p&gt;
-  &lt;/blockquote&gt;
-
-  &lt;p&gt;GithubGist&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;2-2-스타일-가이드--코딩-컨벤션&quot;&gt;2-2. 스타일 가이드 &amp;amp; 코딩 컨벤션&lt;/h3&gt;
-&lt;p&gt;Vue.js 공식 문서에 있는 스타일 가이드 및 코딩 컨벤션을 참고하여 앱을 제작합니다.&lt;br /&gt;
-Vue.js의 Core팀에서 제공하는 코드 스타일을 제공합니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;3-애플리케이션-제작--소개-및-설계&quot;&gt;3. 애플리케이션 제작 : 소개 및 설계&lt;/h2&gt;
-
-&lt;p&gt;Haker News 의 OpenAPI인 HNPWA API를 이용하여 페이지를 작성합니다.&lt;br /&gt;
-Ask, News, Jobs 의 세 페이지를 작성하고, 사용자 정보를 확인할 수 있도록 구성합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;3-1-라우터-설계&quot;&gt;3-1. 라우터 설계&lt;/h3&gt;
-&lt;p&gt;다음과 같이 다섯 개의 라우터로 구성합니다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Ask 페이지&lt;/li&gt;
-  &lt;li&gt;News 페이지&lt;/li&gt;
-  &lt;li&gt;Jobs 페이지&lt;/li&gt;
-  &lt;li&gt;User 페이지&lt;/li&gt;
-  &lt;li&gt;Ask 코멘트 페이지&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;3-2-vue-cli-2x-vs-3x&quot;&gt;3-2. Vue-CLI 2.x vs 3.x&lt;/h3&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;명령어&lt;/strong&gt;&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;2.x : vue init ‘프로젝트 템플릿 이름’ ‘파일 위치’&lt;/li&gt;
-    &lt;li&gt;3.x : vue create ‘프로젝트 이름’&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Web-Pack 설정 파일&lt;/strong&gt;&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;2.x : 노출 0&lt;/li&gt;
-    &lt;li&gt;3.x : 노출 X&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;프로젝트 구성&lt;/strong&gt;&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;2.x : Github의 템플릿 다운로드&lt;/li&gt;
-    &lt;li&gt;3.x : 플러그인 기반으로 기능 추가&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;ES6 이해도&lt;/strong&gt; (ES6 : Javacript 문법)&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;2.x : 필요 X&lt;/li&gt;
-    &lt;li&gt;3.x : 필요 O&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;4-프로젝트-setup&quot;&gt;4. 프로젝트 Setup&lt;/h2&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;vue create vue-news&lt;/code&gt; 를 입력하여 프로젝트를 생성합니다.&lt;br /&gt;
-옵션은 Default를 선택합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;4-1-eslint-도구-소개&quot;&gt;4-1. ESLint 도구 소개&lt;/h3&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Keon-Joo, Ham</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="sw-dev-lab" />
-      
-
-      
-        <summary type="html">Vue.js 완벽가이드 - 1</summary>
-      
-
-      
-      
-    </entry>
   
     <entry>
       <title type="html">Vue.js 시작하기 - 5</title>
@@ -3438,6 +3296,72 @@ https://www.slideshare.net/zipkyh/spring-datajpa?next_slideshow=1&lt;/p&gt;
 
       
         <summary type="html">JAVA - JPA Tutorial</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">(MongoDB) Linux 설치 가이드</title>
+      <link href="https://kjham.github.io/database-mongodb-setup" rel="alternate" type="text/html" title="(MongoDB) Linux 설치 가이드" />
+      <published>2018-03-30T23:42:00+09:00</published>
+      <updated>2018-03-30T23:42:00+09:00</updated>
+      <id>https://kjham.github.io/database-mongodb-setup</id>
+      <content type="html" xml:base="https://kjham.github.io/database-mongodb-setup">&lt;p&gt;&lt;strong&gt;MongoDB 설치 가이드&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;tar 다운로드
+https://www.mongodb.com/download-center#atlas
+위 주소로 접속하여, 최신버전 다운로드&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;linux 서버로 파일 복사&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;압축 풀기
+tar xzf mongodb-linux-x86_64-rhel70-3.4.2.gz&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;데이터 저장용 폴더 생성
+mkdir -p /data/db&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;서버 시작&lt;br /&gt;
+/[압축푼 경로]/mongodb-linux-x86_64-rhel70-3.4.2/bin/mongod –port 27017 –dbpath /data/db&lt;br /&gt;
+인증을 주고자 할 경우는&lt;br /&gt;
+/[압축푼 경로]/mongodb-linux-x86_64-rhel70-3.4.2/bin/mongod –port 27017 –dbpath /data/db – auth
+백그라운드로 실행할 경우는
+/[압축푼 경로]/mongodb-linux-x86_64-rhel70-3.4.2/bin/mongod –port 27017 –dbpath /data/db &amp;amp;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;서버로 접속
+또 다른 linux 세션을 접속 후..
+/[압축푼 경로]/mongodb-linux-x86_64-rhel70-3.4.2/bin/mongo –port 27017&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Keon-Joo, Ham</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="sw-dev-lab" />
+      
+
+      
+        <summary type="html">MongoDB 설치 가이드</summary>
       
 
       
