@@ -1,12 +1,10 @@
 # Jekyll configuration
-markdown: kramdown
-# kramdown : markdown의 개조판.
-# markdown에서 불편한 사항을 개선한 형태.
 
+# kramdown : markdown의 개조판.
+markdown: kramdown
+
+# 2016.02월 이후로 syntax highlighter는 rouge만 지원. Pygments 사용불가.
 highlighter: rouge
-# text highlighter로 rouge이용
-# 2016.02월 이후로 syntax highlighter는 rouge만 지원.
-# Pygments 사용불가.
 
 kramdown:
   syntax_highlighter: rouge
@@ -15,24 +13,11 @@ kramdown:
       line_numbers: true
       start_line: 1
 
-# pagination:
-#   enabled: true
-#   per_page: 12
-#   sort_reverse: true
-#   sort_field: 'date'
-#   title: ':title'
-#   trail:
-#     before: 2
-#     after: 2
 paginate: 10
-# 작성한 모든 post를 하나의 페이지에 열거할 수 없으니
-# pagination이 필요하고 몇개의 post를 하나의 page에서
-# 보여줄 건지를 설정.
 
 # language: 'en-uk'
 language: ['ja', 'ko', 'en']
 default_lang: 'ko'
-# 언어 설정
 
 url: https://kjham.github.io
 # Google Search Console에서 사용하는 sitemap.xml 생성시
@@ -63,7 +48,7 @@ favicon: assets/images/favicon.png
 production_url: https://kjham.github.io/
 # 최종적으로 blog가 운영될 url
 
-source_url: https://github.com/kjham/githubpage_kjham_source/
+source_url: https://github.com/kjham/kjham.github.io
 # blogmaker(jekyll source folder)에 대한 github repository
 
 # Social info
@@ -89,8 +74,7 @@ disqus_shortname: proms-blog
 # disqus shortname을 입력 ( disqus username이 아님 )
 
 # Google Analytics
-google_analytics: UA-144720566-1 # UA-69281367-1 # replace with your GA tracking identifier
-# Google Analytics을 사용할 경우 GA tracking identifier를 입력
+google_analytics: UA-144720566-1
 
 # Permalinks
 permalink: /:title
@@ -115,30 +99,12 @@ exclude: [vendor]
 feed:
   path: feed.xml
 
-# Additional settings available on the front-matter
-# Site logo in the index.html (as in demo.ghost.io)
-# Author's page cover in _layouts/author.html
-# The same for page.html and tag.html layouts
-# Post's page cover as a per-post basis _posts/...
-# Disqus comments as a per-post basis
-# ...
-
-# Settings for builing master branch with travis-ci
-# with jekyll-travis
-
-# Settings for deploy rake task
-# Username and repo of Github repo, e.g.
-# https://github.com/USERNAME/REPO.git
-# username defaults to ENV['GIT_NAME'] used by Travis
-# repo defaults to USERNAME.github.io
-# Branch defaults to "source" for USERNAME.github.io
-# or "master" otherwise
 # Travis-CI 설정입니다.
 safe: False
 lsi: False
 
 username: kjham
-repo: githubpage_kjham_source
+repo: kjham.github.io
 # username : travis-ci와 연동하는 github의 username
 # repo: travis-ci와 연동하는 github의 repository이름
 # https://github.com/<username>/<repository>
@@ -146,35 +112,35 @@ repo: githubpage_kjham_source
 branch: master
 # 사용할 branch명
 
-destination: ../kjham.github.io/
+# destination: ../kjham.github.io/
 # compile된 결과가 생성되는 폴더
 # 이 폴더안으로 우리가 운영하는 블로그 내용이 컴파일되서 들어간다.
 # 이 폴더안의 내용을 github repository(https://username.github.io)에 push
 # 만약 Travis-CI를 이용할 예정이면 이 부분을 git submodule로
 # github repository(https://username.github.io)에 연결해야 한다.
 
-relative_source: # ../jasper2/
+# relative_source: # ../jasper2/
 
 production_url:  https://kjham.github.io/
-source_url:  https://github.com/kjham/githubpage_kjham_source/
+source_url:  https://github.com/kjham/kjham.github.io/
 
 # exclude는 Jekyll컴파일 시 destination에 포함될 필요가
 # 없는것들을 명시한다. (node_modules는 포함시키자)
 
-exclude:
-  - assets/css
-  - node_modules
-  - vendor
-  - .travis.yml
-  - Gemfile
-  - Gemfile.lock
-  - GHOST.txt
-  - gulpfile.js
-  - LICENSE
-  - package.json
-  - Rakefile
-  - README.md
-  - script.py
-  - changelog.md
-  - "*.Rmd"
-  - .git*
+# exclude:
+#   - assets/css
+#   - node_modules
+#   - vendor
+#   - .travis.yml
+#   - Gemfile
+#   - Gemfile.lock
+#   - GHOST.txt
+#   - gulpfile.js
+#   - LICENSE
+#   - package.json
+#   - Rakefile
+#   - README.md
+#   - script.py
+#   - changelog.md
+#   - "*.Rmd"
+#   - .git*
