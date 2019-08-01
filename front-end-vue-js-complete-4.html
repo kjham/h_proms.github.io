@@ -43,7 +43,7 @@
     <meta property="og:site_name" content="SWDEVLAB" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Vue.js 완벽가이드 - 4" />
-    <meta property="og:description" content="7. 스토어 7-1. Vuex 설치 및 Vuex가 적용된 앱 구조 소개 지금까지 수행한 프로젝트는 API에서 바로 View로 데이터를 전달하였습니다. Vuex를 설치하여 API -&gt; Vuex -&gt; View 로 데이터 전달 과정을 알아보겠습니다. 터미널에서 npm i vuex를 입력하여 vuex를 설치합니다. 7-2. Vuex 모듈화 및 state 적용 컴포넌트가 많은 프로젝트의 경우 하나의 컴포넌트가" />
+    <meta property="og:description" content="7. 스토어 &amp; 중간정리 7-1. Vuex 설치 및 Vuex가 적용된 앱 구조 소개 지금까지 수행한 프로젝트는 API에서 바로 View로 데이터를 전달하였습니다. Vuex를 설치하여 API -&gt; Vuex -&gt; View 로 데이터 전달 과정을 알아보겠습니다. 터미널에서 npm i vuex를 입력하여 vuex를 설치합니다. 7-2. Vuex 모듈화 및 state 적용 컴포넌트가 많은 프로젝트의 경우" />
     <meta property="og:url" content="https://kjham.github.io/front-end-vue-js-complete-4" />
     <meta property="og:image" content="https://kjham.github.io/assets/images/VUE_JS.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -53,7 +53,7 @@
     <meta property="article:tag" content="Sw-dev-lab" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Vue.js 완벽가이드 - 4" />
-    <meta name="twitter:description" content="7. 스토어 7-1. Vuex 설치 및 Vuex가 적용된 앱 구조 소개 지금까지 수행한 프로젝트는 API에서 바로 View로 데이터를 전달하였습니다. Vuex를 설치하여 API -&gt; Vuex -&gt; View 로 데이터 전달 과정을 알아보겠습니다. 터미널에서 npm i vuex를 입력하여 vuex를 설치합니다. 7-2. Vuex 모듈화 및 state 적용 컴포넌트가 많은 프로젝트의 경우 하나의 컴포넌트가" />
+    <meta name="twitter:description" content="7. 스토어 &amp; 중간정리 7-1. Vuex 설치 및 Vuex가 적용된 앱 구조 소개 지금까지 수행한 프로젝트는 API에서 바로 View로 데이터를 전달하였습니다. Vuex를 설치하여 API -&gt; Vuex -&gt; View 로 데이터 전달 과정을 알아보겠습니다. 터미널에서 npm i vuex를 입력하여 vuex를 설치합니다. 7-2. Vuex 모듈화 및 state 적용 컴포넌트가 많은 프로젝트의 경우" />
     <meta name="twitter:url" content="https://kjham.github.io/" />
     <meta name="twitter:image" content="https://kjham.github.io/assets/images/VUE_JS.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -85,7 +85,7 @@
         "@type": "WebPage",
         "@id": "https://kjham.github.io/front-end-vue-js-complete-4"
     },
-    "description": "7. 스토어 7-1. Vuex 설치 및 Vuex가 적용된 앱 구조 소개 지금까지 수행한 프로젝트는 API에서 바로 View로 데이터를 전달하였습니다. Vuex를 설치하여 API -&gt; Vuex -&gt; View 로 데이터 전달 과정을 알아보겠습니다. 터미널에서 npm i vuex를 입력하여 vuex를 설치합니다. 7-2. Vuex 모듈화 및 state 적용 컴포넌트가 많은 프로젝트의 경우 하나의 컴포넌트가"
+    "description": "7. 스토어 &amp; 중간정리 7-1. Vuex 설치 및 Vuex가 적용된 앱 구조 소개 지금까지 수행한 프로젝트는 API에서 바로 View로 데이터를 전달하였습니다. Vuex를 설치하여 API -&gt; Vuex -&gt; View 로 데이터 전달 과정을 알아보겠습니다. 터미널에서 npm i vuex를 입력하여 vuex를 설치합니다. 7-2. Vuex 모듈화 및 state 적용 컴포넌트가 많은 프로젝트의 경우"
 }
     </script>
 
@@ -174,7 +174,7 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h1 id="7-스토어">7. 스토어</h1>
+                    <h1 id="7-스토어--중간정리">7. 스토어 &amp; 중간정리</h1>
 
 <h2 id="7-1-vuex-설치-및-vuex가-적용된-앱-구조-소개">7-1. Vuex 설치 및 Vuex가 적용된 앱 구조 소개</h2>
 <p>지금까지 수행한 프로젝트는 API에서 바로 View로 데이터를 전달하였습니다.<br />
@@ -451,6 +451,509 @@ Vuex를 설치하여 API -&gt; Vuex -&gt; View 로 데이터 전달 과정을 �
     <span class="p">}</span>
 <span class="p">})</span>
 </pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="7-4-map-헬퍼-함수를-이용한-askview-풀이">7-4. map 헬퍼 함수를 이용한 AskView 풀이</h2>
+
+<p><code class="highlighter-rouge">index.js</code>에 getters를 추가하고, <code class="highlighter-rouge">AskView.vue</code>에 데이터를 더 쉽게 가져오는 방법을 알아봅니다.<br />
+<code class="highlighter-rouge">index.js</code> 코드 입니다.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="nx">Vue</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">Vuex</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vuex</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">fetchNewsList</span><span class="p">,</span> <span class="nx">fetchAskList</span><span class="p">,</span> <span class="nx">fetchJobsList</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">../api/index.js</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Vuex</span><span class="p">);</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vuex</span><span class="p">.</span><span class="nx">Store</span><span class="p">({</span>
+    <span class="na">state</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">news</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="na">jobs</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="na">ask</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">},</span>
+    <span class="na">getters</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nx">fetchedAsk</span><span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nx">ask</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="na">mutations</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nx">SET_NEWS</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">news</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">state</span><span class="p">.</span><span class="nx">news</span> <span class="o">=</span> <span class="nx">news</span><span class="p">;</span>
+        <span class="p">},</span>
+        <span class="nx">SET_JOBS</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">jobs</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">state</span><span class="p">.</span><span class="nx">jobs</span> <span class="o">=</span> <span class="nx">jobs</span><span class="p">;</span>
+        <span class="p">},</span>
+        <span class="nx">SET_ASK</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">ask</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">state</span><span class="p">.</span><span class="nx">ask</span> <span class="o">=</span> <span class="nx">ask</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="na">actions</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nx">FETCH_NEWS</span><span class="p">(</span><span class="nx">context</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">fetchNewsList</span><span class="p">()</span>
+                <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+                    <span class="nx">context</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="dl">'</span><span class="s1">SET_NEWS</span><span class="dl">'</span><span class="p">,</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+                    <span class="c1">// state.news = response.data; -&gt; 불가능</span>
+                <span class="p">})</span>
+                <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>                    
+                <span class="p">});</span>
+        <span class="p">},</span>
+        <span class="nx">FETCH_JOBS</span><span class="p">({</span> <span class="nx">commit</span> <span class="p">})</span> <span class="p">{</span>
+            <span class="nx">fetchJobsList</span><span class="p">()</span>
+                <span class="p">.</span><span class="nx">then</span><span class="p">(({</span> <span class="nx">data</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                    <span class="nx">commit</span><span class="p">(</span><span class="dl">'</span><span class="s1">SET_JOBS</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+                <span class="p">})</span>
+                <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>                    
+                <span class="p">});</span>
+        <span class="p">},</span>
+        <span class="nx">FETCH_ASK</span><span class="p">({</span> <span class="nx">commit</span> <span class="p">})</span> <span class="p">{</span>
+            <span class="nx">fetchAskList</span><span class="p">()</span>
+                <span class="p">.</span><span class="nx">then</span><span class="p">(({</span> <span class="nx">data</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                    <span class="nx">commit</span><span class="p">(</span><span class="dl">'</span><span class="s1">SET_ASK</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+                <span class="p">})</span>
+                <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+                <span class="p">});</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><code class="highlighter-rouge">AskView.vue</code> 코드 입니다.<br />
+mapState를 활용한 방법과 mapGetters를 이용한 방법이 있습니다.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+</pre></td><td class="rouge-code"><pre><span class="o">&lt;</span><span class="nx">template</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">v</span><span class="o">-</span><span class="k">for</span><span class="o">=</span><span class="dl">"</span><span class="s2">item in fetchedAsk</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/template</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">mapState</span><span class="p">,</span> <span class="nx">mapGetters</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vuex</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+    <span class="na">computed</span><span class="p">:</span> <span class="p">{</span>
+        <span class="c1">// spread operator</span>
+        <span class="p">...</span><span class="nx">mapGetters</span><span class="p">([</span>
+            <span class="dl">'</span><span class="s1">fetchedAsk</span><span class="dl">'</span>
+        <span class="p">]),</span>
+
+        <span class="c1">// #2</span>
+        <span class="c1">// ...mapState({</span>
+        <span class="c1">//     ask: state =&gt; state.ask</span>
+        <span class="c1">// })</span>
+
+        <span class="c1">// #1</span>
+        <span class="c1">// ask() {</span>
+        <span class="c1">//     return this.$store.state.ask;</span>
+        <span class="c1">// }</span>
+    <span class="p">},</span>
+    <span class="nx">created</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="dl">'</span><span class="s1">FETCH_ASK</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">style</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="sr">/style</span><span class="err">&gt;
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="7-5-store-속성-모듈화">7-5. Store 속성 모듈화</h2>
+<p><code class="highlighter-rouge">store\index.js</code>에서 actions와 mutations를 모듈화 해보겠습니다.<br />
+<code class="highlighter-rouge">store\actions.js</code>와 <code class="highlighter-rouge">store\mutations.js</code> 파일을 생성합니다.</p>
+
+<p><code class="highlighter-rouge">index.js</code> 코드 입니다.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="nx">Vue</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">Vuex</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vuex</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">mutations</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./mutations.js</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">actions</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./actions.js</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Vuex</span><span class="p">);</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vuex</span><span class="p">.</span><span class="nx">Store</span><span class="p">({</span>
+    <span class="na">state</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">news</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="na">jobs</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="na">ask</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">},</span>
+    <span class="na">getters</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nx">fetchedAsk</span><span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nx">ask</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="na">mutations</span><span class="p">:</span> <span class="nx">mutations</span><span class="p">,</span>
+    <span class="na">actions</span><span class="p">:</span> <span class="nx">actions</span>
+<span class="p">})</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><code class="highlighter-rouge">actions.js</code> 코드 입니다.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="p">{</span> <span class="nx">fetchNewsList</span><span class="p">,</span> <span class="nx">fetchAskList</span><span class="p">,</span> <span class="nx">fetchJobsList</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">../api/index.js</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+    <span class="nx">FETCH_NEWS</span><span class="p">(</span><span class="nx">context</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">fetchNewsList</span><span class="p">()</span>
+            <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+                <span class="nx">context</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="dl">'</span><span class="s1">SET_NEWS</span><span class="dl">'</span><span class="p">,</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+                <span class="c1">// state.news = response.data; -&gt; 불가능</span>
+            <span class="p">})</span>
+            <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+            <span class="p">});</span>
+    <span class="p">},</span>
+    <span class="nx">FETCH_JOBS</span><span class="p">({</span> <span class="nx">commit</span> <span class="p">})</span> <span class="p">{</span>
+        <span class="nx">fetchJobsList</span><span class="p">()</span>
+            <span class="p">.</span><span class="nx">then</span><span class="p">(({</span> <span class="nx">data</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="nx">commit</span><span class="p">(</span><span class="dl">'</span><span class="s1">SET_JOBS</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+            <span class="p">})</span>
+            <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+            <span class="p">});</span>
+    <span class="p">},</span>
+    <span class="nx">FETCH_ASK</span><span class="p">({</span> <span class="nx">commit</span> <span class="p">})</span> <span class="p">{</span>
+        <span class="nx">fetchAskList</span><span class="p">()</span>
+            <span class="p">.</span><span class="nx">then</span><span class="p">(({</span> <span class="nx">data</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="nx">commit</span><span class="p">(</span><span class="dl">'</span><span class="s1">SET_ASK</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+            <span class="p">})</span>
+            <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+            <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><code class="highlighter-rouge">mutations.js</code> 코드 입니다.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+    <span class="nx">SET_NEWS</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">news</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">state</span><span class="p">.</span><span class="nx">news</span> <span class="o">=</span> <span class="nx">news</span><span class="p">;</span>
+    <span class="p">},</span>
+    <span class="nx">SET_JOBS</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">jobs</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">state</span><span class="p">.</span><span class="nx">jobs</span> <span class="o">=</span> <span class="nx">jobs</span><span class="p">;</span>
+    <span class="p">},</span>
+    <span class="nx">SET_ASK</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">ask</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">state</span><span class="p">.</span><span class="nx">ask</span> <span class="o">=</span> <span class="nx">ask</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="7-6-중간-정리-및-스타일링">7-6. 중간 정리 및 스타일링</h2>
+<p>Ask, Jobs, News의 각 타이틀에 링크를 연결하고, small tag로 꾸며보겠습니다.<br />
+<code class="highlighter-rouge">AskView.vue</code> 파일입니다.<br />
+<code class="highlighter-rouge">v-bind:href</code>를 <code class="highlighter-rouge">:href</code>로 축약하여 표현할 수 있습니다.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="rouge-code"><pre><span class="o">&lt;</span><span class="nx">template</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">v</span><span class="o">-</span><span class="k">for</span><span class="o">=</span><span class="dl">"</span><span class="s2">item in fetchedAsk</span><span class="dl">"</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">a</span> <span class="p">:</span><span class="nx">href</span><span class="o">=</span><span class="dl">"</span><span class="s2">item.url</span><span class="dl">"</span><span class="o">&gt;</span>
+                
+            <span class="o">&lt;</span><span class="sr">/a</span><span class="err">&gt;
+</span>            <span class="o">&lt;</span><span class="nx">small</span><span class="o">&gt;</span> <span class="nx">by</span> <span class="o">&lt;</span><span class="sr">/small</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/template</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">mapState</span><span class="p">,</span> <span class="nx">mapGetters</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vuex</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+    <span class="na">computed</span><span class="p">:</span> <span class="p">{</span>
+        <span class="p">...</span><span class="nx">mapGetters</span><span class="p">([</span>
+            <span class="dl">'</span><span class="s1">fetchedAsk</span><span class="dl">'</span>
+        <span class="p">]),</span>
+    <span class="p">},</span>
+    <span class="nx">created</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="dl">'</span><span class="s1">FETCH_ASK</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">style</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="sr">/style</span><span class="err">&gt;
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+<p><code class="highlighter-rouge">JobsView.vue</code> 파일입니다.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="rouge-code"><pre><span class="o">&lt;</span><span class="nx">template</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">v</span><span class="o">-</span><span class="k">for</span><span class="o">=</span><span class="dl">"</span><span class="s2">job in this.$store.state.jobs</span><span class="dl">"</span><span class="o">&gt;</span>            
+            <span class="o">&lt;</span><span class="nx">a</span> <span class="p">:</span><span class="nx">href</span><span class="o">=</span><span class="dl">"</span><span class="s2">job.url</span><span class="dl">"</span><span class="o">&gt;</span>
+                
+            <span class="o">&lt;</span><span class="sr">/a</span><span class="err">&gt;
+</span>            <span class="o">&lt;</span><span class="nx">small</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="sr">/small</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/template</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>    
+    <span class="nx">created</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="dl">'</span><span class="s1">FETCH_JOBS</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">style</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="sr">/style</span><span class="err">&gt;
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+<p><code class="highlighter-rouge">NewsView.vue</code> 파일입니다.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre></td><td class="rouge-code"><pre><span class="o">&lt;</span><span class="nx">template</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>        
+        <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">v</span><span class="o">-</span><span class="k">for</span><span class="o">=</span><span class="dl">"</span><span class="s2">item in this.$store.state.news</span><span class="dl">"</span><span class="o">&gt;</span>            
+            <span class="c">&lt;!--</span> <span class="err">기존에</span> <span class="err">사용하던</span> <span class="nx">a</span> <span class="err">태그</span> <span class="o">--&gt;</span>
+            <span class="c">&lt;!--</span> <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="dl">"</span><span class="s2">https://google.com</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/a&gt; --</span><span class="err">&gt;
+</span>
+            <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">v</span><span class="o">-</span><span class="nx">bind</span><span class="p">:</span><span class="nx">href</span><span class="o">=</span><span class="dl">"</span><span class="s2">item.url</span><span class="dl">"</span><span class="o">&gt;</span>
+                
+            <span class="o">&lt;</span><span class="sr">/a</span><span class="err">&gt;
+</span>            <span class="o">&lt;</span><span class="nx">small</span><span class="o">&gt;</span> <span class="nx">by</span> <span class="o">&lt;</span><span class="sr">/small</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/template</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+    <span class="nx">created</span><span class="p">()</span> <span class="p">{</span>      
+        <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="dl">'</span><span class="s1">FETCH_NEWS</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">style</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="sr">/style</span><span class="err">&gt;
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
                 </div>
             </section>

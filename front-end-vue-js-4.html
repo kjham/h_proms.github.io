@@ -43,7 +43,7 @@
     <meta property="og:site_name" content="SWDEVLAB" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Vue.js 시작하기 - 4" />
-    <meta property="og:description" content="Vue.js 시작하기 - 4 7. 템플릿 문법 7-1. 데이터 바인딩과 computed 속성 7-2. 뷰 디렉티브와 v-bind 7-3. 공식문서 보는 방법 7-4. methods와 키보드, 마우스 이벤트 처리 7-5. watch 7-6 . computed를 이용한 클래스 코드 작성 방법 8. Vue CLI 8-1. Vue CLI 설치 8-2. 프로젝트 생성 및 실행 8-3. 프로젝트" />
+    <meta property="og:description" content="템플릿 문법 &amp; Vue-CLI 7. 템플릿 뷰의 템플릿 문법이란 뷰로 화면을 조작하는 방법을 의미합니다. 템플릿 문법은 크게 데이터 바인딩과 디렉티브로 나누어집니다. 데이터 바인딩 데이터 바인딩은 뷰 인스턴스에서 정의한 속성들을 화면에 표시하는 방법입니다. 가장 기본적인 데이터 바인딩 방식은 콧수염 괄호(Mustache Tag)입니다. 1 2 3 4 &lt;div&gt;&lt;/div&gt; new Vue({ 　message = 'hello" />
     <meta property="og:url" content="https://kjham.github.io/front-end-vue-js-4" />
     <meta property="og:image" content="https://kjham.github.io/assets/images/VUE_JS.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -53,7 +53,7 @@
     <meta property="article:tag" content="Sw-dev-lab" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Vue.js 시작하기 - 4" />
-    <meta name="twitter:description" content="Vue.js 시작하기 - 4 7. 템플릿 문법 7-1. 데이터 바인딩과 computed 속성 7-2. 뷰 디렉티브와 v-bind 7-3. 공식문서 보는 방법 7-4. methods와 키보드, 마우스 이벤트 처리 7-5. watch 7-6 . computed를 이용한 클래스 코드 작성 방법 8. Vue CLI 8-1. Vue CLI 설치 8-2. 프로젝트 생성 및 실행 8-3. 프로젝트" />
+    <meta name="twitter:description" content="템플릿 문법 &amp; Vue-CLI 7. 템플릿 뷰의 템플릿 문법이란 뷰로 화면을 조작하는 방법을 의미합니다. 템플릿 문법은 크게 데이터 바인딩과 디렉티브로 나누어집니다. 데이터 바인딩 데이터 바인딩은 뷰 인스턴스에서 정의한 속성들을 화면에 표시하는 방법입니다. 가장 기본적인 데이터 바인딩 방식은 콧수염 괄호(Mustache Tag)입니다. 1 2 3 4 &lt;div&gt;&lt;/div&gt; new Vue({ 　message = 'hello" />
     <meta name="twitter:url" content="https://kjham.github.io/" />
     <meta name="twitter:image" content="https://kjham.github.io/assets/images/VUE_JS.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -85,7 +85,7 @@
         "@type": "WebPage",
         "@id": "https://kjham.github.io/front-end-vue-js-4"
     },
-    "description": "Vue.js 시작하기 - 4 7. 템플릿 문법 7-1. 데이터 바인딩과 computed 속성 7-2. 뷰 디렉티브와 v-bind 7-3. 공식문서 보는 방법 7-4. methods와 키보드, 마우스 이벤트 처리 7-5. watch 7-6 . computed를 이용한 클래스 코드 작성 방법 8. Vue CLI 8-1. Vue CLI 설치 8-2. 프로젝트 생성 및 실행 8-3. 프로젝트"
+    "description": "템플릿 문법 &amp; Vue-CLI 7. 템플릿 뷰의 템플릿 문법이란 뷰로 화면을 조작하는 방법을 의미합니다. 템플릿 문법은 크게 데이터 바인딩과 디렉티브로 나누어집니다. 데이터 바인딩 데이터 바인딩은 뷰 인스턴스에서 정의한 속성들을 화면에 표시하는 방법입니다. 가장 기본적인 데이터 바인딩 방식은 콧수염 괄호(Mustache Tag)입니다. 1 2 3 4 &lt;div&gt;&lt;/div&gt; new Vue({ 　message = 'hello"
 }
     </script>
 
@@ -174,28 +174,9 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h1 id="vuejs-시작하기---4">Vue.js 시작하기 - 4</h1>
+                    <h1 id="템플릿-문법--vue-cli">템플릿 문법 &amp; Vue-CLI</h1>
 
-<blockquote>
-  <p><strong>7. 템플릿 문법</strong><br />
-7-1. 데이터 바인딩과 computed 속성<br />
-7-2. 뷰 디렉티브와 v-bind<br />
-7-3. 공식문서 보는 방법<br />
-7-4. methods와 키보드, 마우스 이벤트 처리<br />
-7-5. watch<br />
-7-6 . computed를 이용한 클래스 코드 작성 방법</p>
-</blockquote>
-
-<blockquote>
-  <p><strong>8. Vue CLI</strong><br />
-8-1. Vue CLI 설치<br />
-8-2. 프로젝트 생성 및 실행<br />
-8-3. 프로젝트 폴더 구조<br />
-8-4. 싱글 파일 컴포넌트 소개<br />
-8-5. App.vue와 HelloWorld.vue</p>
-</blockquote>
-
-<h2 id="7-템플릿">7. 템플릿</h2>
+<h1 id="7-템플릿">7. 템플릿</h1>
 <p>뷰의 템플릿 문법이란 뷰로 화면을 조작하는 방법을 의미합니다.<br />
 템플릿 문법은 크게 데이터 바인딩과 디렉티브로 나누어집니다.</p>
 
@@ -721,7 +702,7 @@ Vue 인스턴스 내 data에 선언된 값으로 v-bind:class에 정의 내용�
 <span class="nt">&lt;/html&gt;</span>
 </pre></td></tr></tbody></table></code></pre></div></div>
 
-<h2 id="8-vue-cli">8. Vue CLI</h2>
+<h1 id="8-vue-cli">8. Vue CLI</h1>
 <p>CLI (Command Line Interfase) 는 명령어 실행을 위한 인터페이스 역할을 합니다.</p>
 
 <h2 id="8-1-vue-cli-설치">8-1. Vue CLI 설치</h2>

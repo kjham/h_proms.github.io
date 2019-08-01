@@ -43,7 +43,7 @@
     <meta property="og:site_name" content="SWDEVLAB" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Vue.js 시작하기 - 3" />
-    <meta property="og:description" content="Vue.js 시작하기 - 3 5. 라우터 5-1. 라우터 코드 정의 6. HTTP 통신 라이브러리 6-1. Axios (액시오스) 6-2. Axios 실습 6-3. HTTP 통신 구조 6-4. 크롬 개발자 도구 네트워크 패널 5. 라우터 Vue 라우터는 Vue.js의 공식 라우터입니다. Vue.js를 사용한 싱글 페이지 앱을 쉽게 만들 수 있도록 Vue.js의 코어와 긴밀히 통합되어" />
+    <meta property="og:description" content="라우터 &amp; Axios 5. 라우터 Vue 라우터는 Vue.js의 공식 라우터입니다. Vue.js를 사용한 싱글 페이지 앱을 쉽게 만들 수 있도록 Vue.js의 코어와 긴밀히 통합되어 있습니다. 아래의 기능을 포함합니다. 중첩된 라우트/뷰 매핑 모듈화된, 컴포넌트 기반의 라우터 설정 라우터 파라미터, 쿼리, 와일드카드 Vue.js의 트랜지션 시스템을 이용한 트랜지션 효과 세밀한 네비게이션 컨트롤 active CSS" />
     <meta property="og:url" content="https://kjham.github.io/front-end-vue-js-3" />
     <meta property="og:image" content="https://kjham.github.io/assets/images/VUE_JS.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -53,7 +53,7 @@
     <meta property="article:tag" content="Sw-dev-lab" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Vue.js 시작하기 - 3" />
-    <meta name="twitter:description" content="Vue.js 시작하기 - 3 5. 라우터 5-1. 라우터 코드 정의 6. HTTP 통신 라이브러리 6-1. Axios (액시오스) 6-2. Axios 실습 6-3. HTTP 통신 구조 6-4. 크롬 개발자 도구 네트워크 패널 5. 라우터 Vue 라우터는 Vue.js의 공식 라우터입니다. Vue.js를 사용한 싱글 페이지 앱을 쉽게 만들 수 있도록 Vue.js의 코어와 긴밀히 통합되어" />
+    <meta name="twitter:description" content="라우터 &amp; Axios 5. 라우터 Vue 라우터는 Vue.js의 공식 라우터입니다. Vue.js를 사용한 싱글 페이지 앱을 쉽게 만들 수 있도록 Vue.js의 코어와 긴밀히 통합되어 있습니다. 아래의 기능을 포함합니다. 중첩된 라우트/뷰 매핑 모듈화된, 컴포넌트 기반의 라우터 설정 라우터 파라미터, 쿼리, 와일드카드 Vue.js의 트랜지션 시스템을 이용한 트랜지션 효과 세밀한 네비게이션 컨트롤 active CSS" />
     <meta name="twitter:url" content="https://kjham.github.io/" />
     <meta name="twitter:image" content="https://kjham.github.io/assets/images/VUE_JS.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -85,7 +85,7 @@
         "@type": "WebPage",
         "@id": "https://kjham.github.io/front-end-vue-js-3"
     },
-    "description": "Vue.js 시작하기 - 3 5. 라우터 5-1. 라우터 코드 정의 6. HTTP 통신 라이브러리 6-1. Axios (액시오스) 6-2. Axios 실습 6-3. HTTP 통신 구조 6-4. 크롬 개발자 도구 네트워크 패널 5. 라우터 Vue 라우터는 Vue.js의 공식 라우터입니다. Vue.js를 사용한 싱글 페이지 앱을 쉽게 만들 수 있도록 Vue.js의 코어와 긴밀히 통합되어"
+    "description": "라우터 &amp; Axios 5. 라우터 Vue 라우터는 Vue.js의 공식 라우터입니다. Vue.js를 사용한 싱글 페이지 앱을 쉽게 만들 수 있도록 Vue.js의 코어와 긴밀히 통합되어 있습니다. 아래의 기능을 포함합니다. 중첩된 라우트/뷰 매핑 모듈화된, 컴포넌트 기반의 라우터 설정 라우터 파라미터, 쿼리, 와일드카드 Vue.js의 트랜지션 시스템을 이용한 트랜지션 효과 세밀한 네비게이션 컨트롤 active CSS"
 }
     </script>
 
@@ -174,22 +174,9 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h1 id="vuejs-시작하기---3">Vue.js 시작하기 - 3</h1>
+                    <h1 id="라우터--axios">라우터 &amp; Axios</h1>
 
-<blockquote>
-  <p><strong>5. 라우터</strong><br />
-5-1. 라우터 코드 정의</p>
-</blockquote>
-
-<blockquote>
-  <p><strong>6. HTTP 통신 라이브러리</strong>
-6-1.  Axios (액시오스) <br />
-6-2. Axios 실습<br />
-6-3. HTTP 통신 구조<br />
-6-4. 크롬 개발자 도구 네트워크 패널</p>
-</blockquote>
-
-<h2 id="5-라우터">5. 라우터</h2>
+<h1 id="5-라우터">5. 라우터</h1>
 <p>Vue 라우터는 Vue.js의 공식 라우터입니다.<br />
 Vue.js를 사용한 싱글 페이지 앱을 쉽게 만들 수 있도록 Vue.js의 코어와 긴밀히 통합되어 있습니다.</p>
 

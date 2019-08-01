@@ -43,7 +43,7 @@
     <meta property="og:site_name" content="SWDEVLAB" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Vue.js 시작하기 - 2" />
-    <meta property="og:description" content="Vue.js 시작하기 - 2 3. 인스턴스 3-1. 인스턴스 소개 3-2. 인스턴스와 생성자 함수 3-3. 인스턴스 옵션 속성 4. 컴포넌트 4-1. 전역 컴포넌트 4-2. 지역 컴포넌트 4-3. 컴포넌트와 인스턴스 관계 4.4. 컴포넌트 통신 : Props 4.5. 컴포넌트 통신 : Event Emit 4.6. Event Emit 실습 4.7. 같은 컴포넌트 레벨 간의 통신" />
+    <meta property="og:description" content="인스턴스 &amp; 컴포넌트 3. 인스턴스 인스턴스는 뷰로 개발할 때 필수로 생성해야하는 코드입니다. 3-1. 인스턴스 소개 아래 코드에서 Vue로 인스턴스를 생성하는 것을 보여줍니다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 &lt;!DOCTYPE html&gt; &lt;html" />
     <meta property="og:url" content="https://kjham.github.io/front-end-vue-js-2" />
     <meta property="og:image" content="https://kjham.github.io/assets/images/VUE_JS.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -53,7 +53,7 @@
     <meta property="article:tag" content="Sw-dev-lab" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Vue.js 시작하기 - 2" />
-    <meta name="twitter:description" content="Vue.js 시작하기 - 2 3. 인스턴스 3-1. 인스턴스 소개 3-2. 인스턴스와 생성자 함수 3-3. 인스턴스 옵션 속성 4. 컴포넌트 4-1. 전역 컴포넌트 4-2. 지역 컴포넌트 4-3. 컴포넌트와 인스턴스 관계 4.4. 컴포넌트 통신 : Props 4.5. 컴포넌트 통신 : Event Emit 4.6. Event Emit 실습 4.7. 같은 컴포넌트 레벨 간의 통신" />
+    <meta name="twitter:description" content="인스턴스 &amp; 컴포넌트 3. 인스턴스 인스턴스는 뷰로 개발할 때 필수로 생성해야하는 코드입니다. 3-1. 인스턴스 소개 아래 코드에서 Vue로 인스턴스를 생성하는 것을 보여줍니다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 &lt;!DOCTYPE html&gt; &lt;html" />
     <meta name="twitter:url" content="https://kjham.github.io/" />
     <meta name="twitter:image" content="https://kjham.github.io/assets/images/VUE_JS.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -85,7 +85,7 @@
         "@type": "WebPage",
         "@id": "https://kjham.github.io/front-end-vue-js-2"
     },
-    "description": "Vue.js 시작하기 - 2 3. 인스턴스 3-1. 인스턴스 소개 3-2. 인스턴스와 생성자 함수 3-3. 인스턴스 옵션 속성 4. 컴포넌트 4-1. 전역 컴포넌트 4-2. 지역 컴포넌트 4-3. 컴포넌트와 인스턴스 관계 4.4. 컴포넌트 통신 : Props 4.5. 컴포넌트 통신 : Event Emit 4.6. Event Emit 실습 4.7. 같은 컴포넌트 레벨 간의 통신"
+    "description": "인스턴스 &amp; 컴포넌트 3. 인스턴스 인스턴스는 뷰로 개발할 때 필수로 생성해야하는 코드입니다. 3-1. 인스턴스 소개 아래 코드에서 Vue로 인스턴스를 생성하는 것을 보여줍니다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 &lt;!DOCTYPE html&gt; &lt;html"
 }
     </script>
 
@@ -174,32 +174,14 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h1 id="vuejs-시작하기---2">Vue.js 시작하기 - 2</h1>
+                    <h1 id="인스턴스--컴포넌트">인스턴스 &amp; 컴포넌트</h1>
 
-<blockquote>
-  <p><strong>3. 인스턴스</strong><br />
-3-1. 인스턴스 소개<br />
-3-2. 인스턴스와 생성자 함수<br />
-3-3. 인스턴스 옵션 속성</p>
-</blockquote>
-
-<blockquote>
-  <p><strong>4. 컴포넌트</strong><br />
-4-1. 전역 컴포넌트<br />
-4-2. 지역 컴포넌트<br />
-4-3. 컴포넌트와 인스턴스 관계<br />
-4.4. 컴포넌트 통신 : Props<br />
-4.5. 컴포넌트 통신 : Event Emit<br />
-4.6. Event Emit 실습<br />
-4.7. 같은 컴포넌트 레벨 간의 통신 방법</p>
-</blockquote>
-
-<h2 id="3-인스턴스">3. 인스턴스</h2>
+<h1 id="3-인스턴스">3. 인스턴스</h1>
 <p>인스턴스는 뷰로 개발할 때 필수로 생성해야하는 코드입니다.</p>
 
-<h3 id="3-1-인스턴스-소개">3-1. 인스턴스 소개</h3>
+<h2 id="3-1-인스턴스-소개">3-1. 인스턴스 소개</h2>
 <p>아래 코드에서 Vue로 인스턴스를 생성하는 것을 보여줍니다.</p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -224,21 +206,21 @@ into the {body} of the default.hbs template -->
 23
 24
 25
-</pre></td><td class="rouge-code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"ie=edge"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
-<span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app"</span><span class="nt">&gt;</span>
-        <span class="c">&lt;!-- ... --&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script&gt;</span>
+</pre></td><td class="rouge-code"><pre><span class="o">&lt;!</span><span class="nx">DOCTYPE</span> <span class="nx">html</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">html</span> <span class="nx">lang</span><span class="o">=</span><span class="dl">"</span><span class="s2">en</span><span class="dl">"</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">charset</span><span class="o">=</span><span class="dl">"</span><span class="s2">UTF-8</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">viewport</span><span class="dl">"</span> <span class="nx">content</span><span class="o">=</span><span class="dl">"</span><span class="s2">width=device-width, initial-scale=1.0</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">http</span><span class="o">-</span><span class="nx">equiv</span><span class="o">=</span><span class="dl">"</span><span class="s2">X-UA-Compatible</span><span class="dl">"</span> <span class="nx">content</span><span class="o">=</span><span class="dl">"</span><span class="s2">ie=edge</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Document</span><span class="o">&lt;</span><span class="sr">/title</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/head</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="c">&lt;!--</span> <span class="p">...</span> <span class="o">--&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>
+    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">https://cdn.jsdelivr.net/npm/vue/dist/vue.js</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
     	<span class="c1">// Vue를 사용하기 위해 필수로 생성하는 객체</span>
         <span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
             <span class="na">el</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#app</span><span class="dl">'</span><span class="p">,</span>
@@ -246,12 +228,12 @@ into the {body} of the default.hbs template -->
                 <span class="na">mesage</span><span class="p">:</span> <span class="dl">'</span><span class="s1">hi</span><span class="dl">'</span>
             <span class="p">}</span>
         <span class="p">});</span>
-    <span class="nt">&lt;/script&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+    <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/body</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/html</span><span class="err">&gt;
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h3 id="3-2-인스턴스와-생성자-함수">3-2. 인스턴스와 생성자 함수</h3>
+<h2 id="3-2-인스턴스와-생성자-함수">3-2. 인스턴스와 생성자 함수</h2>
 <p>인스턴스와 생성자 함수를 사용하는 예는 다음과 같습니다.</p>
 <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -298,7 +280,7 @@ into the {body} of the default.hbs template -->
   <li>watch : data에서 정의한 속성이 변화했을 때 추가 동작을 수행할 수 있게 정의하는 속성</li>
 </ul>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -328,21 +310,21 @@ into the {body} of the default.hbs template -->
 28
 29
 30
-</pre></td><td class="rouge-code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"ie=edge"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
-<span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app"</span><span class="nt">&gt;</span>
-        <span class="c">&lt;!-- ... --&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script&gt;</span>
+</pre></td><td class="rouge-code"><pre><span class="o">&lt;!</span><span class="nx">DOCTYPE</span> <span class="nx">html</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">html</span> <span class="nx">lang</span><span class="o">=</span><span class="dl">"</span><span class="s2">en</span><span class="dl">"</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">charset</span><span class="o">=</span><span class="dl">"</span><span class="s2">UTF-8</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">viewport</span><span class="dl">"</span> <span class="nx">content</span><span class="o">=</span><span class="dl">"</span><span class="s2">width=device-width, initial-scale=1.0</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">http</span><span class="o">-</span><span class="nx">equiv</span><span class="o">=</span><span class="dl">"</span><span class="s2">X-UA-Compatible</span><span class="dl">"</span> <span class="nx">content</span><span class="o">=</span><span class="dl">"</span><span class="s2">ie=edge</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Document</span><span class="o">&lt;</span><span class="sr">/title</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/head</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="c">&lt;!--</span> <span class="p">...</span> <span class="o">--&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>
+    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">https://cdn.jsdelivr.net/npm/vue/dist/vue.js</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
         <span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
             <span class="na">el</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#app</span><span class="dl">'</span><span class="p">,</span>
             <span class="na">data</span><span class="p">:</span> <span class="p">{</span>
@@ -355,18 +337,18 @@ into the {body} of the default.hbs template -->
                 
             <span class="p">}</span>
         <span class="p">});</span>
-    <span class="nt">&lt;/script&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+    <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/body</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/html</span><span class="err">&gt;
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h2 id="4-컴포넌트-소개">4. 컴포넌트 소개</h2>
+<h1 id="4-컴포넌트-소개">4. 컴포넌트 소개</h1>
 <p>컴포넌트는 화면의 영역을 구분하여 개발할 수 있는 뷰의 기능입니다.<br />
 컴포넌트 기반으로 화면을 개발하게 되면 코드의 재사용성이 올라가고 빠르게 화면을 제작할 수 있습니다.</p>
 
-<h3 id="4-1-전역-컴포넌트">4-1. 전역 컴포넌트</h3>
+<h2 id="4-1-전역-컴포넌트">4-1. 전역 컴포넌트</h2>
 <p>전역 컴포너트를 생성하면 모든 인스턴스에서 호출이 가능하지만, 실제로는 잘 사용하지 않습니다.</p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -397,22 +379,22 @@ into the {body} of the default.hbs template -->
 29
 30
 31
-</pre></td><td class="rouge-code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"ie=edge"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
-<span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;app-header&gt;&lt;/app-header&gt;</span>
-        <span class="nt">&lt;app-content&gt;&lt;/app-content&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script&gt;</span>
+</pre></td><td class="rouge-code"><pre><span class="o">&lt;!</span><span class="nx">DOCTYPE</span> <span class="nx">html</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">html</span> <span class="nx">lang</span><span class="o">=</span><span class="dl">"</span><span class="s2">en</span><span class="dl">"</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">charset</span><span class="o">=</span><span class="dl">"</span><span class="s2">UTF-8</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">viewport</span><span class="dl">"</span> <span class="nx">content</span><span class="o">=</span><span class="dl">"</span><span class="s2">width=device-width, initial-scale=1.0</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">http</span><span class="o">-</span><span class="nx">equiv</span><span class="o">=</span><span class="dl">"</span><span class="s2">X-UA-Compatible</span><span class="dl">"</span> <span class="nx">content</span><span class="o">=</span><span class="dl">"</span><span class="s2">ie=edge</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Document</span><span class="o">&lt;</span><span class="sr">/title</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/head</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">app</span><span class="o">-</span><span class="nx">header</span><span class="o">&gt;&lt;</span><span class="sr">/app-header</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">app</span><span class="o">-</span><span class="nx">content</span><span class="o">&gt;&lt;</span><span class="sr">/app-content</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>
+    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">https://cdn.jsdelivr.net/npm/vue/dist/vue.js</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
         <span class="c1">// Vue.component('컴폰언트 이름', 컴포넌트 내용)</span>
         <span class="c1">// 전역 컴포넌트 (실제 프로젝트에서는 전역 컴포넌트는 거의 사용할 일 없음)</span>
         <span class="nx">Vue</span><span class="p">.</span><span class="nx">component</span><span class="p">(</span><span class="dl">'</span><span class="s1">app-header</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
@@ -425,14 +407,14 @@ into the {body} of the default.hbs template -->
         <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
             <span class="na">el</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#app</span><span class="dl">'</span>
         <span class="p">})</span>
-    <span class="nt">&lt;/script&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+    <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/body</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/html</span><span class="err">&gt;
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h3 id="4-2-지역-컴포넌트">4-2. 지역 컴포넌트</h3>
+<h2 id="4-2-지역-컴포넌트">4-2. 지역 컴포넌트</h2>
 <p>각 인스턴스 내 지역 컴포넌트를 사용하여 호출하는 방식을 살펴봅니다.</p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -471,23 +453,23 @@ into the {body} of the default.hbs template -->
 37
 38
 39
-</pre></td><td class="rouge-code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"ie=edge"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
-<span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;app-header&gt;&lt;/app-header&gt;</span>
-        <span class="nt">&lt;app-content&gt;&lt;/app-content&gt;</span>
-        <span class="nt">&lt;app-footer&gt;&lt;/app-footer&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script&gt;</span>
+</pre></td><td class="rouge-code"><pre><span class="o">&lt;!</span><span class="nx">DOCTYPE</span> <span class="nx">html</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">html</span> <span class="nx">lang</span><span class="o">=</span><span class="dl">"</span><span class="s2">en</span><span class="dl">"</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">charset</span><span class="o">=</span><span class="dl">"</span><span class="s2">UTF-8</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">viewport</span><span class="dl">"</span> <span class="nx">content</span><span class="o">=</span><span class="dl">"</span><span class="s2">width=device-width, initial-scale=1.0</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">http</span><span class="o">-</span><span class="nx">equiv</span><span class="o">=</span><span class="dl">"</span><span class="s2">X-UA-Compatible</span><span class="dl">"</span> <span class="nx">content</span><span class="o">=</span><span class="dl">"</span><span class="s2">ie=edge</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Document</span><span class="o">&lt;</span><span class="sr">/title</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/head</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">app</span><span class="o">-</span><span class="nx">header</span><span class="o">&gt;&lt;</span><span class="sr">/app-header</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">app</span><span class="o">-</span><span class="nx">content</span><span class="o">&gt;&lt;</span><span class="sr">/app-content</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">app</span><span class="o">-</span><span class="nx">footer</span><span class="o">&gt;&lt;</span><span class="sr">/app-footer</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>
+    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">https://cdn.jsdelivr.net/npm/vue/dist/vue.js</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
         <span class="c1">// Vue.component('컴폰언트 이름', 컴포넌트 내용)</span>
         <span class="c1">// 전역 컴포넌트 (실제 프로젝트에서는 전역 컴포넌트는 거의 사용할 일 없음)</span>
         <span class="nx">Vue</span><span class="p">.</span><span class="nx">component</span><span class="p">(</span><span class="dl">'</span><span class="s1">app-header</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
@@ -507,14 +489,14 @@ into the {body} of the default.hbs template -->
                 <span class="p">}</span>
             <span class="p">}</span>
         <span class="p">})</span>
-    <span class="nt">&lt;/script&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+    <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/body</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/html</span><span class="err">&gt;
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h3 id="4-3-컴포넌트와-인스턴스-관계">4-3. 컴포넌트와 인스턴스 관계</h3>
+<h2 id="4-3-컴포넌트와-인스턴스-관계">4-3. 컴포넌트와 인스턴스 관계</h2>
 <p>인스턴스를 추가로 더 생성하여 컴포넌트와의 관계를 살펴봅니다.</p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -560,28 +542,28 @@ into the {body} of the default.hbs template -->
 44
 45
 46
-</pre></td><td class="rouge-code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"ie=edge"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
-<span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;app-header&gt;&lt;/app-header&gt;</span>
-        <span class="nt">&lt;app-footer&gt;&lt;/app-footer&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app2"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;app-header&gt;&lt;/app-header&gt;</span>
-        <span class="c">&lt;!-- 지역 컴포넌트이기 떄문에 에러 발생 --&gt;</span>
-        <span class="nt">&lt;app-footer&gt;&lt;/app-footer&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script&gt;</span>
+</pre></td><td class="rouge-code"><pre><span class="o">&lt;!</span><span class="nx">DOCTYPE</span> <span class="nx">html</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">html</span> <span class="nx">lang</span><span class="o">=</span><span class="dl">"</span><span class="s2">en</span><span class="dl">"</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">charset</span><span class="o">=</span><span class="dl">"</span><span class="s2">UTF-8</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">viewport</span><span class="dl">"</span> <span class="nx">content</span><span class="o">=</span><span class="dl">"</span><span class="s2">width=device-width, initial-scale=1.0</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">http</span><span class="o">-</span><span class="nx">equiv</span><span class="o">=</span><span class="dl">"</span><span class="s2">X-UA-Compatible</span><span class="dl">"</span> <span class="nx">content</span><span class="o">=</span><span class="dl">"</span><span class="s2">ie=edge</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Document</span><span class="o">&lt;</span><span class="sr">/title</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/head</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">app</span><span class="o">-</span><span class="nx">header</span><span class="o">&gt;&lt;</span><span class="sr">/app-header</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">app</span><span class="o">-</span><span class="nx">footer</span><span class="o">&gt;&lt;</span><span class="sr">/app-footer</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">app2</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">app</span><span class="o">-</span><span class="nx">header</span><span class="o">&gt;&lt;</span><span class="sr">/app-header</span><span class="err">&gt;
+</span>        <span class="c">&lt;!--</span> <span class="err">지역</span> <span class="err">컴포넌트이기</span> <span class="err">떄문에</span> <span class="err">에러</span> <span class="err">발생</span> <span class="o">--&gt;</span>
+        <span class="o">&lt;</span><span class="nx">app</span><span class="o">-</span><span class="nx">footer</span><span class="o">&gt;&lt;</span><span class="sr">/app-footer</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>
+    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">https://cdn.jsdelivr.net/npm/vue/dist/vue.js</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
         <span class="c1">// Vue.component('컴폰언트 이름', 컴포넌트 내용)</span>
         <span class="c1">// 전역 컴포넌트 (실제 프로젝트에서는 전역 컴포넌트는 거의 사용할 일 없음)</span>
         <span class="nx">Vue</span><span class="p">.</span><span class="nx">component</span><span class="p">(</span><span class="dl">'</span><span class="s1">app-header</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
@@ -603,12 +585,12 @@ into the {body} of the default.hbs template -->
         <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
             <span class="na">el</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#app2</span><span class="dl">'</span>
         <span class="p">})</span>
-    <span class="nt">&lt;/script&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+    <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/body</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/html</span><span class="err">&gt;
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h3 id="44-컴포넌트-통신--props">4.4. 컴포넌트 통신 : Props</h3>
+<h2 id="44-컴포넌트-통신--props">4.4. 컴포넌트 통신 : Props</h2>
 <p>뷰 컴포넌트는 각각 고유한 데이터 유효 범위를 갖습니다.<br />
 따라서 컴포넌트 간에 데이터를 주고 받기 위한 규칙을 따라야 합니다.</p>
 
@@ -616,7 +598,7 @@ into the {body} of the default.hbs template -->
 하위에서 상위로는 이벤트를 올려줍니다. (이벤트 발생 : Event)</p>
 
 <p>위 관계가 없이 N방향 통신을 한다면, 데이터 통신 흐름이 굉장히 복잡해지고 버그 추적이 힘들어집니다.</p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -660,26 +642,26 @@ into the {body} of the default.hbs template -->
 42
 43
 44
-</pre></td><td class="rouge-code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"ie=edge"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
-<span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app"</span><span class="nt">&gt;</span>
-        <span class="c">&lt;!-- &lt;app-header v-bind:프롭스 속성 이름="상위 컴포너트의 데이터 이름"&gt;&lt;/app-header&gt; --&gt;</span>
-        <span class="nt">&lt;app-header</span> <span class="na">v-bind:propsdata=</span><span class="s">"message"</span><span class="nt">&gt;&lt;/app-header&gt;</span>
-        <span class="nt">&lt;app-content</span> <span class="na">v-bind:propsdata=</span><span class="s">"number"</span><span class="nt">&gt;&lt;/app-content&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script&gt;</span>
+</pre></td><td class="rouge-code"><pre><span class="o">&lt;!</span><span class="nx">DOCTYPE</span> <span class="nx">html</span><span class="o">&gt;</span>
+<span class="o">&lt;!</span><span class="nx">DOCTYPE</span> <span class="nx">html</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">html</span> <span class="nx">lang</span><span class="o">=</span><span class="dl">"</span><span class="s2">en</span><span class="dl">"</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">charset</span><span class="o">=</span><span class="dl">"</span><span class="s2">UTF-8</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">viewport</span><span class="dl">"</span> <span class="nx">content</span><span class="o">=</span><span class="dl">"</span><span class="s2">width=device-width, initial-scale=1.0</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">http</span><span class="o">-</span><span class="nx">equiv</span><span class="o">=</span><span class="dl">"</span><span class="s2">X-UA-Compatible</span><span class="dl">"</span> <span class="nx">content</span><span class="o">=</span><span class="dl">"</span><span class="s2">ie=edge</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Document</span><span class="o">&lt;</span><span class="sr">/title</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/head</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="c">&lt;!--</span> <span class="o">&lt;</span><span class="nx">app</span><span class="o">-</span><span class="nx">header</span> <span class="nx">v</span><span class="o">-</span><span class="nx">bind</span><span class="p">:</span><span class="err">프롭스</span> <span class="err">속성</span> <span class="err">이름</span><span class="o">=</span><span class="dl">"</span><span class="s2">상위 컴포너트의 데이터 이름</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/app-header&gt; --</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">app</span><span class="o">-</span><span class="nx">header</span> <span class="nx">v</span><span class="o">-</span><span class="nx">bind</span><span class="p">:</span><span class="nx">propsdata</span><span class="o">=</span><span class="dl">"</span><span class="s2">message</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/app-header</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">app</span><span class="o">-</span><span class="nx">content</span> <span class="nx">v</span><span class="o">-</span><span class="nx">bind</span><span class="p">:</span><span class="nx">propsdata</span><span class="o">=</span><span class="dl">"</span><span class="s2">number</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/app-content</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    
+    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">https://cdn.jsdelivr.net/npm/vue/dist/vue.js</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
         <span class="kd">var</span> <span class="nx">appHeader</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="c1">//  를 이용하여 props data 전달 가능</span>
+            <span class="c1">// 다음과 같이 props data 전달 가능</span>
             <span class="na">template</span><span class="p">:</span> <span class="dl">'</span><span class="s1">&lt;h1&gt;&lt;/h1&gt;</span><span class="dl">'</span><span class="p">,</span>
             <span class="na">props</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">propsdata</span><span class="dl">'</span><span class="p">]</span>
         <span class="p">}</span>
@@ -701,14 +683,14 @@ into the {body} of the default.hbs template -->
                 <span class="na">number</span><span class="p">:</span> <span class="mi">10</span>
             <span class="p">}</span>
         <span class="p">})</span>
-    <span class="nt">&lt;/script&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+    <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/body</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/html</span><span class="err">&gt;
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h3 id="45-event-emit">4.5. Event Emit</h3>
+<h2 id="45-event-emit">4.5. Event Emit</h2>
 <p>Event Emit 을 어떻게 수행하는지 살펴봅니다.</p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -747,22 +729,22 @@ into the {body} of the default.hbs template -->
 37
 38
 39
-</pre></td><td class="rouge-code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"ie=edge"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
-<span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app"</span><span class="nt">&gt;</span>
-        <span class="c">&lt;!-- &lt;app-header v-on:하위 컴포넌트에서 발생한 이벤트이름="상위 컴포넌트의 메소드 이름"&gt;&lt;/app-header&gt; --&gt;</span>
-        <span class="nt">&lt;app-header</span> <span class="na">v-on:pass=</span><span class="s">"logText"</span><span class="nt">&gt;&lt;/app-header&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script&gt;</span>
+</pre></td><td class="rouge-code"><pre><span class="o">&lt;!</span><span class="nx">DOCTYPE</span> <span class="nx">html</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">html</span> <span class="nx">lang</span><span class="o">=</span><span class="dl">"</span><span class="s2">en</span><span class="dl">"</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">charset</span><span class="o">=</span><span class="dl">"</span><span class="s2">UTF-8</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">viewport</span><span class="dl">"</span> <span class="nx">content</span><span class="o">=</span><span class="dl">"</span><span class="s2">width=device-width, initial-scale=1.0</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">http</span><span class="o">-</span><span class="nx">equiv</span><span class="o">=</span><span class="dl">"</span><span class="s2">X-UA-Compatible</span><span class="dl">"</span> <span class="nx">content</span><span class="o">=</span><span class="dl">"</span><span class="s2">ie=edge</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Document</span><span class="o">&lt;</span><span class="sr">/title</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/head</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="c">&lt;!--</span> <span class="o">&lt;</span><span class="nx">app</span><span class="o">-</span><span class="nx">header</span> <span class="nx">v</span><span class="o">-</span><span class="nx">on</span><span class="p">:</span><span class="err">하위</span> <span class="err">컴포넌트에서</span> <span class="err">발생한</span> <span class="err">이벤트이름</span><span class="o">=</span><span class="dl">"</span><span class="s2">상위 컴포넌트의 메소드 이름</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/app-header&gt; --</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">app</span><span class="o">-</span><span class="nx">header</span> <span class="nx">v</span><span class="o">-</span><span class="nx">on</span><span class="p">:</span><span class="nx">pass</span><span class="o">=</span><span class="dl">"</span><span class="s2">logText</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/app-header</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>
+    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">https://cdn.jsdelivr.net/npm/vue/dist/vue.js</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
         <span class="kd">var</span> <span class="nx">appHeader</span> <span class="o">=</span> <span class="p">{</span>
             <span class="na">template</span><span class="p">:</span> <span class="dl">'</span><span class="s1">&lt;button v-on:click="passEvent"&gt;click me&lt;/button&gt;</span><span class="dl">'</span><span class="p">,</span>
             <span class="na">methods</span><span class="p">:</span> <span class="p">{</span>
@@ -783,12 +765,12 @@ into the {body} of the default.hbs template -->
                 <span class="p">}</span>
             <span class="p">}</span>
         <span class="p">});</span>
-    <span class="nt">&lt;/script&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+    <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/body</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/html</span><span class="err">&gt;
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h3 id="46-event-emit-실습">4.6. Event Emit 실습</h3>
+<h2 id="46-event-emit-실습">4.6. Event Emit 실습</h2>
 <p>숫자를 가산하는 이벤트를 작성합니다. <br />
 그리고 이벤트 발생 시, 산된 숫자를 표기하는 메소드를 호출하는 코드를 작성해봅시다.</p>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -907,12 +889,12 @@ into the {body} of the default.hbs template -->
 <span class="nt">&lt;/html&gt;</span>
 </pre></td></tr></tbody></table></code></pre></div></div>
 
-<h3 id="47-같은-컴포넌트-레벨-간의-통신-방법">4.7. 같은 컴포넌트 레벨 간의 통신 방법</h3>
+<h2 id="47-같은-컴포넌트-레벨-간의-통신-방법">4.7. 같은 컴포넌트 레벨 간의 통신 방법</h2>
 <p>Root 하위에 두 개(A, B)의 컴포넌트가 있을 때, 어떻게 데이터 통신을 할 수 있을까 ?<br />
 B 에서 A 컴포넌트에 데이터를 전달한다고 가정할 때 다음과 같은 과정으로 수행할 수 있다.<br />
 B 에서 Root 로 Event Emit을 이용하여 데이터를 전달한다.<br />
 그리고 Root에서 A로 Props를 이용하여 데이터를 전달한다.</p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -959,22 +941,22 @@ B 에서 Root 로 Event Emit을 이용하여 데이터를 전달한다.<br />
 45
 46
 47
-</pre></td><td class="rouge-code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"ie=edge"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
-<span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;app-header</span> <span class="na">v-bind:propsdata=</span><span class="s">"num"</span><span class="nt">&gt;&lt;/app-header&gt;</span>
-        <span class="nt">&lt;app-content</span> <span class="na">v-on:pass=</span><span class="s">"deliverNum"</span><span class="nt">&gt;&lt;/app-content&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script&gt;</span>     
+</pre></td><td class="rouge-code"><pre><span class="o">&lt;!</span><span class="nx">DOCTYPE</span> <span class="nx">html</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">html</span> <span class="nx">lang</span><span class="o">=</span><span class="dl">"</span><span class="s2">en</span><span class="dl">"</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">charset</span><span class="o">=</span><span class="dl">"</span><span class="s2">UTF-8</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">viewport</span><span class="dl">"</span> <span class="nx">content</span><span class="o">=</span><span class="dl">"</span><span class="s2">width=device-width, initial-scale=1.0</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">http</span><span class="o">-</span><span class="nx">equiv</span><span class="o">=</span><span class="dl">"</span><span class="s2">X-UA-Compatible</span><span class="dl">"</span> <span class="nx">content</span><span class="o">=</span><span class="dl">"</span><span class="s2">ie=edge</span><span class="dl">"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Document</span><span class="o">&lt;</span><span class="sr">/title</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/head</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">app</span><span class="o">-</span><span class="nx">header</span> <span class="nx">v</span><span class="o">-</span><span class="nx">bind</span><span class="p">:</span><span class="nx">propsdata</span><span class="o">=</span><span class="dl">"</span><span class="s2">num</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/app-header</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">app</span><span class="o">-</span><span class="nx">content</span> <span class="nx">v</span><span class="o">-</span><span class="nx">on</span><span class="p">:</span><span class="nx">pass</span><span class="o">=</span><span class="dl">"</span><span class="s2">deliverNum</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/app-content</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>
+    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">https://cdn.jsdelivr.net/npm/vue/dist/vue.js</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>     
         <span class="kd">var</span> <span class="nx">appHeader</span> <span class="o">=</span> <span class="p">{</span>
             <span class="na">template</span><span class="p">:</span> <span class="dl">'</span><span class="s1">&lt;div&gt;header&lt;/div&gt;</span><span class="dl">'</span><span class="p">,</span>
             <span class="na">props</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">propsdata</span><span class="dl">'</span><span class="p">]</span>
@@ -1003,10 +985,10 @@ B 에서 Root 로 Event Emit을 이용하여 데이터를 전달한다.<br />
                 <span class="p">}</span>
             <span class="p">}</span>
         <span class="p">})</span>
-    <span class="nt">&lt;/script&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
+    <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/body</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/html</span><span class="err">&gt;
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
                 </div>
             </section>
