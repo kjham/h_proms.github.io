@@ -8,9 +8,24 @@
     
       
       <item>
+        <title>Vue.js 완벽가이드 - 8</title>
+        
+          <description>&lt;h1 id=&quot;8-리팩토링--hoc-mixin&quot;&gt;8. 리팩토링 : HOC, Mixin&lt;/h1&gt;
+
+</description>
+        
+        <pubDate>Mon, 05 Aug 2019 22:00:00 +0900</pubDate>
+        <link>
+        https://kjham.github.io/front-end-vue-js-complete-8</link>
+        <guid isPermaLink="true">https://kjham.github.io/front-end-vue-js-complete-8</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Vue.js 완벽가이드 - 7</title>
         
-          <description>&lt;h1 id=&quot;10-리팩토링-2&quot;&gt;10. 리팩토링 2&lt;/h1&gt;
+          <description>&lt;h1 id=&quot;7-리팩토링--data-flow-slot&quot;&gt;7. 리팩토링 : Data Flow, Slot&lt;/h1&gt;
 
 </description>
         
@@ -25,7 +40,7 @@
       <item>
         <title>Vue.js 완벽가이드 - 6</title>
         
-          <description>&lt;h1 id=&quot;9-리팩토링-1&quot;&gt;9. 리팩토링 1&lt;/h1&gt;
+          <description>&lt;h1 id=&quot;6-리팩토링--스타일링-공통-컴포넌트&quot;&gt;6. 리팩토링 : 스타일링, 공통 컴포넌트&lt;/h1&gt;
 
 </description>
         
@@ -40,7 +55,7 @@
       <item>
         <title>Vue.js 완벽가이드 - 5</title>
         
-          <description>&lt;h1 id=&quot;8-라우터-실전&quot;&gt;8. 라우터 실전&lt;/h1&gt;
+          <description>&lt;h1 id=&quot;5-라우터-실전&quot;&gt;5. 라우터 실전&lt;/h1&gt;
 
 </description>
         
@@ -55,7 +70,7 @@
       <item>
         <title>Vue.js 완벽가이드 - 4</title>
         
-          <description>&lt;h1 id=&quot;7-스토어--중간정리&quot;&gt;7. 스토어 &amp;amp; 중간정리&lt;/h1&gt;
+          <description>&lt;h1 id=&quot;4-스토어--중간정리&quot;&gt;4. 스토어 &amp;amp; 중간정리&lt;/h1&gt;
 
 </description>
         
@@ -70,7 +85,7 @@
       <item>
         <title>Vue.js 완벽가이드 - 3</title>
         
-          <description>&lt;h1 id=&quot;6-api-구현&quot;&gt;6. API 구현&lt;/h1&gt;
+          <description>&lt;h1 id=&quot;3-api-구현&quot;&gt;3. API 구현&lt;/h1&gt;
 
 </description>
         
@@ -85,7 +100,7 @@
       <item>
         <title>Vue.js 완벽가이드 - 2</title>
         
-          <description>&lt;h1 id=&quot;5-라우터-기본&quot;&gt;5. 라우터 기본&lt;/h1&gt;
+          <description>&lt;h1 id=&quot;2-라우터-기본&quot;&gt;2. 라우터 기본&lt;/h1&gt;
 
 </description>
         
@@ -100,7 +115,7 @@
       <item>
         <title>Vue.js 완벽가이드 - 1</title>
         
-          <description>&lt;h1 id=&quot;강의소개--설치&quot;&gt;강의소개 &amp;amp; 설치&lt;/h1&gt;
+          <description>&lt;h1 id=&quot;1-강의소개--설치&quot;&gt;1. 강의소개 &amp;amp; 설치&lt;/h1&gt;
 
 </description>
         

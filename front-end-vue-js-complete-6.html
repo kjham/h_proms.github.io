@@ -43,7 +43,7 @@
     <meta property="og:site_name" content="SWDEVLAB" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Vue.js 완벽가이드 - 6" />
-    <meta property="og:description" content="9. 리팩토링 1 리스트 아이템 컨포넌트 공통화를 위한 리팩토링을 진행합니다. 9-1. 컴포넌트 공통화 리팩토링 소개 AskView 컴포넌트 하나에 모든 데이터를 출력하였지만, 각 항목을 Component로 구성하여 리스트화를 작업하려 합니다. 이를 위한 공통 Component를 생성합니다. 9-2. News 리스트 스타일링 NewsView.vue 스탕일링을 합니다. 각 항목을 리스트로 표기합니다. 그리고 스타일링이 필요한 Tag에 클래스명을 지정하여" />
+    <meta property="og:description" content="6. 리팩토링 : 스타일링, 공통 컴포넌트 리스트 아이템 컨포넌트 공통화를 위한 리팩토링을 진행합니다. 6-1. 컴포넌트 공통화 리팩토링 소개 AskView 컴포넌트 하나에 모든 데이터를 출력하였지만, 각 항목을 Component로 구성하여 리스트화를 작업하려 합니다. 이를 위한 공통 Component를 생성합니다. 6-2. News 리스트 스타일링 NewsView.vue 스탕일링을 합니다. 각 항목을 리스트로 표기합니다. 그리고 스타일링이 필요한" />
     <meta property="og:url" content="https://kjham.github.io/front-end-vue-js-complete-6" />
     <meta property="og:image" content="https://kjham.github.io/assets/images/VUE_JS.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -53,7 +53,7 @@
     <meta property="article:tag" content="Sw-dev-lab" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Vue.js 완벽가이드 - 6" />
-    <meta name="twitter:description" content="9. 리팩토링 1 리스트 아이템 컨포넌트 공통화를 위한 리팩토링을 진행합니다. 9-1. 컴포넌트 공통화 리팩토링 소개 AskView 컴포넌트 하나에 모든 데이터를 출력하였지만, 각 항목을 Component로 구성하여 리스트화를 작업하려 합니다. 이를 위한 공통 Component를 생성합니다. 9-2. News 리스트 스타일링 NewsView.vue 스탕일링을 합니다. 각 항목을 리스트로 표기합니다. 그리고 스타일링이 필요한 Tag에 클래스명을 지정하여" />
+    <meta name="twitter:description" content="6. 리팩토링 : 스타일링, 공통 컴포넌트 리스트 아이템 컨포넌트 공통화를 위한 리팩토링을 진행합니다. 6-1. 컴포넌트 공통화 리팩토링 소개 AskView 컴포넌트 하나에 모든 데이터를 출력하였지만, 각 항목을 Component로 구성하여 리스트화를 작업하려 합니다. 이를 위한 공통 Component를 생성합니다. 6-2. News 리스트 스타일링 NewsView.vue 스탕일링을 합니다. 각 항목을 리스트로 표기합니다. 그리고 스타일링이 필요한" />
     <meta name="twitter:url" content="https://kjham.github.io/" />
     <meta name="twitter:image" content="https://kjham.github.io/assets/images/VUE_JS.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -85,7 +85,7 @@
         "@type": "WebPage",
         "@id": "https://kjham.github.io/front-end-vue-js-complete-6"
     },
-    "description": "9. 리팩토링 1 리스트 아이템 컨포넌트 공통화를 위한 리팩토링을 진행합니다. 9-1. 컴포넌트 공통화 리팩토링 소개 AskView 컴포넌트 하나에 모든 데이터를 출력하였지만, 각 항목을 Component로 구성하여 리스트화를 작업하려 합니다. 이를 위한 공통 Component를 생성합니다. 9-2. News 리스트 스타일링 NewsView.vue 스탕일링을 합니다. 각 항목을 리스트로 표기합니다. 그리고 스타일링이 필요한 Tag에 클래스명을 지정하여"
+    "description": "6. 리팩토링 : 스타일링, 공통 컴포넌트 리스트 아이템 컨포넌트 공통화를 위한 리팩토링을 진행합니다. 6-1. 컴포넌트 공통화 리팩토링 소개 AskView 컴포넌트 하나에 모든 데이터를 출력하였지만, 각 항목을 Component로 구성하여 리스트화를 작업하려 합니다. 이를 위한 공통 Component를 생성합니다. 6-2. News 리스트 스타일링 NewsView.vue 스탕일링을 합니다. 각 항목을 리스트로 표기합니다. 그리고 스타일링이 필요한"
 }
     </script>
 
@@ -174,16 +174,16 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h1 id="9-리팩토링-1">9. 리팩토링 1</h1>
+                    <h1 id="6-리팩토링--스타일링-공통-컴포넌트">6. 리팩토링 : 스타일링, 공통 컴포넌트</h1>
 
 <p>리스트 아이템 컨포넌트 공통화를 위한 리팩토링을 진행합니다.</p>
 
-<h2 id="9-1-컴포넌트-공통화-리팩토링-소개">9-1. 컴포넌트 공통화 리팩토링 소개</h2>
+<h2 id="6-1-컴포넌트-공통화-리팩토링-소개">6-1. 컴포넌트 공통화 리팩토링 소개</h2>
 <p>AskView 컴포넌트 하나에 모든 데이터를 출력하였지만,<br />
 각 항목을 Component로 구성하여 리스트화를 작업하려 합니다.<br />
 이를 위한 공통 Component를 생성합니다.</p>
 
-<h2 id="9-2-news-리스트-스타일링">9-2. News 리스트 스타일링</h2>
+<h2 id="6-2-news-리스트-스타일링">6-2. News 리스트 스타일링</h2>
 <p><code class="highlighter-rouge">NewsView.vue</code> 스탕일링을 합니다.<br />
 각 항목을 리스트로 표기합니다.<br />
 그리고 스타일링이 필요한 Tag에 클래스명을 지정하여 개별적인 스타일링을 수행합니다.</p>
@@ -410,7 +410,7 @@ into the {body} of the default.hbs template -->
 <span class="nt">&lt;/</span><span class="k">style</span><span class="nt">&gt;</span>
 </pre></td></tr></tbody></table></code></pre></div></div>
 
-<h2 id="9-3-ask-jobs-리스트-스타일링">9-3. Ask, Jobs 리스트 스타일링</h2>
+<h2 id="6-3-ask-jobs-리스트-스타일링">6-3. Ask, Jobs 리스트 스타일링</h2>
 <p>Ask와 Jobs도 스타일링 작업을 합니다.<br />
 <code class="highlighter-rouge">AskView.vue</code>에 스타일링을 적용합니다.</p>
 <div class="language-vue highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -692,7 +692,7 @@ into the {body} of the default.hbs template -->
 <span class="nt">&lt;/</span><span class="k">style</span><span class="nt">&gt;</span>
 </pre></td></tr></tbody></table></code></pre></div></div>
 
-<h2 id="9-4-공통-컴포넌트-listitem-제작">9-4. 공통 컴포넌트 ListItem 제작</h2>
+<h2 id="6-4-공통-컴포넌트-listitem-제작">6-4. 공통 컴포넌트 ListItem 제작</h2>
 <p><code class="highlighter-rouge">ListItem.vue</code>를 정의하여 공통 컴포넌트를 생성합니다.</p>
 
 <p>먼저 <code class="highlighter-rouge">routes/index.js</code>의 각 항목에 <code class="highlighter-rouge">name</code>을 정의합니다.<br />
@@ -985,7 +985,7 @@ into the {body} of the default.hbs template -->
 
 <p>News, Ask는 문제없이 잘 동작하지만, Job는 몇몇 데이터가 누락된 것을 확인할 수 있습니다..</p>
 
-<h2 id="9-5-template-속성과-v-if-활용">9-5. template 속성과 v-if 활용</h2>
+<h2 id="6-5-template-속성과-v-if-활용">6-5. template 속성과 v-if 활용</h2>
 <p><code class="highlighter-rouge">v-if</code>를 이용하여 Tag 분기 처리를 수행하도록 하겠습니다.<br />
 <code class="highlighter-rouge">ListItem.vue</code>에 다음과 같이 <code class="highlighter-rouge">v-if</code> 코드를 적용합니다.</p>
 <div class="language-vue highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -1296,6 +1296,15 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
+                                            <li><a href="/front-end-vue-js-complete-8">Vue.js 완벽가이드 - 8</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
                                             <li><a href="/front-end-vue-js-complete-7">Vue.js 완벽가이드 - 7</a></li>
                                         
                                     
@@ -1317,8 +1326,6 @@ into the {body} of the default.hbs template -->
                                   
                                     
                                         
-                                        
-                                            <li><a href="/front-end-vue-js-complete-4">Vue.js 완벽가이드 - 4</a></li>
                                         
                                     
                                   
@@ -1597,7 +1604,7 @@ into the {body} of the default.hbs template -->
                         <footer class="read-next-card-footer">
                             <a href="/tag/sw-dev-lab/">
                                 
-                                    See all 40 posts  →
+                                    See all 41 posts  →
                                 
                             </a>
                         </footer>

@@ -43,7 +43,7 @@
     <meta property="og:site_name" content="SWDEVLAB" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Vue.js 완벽가이드 - 4" />
-    <meta property="og:description" content="7. 스토어 &amp; 중간정리 7-1. Vuex 설치 및 Vuex가 적용된 앱 구조 소개 지금까지 수행한 프로젝트는 API에서 바로 View로 데이터를 전달하였습니다. Vuex를 설치하여 API -&gt; Vuex -&gt; View 로 데이터 전달 과정을 알아보겠습니다. 터미널에서 npm i vuex를 입력하여 vuex를 설치합니다. 7-2. Vuex 모듈화 및 state 적용 컴포넌트가 많은 프로젝트의 경우" />
+    <meta property="og:description" content="4. 스토어 &amp; 중간정리 4-1. Vuex 설치 및 Vuex가 적용된 앱 구조 소개 지금까지 수행한 프로젝트는 API에서 바로 View로 데이터를 전달하였습니다. Vuex를 설치하여 API -&gt; Vuex -&gt; View 로 데이터 전달 과정을 알아보겠습니다. 터미널에서 npm i vuex를 입력하여 vuex를 설치합니다. 4-2. Vuex 모듈화 및 state 적용 컴포넌트가 많은 프로젝트의 경우" />
     <meta property="og:url" content="https://kjham.github.io/front-end-vue-js-complete-4" />
     <meta property="og:image" content="https://kjham.github.io/assets/images/VUE_JS.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -53,7 +53,7 @@
     <meta property="article:tag" content="Sw-dev-lab" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Vue.js 완벽가이드 - 4" />
-    <meta name="twitter:description" content="7. 스토어 &amp; 중간정리 7-1. Vuex 설치 및 Vuex가 적용된 앱 구조 소개 지금까지 수행한 프로젝트는 API에서 바로 View로 데이터를 전달하였습니다. Vuex를 설치하여 API -&gt; Vuex -&gt; View 로 데이터 전달 과정을 알아보겠습니다. 터미널에서 npm i vuex를 입력하여 vuex를 설치합니다. 7-2. Vuex 모듈화 및 state 적용 컴포넌트가 많은 프로젝트의 경우" />
+    <meta name="twitter:description" content="4. 스토어 &amp; 중간정리 4-1. Vuex 설치 및 Vuex가 적용된 앱 구조 소개 지금까지 수행한 프로젝트는 API에서 바로 View로 데이터를 전달하였습니다. Vuex를 설치하여 API -&gt; Vuex -&gt; View 로 데이터 전달 과정을 알아보겠습니다. 터미널에서 npm i vuex를 입력하여 vuex를 설치합니다. 4-2. Vuex 모듈화 및 state 적용 컴포넌트가 많은 프로젝트의 경우" />
     <meta name="twitter:url" content="https://kjham.github.io/" />
     <meta name="twitter:image" content="https://kjham.github.io/assets/images/VUE_JS.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -85,7 +85,7 @@
         "@type": "WebPage",
         "@id": "https://kjham.github.io/front-end-vue-js-complete-4"
     },
-    "description": "7. 스토어 &amp; 중간정리 7-1. Vuex 설치 및 Vuex가 적용된 앱 구조 소개 지금까지 수행한 프로젝트는 API에서 바로 View로 데이터를 전달하였습니다. Vuex를 설치하여 API -&gt; Vuex -&gt; View 로 데이터 전달 과정을 알아보겠습니다. 터미널에서 npm i vuex를 입력하여 vuex를 설치합니다. 7-2. Vuex 모듈화 및 state 적용 컴포넌트가 많은 프로젝트의 경우"
+    "description": "4. 스토어 &amp; 중간정리 4-1. Vuex 설치 및 Vuex가 적용된 앱 구조 소개 지금까지 수행한 프로젝트는 API에서 바로 View로 데이터를 전달하였습니다. Vuex를 설치하여 API -&gt; Vuex -&gt; View 로 데이터 전달 과정을 알아보겠습니다. 터미널에서 npm i vuex를 입력하여 vuex를 설치합니다. 4-2. Vuex 모듈화 및 state 적용 컴포넌트가 많은 프로젝트의 경우"
 }
     </script>
 
@@ -174,15 +174,15 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h1 id="7-스토어--중간정리">7. 스토어 &amp; 중간정리</h1>
+                    <h1 id="4-스토어--중간정리">4. 스토어 &amp; 중간정리</h1>
 
-<h2 id="7-1-vuex-설치-및-vuex가-적용된-앱-구조-소개">7-1. Vuex 설치 및 Vuex가 적용된 앱 구조 소개</h2>
+<h2 id="4-1-vuex-설치-및-vuex가-적용된-앱-구조-소개">4-1. Vuex 설치 및 Vuex가 적용된 앱 구조 소개</h2>
 <p>지금까지 수행한 프로젝트는 API에서 바로 View로 데이터를 전달하였습니다.<br />
 Vuex를 설치하여 API -&gt; Vuex -&gt; View 로 데이터 전달 과정을 알아보겠습니다.</p>
 
 <p>터미널에서 <code class="highlighter-rouge">npm i vuex</code>를 입력하여 vuex를 설치합니다.</p>
 
-<h2 id="7-2-vuex-모듈화-및-state-적용">7-2. Vuex 모듈화 및 state 적용</h2>
+<h2 id="4-2-vuex-모듈화-및-state-적용">4-2. Vuex 모듈화 및 state 적용</h2>
 <p>컴포넌트가 많은 프로젝트의 경우 하나의 컴포넌트가 갖고 있는 data를 다른 컴포넌트에 공유할 일이 발생합니다.</p>
 
 <p><code class="highlighter-rouge">./src/store/index.js</code> 파일을 생성합니다.<br />
@@ -238,7 +238,7 @@ Vuex를 설치하여 API -&gt; Vuex -&gt; View 로 데이터 전달 과정을 �
 
 <p>서버를 실행 하면 개발자도구 Vue의 두번째 Tab에서 State 항목으로 news가 등록된 것을 확인할 수 있습니다.</p>
 
-<h2 id="7-2-newsview에-actions와-실습-안내">7-2. NewsView에 actions와 실습 안내</h2>
+<h2 id="4-3-newsview에-actions와-실습-안내">4-3. NewsView에 actions와 실습 안내</h2>
 <p>Actions에서 Backend API를 통해 데이터를 수신받습니다.<br />
 이 데이터는 state로 바로 전달하지 못하고, mutations를 통해 전달해야 합니다.<br />
 <code class="highlighter-rouge">index.js</code>에 actions, mutations를 구현해봅시다.</p>
@@ -338,7 +338,7 @@ Vuex를 설치하여 API -&gt; Vuex -&gt; View 로 데이터 전달 과정을 �
 <span class="o">&lt;</span><span class="sr">/style</span><span class="err">&gt;
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h2 id="7-3-jobsview-askview-적용">7-3. JobsView, AskView 적용</h2>
+<h2 id="4-4-jobsview-askview-적용">4-4. JobsView, AskView 적용</h2>
 <p><code class="highlighter-rouge">index.js</code>에 Jobs, Ask 에 관한 state, mutations, actions를 추가합니다.</p>
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -452,7 +452,7 @@ Vuex를 설치하여 API -&gt; Vuex -&gt; View 로 데이터 전달 과정을 �
 <span class="p">})</span>
 </pre></td></tr></tbody></table></code></pre></div></div>
 
-<h2 id="7-4-map-헬퍼-함수를-이용한-askview-풀이">7-4. map 헬퍼 함수를 이용한 AskView 풀이</h2>
+<h2 id="4-5-map-헬퍼-함수를-이용한-askview-풀이">4-5. map 헬퍼 함수를 이용한 AskView 풀이</h2>
 
 <p><code class="highlighter-rouge">index.js</code>에 getters를 추가하고, <code class="highlighter-rouge">AskView.vue</code>에 데이터를 더 쉽게 가져오는 방법을 알아봅니다.<br />
 <code class="highlighter-rouge">index.js</code> 코드 입니다.</p>
@@ -652,7 +652,7 @@ mapState를 활용한 방법과 mapGetters를 이용한 방법이 있습니다.<
 <span class="o">&lt;</span><span class="sr">/style</span><span class="err">&gt;
 </span></pre></td></tr></tbody></table></code></pre></div></div>
 
-<h2 id="7-5-store-속성-모듈화">7-5. Store 속성 모듈화</h2>
+<h2 id="4-6-store-속성-모듈화">4-6. Store 속성 모듈화</h2>
 <p><code class="highlighter-rouge">store\index.js</code>에서 actions와 mutations를 모듈화 해보겠습니다.<br />
 <code class="highlighter-rouge">store\actions.js</code>와 <code class="highlighter-rouge">store\mutations.js</code> 파일을 생성합니다.</p>
 
@@ -795,7 +795,7 @@ mapState를 활용한 방법과 mapGetters를 이용한 방법이 있습니다.<
 <span class="p">}</span>
 </pre></td></tr></tbody></table></code></pre></div></div>
 
-<h2 id="7-6-중간-정리-및-스타일링">7-6. 중간 정리 및 스타일링</h2>
+<h2 id="4-7-중간-정리-및-스타일링">4-7. 중간 정리 및 스타일링</h2>
 <p>Ask, Jobs, News의 각 타이틀에 링크를 연결하고, small tag로 꾸며보겠습니다.<br />
 <code class="highlighter-rouge">AskView.vue</code> 파일입니다.<br />
 <code class="highlighter-rouge">v-bind:href</code>를 <code class="highlighter-rouge">:href</code>로 축약하여 표현할 수 있습니다.</p>
@@ -1056,6 +1056,15 @@ mapState를 활용한 방법과 mapGetters를 이용한 방법이 있습니다.<
                                     
                                         
                                         
+                                            <li><a href="/front-end-vue-js-complete-8">Vue.js 완벽가이드 - 8</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
                                             <li><a href="/front-end-vue-js-complete-7">Vue.js 완벽가이드 - 7</a></li>
                                         
                                     
@@ -1073,8 +1082,6 @@ mapState를 활용한 방법과 mapGetters를 이용한 방법이 있습니다.<
                                   
                                     
                                         
-                                        
-                                            <li><a href="/front-end-vue-js-complete-5">Vue.js 완벽가이드 - 5</a></li>
                                         
                                     
                                   
@@ -1357,7 +1364,7 @@ mapState를 활용한 방법과 mapGetters를 이용한 방법이 있습니다.<
                         <footer class="read-next-card-footer">
                             <a href="/tag/sw-dev-lab/">
                                 
-                                    See all 40 posts  →
+                                    See all 41 posts  →
                                 
                             </a>
                         </footer>
