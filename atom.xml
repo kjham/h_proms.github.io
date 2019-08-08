@@ -8,6 +8,51 @@
     
       
       <item>
+        <title>Vue.js 완벽가이드 - 11</title>
+        
+          <description>&lt;h1 id=&quot;11-외부-라이브러리-모듈화-방법&quot;&gt;11. 외부 라이브러리 모듈화 방법&lt;/h1&gt;
+
+</description>
+        
+        <pubDate>Thu, 08 Aug 2019 01:00:00 +0900</pubDate>
+        <link>
+        https://kjham.github.io/front-end-vue-js-complete-11</link>
+        <guid isPermaLink="true">https://kjham.github.io/front-end-vue-js-complete-11</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Vue.js 완벽가이드 - 10</title>
+        
+          <description>&lt;h1 id=&quot;10-리팩토링--비동기-처리&quot;&gt;10. 리팩토링 : 비동기 처리&lt;/h1&gt;
+
+</description>
+        
+        <pubDate>Thu, 08 Aug 2019 00:00:00 +0900</pubDate>
+        <link>
+        https://kjham.github.io/front-end-vue-js-complete-10</link>
+        <guid isPermaLink="true">https://kjham.github.io/front-end-vue-js-complete-10</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Vue.js 완벽가이드 - 9</title>
+        
+          <description>&lt;h1 id=&quot;9-리팩토링--네비게이션-가드&quot;&gt;9. 리팩토링 : 네비게이션 가드&lt;/h1&gt;
+
+</description>
+        
+        <pubDate>Wed, 07 Aug 2019 22:00:00 +0900</pubDate>
+        <link>
+        https://kjham.github.io/front-end-vue-js-complete-9</link>
+        <guid isPermaLink="true">https://kjham.github.io/front-end-vue-js-complete-9</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Vue.js 완벽가이드 - 8</title>
         
           <description>&lt;h1 id=&quot;8-리팩토링--hoc-mixin&quot;&gt;8. 리팩토링 : HOC, Mixin&lt;/h1&gt;
