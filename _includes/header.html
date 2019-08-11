@@ -6,7 +6,7 @@
         <span class="sr-only">Toggle Search Form</span>
     </button>
     <a id="logo" href="/">
-        <span class="sr-only">KakaoTech</span>
+        <span class="sr-only">SWDEVLAB</span>
     </a>
     <div id="search">
         <input id="search-input" type="search" placeholder="Search..." value="" />
@@ -14,10 +14,10 @@
     <ul class="search__results" id="results-container"></ul>
 
     <ul id="menu" class="nav">
-        <li class="{% if page.url != '/opensource/' and page.url != '/openapi/' and page.url != '/events/' %} active {% endif %}"><a href="{{ base_path }}/">블로그</a></li>
-        <li class="{% if page.url == '/opensource/' %} active {% endif %}"><a href="{{ base_path }}/opensource/">오픈소스</a></li>
-        <li class="{% if page.url == '/openapi/' %} active {% endif %}"><a href="{{ base_path }}/openapi/">오픈API</a></li>
-        <li class="{% if page.url == '/events/' %} active {% endif %}"><a href="{{ base_path }}/events/">기술행사</a></li>
+        <li class="{% if page.url != '/opensource/' and page.url != '/religion/' and page.url != '/lifestyle/' %} active {% endif %}"><a href="{{ base_path }}/">SW TECH</a></li>
+        <li class="{% if page.url == '/opensource/' %} active {% endif %}"><a href="{{ base_path }}/opensource/">Open Source</a></li>
+        <li class="{% if page.url == '/religion/' %} active {% endif %}"><a href="{{ base_path }}/religion/">Religion</a></li>
+        <li class="{% if page.url == '/lifestyle/' %} active {% endif %}"><a href="{{ base_path }}/lifestyle/">My Life</a></li>
     </ul>
 </div>
 <!-- Script pointing to jekyll-search.js -->
