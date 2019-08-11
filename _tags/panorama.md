@@ -1,5 +1,5 @@
 ---
 name: panorama
 title: Panoprama
-# image: /files/covers/opensource.jpg
+image: /files/covers/religion_bible_panorama_title.jpg
 ---

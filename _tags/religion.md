@@ -1,5 +1,5 @@
 ---
 name: religion
 title: Religion
-# image: /files/covers/opensource.jpg
+image: /files/covers/religion.jpg
 ---
