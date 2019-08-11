@@ -2,7 +2,7 @@
 /*
  * Kakao
  */
-@font-face {
+/* @font-face {
     font-family: 'Kakao';
     font-style: normal;
     font-weight: 400;
@@ -22,7 +22,7 @@
     url(KakaoOTF-aLt.woff2) format('woff2'),
     url(KakaoOTF-aLt.woff) format('woff'),
     url(KakaoOTF-aLt.otf) format('opentype');
-}
+} */
 
 /*
 @font-face {
