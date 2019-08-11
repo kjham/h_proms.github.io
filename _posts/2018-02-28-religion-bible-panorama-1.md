@@ -37,7 +37,7 @@ image: /files/covers/religion_bible_panorama_title.jpg
 이상적인 순서는 전체를 먼저 본 뒤 부분을 보고, 다시 부분을 전체와 연관지어 생각하는 것입니다.
 
 일반적으로 성경은 일곱 가지 논리적 단계에 따라 접근할 수 있습니다.  
-![일곱가지단계](/assets\images\religion_bible_panorama_1-1.jpg){: .center-image } 
+![일곱가지단계](/files/covers/religion_bible_panorama_1-1.jpg){: .center-image } 
 이 때,  저자가 제안하는 방법이 있습니다.  
 
 만약 '문장' 을 가리키는 것을 분석하고자 한다면..  
@@ -85,7 +85,7 @@ image: /files/covers/religion_bible_panorama_title.jpg
 역사 범주는 구약 17권과 신약 5권 총 22권으로,  
 체험 범주는 구약 5권과 신약 21권으로,  
 예언 범주는 구약은약 17권과 신약 1권으로 이루어져 있습니다. 
-![성경의세골격](/assets\images\religion_bible_panorama_1-2.jpg){: .center-image } 
+![성경의세골격](/files/covers/religion_bible_panorama_1-2.jpg){: .center-image } 
 
 **6. 성경의 역사 요약**  
 >**구약**  
@@ -127,7 +127,7 @@ image: /files/covers/religion_bible_panorama_title.jpg
 그것은 예수 그리스도께 모든 초점이 맞추어져 있기 때문이다.
 
 **8. 성경의 특별한 용어**  
-![성경의세골격](/assets\images\religion_bible_panorama_1-3.jpg){: .center-image }
+![성경의세골격](/files/covers/religion_bible_panorama_1-3.jpg){: .center-image }
 
 **9. 성경, 얼마나 잘 알고 있나?**
 성경의 주된 목적은 하나님을 계시하고 하나님의 구권의 길을 밝히는 것이다.  
