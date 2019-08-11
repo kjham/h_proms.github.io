@@ -3,7 +3,7 @@ layout: post
 title: 'Java Thread Tutorial (2)'
 author: kjham.ham
 date: 2018-02-21 00:00
-tags: [java,thread]
+tags: [swtech,java,thread]
 image: /files/covers/blog.jpg
 ---
 
