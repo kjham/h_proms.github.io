@@ -1,5 +1,5 @@
 ---
 name: vuejs
 title: Vue.JS
-# image: /files/covers/opensource.jpg
+image: /files/covers/VUE_JS.jpg
 ---
