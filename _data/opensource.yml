@@ -1,0 +1,149 @@
+defaults:
+  - name: khaiii
+    github: https://github.com/kakao/khaiii
+    title: Kakao Hangul Analyzer III
+    blog_url: http://tech.kakao.com/2018/12/13/khaiii/
+    content: 카카오의 딥러닝 기반 형태소 분석기
+    tags:
+     - Deep-Learning
+     - CNN
+     - AI
+
+  - name: Apache S2Graph
+    github: https://github.com/apache/incubator-s2graph
+    title: 대용량 분산 그래프DB "S2Graph"
+    blog_url: http://tech.kakao.com/2016/01/29/opensource-1-s2graph/
+    content: <a href="http://s2graph.incubator.apache.org">아파치 인큐베이터 프로젝트</a>로 선정(2015/11/29)
+    tags:
+     - Scala
+     - Play 프레임웍
+     - HBase
+
+  - name:  N2
+    github: https://github.com/kakao/n2
+    title: approximate Nearest Neighbor
+    blog_url:
+    content: nmslib 기반으로 개선한 버전으로 사용이 쉽고, 검색속도와 인덱스 생성 시간이 빠름
+    tags:
+     - HNSW
+     - NMSLIB
+     - Annoy
+     - Go
+
+  - name:  Duct module.lacinia
+    github: https://github.com/kakao/duct-lacinia
+    title: Clojure 언어에서 사용하는 Duct 서버 프레임워크 용 GraphQL 모듈
+    blog_url:
+    content: <a href="https://clojars.org/">clojars.org</a>와 <a href="https://github.com/duct-framework/duct/wiki/Modules">duct wiki module</a>로 공개
+    tags:
+     - ring-graphql-ui
+     - Lacinia
+     - Clojure
+     - Duct
+
+  - name: HBase Tools
+    github: https://github.com/kakao/hbase-tools
+    title: HBase 명령행 도구 모음
+    blog_url: http://tech.kakao.com/2016/03/24/opensource-4-hbase-tools/
+    content:
+    tags:
+     - Clojure
+     - HBase
+
+  - name: HBase Region Inspector
+    github: https://github.com/kakao/hbase-region-inspector
+    title: HBase 리젼 통계 시각화 도구
+    blog_url: http://tech.kakao.com/2016/03/11/opensource-3-hri/
+    content:
+    tags:
+     - Clojure
+     - HBase
+
+  - name: HBase Packet Inspector
+    github: https://github.com/kakao/hbase-packet-inspector
+    title: HBase 리젼서버의 네트워크 패킷을 분석해 요청과 응답 정보를 추출하는 툴
+    blog_url: http://tech.kakao.com/2017/09/22/opensource-8-hbase-packet-inspector/
+    content:
+    tags:
+     - Clojure
+     - HBase
+
+  - name: CMUX
+    github: https://github.com/kakao/cmux
+    title: CMUX| CLI에 날개를 달자!
+    blog_url: http://tech.kakao.com/2017/07/12/opensource-7-cmux/
+    content: Cloudera Manager 기반의 하둡 클러스터를 관리하는데 필요한 대화형 커맨드라인 인터페이스 도구들
+    tags:
+     - Cloudera Manager
+     - TMUX
+     - FZF
+     - Ruby
+
+  - name:  MRTE-Collector
+    github: https://github.com/kakao/MRTE-Collector
+    title: MRTE(MySQL Realtime Traffic Emulator) Collector
+    blog_url: http://tech.kakao.com/2016/02/16/opensource-2-mtre/
+    content: 실제 서비스의 MySQL 트래픽을 실시간으로 수집
+    tags:
+     - Go
+     - MySQL
+
+  - name:  MRTE-Player
+    github: https://github.com/kakao/MRTE-Player
+    title: MRTE(MySQL Realtime Traffic Emulator) Player
+    blog_url: http://tech.kakao.com/2016/02/16/opensource-2-mtre/
+    content: 실제 서비스에서 수집한 데이터를 테스트 환경의 MySQL에서 재현
+    tags:
+     - Go
+     - MySQL
+
+  - name:  ADT
+    github: https://github.com/kakao/adt
+    title: Almighty Data Transmitter
+    blog_url: http://tech.kakao.com/2016/06/27/opensource-5-adt
+    content: MySQL 샤드 재분배, 실시간 마이그레이션
+    tags:
+     - adt
+     - MySQL
+
+tagmap:
+  - tag: Scala
+    url: http://scala-lang.org
+  - tag: Play 프레임웍
+    url: https://www.playframework.com
+  - tag: Clojure
+    url: http://clojure.org
+  - tag: Go
+    url: https://golang.org
+  - tag: HBase
+    url: https://hbase.apache.org
+  - tag: MySQL
+    url: http://www.mysql.com
+  - tag: GitHub API
+    url: https://developer.github.com/enterprise/2.8/v3/
+  - tag: Kubernetes
+    url: http://kubernetes.io/docs/
+  - tag: Docker
+    url: https://docs.docker.com/
+  - tag: Cloudera Manager
+    url: https://www.cloudera.com/products/product-components/cloudera-manager.html
+  - tag: TMUX
+    url: https://github.com/tmux/tmux/wiki
+  - tag: FZF
+    url: https://github.com/junegunn/fzf
+  - tag: Ruby
+    url: https://www.ruby-lang.org
+  - tag: HNSW
+    url: https://arxiv.org/abs/1603.09320
+  - tag: NMSLIB
+    url: https://github.com/searchivarius/NMSLIB
+  - tag: Annoy
+    url: https://github.com/spotify/annoy
+  - tag: ring-graphql-ui
+    url: https://github.com/threatgrid/ring-graphql-ui
+  - tag: Lacinia
+    url: https://github.com/walmartlabs/lacinia
+  - tag: Duct
+    url: https://github.com/duct-framework/duct
+  - tag: adt
+    url: http://tech.kakao.com/tags/adt/

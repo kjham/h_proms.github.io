@@ -1,0 +1,4 @@
+---
+name: weekly
+title: 'Weekly'
+---

@@ -1,0 +1,39 @@
+---
+layout: page
+title: kakao의 오픈소스
+image: /files/covers/opensource.jpg
+permalink: /opensource/
+sitemap: yes
+excerpt: kakao의 오픈소스를 소개합니다.
+tags: [opensource,s2graph,mrte,hbase-tools,hbase-region-inspector,adt,daum-editor]
+---
+<a id="forkme" href="https://github.com/kakao"></a>
+<link rel="stylesheet" href="../assets/css/opensource.css">
+<div class="row">
+	{% for item in site.data.opensource.defaults %}
+	<div class="col-sm-6">
+		<div class="card">
+			<div class="card-body">
+				<h2 class="card-title" style="margin:10px 0 0 0;">{{ item.name }}</h2>
+				<h6 class="card-subtitle mb-2 text-muted" style="margin-top:10px">{{ item.title }}</h6>
+				<p class="card-text">{{ item.content }}</p>
+				<p class="post-tags">
+					{% for tag in item.tags %}
+					{% assign tag_url = '/tags/' | append: tag %}
+						{% for tm in site.data.opensource.tagmap %}
+							{% if tag == tm.tag %}
+								{% assign tag_url = tm.url %}
+							{% endif %}
+					    {% endfor %}
+					<a href="{{ tag_url }}" target="_blank" title="opensource" class="tag tag-opensource" style="text-decoration: none">{{ tag }}</a>
+					{% endfor %}
+				</p><br/>
+				<a href="{{ item.github }}" target="_blank" class="btn btn-primary" style="color:#fff; text-decoration: none;">> GitHub</a>
+				{% if item.blog_url %}
+				<a href="{{ item.blog_url }}" class="btn btn-primary" style="color:#fff; text-decoration: none;">> Blog</a>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>
