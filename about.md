@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-image: /files/covers/proms_profile_cover.jpg
+image: /files/covers/about.jpg
 sitemap: yes
 tags: [about]
 ---
