@@ -9,7 +9,7 @@ timezone: Asia/Seoul
 
 repository: kjham/kjham.github.io
 
-permalink: /:year/:month/:day/:title/
+permalink: /:title/
 
 excerpt_separator: <!--more-->
 
