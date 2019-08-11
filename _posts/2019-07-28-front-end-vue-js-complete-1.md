@@ -4,7 +4,7 @@ title: 'Vue.js 완벽가이드 - 1'
 author: kjham.ham
 date: 2019-07-28 12:00
 tags: [swtech,java,vue-js,front-end]
-image: assets/images/VUE_JS.jpg
+image: /files/covers/VUE_JS.jpg
 ---
 
 # 1. 강의소개 & 설치

@@ -4,7 +4,7 @@ title: '여덟 기둥으로 성경의 맥을 잡아라'
 author: kjham.ham
 date: 2018-03-10 00:00
 tags: [religion,panorama]
-image: assets/images/religion_bible_panorama_title.jpg
+image: /files/covers/religion_bible_panorama_title.jpg
 ---
 
 **Chapter 02 : 여덟 기둥으로 성경의 맥을 잡아라**

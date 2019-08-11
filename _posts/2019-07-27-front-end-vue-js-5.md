@@ -4,7 +4,7 @@ title: 'Vue.js 시작하기 - 5'
 author: kjham.ham
 date: 2019-07-26 12:00
 tags: [swtech,java,vue-js,front-end]
-image: assets/images/VUE_JS.jpg
+image: /files/covers/VUE_JS.jpg
 ---
 
 # 싱글 파일 컴포넌트 & 최종정리  

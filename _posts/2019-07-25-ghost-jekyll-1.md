@@ -4,7 +4,7 @@ title: 'Ghost-Jekyll 적용하기 - 1'
 author: kjham.ham
 date: 2019-07-24 15:38
 tags: [swtech,ghost,jekyll]
-image: assets/images/VUE_JS.jpg
+image: /files/covers/VUE_JS.jpg
 ---
 
 # Github Page & Jekyll 적용

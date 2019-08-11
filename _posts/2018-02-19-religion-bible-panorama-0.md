@@ -4,7 +4,7 @@ title: 'Bible Panorama 를 시작하며'
 author: kjham.ham
 date: 2018-02-19 00:00
 tags: [religion,panorama]
-image: assets/images/religion_bible_panorama_title.jpg
+image: /files/covers/religion_bible_panorama_title.jpg
 ---
 
 **BIBLE PANORAMA 를 시작하며 ...**

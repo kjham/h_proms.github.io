@@ -4,7 +4,7 @@ title: 'Vue.js 완벽가이드 - 3'
 author: kjham.ham
 date: 2019-07-29 14:00
 tags: [swtech,java,vue-js,front-end]
-image: assets/images/VUE_JS.jpg
+image: /files/covers/VUE_JS.jpg
 ---
 
 # 3. API 구현  

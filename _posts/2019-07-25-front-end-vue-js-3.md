@@ -4,7 +4,7 @@ title: 'Vue.js 시작하기 - 3'
 author: kjham.ham
 date: 2019-07-25 17:00
 tags: [swtech,java,vue-js,front-end]
-image: assets/images/VUE_JS.jpg
+image: /files/covers/VUE_JS.jpg
 ---
 
 # 라우터 & Axios

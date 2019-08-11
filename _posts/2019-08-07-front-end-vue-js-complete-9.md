@@ -4,7 +4,7 @@ title: 'Vue.js 완벽가이드 - 9'
 author: kjham.ham
 date: 2019-08-07 13:00
 tags: [swtech,java,vue-js,front-end]
-image: assets/images/VUE_JS.jpg
+image: /files/covers/VUE_JS.jpg
 ---
 
 # 9. 리팩토링 : 네비게이션 가드  

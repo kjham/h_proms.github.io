@@ -4,7 +4,7 @@ title: '먼저 숲을 보고 나무를 보라'
 author: kjham.ham
 date: 2018-02-28 00:00
 tags: [religion,panorama]
-image: assets/images/religion_bible_panorama_title.jpg
+image: /files/covers/religion_bible_panorama_title.jpg
 ---
 
 **Chapter 01 : 먼저 숲을 보고 나무를 보라**

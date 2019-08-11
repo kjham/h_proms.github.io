@@ -4,7 +4,7 @@ title: 'Vue.js 완벽가이드 - 6'
 author: kjham.ham
 date: 2019-08-01 17:00
 tags: [swtech,java,vue-js,front-end]
-image: assets/images/VUE_JS.jpg
+image: /files/covers/VUE_JS.jpg
 ---
 
 # 6. 리팩토링 : 스타일링, 공통 컴포넌트  

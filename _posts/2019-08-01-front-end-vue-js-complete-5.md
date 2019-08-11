@@ -4,7 +4,7 @@ title: 'Vue.js 완벽가이드 - 5'
 author: kjham.ham
 date: 2019-08-01 12:00
 tags: [swtech,java,vue-js,front-end]
-image: assets/images/VUE_JS.jpg
+image: /files/covers/VUE_JS.jpg
 ---
 
 # 5. 라우터 실전  

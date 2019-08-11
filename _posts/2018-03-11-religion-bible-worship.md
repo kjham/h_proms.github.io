@@ -4,7 +4,7 @@ title: '내 멍에 주님의 멍에'
 author: kjham.ham
 date: 2018-03-11 00:00
 tags: [religion,logos]
-image: assets/images/religion_bible_bunpeace_title.jpg
+image: /files/covers/religion_bible_bunpeace_title.jpg
 ---
 
 **2018년 3월 11일, 번동평화교회 주일예배**

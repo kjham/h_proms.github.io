@@ -4,7 +4,7 @@ title: 'Vue.js 시작하기 - 1'
 author: kjham.ham
 date: 2019-07-23 12:00
 tags: [swtech,java,vue-js,front-end]
-image: assets/images/VUE_JS.jpg
+image: /files/covers/VUE_JS.jpg
 ---
 
 # 개발환경 설정 & Vue 소개

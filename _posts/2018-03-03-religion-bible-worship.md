@@ -4,7 +4,7 @@ title: '고난을 이기는 감사'
 author: kjham.ham
 date: 2018-03-03 00:00
 tags: [religion,logos]
-image: assets/images/religion_bible_bunpeace_title.jpg
+image: /files/covers/religion_bible_bunpeace_title.jpg
 ---
 
 **2018년 3월 4일, 번동평화교회 주일예배**
