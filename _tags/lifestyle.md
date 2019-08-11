@@ -1,5 +1,5 @@
 ---
 name: lifestyle
 title: Life Style
-# image: /files/covers/opensource.jpg
+image: /files/covers/lifestyle.jpg
 ---
