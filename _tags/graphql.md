@@ -1,4 +1,0 @@
----
-name: graphql
-title: 'GraphQL'
----
