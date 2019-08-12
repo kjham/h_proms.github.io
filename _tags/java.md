@@ -1,5 +1,5 @@
 ---
 name: java
 title: Java
-# image: /files/covers/opensource.jpg
+image: /files/covers/java.jpg
 ---
