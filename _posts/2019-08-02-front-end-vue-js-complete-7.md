@@ -3,7 +3,7 @@ layout: post
 title: 'Vue.js 완벽가이드 - 7'
 author: kjham.ham
 date: 2019-08-02 13:00
-tags: [swtech,java,vue-js,front-end]
+tags: [swtech,java,vuejs,frontend]
 image: /files/covers/VUE_JS.jpg
 ---
 

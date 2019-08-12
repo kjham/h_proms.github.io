@@ -3,7 +3,7 @@ layout: post
 title: 'Vue.js 시작하기 - 5'
 author: kjham.ham
 date: 2019-07-26 12:00
-tags: [swtech,java,vue-js,front-end]
+tags: [swtech,java,vuejs,frontend]
 image: /files/covers/VUE_JS.jpg
 ---
 
