@@ -1,5 +1,5 @@
 <li class="post-item post {{ post.post_class }}">
-    <a href="{{ post.url }}">
+    <a href="{{site.url}}{{site.baseurl}}/{{ post.url }}">
         <h3 class="post-title">{{ post.title }}</h3>
         <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 75 }}</p>
     </a>
