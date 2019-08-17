@@ -7,7 +7,7 @@ layout: default
 </div>
 
 <div id="cover" class="container"
-     {% if page.image %}style="background-image: url({{site.baseurl}}{{ page.image }});"{% endif %}>
+     {% if page.image %}style="background-image: url({{site.url}}{{site.baseurl}}/{{ page.image }});"{% endif %}>
     <div>
         <h1>{{ page.title }}</h1>
         <p>
@@ -24,14 +24,14 @@ layout: default
     <div id="post-content">{{ content }}</div>
     <div id="post-footer">
         {% assign author = site.authors | where: 'name', page.author | first %}
-        <a id="post-author" href="{{site.baseurl}}{{ author.url }}">
-            <div id="author-image" style="background-image:url({{site.baseurl}}{{ author.image | default: '' }});">
+        <a id="post-author" href="{{site.url}}{{site.baseurl}}/{{ author.url }}">
+            <div id="author-image" style="background-image:url({{site.url}}{{site.baseurl}}/{{ author.image | default: '' }});">
                 <span class="sr-only">{{ author.name }}'s profile image</span>
             </div>
             <p id="author-name">{{ author.name }}</p>
         </a>
         <p id="post-date">{{ page.date | date: '%Y-%m-%d %H:%M' }}</p>
-        <a id="post-more" href="{{site.baseurl}}{{ author.url }}">
+        <a id="post-more" href="{{site.url}}{{site.baseurl}}/{{ author.url }}">
             <span>Read more posts by this author</span>
         </a>
     </div>
@@ -41,9 +41,9 @@ layout: default
     {% assign prev = page.previous %}
     {% if prev %}
         <div id="post-prev"
-             {% if prev.image %}style="background-image: url({{site.baseurl}}{{ prev.image }});"{% endif %}>
+             {% if prev.image %}style="background-image: url({{ prev.image }});"{% endif %}>
             <div>
-                <h3><a href="{{site.baseurl}}{{ prev.url }}">{{ prev.title }}</a></h3>
+                <h3><a href="{{ prev.url }}">{{ prev.title }}</a></h3>
                 <p>YOU MIGHT ENJOY</p>
             </div>
         </div>
@@ -51,9 +51,9 @@ layout: default
     {% assign next = page.next %}
     {% if next %}
         <div id="post-next"
-             {% if next.image %}style="background-image: url({{site.baseurl}}{{ next.image }});"{% endif %}>
+             {% if next.image %}style="background-image: url({{ next.image }});"{% endif %}>
             <div>
-                <h3><a href="{{site.baseurl}}{{ next.url }}">{{ next.title }}</a></h3>
+                <h3><a href="{{ next.url }}">{{ next.title }}</a></h3>
                 <p>NEXT POST</p>
             </div>
         </div>
