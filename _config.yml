@@ -7,7 +7,7 @@ baseurl: 'kjham'
 url: 'http://kjham.github.io'
 timezone: Asia/Seoul 
 
-repository: kjham/kjham.github.io
+repository: kjham/kjham
 
 permalink: /:title/
 
