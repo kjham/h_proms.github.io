@@ -2,7 +2,7 @@
 layout: default
 ---
 <div id="navbar" class="container">
-    <h5><a id="link-back" href="/">Back to Posts</a></h5>
+    <h5><a id="link-back" href="{{site.baseurl}}/">Back to Posts</a></h5>
     {% include share.html page=page %}
 </div>
 
@@ -41,9 +41,9 @@ layout: default
     {% assign prev = page.previous %}
     {% if prev %}
         <div id="post-prev"
-             {% if prev.image %}style="background-image: url({{ prev.image }});"{% endif %}>
+             {% if prev.image %}style="background-image: url({{site.url}}{{site.baseurl}}/{{ prev.image }});"{% endif %}>
             <div>
-                <h3><a href="{{ prev.url }}">{{ prev.title }}</a></h3>
+                <h3><a href="{{site.url}}{{site.baseurl}}/{{ prev.url }}">{{ prev.title }}</a></h3>
                 <p>YOU MIGHT ENJOY</p>
             </div>
         </div>
@@ -51,9 +51,9 @@ layout: default
     {% assign next = page.next %}
     {% if next %}
         <div id="post-next"
-             {% if next.image %}style="background-image: url({{ next.image }});"{% endif %}>
+             {% if next.image %}style="background-image: url({{site.url}}{{site.baseurl}}/{{ next.image }});"{% endif %}>
             <div>
-                <h3><a href="{{ next.url }}">{{ next.title }}</a></h3>
+                <h3><a href="{{site.url}}{{site.baseurl}}/{{ next.url }}">{{ next.title }}</a></h3>
                 <p>NEXT POST</p>
             </div>
         </div>
