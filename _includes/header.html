@@ -16,9 +16,9 @@
     <ul id="menu" class="nav">
         <li class="{% if page.url == '/about/' %} active {% endif %}"><a href="{{ base_path }}/{{site.baseurl}}/about/">About</a></li>
         <li class="{% if page.url != '/about/' and page.url != '/swtech/' and page.url != '/religion/' and page.url != '/lifestyle/' %} active {% endif %}"><a href="{{ base_path }}/{{site.baseurl}}/">ALL</a></li>
-        <li class="{% if page.url == '/swtech/' %} active {% endif %}"><a href="https://kjham.github.io/{{site.baseurl}}/tags/swtech/">SW Tech</a></li>
-        <li class="{% if page.url == '/religion/' %} active {% endif %}"><a href="https://kjham.github.io/{{site.baseurl}}/tags/religion/">Religion</a></li>
-        <li class="{% if page.url == '/lifestyle/' %} active {% endif %}"><a href="https://kjham.github.io/{{site.baseurl}}/tags/lifestyle/">Life Style</a></li>
+        <li class="{% if page.url == '/swtech/' %} active {% endif %}"><a href="{{ base_path }}/{{site.baseurl}}/tags/swtech/">SW Tech</a></li>
+        <li class="{% if page.url == '/religion/' %} active {% endif %}"><a href="{{ base_path }}/{{site.baseurl}}/tags/religion/">Religion</a></li>
+        <li class="{% if page.url == '/lifestyle/' %} active {% endif %}"><a href="{{ base_path }}/{{site.baseurl}}/tags/lifestyle/">Life Style</a></li>
     </ul>
 </div>
 <!-- Script pointing to jekyll-search.js -->
@@ -28,7 +28,7 @@
     SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
-        json: '{{ site.baseurl }}/search2.json',
+        json: '{{ base_path }}/{{site.baseurl}}/search2.json',
         searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
         noResultsText: '<li>No results found</li>',
         limit: 15,
