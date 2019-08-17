@@ -550,6 +550,6 @@ export default {
 ~~~
 
 현재까지 작성된 코드로 다음과 같이 만들어진 것을 확인할 수 있습니다.  
-![News Page](kjham\files\swtech\VUE_JS_COMPLETE_01.jpg){: .center-image }  
-![Ask Page](kjham\files\swtech\VUE_JS_COMPLETE_02.jpg){: .center-image }  
-![Jobs Page](kjham\files\swtech\VUE_JS_COMPLETE_03.jpg){: .center-image }  
+![News Page]({{site.url}}{{site.baseurl}}/files\swtech\VUE_JS_COMPLETE_01.jpg){: .center-image }  
+![Ask Page]({{site.url}}{{site.baseurl}}/files\swtech\VUE_JS_COMPLETE_02.jpg){: .center-image }  
+![Jobs Page]({{site.url}}{{site.baseurl}}/files\swtech\VUE_JS_COMPLETE_03.jpg){: .center-image }  
