@@ -51,8 +51,8 @@ keep_files: [assets, files]
 github: [metadata]
 # iolo's custom
 author: h_proms@naver.com
-image: '/assets/images/default_blog_cover.jpg'
-asset_url: /assets
+image: '/kjham/assets/images/default_blog_cover.jpg'
+asset_url: /kjham/assets
 #asset_url: //meta-kage.kakaocdn.net/dn/osa/blog/assets
 #asset_url: //t1.daumcdn.net/osa/blog/assets
 google_analytics:
