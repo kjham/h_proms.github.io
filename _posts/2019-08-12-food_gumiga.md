@@ -20,7 +20,7 @@ image: /files/covers/foods_korean.jpg
 
 성인 6명과 아이 1명이 냠냠 ~ 먹었지만 결국 남겼습니다.  
 
-![구미가 오리백숙](kjham/files/lifestyle/last_chicken_gumiga.jpg){: .center-image }  
+![구미가 오리백숙]({{site.url}}{{site.baseurl}}/files/lifestyle/last_chicken_gumiga.jpg){: .center-image }  
 
 맛있게 잘 먹었습니다.  
 오늘은 동생이 결제를 하였네요 ^^  
