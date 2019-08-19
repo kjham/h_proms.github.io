@@ -1,0 +1,32 @@
+---
+layout: post
+title: 'Vue 공부 : V-flex'
+author: kjham.ham
+date: 2019-08-19 15:00
+tags: [swtech,java,vuejs,frontend]
+image: /files/covers/VUE_JS.jpg
+---
+
+Vuetify.js를 이용하여 Moden-Web방식의 페이지를 보다 쉽게 구현할 수 있습니다.  
+Vuetify를 이용한다면,  
+v-container, v-layout, v-flex 3계층으로 구성하여 코드를 작성하게 됩니다.  
+상황에 따라 v-container 대신 v-form을 사용하기도합니다.  
+(v-flex로 이루어진 하위 컴포넌트를 상위 컴포넌트에 넣을 때)  
+
+v-flex를 사용하게 되면, xs, sm, md, lg, xl 등의 키워드를 보게 됩니다.  
+기존 Bootstrap 등 다른 Framework도 마찬가지이지요.  
+
+> 각 키워드의 의미  
+xs : mobile  
+sm : tablet  
+md : notebook  
+lg : desktop  
+xl : 4k monitor  
+
+너비 사이즈를 총 12라고 보고, 이를 적절하게 나누어 분배하면 됩니다.  
+`xs12 sm6 md2 lg2 xl1` 라고 했을 때..  
+mobile 에서는 너비 전체를 다 사용하고,  
+table 에서는 반 만큼의 너비를 사용..  
+notebook, desktop 에서는 1/6 만큼 사용한다는 의미입니다.  
+
+이를 이용하여 다양한 단말기에서 적절한 화면을 보여줄 수 있습니다.
