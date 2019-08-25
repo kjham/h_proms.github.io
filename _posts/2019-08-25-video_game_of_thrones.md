@@ -5,7 +5,6 @@ author: kjham.ham
 date: 2019-08-25 23:40
 tags: [lifestyle,video,drama]
 image: /files/covers/game_of_thrones.jpg
-comments: true
 ---
 
 # Game of Thrones  
@@ -27,7 +26,7 @@ comments: true
 ---
 
 아린 가문의 요새를 처음 보면서 '와 ~ 멋지다 !'라고 생각했어요.  
-이 떄 부터 스크린샷을 저장하기 시작했지요.  
+이 때 부터 스크린샷을 저장하기 시작했지요.  
 ![아린 가문 요새]({{site.url}}{{site.baseurl}}/files/vedio/got/GameOfThrones_01.jpg){: .center-image }  
 
 아린 가문의 자하 감옥에 갖힌 티리온 라니스터 ..  
