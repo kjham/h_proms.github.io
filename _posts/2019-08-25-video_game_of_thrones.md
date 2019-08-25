@@ -2,7 +2,7 @@
 layout: post
 title: '왕좌의 게임 멋진 사진'
 author: kjham.ham
-date: 2019-08-17 17:00
+date: 2019-08-25 23:40
 tags: [lifestyle,video,drama]
 ---
 
