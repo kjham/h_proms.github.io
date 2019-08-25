@@ -123,7 +123,7 @@ tags: [lifestyle,video,drama]
 차기작이 나온다면 기대됩니다..  
 ![아리아 스타크 엔딩]({{site.url}}{{site.baseurl}}/files/vedio/got/GameOfThrones_33.jpg){: .center-image }  
 
-윈터펠 독립왕국의 지배자가 산사 스타크..  
+윈터펠 독립왕국의 지배자 산사 스타크..  
 ![산사 스타크 엔딩]({{site.url}}{{site.baseurl}}/files/vedio/got/GameOfThrones_34.jpg){: .center-image }  
 
 나이트 워치로 돌아와 야인들과 동행하는 존 스노우..  
