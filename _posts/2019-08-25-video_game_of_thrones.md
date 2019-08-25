@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-08-25 23:40
 tags: [lifestyle,video,drama]
 image: /files/covers/game_of_thrones.jpg
+comments: true
 ---
 
 # Game of Thrones  
