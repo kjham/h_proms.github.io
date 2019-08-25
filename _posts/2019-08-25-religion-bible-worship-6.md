@@ -1,3 +1,4 @@
+---
 layout: post
 title: '우리는 낮에 속하였으니'
 author: kjham.ham
