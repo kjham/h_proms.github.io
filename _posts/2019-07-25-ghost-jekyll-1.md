@@ -2,9 +2,10 @@
 layout: post
 title: 'Ghost-Jekyll 적용하기 - 1'
 author: kjham.ham
-date: 2019-07-24 15:38
+date: 2019-09-01 23:52
 tags: [swtech,ghost,jekyll]
 image: /files/covers/VUE_JS.jpg
+createdate: 2019-07-24 15:38
 ---
 
 # Github Page & Jekyll 적용
@@ -64,6 +65,8 @@ Configuration file: C:/Ruby25-x64/user/myblog/_config.yml
 ~~~
 
 # 4. 이슈 사항
+
+## 4-1. Jekyll 버전 에러  
 Jekyll 버전이 맞지 않을 경우 build가 안될 때가 있습니다.  
 jekyll 소스 폴더 내 Gemfile 을 삭제 후 다음과 같이 실행합니다.
 ~~~shell
@@ -74,3 +77,14 @@ $ bundle install
 $ jekyll -v
 ~~~
 버전이 갱신된 것을 확인할 수 있습니다.
+
+## 4-2. Liquid Exception 에러  
+Local 에서 Jekyll을 실행할 때  
+`Liquid Exception: incompatible character encodings: UTF-8` 와 같은 에러가 발생할 떄가 있습니다.  
+~~~html
+If you use UTF-8 encoding, make sure that no BOM header characters exist in your files or very, very bad things will happen to Jekyll. This is especially relevant when you’re running Jekyll on Windows.
+
+Additionally, you might need to change the code page of the console window to UTF-8 in case you get a Liquid Exception: Incompatible character encoding error during the site generation process. It can be done with the following command:
+~~~
+
+즉, Terminal에서 `chcp 65001`를 입력하 `jekyll serve`를 실행합니다.  
