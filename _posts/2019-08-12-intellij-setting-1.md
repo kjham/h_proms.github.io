@@ -2,7 +2,8 @@
 layout: post
 title: 'IntelliJ 설치 및 세팅'
 author: kjham.ham
-date: 2019-08-12 10:00
+date: 2019-09-04 10:00
+createdate: 2019-08-12 10:00
 tags: [swtech,ide,intellij]
 ---
 
@@ -22,6 +23,8 @@ tags: [swtech,ide,intellij]
 Marketplace를 이용하여 원하는 플러그인을 설치해도 됩니다.  
 `lombok`을 검색하여 설치합니다.  
 `Ctrl + Alt + S` 를 누른 후, 'Annotation Processings '에서 'Enable annotation processing' 체크  
+
+# 2. 실행 및 세팅  
 
 ## Terminal 실행  
 `npm install -g vue-cli`로 vue-cli를 설치  

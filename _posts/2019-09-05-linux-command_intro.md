@@ -1,0 +1,18 @@
+---
+layout: post
+title: 'Linux Command 정리'
+author: kjham.ham
+date: 2019-09-05 09:47
+tags: [swtech,linux]
+---
+
++ 도메인 편집
+`vi /etc/hosts`  
+
++ 방화벽 관련
+`service iptables stop`  
+`service firewalld stop`  
+
++ 이더넷 드라이버 관련  
+`/etc/sysconfig/network-scripts/`
+
