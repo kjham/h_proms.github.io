@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 'Java의 객체 생성과 파괴 (작성중)'
+title: 'Java의 정적 팩터리 메서드'
 author: kjham.ham
-date: 2019-09-17 09:20
+date: 2019-09-23 09:20
 tags: [swtech,java,effectivejava]
 ---
 
