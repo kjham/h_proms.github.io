@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Linux에서 Too Many Open File 현상'
+title: 'MongoDB에서 Too Many Open File 현상'
 author: kjham.ham
 date: 2019-10-17 10:00
 tags: [swtech,java,ulimit,mongodb]
