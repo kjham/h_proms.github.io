@@ -4,6 +4,7 @@ title: 'Finalizer와 Cleaner의 단점'
 author: kjham.ham
 date: 2019-10-23 13:30
 tags: [swtech,java,effectivejava]
+image: /files/covers/effectivejava.jpg
 ---
 
 # Finalizer와 Cleaner 사용을 피해라  

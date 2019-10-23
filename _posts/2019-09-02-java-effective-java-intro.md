@@ -4,12 +4,13 @@ title: 'Effective Java를 시작하며'
 author: kjham.ham
 date: 2019-09-02 09:25
 tags: [swtech,java,effectivejava]
+image: /files/covers/effectivejava.jpg
 ---
 
 C언어 개발자로 신입으로 입사하여 2년을 보낸 후, JAVA 개발자로 전환하여 어느덧 3년이 지났습니다.  
 이 시기에 필도서로 꼽히는 `Effective Java`를 읽으며서 한 층 더 앞으로 도약하고자 합니다.
 
----
+-----
 
 Java의 아버지인 제임스 고슬링(James Gosling)이 말했다.  
 `자바는 '아주 단순한' '노동자용 언어' 다.`

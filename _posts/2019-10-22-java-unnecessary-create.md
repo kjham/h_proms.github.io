@@ -4,6 +4,7 @@ title: '불필요한 객체 생성'
 author: kjham.ham
 date: 2019-10-22 11:30
 tags: [swtech,java,effectivejava]
+image: /files/covers/effectivejava.jpg
 ---
 
 # 불필요한 객체 생성을 피해라
