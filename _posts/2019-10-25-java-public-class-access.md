@@ -2,7 +2,7 @@
 layout: post
 title: 'Public 클래스의 접근자 메서드'
 author: kjham.ham
-date: 2019-10-25 09:30
+date: 1019-10-25 09:30
 tags: [swtech,java,effectivejava,item16]
 image: /files/covers/effectivejava.jpg
 ---
