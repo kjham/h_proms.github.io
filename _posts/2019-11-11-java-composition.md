@@ -3,7 +3,7 @@ layout: post
 title: 'Compoisition 활용'
 author: kjham.ham
 date: 2019-11-11 09:30
-tags: [swtech,java,effectivejava,item16]
+tags: [swtech,java,effectivejava,composition]
 image: /files/covers/effectivejava.jpg
 ---
 

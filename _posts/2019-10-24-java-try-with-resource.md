@@ -3,7 +3,7 @@ layout: post
 title: 'try-with-resource 사용'
 author: kjham.ham
 date: 2019-10-24 09:30
-tags: [swtech,java,effectivejava]
+tags: [swtech,java,effectivejava,try-catch]
 image: /files/covers/effectivejava.jpg
 ---
 

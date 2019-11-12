@@ -3,11 +3,11 @@ layout: post
 title: '변경 가능성을 최소화한 클래스 설계'
 author: kjham.ham
 date: 2019-10-25 10:00
-tags: [swtech,java,effectivejava,item16]
+tags: [swtech,java,effectivejava,architecture]
 image: /files/covers/effectivejava.jpg
 ---
 
-# 변경 가능성을 최소화하라  
+# 변경 가능성을 최소화하라 (아이템 17)  
 
 불변 클래스란 그 인스턴스의 내부 값을 수정할 수 없는 클래스를 말합니다.  
 예로 `String`, `BigInteger`, `BigDecimal`을 볼 수 있습니다.  

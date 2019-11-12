@@ -2,12 +2,12 @@
 layout: post
 title: 'Public 클래스의 접근자 메서드'
 author: kjham.ham
-date: 1019-10-25 09:30
-tags: [swtech,java,effectivejava,item16]
+date: 2019-10-25 09:30
+tags: [swtech,java,effectivejava,access-mothod]
 image: /files/covers/effectivejava.jpg
 ---
 
-# Public 클래스에서는 Public 필드가 아닌 접근자 메서드를 사용하라
+# Public 클래스에서는 Public 필드가 아닌 접근자 메서드를 사용하라 (아이템 16)
 
 다음 코드는 어떤 단점이 존재할까 ?  
 ~~~java
