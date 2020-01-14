@@ -265,3 +265,7 @@ https://minuwuk.blog.me/221593012167
 ## 관련 정보 (링크로 연결하여 확인할 것)  
 
 https://blog.naver.com/gktjdgns2/221408954354
+
+## AWS 매뉴얼  
+
+https://docs.aws.amazon.com/index.html
