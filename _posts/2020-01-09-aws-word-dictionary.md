@@ -103,7 +103,7 @@ M4는 컴퓨팅 ,메모리, 네트워크 리소스를 균형있게 제공하며 
 : 여러 Amazon EC2 인스턴스에서 기본적인 로드 밸런싱을 제공하며, 요청 수준 및 연결 수준에서 작동함  
 : Classic Load Balancer는 EC2-Classic 네트워크 내에 구축된 애플리케이션용임  
 
-### - EMR  
+### - EMR (Elastic MapReduce)  
 .Apache Spark, 하둡, HBase, Presto, Hive 및 다른 빅 데이터 프레임워크를 손쉽게 실행하고 확장  
 .관리형 하둡 프레임워크로서 동적으로 확장 가능한 Amazon EC2 인스턴스 전체에서 대량의 데이터를 쉽고 빠르며 비용 효율적으로 처리할 수 있음  
 .Apache Spark, HBase, Presto 및 Flink와 같이 널리 사용되는 분산 프레임워크를 실행하고, Amazon S3 및 Amazon DynamoDB와 같은 다른 AWS 데이터 스토어의 데이터와 상호 작용할 수 있음  
