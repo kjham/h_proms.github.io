@@ -2,7 +2,7 @@
 layout: post
 title: 'Network 용어집'
 author: kjham.ham
-date: 2020-02-04 17:35
+date: 2020-02-05 17:40
 create-date: 2020-02-04 17:35
 tags: [swtech,network,cloud,aws,cdn]
 ##image: /files/covers/effectivejava.jpg
@@ -12,8 +12,13 @@ tags: [swtech,network,cloud,aws,cdn]
 
 ## AWS (Amazon)
 
-## AWS 용어집  
+### AWS 용어집  
 https://docs.aws.amazon.com/ko_kr/general/latest/gr/glos-chap.html  
+
+### AZ (Availity Zone)  
+AWS 서비스가 리전들의 집합이라면, Region은 AZ(가용역역)들의 집합입니다.  
+AZ는 데이터 센터이며, 실제 물리저그로 완전히 돌립되어 있지만, AWS 콘솔 상에서 리소스별로 구분하지는 않습니다.  
+하나의 Region안에 여러 개의 데이터 센터를 운영함으로써 가동률 혹은 가용성을 크게 높일 수 있습니다. 가용성(Availibility)은 서비스를 정상적으로 사용가능한 정도라고 볼 수 있습니다.  
 
 ### Cloud Front  
 전세계에 위치한 Edge location을 이용하여 효율적인 컨텐츠 배포 구조를 제공하는 서비스  
@@ -39,6 +44,10 @@ Subnet Mask : 255.255.255.192
 BroadCast : 192.168.32.63  
 IP주소 영역: 192.168.32.1 ~ 192.168.32.62  
 
+### DevOps  
+개발팀(Developmenet) 과 운영팀(Operation) 두 단어의 조합으로 두 팀 간의 소통이 원활히 이루어질 수 있도록 하는 것을 의미합니다.  
+클라우드 서비스가 확장되면서 개발과 운영을 통합하는 데브옵스 개념이 정차 증가하고 있습니다.  
+
 ### Edge Cache Server  
 캐시 서버는 각 컨텐츠에 대한 유효시간을 관리하고 있습니다.  
 각 사용자가 컨텐츠를 요청했을 때, 유효시간에 따라 캐시서버 동작 방식이 다릅니다.  
@@ -54,7 +63,7 @@ Origin Sever로 부터 요청하여 캐시서버에 저장합니다.
 ### GSLB  
 
 #### GSLB 장점  
-(장점 : https://www.netmanias.com/ko/?m=view&id=blog&no=5620)
+(장점 : https://www.netmanias.com/ko/?m=view&id=blog&no=5620)  
 (Global Server Load Balancing)  
 지역적으로 서버가 분산된 환경에서 GSLB를 이용하여 아래와 같은 이점이 있습니다.  
 (1) 서비스 가용성 제공 (Disaster Recovery)  
@@ -63,8 +72,8 @@ Origin Sever로 부터 요청하여 캐시서버에 저장합니다.
 (4) 가까운 곳으로 접속 (Nearest by Geographic Proximity)  
 
 #### GSLB 정책  
-(참고1 : https://www.netmanias.com/ko/?m=view&id=blog&no=5622)
-(참고2 : https://www.netmanias.com/ko/?m=view&id=blog&no=5624)
+(참고1 : https://www.netmanias.com/ko/?m=view&id=blog&no=5622)  
+(참고2 : https://www.netmanias.com/ko/?m=view&id=blog&no=5624)  
 ① Server Health -  살아있는 사이트 선택  
 ② SLB Session & Network Capacity Threshold - 과부하 상태가 아닌 사이트 선택  
 ③ Network Proximity - 응답 속도가 빠른(Low Latency) 사이트 선택  
@@ -73,6 +82,14 @@ Origin Sever로 부터 요청하여 캐시서버에 저장합니다.
 ⑥ Site Preference - 운영자의 정책에 의해 특정 사이트 선택  
 ⑦ Least Selected - 균등하게 사이트 선택  
 ⑧ Static Load Balancing - 균등하게 사이트 선택  
+
+### OAI  
+(Origin Access ID) Amazon S3 Bucket와 CloudFront를 함께 사용하면, OAI를 통해 쉽게 접근을 제한할 수 있습니다.
+
+### Region  
+AWS는 물리적으로 떨어진 지역에 여러 개의 클라우드 인프라를 운영하는데, 이 지역을 어원 그대로 리전(region)이라고 부릅니다.  
+물리적으로 완전히 물리되어 있으며, AWS 콘솔 상에서도 완전히 다른 리소스로 구분합니다.  
+전 세계에 뻗어있는 AWS 인프라는 크게 언급한 리전과 가용 영역(AZ) 그리고 에지 로케이션(Edge Location)으로 나눌 수 있습니다.  
 
 ## GCP (Google)  
 
@@ -116,11 +133,27 @@ ADN도 CDN과 같이 사용자와 Origin Server간에 지리적인 거리로 인
 * 각 Content는 일정 시간(TTL)이 지나면 Cache Server에서 삭제될 수 있고, 혹은 Origin Server를 통해 Content Freshness 확인 후에 계속 가지고 있을 수 있음  
 * Akamai, Amazon과 같은 Global CDN 업체, 그리고 Cisco나 ALU의 통신사업자향 CDN 장비 솔루션에서 이 방식을 지원함
 
+## IPv6  
+* IP 주소의 길이가 128비트 체계로 확장 (거의 무한대로 주소 부여 가능)  
+* 네트워크 속도 증가  
+* 높은 품질의 서비스 제공  
+* 데이터 무결성 및 비밀 보장  
+
+## OSI Layer 7 Model 
+* (1계층) Physical Layer  
+* (2계층) DataLink Layer  
+* (3계층) Network Layer  
+* (4계층) Transport Layer  
+* (5계층) Session Layer  
+* (6계층) Presentation Layer  
+* (7계층)  Application Layer  
+
 ## Request Routing  
 (참고 : https://www.netmanias.com/ko/?m=view&id=blog&no=5630)  
 Request Routing은 사용자의 Content Request에 대해 최적의 Cache Server를 선택해 주는 기능입니다.  
 이를 위해 CDN 망에는 Request Router가 존재합니다. (이름에 Router가 들어갔다고 IP Routing의 OSPF, BGP와 같은 라우팅 기능을 수행하는 것은 아닙니다)  
 Request Router는 DNS 기능을 지원하며 사용자의 Content 요청을 Cache Server로 Redirection해 주는 방식에 따라 DNS-based Request Routing과 Service-based Request Routing으로 나눌 수 있습니다.  
+
 * DNS-based Request Routing  
 1) 사용자 단말이 `orgin.example.com`를 요청했을 때, 이에 대한 `example.com DNS 서버`는 CNAME으로 `csp123.cdn.kt.com`를 응답합니다.  
 2) 그리고 `Local DNS 서버`는 `Request Router`로 `DNS Query`를 전달하여 `Host Name = csp123.cdn.kt.com`에 대한 IP 주소를 요청하고 최종적으로 가장 빠른 `캐시 서버`의 IP 주소를 응답합니다. 
@@ -138,6 +171,19 @@ Request Router는 DNS 기능을 지원하며 사용자의 Content 요청을 Cach
 
 Redirection 하는 방법 : HTTP 302 Redirection, HTTP ASX Redirection, RTSP 302 Redirection, RTMP 302 Redirection  
 
+## Router  
+서로 다른 지역의 컴퓨터를 연결하는 기기입니다. 2개 이상의 네트워크 간 데이터 전송을 위해 최적 경로를 설정해주며, 데이터를 해당 경로를 따라 한 통신망에서 다른 통신망으로 통신 가능하게 도와주는 인터넷 접속 장비입니다.  
+내부 네트워크는 컴퓨터 기종이나 운영체제, 프로토콜 등을 확실히 알 수 있어서 네트워크의 최적화를 이룰 수 있지만, 외부와 연결할 때는 이러한 정보를 알 수 없습니다. 이러한 임의의 네트워크와 내부 네트워크를 연결하기 위한 네트워크 장비가 바로 라우터입니다.  
+
+## Switch  
+여러 컴퓨터를 연결하는 네트워크 분배기 역할을 합니다.  하나의 네트워크 라인에 여러 대의 컴퓨터에 랜 케이블을 꽂을 수 있도록 분배하는 장비입니다.  
+
+## TCP/IP 모델  
+- (1계층) Network Interface  
+- (2계층) Internet Layer  
+- (3계층) Transport Layer  
+- (4계층) Application Layer  
+
 ## VPN  
 (Virtual Private Network) 가상사설망이라고 부릅니다.  
 `A 컴퓨터(210.*.*.*)`가 `B네트워크(=VNP서버, 168.*.*.*)`에 접속할 때, `A 컴퓨터`는 더 이상 `210.*.*.*`이 아니라 `168.*.*.*`으로 보여지게 됩니다.  
@@ -150,6 +196,7 @@ Redirection 하는 방법 : HTTP 302 Redirection, HTTP ASX Redirection, RTSP 302
 ### 장점  
 * 외부 통신 장비가 VPN 사설망에 접속하기 때문에, 내부 네트워크에 포함된 장비처럼 보입니다.  
 * 보안을 해치지 않고, 외부 장비가 VPN을 통해 통신을 할 수 있습니다.  
+
 ### 단점  
 * VPN 서버와 암호화 통신을 해야하기 떄문에 매우 느립니다.  
 
