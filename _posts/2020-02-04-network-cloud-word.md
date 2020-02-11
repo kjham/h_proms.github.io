@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 'Network 용어집'
+title: 'Network&Cloud 용어집'
 author: kjham.ham
-date: 2020-02-05 17:40
+date: 2020-02-11 13:00
 create-date: 2020-02-04 17:35
 tags: [swtech,network,cloud,aws,cdn]
 ##image: /files/covers/effectivejava.jpg
