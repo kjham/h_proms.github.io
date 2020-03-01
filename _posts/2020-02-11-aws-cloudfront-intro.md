@@ -6,6 +6,7 @@ date: 2020-02-11 13:00
 create-date: 2020-02-11 13:00
 tags: [swtech,network,cloud,aws,cloudfront]
 ##image: /files/covers/effectivejava.jpg
+comments: true
 ---
 
 # Amazon CloudFront 란 ?  
