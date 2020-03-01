@@ -5,7 +5,7 @@
     <button id="search-toggle" type="button">
         <span class="sr-only">Toggle Search Form</span>
     </button>
-    <a id="logo" href="{{ base_path }}/">
+    <a id="logo" href="{{ url }}/">
         <span class="sr-only">SWDEVLAB</span>
     </a>
     <div id="search">
@@ -14,21 +14,21 @@
     <ul class="search__results" id="results-container"></ul>
 
     <ul id="menu" class="nav">
-        <li class="{% if page.url == '/about/' %} active {% endif %}"><a href="{{ base_path }}/about/">About</a></li>
-        <li class="{% if page.url != '/about/' and page.url != '/swtech/' and page.url != '/religion/' and page.url != '/lifestyle/' %} active {% endif %}"><a href="{{ base_path }}/">ALL</a></li>
-        <li class="{% if page.url == '/swtech/' %} active {% endif %}"><a href="{{ base_path }}/tags/swtech/">SW Tech</a></li>
-        <li class="{% if page.url == '/religion/' %} active {% endif %}"><a href="{{ base_path }}/tags/religion/">Religion</a></li>
-        <li class="{% if page.url == '/lifestyle/' %} active {% endif %}"><a href="{{ base_path }}/tags/lifestyle/">Life Style</a></li>
+        <li class="{% if page.url == '/about/' %} active {% endif %}"><a href="{{ url }}/about/">About</a></li>
+        <li class="{% if page.url != '/about/' and page.url != '/swtech/' and page.url != '/religion/' and page.url != '/lifestyle/' %} active {% endif %}"><a href="{{ url }}/">ALL</a></li>
+        <li class="{% if page.url == '/swtech/' %} active {% endif %}"><a href="{{ url }}/tags/swtech/">SW Tech</a></li>
+        <li class="{% if page.url == '/religion/' %} active {% endif %}"><a href="{{ url }}/tags/religion/">Religion</a></li>
+        <li class="{% if page.url == '/lifestyle/' %} active {% endif %}"><a href="{{ url }}/tags/lifestyle/">Life Style</a></li>
     </ul>
 </div>
 <!-- Script pointing to jekyll-search.js -->
-<script src="{{ base_path }}/dest/jekyll-search.js" type="text/javascript"></script>
+<script src="{{ url }}/dest/jekyll-search.js" type="text/javascript"></script>
 
 <script type="text/javascript">
     SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
-        json: '{{ base_path }}/search2.json',
+        json: '{{ url }}/search2.json',
         searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
         noResultsText: '<li>No results found</li>',
         limit: 15,
