@@ -4,6 +4,7 @@ title: 'MongoDB에서 Too Many Open File 현상'
 author: kjham.ham
 date: 2019-10-17 10:00
 tags: [swtech,java,ulimit,mongodb]
+comments: true
 ---
 
 현재 프로젝트에서 두 대의 서버로 MongoDB의 ReplicaSet를 구성하였습니다.

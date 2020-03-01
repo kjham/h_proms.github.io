@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-08-17 17:00
 tags: [lifestyle,foods,korean]
 image: /files/covers/foods_korean.jpg
+comments: true
 ---
 
 # 2019-08-17, 가족 주말 여행 저녁식사  

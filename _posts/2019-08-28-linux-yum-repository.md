@@ -4,6 +4,7 @@ title: 'Centos Yum Repository 추가'
 author: kjham.ham
 date: 2019-08-28 11:00
 tags: [swtech,linux,yum]
+comments: true
 ---
 
 폐쇄 개발망을 이용하다보면 yml이나 apt-get을 정상적으로 이용할 수 없습니다.  

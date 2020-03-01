@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-10-25 10:00
 tags: [swtech,java,effectivejava,architecture]
 image: /files/covers/effectivejava.jpg
+comments: true
 ---
 
 # 변경 가능성을 최소화하라 (아이템 17)  

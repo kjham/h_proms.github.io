@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2018-02-21 00:00
 tags: [swtech,java,logging]
 image: /files/covers/blog.jpg
+comments: true
 ---
 
 **Java - Logging Introduction (1) : 종류**

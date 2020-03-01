@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2018-03-12 16:00
 tags: [swtech,nosql,mongodb]
 image: /files/covers/blog.jpg
+comments: true
 ---
 
 **penSource MongoDB - Introduction**

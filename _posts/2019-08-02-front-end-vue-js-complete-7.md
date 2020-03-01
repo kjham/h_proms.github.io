@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-08-02 13:00
 tags: [swtech,java,vuejs,frontend]
 image: /files/covers/VUE_JS.jpg
+comments: true
 ---
 
 # 7. 리팩토링 : Data Flow, Slot  

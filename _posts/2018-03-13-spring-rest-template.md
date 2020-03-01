@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2018-03-13 00:00
 tags: [swtech,java,spring]
 image: /files/covers/blog.jpg
+comments: true
 ---
 
 **Spring - RestTemplate**

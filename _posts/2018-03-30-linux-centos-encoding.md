@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2018-03-30 10:03
 tags: [swtech,linux]
 image: /files/covers/blog.jpg
+comments: true
 ---
 
 **Linux Centos7 - 한글깨짐**

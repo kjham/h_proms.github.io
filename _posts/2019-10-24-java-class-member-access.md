@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-10-24 13:00
 tags: [swtech,java,effectivejava]
 image: /files/covers/effectivejava.jpg
+comments: true
 ---
 
 # 클래스 멤버의 접근 권한을 최소화하라

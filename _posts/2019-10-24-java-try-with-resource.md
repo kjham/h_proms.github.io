@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-10-24 09:30
 tags: [swtech,java,effectivejava,try-catch]
 image: /files/covers/effectivejava.jpg
+comments: true
 ---
 
 # try-finally 보다는 try-with-resource를 사용하라

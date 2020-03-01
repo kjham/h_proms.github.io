@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-12-17 16:10
 tags: [swtech,java,database,mongodb,nosql]
 ##image: /files/covers/effectivejava.jpg
+comments: true
 ---
 
 업무 중 MongoDB의 Database를 복제해야 하는 일이 생겼습니다.  

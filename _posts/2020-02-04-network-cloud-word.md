@@ -6,6 +6,7 @@ date: 2020-02-11 13:00
 create-date: 2020-02-04 17:35
 tags: [swtech,network,cloud,aws,cdn]
 ##image: /files/covers/effectivejava.jpg
+comments: true
 ---
 
 # Cloud

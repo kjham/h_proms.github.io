@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-10-22 10:30
 tags: [swtech,java,effectivejava,dependency injection]
 image: /files/covers/effectivejava.jpg
+comments: true
 ---
 
 # 자원을 직접 명시하지말고 의존객체주입을 사용하라

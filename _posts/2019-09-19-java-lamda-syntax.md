@@ -4,6 +4,7 @@ title: 'Java에서 자주 사용하는 lamda식 문법'
 author: kjham.ham
 date: 2019-09-19 09:20
 tags: [swtech,java,lamda]
+comments: true
 ---
 
 저는 Java에서 Lamda를 자주 사용하는 편입니다..  

@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2018-03-14 17:30
 tags: [swtech,nosql,mongodb]
 image: /files/covers/blog.jpg
+comments: true
 ---
 
 **openSource MongoDB - Aggregate Pipeline Optimization**

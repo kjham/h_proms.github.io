@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-08-27 11:00
 tags: [swtech,java,vuejs,frontend]
 image: /files/covers/VUE_JS.jpg
+comments: true
 ---
 
 Vuetify를 이용해 Tag를 작성하여 Component를 배치하다 보면,  

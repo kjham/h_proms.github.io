@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-09-23 09:20
 tags: [swtech,java,effectivejava]
 image: /files/covers/effectivejava.jpg
+comments: true
 ---
 
 다음 사항을 관리하는 방법에 대해 설명합니다.  

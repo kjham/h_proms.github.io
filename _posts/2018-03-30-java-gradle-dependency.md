@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2018-03-30 14:45
 tags: [swtech,java,gradle]
 image: /files/covers/blog.jpg
+comments: true
 ---
 
 **JAVA - Gradle Dependency**

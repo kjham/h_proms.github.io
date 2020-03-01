@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-07-26 12:00
 tags: [swtech,java,vuejs,frontend]
 image: /files/covers/VUE_JS.jpg
+comments: true
 ---
 
 # 싱글 파일 컴포넌트 & 최종정리  

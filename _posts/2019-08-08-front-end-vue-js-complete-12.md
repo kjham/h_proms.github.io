@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-08-08 10:00
 tags: [swtech,java,vuejs,frontend]
 image: /files/covers/VUE_JS.jpg
+comments: true
 ---
 
 # 12. 컴포넌트 디자인 패턴  

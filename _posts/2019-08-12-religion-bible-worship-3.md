@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-08-12 00:00
 tags: [religion,logos]
 image: /files/covers/religion_bible_bunpeace_title.jpg
+comments: true
 ---
 
 **2019년 8월 11일, 번동평화교회 3부예배**

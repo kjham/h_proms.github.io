@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2018-03-30 14:42
 tags: [swtech,nosql,mongodb]
 image: /files/covers/blog.jpg
+comments: true
 ---
 
 **MongoDB 설치 가이드**

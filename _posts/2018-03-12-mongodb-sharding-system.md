@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2018-08-30 13:30
 tags: [swtech,nosql,mongodb]
 image: /files/covers/blog.jpg
+comments: true
 ---
 
 **New NoSQL & mongoDB - Sharding System**

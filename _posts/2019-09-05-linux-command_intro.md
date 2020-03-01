@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-09-19 13:41
 createdate: 2019-09-05 09:47
 tags: [swtech,linux]
+comments: true
 ---
 
 + 도메인 편집

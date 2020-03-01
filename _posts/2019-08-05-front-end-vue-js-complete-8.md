@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-08-05 13:00
 tags: [swtech,java,vuejs,frontend]
 image: /files/covers/VUE_JS.jpg
+comments: true
 ---
 
 # 8. 리팩토링 : HOC, Mixin  

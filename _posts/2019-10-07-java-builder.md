@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-10-07 10:00
 tags: [swtech,java,effectivejava,builder]
 image: /files/covers/effectivejava.jpg
+comments: true
 ---
 
 정적 팩터리와 생성자에는 똑같은 제약이 있습니다.  

@@ -4,6 +4,7 @@ title: 'MongoDB Limit, Sort 여러번 사용'
 author: kjham.ham
 date: 2019-12-17 16:30
 tags: [swtech,java,database,mongodb,nosql]
+comments: true
 ##image: /files/covers/effectivejava.jpg
 ---
 

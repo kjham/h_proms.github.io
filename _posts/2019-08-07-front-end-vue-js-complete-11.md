@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-08-07 16:00
 tags: [swtech,java,vuejs,frontend]
 image: /files/covers/VUE_JS.jpg
+comments: true
 ---
 
 # 11. 외부 라이브러리 모듈화 방법  

@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2018-02-28 00:00
 tags: [religion,panorama]
 image: /files/covers/religion_bible_panorama_title.jpg
+comments: true
 ---
 
 **Chapter 01 : 먼저 숲을 보고 나무를 보라**

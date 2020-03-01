@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2020-01-14 13:00
 tags: [swtech,algorithm]
 ##image: /files/covers/effectivejava.jpg
+comments: true
 ---
 
 N 개의 리스트 A와 N 개의 리스트 B 라는 두 개의 컬렉션이 주어집니다.  

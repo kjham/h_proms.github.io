@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2018-03-30 15:29
 tags: [swtech,java,database,redis]
 image: /files/covers/blog.jpg
+comments: true
 ---
 
 **JAVA - REDIS Tutorial**

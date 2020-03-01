@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2020-01-16 15:30
 tags: [swtech,java,database,mongodb,nosql]
 ##image: /files/covers/effectivejava.jpg
+comments: true
 ---
 
 시간이 없어서.. 간략하게 적어봅니다.  

@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2020-01-09 12:30
 tags: [swtech,cloud,aws,dictionary]
 ##image: /files/covers/effectivejava.jpg
+comments: true
 ---
 
 ## 용어 정리

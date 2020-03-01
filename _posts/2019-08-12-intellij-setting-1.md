@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-09-04 10:00
 createdate: 2019-08-12 10:00
 tags: [swtech,ide,intellij]
+comments: true
 ---
 
 # 1. IntelliJ 설치  

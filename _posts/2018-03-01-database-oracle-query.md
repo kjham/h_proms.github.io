@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2018-03-01 00:00
 tags: [swtech,database,oracle]
 image: /files/covers/blog.jpg
+comments: true
 ---
 
 **Oracle 자주 사용하는 Query**

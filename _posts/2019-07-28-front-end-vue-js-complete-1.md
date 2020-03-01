@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-07-28 12:00
 tags: [swtech,java,vuejs,frontend]
 image: /files/covers/VUE_JS.jpg
+comments: true
 ---
 
 # 1. 강의소개 & 설치

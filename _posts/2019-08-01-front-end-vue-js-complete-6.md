@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-08-01 17:00
 tags: [swtech,java,vuejs,frontend]
 image: /files/covers/VUE_JS.jpg
+comments: true
 ---
 
 # 6. 리팩토링 : 스타일링, 공통 컴포넌트  

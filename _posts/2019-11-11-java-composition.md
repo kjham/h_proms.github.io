@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-11-11 09:30
 tags: [swtech,java,effectivejava,composition]
 image: /files/covers/effectivejava.jpg
+comments: true
 ---
 
 # 상속 보다는 컴포지션을 사용하라 (아이템 18)  

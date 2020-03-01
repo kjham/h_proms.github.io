@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-07-24 13:00
 tags: [swtech,java,vuejs,frontend]
 image: /files/covers/VUE_JS.jpg
+comments: true
 ---
 
 # 인스턴스 & 컴포넌트

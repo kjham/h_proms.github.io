@@ -4,6 +4,7 @@ title: 'Mybatis - ParamterType'
 author: kjham.ham
 date: 2019-08-23 15:30
 tags: [swtech,java,mabatis,backend]
+comments: true
 ---
 
 Mybatis의 XML을 작성할 때  

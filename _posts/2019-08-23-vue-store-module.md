@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-08-23 13:30
 tags: [swtech,java,vuejs,frontend]
 image: /files/covers/VUE_JS.jpg
+comments: true
 ---
 
 Vue에서 `Store`를 정의하다보면 하나의 큰 객체 안에 너무 많은 데이터를 저장하게 됩니다.  

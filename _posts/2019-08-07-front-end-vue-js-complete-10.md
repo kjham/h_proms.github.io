@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-08-07 15:00
 tags: [swtech,java,vuejs,frontend]
 image: /files/covers/VUE_JS.jpg
+comments: true
 ---
 
 # 10. 리팩토링 : 비동기 처리  

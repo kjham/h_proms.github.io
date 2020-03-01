@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2018-03-30 11:26
 tags: [swtech,linux]
 image: /files/covers/blog.jpg
+comments: true
 ---
 
 **Linux Centos7 - IP 고정방법**

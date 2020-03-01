@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-10-21 10:30
 tags: [swtech,java,effectivejava,private,construction]
 image: /files/covers/effectivejava.jpg
+comments: true
 ---
 
 # 인스턴스화를 막으려거든 private 생성자를 사용하라  

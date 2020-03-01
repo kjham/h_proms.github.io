@@ -4,6 +4,7 @@ title: 'IntelliJ 주석 자동완성'
 author: kjham.ham
 date: 2019-08-22 11:00
 tags: [swtech,ide,intellij]
+comments: true
 ---
 
 Back-End 개발을 수행하면 주석을 자동으로 완성하여 넣어야 할 일이 많이 있습니다.  

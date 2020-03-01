@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-08-12 23:00
 tags: [lifestyle,foods,korean]
 image: /files/covers/foods_korean.jpg
+comments: true
 ---
 
 # 2019-08-11, 말복 기념 가족 모임

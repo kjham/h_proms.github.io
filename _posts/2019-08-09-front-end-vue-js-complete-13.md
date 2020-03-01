@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-08-09 10:00
 tags: [swtech,java,vuejs,frontend]
 image: /files/covers/VUE_JS.jpg
+comments: true
 ---
 
 # 13. 서비스 배포 환경 구성  

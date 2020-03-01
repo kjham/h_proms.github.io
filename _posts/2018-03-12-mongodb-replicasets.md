@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-08-30 13:36
 tags: [swtech,nosql,mongodb]
 image: /files/covers/blog.jpg
+comments: true
 ---
 
 **New NoSQL & mongoDB - Replica & ReplicaSets**

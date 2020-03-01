@@ -4,6 +4,7 @@ title: 'Linux Shell Command 정리'
 author: kjham.ham
 date: 2019-08-30 14:45
 tags: [swtech,linux,shell]
+comments: true
 ---
 
 + `sed (stream editor)`  

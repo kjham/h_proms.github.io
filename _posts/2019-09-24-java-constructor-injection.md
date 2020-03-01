@@ -4,6 +4,7 @@ title: 'Java의 Construction Injection'
 author: kjham.ham
 date: 2019-09-24 16:10
 tags: [swtech,java]
+comments: true
 ---
 
 의존성을 주입할 때, Field Injection을 권장하고 있지 않습니다.  

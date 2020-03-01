@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2018-03-30 15:13
 tags: [swtech,java,jpa]
 image: /files/covers/blog.jpg
+comments: true
 ---
 
 **JAVA - JPA Tutorial**

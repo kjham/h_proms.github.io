@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2018-03-30 11:14
 tags: [swtech,linux]
 image: /files/covers/blog.jpg
+comments: true
 ---
 
 **Linux Centos7 -Booting Mode 변경**

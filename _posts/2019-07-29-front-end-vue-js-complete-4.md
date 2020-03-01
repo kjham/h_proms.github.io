@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-07-29 18:00
 tags: [swtech,java,vuejs,frontend]
 image: /files/covers/VUE_JS.jpg
+comments: true
 ---
 
 # 4. 스토어 & 중간정리  

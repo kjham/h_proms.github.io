@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2018-03-06 00:00
 tags: [swtech,shell]
 image: /files/covers/blog.jpg
+comments: true
 ---
 
 **Java - Shell-Script Tutorial**

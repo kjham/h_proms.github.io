@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-10-30 09:30
 tags: [swtech,java,database,plsql]
 ##image: /files/covers/effectivejava.jpg
+comments: true
 ---
 
 # PL/SQL 이란 ?  

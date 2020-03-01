@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-07-23 12:00
 tags: [swtech,java,vuejs,frontend]
 image: /files/covers/VUE_JS.jpg
+comments: true
 ---
 
 # 개발환경 설정 & Vue 소개

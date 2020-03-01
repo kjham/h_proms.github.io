@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2018-03-13 12:30
 tags: [swtech,nosql,mongodb]
 image: /files/covers/blog.jpg
+comments: true
 ---
 
 **New NoSQL & mongoDB - Performance Tuning**

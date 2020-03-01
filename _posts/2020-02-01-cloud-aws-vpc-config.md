@@ -6,6 +6,7 @@ date: 2020-02-01 18:04
 create-date: 2020-02-01 16:04
 tags: [swtech,cloud,aws,vpc]
 ##image: /files/covers/effectivejava.jpg
+comments: true
 ---
 
 **`AWS Networking Cookbook`**의 2장(`사용자 맞춤형 VPC 구성`)을 읽고 VPC 설정을 위한 기본 구성요소를 살펴봅니다.  

@@ -6,6 +6,7 @@ date: 2019-09-01 23:52
 tags: [swtech,ghost,jekyll]
 image: /files/covers/VUE_JS.jpg
 createdate: 2019-07-24 15:38
+comments: true
 ---
 
 # Github Page & Jekyll 적용

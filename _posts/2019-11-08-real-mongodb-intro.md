@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-11-08 09:10
 tags: [swtech,java,database,mongodb,nosql]
 ##image: /files/covers/effectivejava.jpg
+comments: true
 ---
 
 `Spananer`가 가진 기능들이 분산 처리 데이터베이스가 가야 할 방향이라고 생각합니다.  

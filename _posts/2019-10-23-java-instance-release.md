@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2019-10-23 13:00
 tags: [swtech,java,effectivejava]
 image: /files/covers/effectivejava.jpg
+comments: true
 ---
 
 # 다 쓴 객체 참조를 해제하라

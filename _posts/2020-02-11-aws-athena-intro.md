@@ -6,6 +6,7 @@ date: 2020-02-11 13:20
 create-date: 2020-02-11 13:20
 tags: [swtech,cloud,aws,athena,database]
 ##image: /files/covers/effectivejava.jpg
+comments: true
 ---
 
 # Amazon Athena 란 ?  

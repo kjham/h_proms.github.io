@@ -5,6 +5,7 @@ author: kjham.ham
 date: 2018-03-03 00:00
 tags: [religion,logos]
 image: /files/covers/religion_bible_bunpeace_title.jpg
+comments: true
 ---
 
 **2018년 3월 4일, 번동평화교회 주일예배**
