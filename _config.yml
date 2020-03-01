@@ -4,7 +4,7 @@ description: |
   Software Developement Laboratory
   & Life Style Blog
 baseurl: ''
-url: 'http://kjham.github.io/'
+url: 'http://kjham.github.io'
 timezone: Asia/Seoul 
 
 repository: kjham/kjham.github.io

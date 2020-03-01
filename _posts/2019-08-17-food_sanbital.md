@@ -22,7 +22,7 @@ image: /files/covers/foods_korean.jpg
 
 자~ 음식이 나왔습니다.  
 
-![산비탈 버섯두부전골]({{site.url}}{{site.baseurl}}/files/lifestyle/family_travel_sanbital.jpg){: .center-image }  
+![산비탈 버섯두부전골]({{site.url}}/files/lifestyle/family_travel_sanbital.jpg){: .center-image }  
 
 버섯과 두부, 그리고 약간의 고기가 밸런스 있게 맛의 균형을 잘 잡은 것 같았습니다.  
 고춧가루도 별도로 주셨는데, 적당히 매워서 너무 덥지 않게 잘 먹었습니다.  
