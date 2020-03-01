@@ -51,8 +51,8 @@ keep_files: [assets, files]
 github: [metadata]
 # iolo's custom
 author: h_proms@naver.com
-image: '/kjham/assets/images/default_blog_cover.jpg'
-asset_url: /kjham/assets
+image: '/assets/images/default_blog_cover.jpg'
+asset_url: /assets
 google_analytics:
   ua: 'UA-144720566-1'
 facebook:
