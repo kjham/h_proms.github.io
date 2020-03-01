@@ -35,6 +35,19 @@ layout: default
             <span>Read more posts by this author</span>
         </a>
     </div>
+    {% if page.comments %}
+    <div id="disqus_thread"></div>
+    <script>
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-kjham-github-io.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    {% endif %}        
+    </div>
 </div>
 
 <div id="post-links" class="container">
