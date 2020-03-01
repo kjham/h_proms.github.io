@@ -3,7 +3,7 @@ email: h_proms@naver.com
 description: |
   Software Developement Laboratory
   & Life Style Blog
-baseurl: 'kjham'
+baseurl: ''
 url: 'http://kjham.github.io/'
 timezone: Asia/Seoul 
 
@@ -53,8 +53,6 @@ github: [metadata]
 author: h_proms@naver.com
 image: '/kjham/assets/images/default_blog_cover.jpg'
 asset_url: /kjham/assets
-#asset_url: //meta-kage.kakaocdn.net/dn/osa/blog/assets
-#asset_url: //t1.daumcdn.net/osa/blog/assets
 google_analytics:
   ua: 'UA-144720566-1'
 facebook:
