@@ -49,7 +49,7 @@ exclude: [README.md, Gemfile, Gemfile.lock]
 
 keep_files: [assets, files]
 github: [metadata]
-# iolo's custom
+
 author: h_proms@naver.com
 image: '/assets/images/default_blog_cover.jpg'
 asset_url: /assets
