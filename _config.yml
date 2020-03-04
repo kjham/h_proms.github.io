@@ -32,7 +32,16 @@ collections:
   tags:
     output: true
     permalink: /tags/:path/
-
+  backend:
+    output: true
+    permalink: /backend/:path/
+  database:
+    output: true
+    permalink: /database/:path/
+  cloud:
+    output: true
+    permalink: /cloud/:path/
+        
 defaults:
   - scope:
       path: ''
@@ -44,6 +53,21 @@ defaults:
       type: tags
     values:
       layout: tag
+  - scope:
+      path: ''
+      type: backend
+    values:
+      layout: backend
+  - scope:
+      path: ''
+      type: database
+    values:
+      layout: database
+  - scope:
+      path: ''
+      type: cloud
+    values:
+      layout: cloud
 
 exclude: [README.md, Gemfile, Gemfile.lock]
 
