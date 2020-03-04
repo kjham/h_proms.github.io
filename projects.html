@@ -1,27 +1,16 @@
 ---
 layout: default
 title: PROJECTS
+description: Project List
 ---
-<div id="navbar" class="container">
-    <h5><a id="link-back" href="/">Main</a></h5>
-    {% include share.html %}
-</div>
-
-<div id="cover" class="container"
-     {% if page.cover %}style="background-image: url({{site.url}}/{{ page.cover }});"{% endif %}>
+<div id="cover" class="container-fluid" {% if site.image %}style="background-image:url({{ site.image }});"{% endif %}>
     <div>
-        <div id="cover-author-image"
-             {% if page.image %}style="background-image:url({{site.url}}/{{ page.image }});"{% endif %}>
-            <span class="sr-only">{{ page.name }}'s profile image</span>
-        </div>
-        <h1>{{ page.title | default: page.name }}</h1>
-        <p>All Posts by <em>{{ page.name }}</em></p>
+        <h1>{{ page.title }} (개발중)</h1>
+        <p>{{ page.description | newline_to_br }}</p>
     </div>
 </div>
 
 <div>
-    <p>Project 항목 나열을 개발중입니다.</p>
-
     <main id="site-main" class="site-main outer" role="main">
         <div class="inner">
 
