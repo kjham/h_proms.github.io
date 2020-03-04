@@ -13,13 +13,28 @@
     </div>
     <ul class="search__results" id="results-container"></ul>
 
-    <ul id="menu" class="nav">
-        <li class="{% if page.url == '/about/' %} active {% endif %}"><a href="{{ url }}/about/">About</a></li>
-        <li class="{% if page.url != '/about/' and page.url != '/swtech/' and page.url != '/religion/' and page.url != '/lifestyle/' %} active {% endif %}"><a href="{{ url }}/">ALL</a></li>
-        <li class="{% if page.url == '/swtech/' %} active {% endif %}"><a href="{{ url }}/tags/swtech/">SW Tech</a></li>
-        <li class="{% if page.url == '/religion/' %} active {% endif %}"><a href="{{ url }}/tags/religion/">Religion</a></li>
-        <li class="{% if page.url == '/lifestyle/' %} active {% endif %}"><a href="{{ url }}/tags/lifestyle/">Life Style</a></li>
-    </ul>
+    <div class="customizing-nav">
+        <ul id="menu" class="nav">
+            <li class="{% if page.url == '/' %} active {% endif %}"><a href="{{ url }}/">HOME</a></li>
+            <li class="{% if page.url == '/about/' %} active {% endif %}"><a href="{{ url }}/about/">ABOUT</a></li>        
+            <li class="{% if page.url contains '/tags/' %} active {% endif %}">
+                <a>CATEGORY ▼</a>
+                <ul>
+                    <li class="{% if page.url contains '/swtech/' %} active {% endif %}">
+                        <a href="{{ url }}/tags/swtech/">SW TECH</a>
+                    </li>
+                    <li class="{% if page.url contains '/religion/' %} active {% endif %}">
+                        <a href="{{ url }}/tags/religion/">RELIGION</a>
+                    </li>
+                    <li class="{% if page.url contains '/lifestyle/' %} active {% endif %}">
+                        <a href="{{ url }}/tags/lifestyle/">LIFE STYLE</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="{% if page.url == '/projects/' %} active {% endif %}"><a href="{{ url }}/projects/">PROJECTS</a></li>
+            <li class="{% if page.url == '/contact/' %} active {% endif %}"><a href="{{ url }}/contact/">CONTACT</a></li>
+        </ul>
+    </div>    
 </div>
 
 <!-- Script pointing to jekyll-search.js -->
