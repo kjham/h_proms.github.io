@@ -19,22 +19,25 @@ Category Level은 계속 늘어날 수 있도록 구성
 Pagination 을 처리할지는 고민해볼 것  
 
 Back-End  
-ㄴ
+ㄴ JAVA
 
 Cloud
-ㄴ
+ㄴ AWS
+ㄴ GCP
 
 Database  
 ㄴ MongoDB
+ㄴ Redis
 
-Dev Management  
+Dev SKill  
 ㄴ Github
 
 Front-End  
-ㄴ
+ㄴ Vue.js
 
 Religion  
-ㄴ
+ㄴ 기독교
 
 Hobby  
-ㄴ
+ㄴ Travel
+ㄴ Foods

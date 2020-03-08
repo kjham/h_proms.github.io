@@ -41,6 +41,18 @@ collections:
   cloud:
     output: true
     permalink: /cloud/:path/
+  devskill:
+    output: true
+    permalink: /devskill/:path/
+  frontend:
+    output: true
+    permalink: /frontend/:path/
+  religion:
+    output: true
+    permalink: /religion/:path/
+  hobby:
+    output: true
+    permalink: /hobby/:path/
         
 defaults:
   - scope:
@@ -68,7 +80,27 @@ defaults:
       type: cloud
     values:
       layout: cloud
-
+  - scope:
+      path: ''
+      type: devskill
+    values:
+      layout: devskill
+  - scope:
+      path: ''
+      type: frontend
+    values:
+      layout: frontend
+  - scope:
+      path: ''
+      type: religion
+    values:
+      layout: religion
+  - scope:
+      path: ''
+      type: hobby
+    values:
+      layout: hobby
+      
 exclude: [README.md, Gemfile, Gemfile.lock]
 
 keep_files: [assets, files]
