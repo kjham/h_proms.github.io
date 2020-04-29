@@ -7,14 +7,8 @@ tags: [swtech,java,lamda]
 comments: true
 ---
 
-저는 Java에서 Lamda를 자주 사용하는 편입니다..  
-Front End 개발을 한 동안 하면서 Lamda식 문법이 헷갈려서 한 곳에 정리를 하려 합니다.  
+# 저는 Java에서 Lamda를 자주 사용하는 편입니다..  
 
-### List 를 Map 으로 변환   
-Map의 Value에 Instance를 그대로 넣고 싶을 때는 `Function.identy()`를 사용합니다.  
-~~~java
-public Map<Integer, InstanceNm> convertLitToMap(List<InstanceNm> objectList) {
-    return objectList.stream().collect(Collectors.toMap(InstanceNm:getId, Function.identy(), (v1, v2) -> v1, HashMap::new));
-}
-~~~
+본 내용은 [SWDEVLAB.COM](https://swdevlab.com/70) 으로 이관되었습니다.
+링크를 통해 확인해주세요.
 

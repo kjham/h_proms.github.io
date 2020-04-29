@@ -8,21 +8,5 @@ tags: [swtech,linux]
 comments: true
 ---
 
-+ 도메인 편집
-`vi /etc/hosts`  
-
-+ 방화벽 관련
-`service iptables stop`  
-`service firewalld stop`  
-
-+ 이더넷 드라이버 관련  
-`/etc/sysconfig/network-scripts/`
-
-+ 특정 확장자 파일 제거  
-`find /work/dir -name "*.tmp" -exec rm -rf {} \;`  
-
-+ 특정 확장자 파일 이동  
-`find /work/dir -name "*.tmp" -exec cp {} /des/dir \;`
-
-+ 특정 확장자 파일 복사  
-`find /work/dir -name "*.tmp" -exec mv {} /des/dir \;`
+본 내용은 [SWDEVLAB.COM](https://swdevlab.com/67) 으로 이관되었습니다.
+링크를 통해 확인해주세요.

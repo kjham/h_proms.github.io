@@ -7,7 +7,5 @@ tags: [swtech,linux,firewall]
 comments: true
 ---
 
-### Centos  
-~~~sh
-# systemctl stop firewalld
-~~~
+본 내용은 [SWDEVLAB.COM](https://swdevlab.com/62) 으로 이관되었습니다.
+링크를 통해 확인해주세요.
